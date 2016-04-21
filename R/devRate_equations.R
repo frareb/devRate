@@ -13,20 +13,24 @@ janisch_32 <- list(eq = rT ~ Tmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt)))
                      cc = c(),
                      ref = c()
                    ),
-                   com = ""
+                   com = "",
+                   id = "eq010"
 )
+save(janisch_32, file = "./data/janisch_32.RData")
 
 davidson_44 <- list(eq = rT ~ K / (1 + exp(aa - bb * T)),
                     name = "Logistic",
                     ref = "Davidson, J. (1944). On the relationship between temperature and rate of development of insects at constant temperatures. The Journal of Animal Ecology:26-38.",
                     refShort = "Davidson 1944",
                     startVal = data.frame(),
-                    com = '"[...] data on the rate of development at temperatures above the peak should not be included when calculating the formula for the temperature-velocity curve." Davidson 1944.'
+                    com = '"[...] data on the rate of development at temperatures above the peak should not be included when calculating the formula for the temperature-velocity curve." Davidson 1944.',
+                    id = "eq020"
 )
+save(davidson_44, file = "./data/davidson_44.RData")
 
 campbell_74 <- list(eq = rT ~ aa + bb * T,
                     name = "Linear",
-                    ref = "Campbell, A., B. Frazer, N. Gilbert, A. Gutierrez, and M. Mackauer. (1974). Temperature requirements of some aphids and their parasites. Journal of applied ecology:431-438.",
+                    ref = "Campbell, A., B. Frazer, N. Gilbert, A. Gutierrez, and M. Mackauer. (1974). Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.",
                     refShort = "Campbell et al. 1974",
                     startVal = data.frame(
                       ordersp = c(rep("Hemiptera", 10), "Lepidoptera", rep("Hemiptera", 2)),
@@ -37,16 +41,20 @@ campbell_74 <- list(eq = rT ~ aa + bb * T,
                       bb = c(1/105, 1/104, 1/118, 1/80, 1/136, 1/127, 1/182, 1/163, 1/117, 1/125, 0.0024, 0.97/100, 0.91/100),
                       ref = c(rep("Campbell et al. 1974", 10), "Ozgokce et al. 2016", rep("Lamb 1992", 2))
                     ),
-                    com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974'
+                    com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974',
+                    id = "eq030"
 )
+save(campbell_74, file = "./data/campbell_74.RData")
 
 stinner_74 <- list(eq = rT ~ C / (1 + exp(k1 + k2 * T)),
                    name = "Logistic",
                    ref = "Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth rate simulation. The Canadian Entomologist, 106, 519-524.",
                    refShort = "Stinner et al. 1974",
                    startVal = data.frame(),
-                   com = '"[...] the relationship [is] inverted when the temperature is above an optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.'
+                   com = '"[...] the relationship [is] inverted when the temperature is above an optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.',
+                   id = "eq040"
 )
+save(stinner_74, file = "./data/stinner_74.RData")
 
 logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) ,
                   name = "Logan-6",
@@ -63,8 +71,10 @@ logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/delt
                     deltaT = c(7.1, 7.3366),
                     ref = c("Ozgokce et al. 2016", "Hilbert and Logan 1983")
                   ),
-                  com = ''
+                  com = '',
+                  id = "eq050"
 )
+save(logan6_76, file = "./data/logan6_76.RData")
 
 logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))) ,
                    name = "Logan-10",
@@ -82,8 +92,10 @@ logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax -
                      deltaT = c(1.1),
                      ref = c("Ozgokce et al. 2016")
                    ),
-                   com = ''
+                   com = '',
+                   id = "eq060"
 )
+save(logan10_76, file = "./data/logan10_76.RData")
 
 sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987)) ,
                            name = "Sharpe and DeMichele",
@@ -102,8 +114,10 @@ sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/
                              gg = c(69113),
                              ref = c("Sharpe and DeMichele 1977")
                            ),
-                           com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).'
+                           com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
+                           id = "eq070"
 )
+save(sharpeDeMichele_77, file = "./data/sharpeDeMichele_77.RData")
 
 analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
                     name = "Analytis",
@@ -121,8 +135,10 @@ analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
                       Tmax = c(),
                       ref = c()
                     ),
-                    com = ''
+                    com = '',
+                    id = "eq080"
 )
+save(analytis_77, file = "./data/analytis_77.RData")
 
 schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(T + 273.16))) + exp(dd/R * (1/ee - 1/(T + 273.16)))),
                        name = "Schoolfield",
@@ -141,8 +157,10 @@ schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1
                          ee = c(316.695),
                          ref = c("Hilbert and Logan 1983")
                        ),
-                       com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).'
+                       com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
+                       id = "eq090"
 )
+save(schoolfield_81, file = "./data/schoolfield_81.RData")
 
 taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
                   name = "Taylor",
@@ -182,8 +200,10 @@ taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
                            11.4, 10.1, 11.5, 9.8, 9.2, 15.3, 11.9, 7.7, 8.8),
                     ref = c(rep("Taylor 1981", 61))
                   ),
-                  com = 'Developmental rate is expressed as "% development per day". "The curve must be truncated to the right of Tm because of lethal effects of short exposures to high temperatures. The rate at which development rate falls away from Tm is measured by To." Taylor 1981'
+                  com = 'Developmental rate is expressed as "% development per day". "The curve must be truncated to the right of Tm because of lethal effects of short exposures to high temperatures. The rate at which development rate falls away from Tm is measured by To." Taylor 1981',
+                  id = "eq100"
 )
+save(taylor_81, file = "./data/taylor_81.RData")
 
 poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
               name = "Second-order polynomial",
@@ -199,11 +219,13 @@ poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
                 a2 = c(),
                 ref = c()
               ),
-              com = ''
+              com = '',
+              id = "eq110"
 )
+save(poly2, file = "./data/poly2.RData")
 
 harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
-                       name = "Third-order polynomial ",
+                       name = "Third-order polynomial",
                        ref = "Harcourt, D. and Yee, J. (1982) Polynomial algorithm for predicting the duration of insect life stages. Environmental Entomology, 11, 581-584.",
                        refShort = "Harcourt and Yee 1982",
                        startVal = data.frame(
@@ -217,8 +239,10 @@ harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
                          a3 = c(-0.000026629, -0.000012930, 0.000020124, -0.000030130, 0.000025595, 0.000022486, -0.000011439),
                          ref = c(rep("Harcourt and Yee 1982", 7))
                        ),
-                       com = ''
+                       com = '',
+                       id = "eq120"
 )
+save(harcourtYee_82, file = "./data/harcourtYee_82.RData")
 
 poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
               name = "Forth-order polynomial",
@@ -236,8 +260,10 @@ poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
                 a4 = c(-0.000001),
                 ref = c("Ozgokce et al. 2016")
               ),
-              com = ''
+              com = '',
+              id = "eq130"
 )
+save(poly4, file = "./data/poly4.RData")
 
 hilbertLogan_83 <- list(eq = rT ~ phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/deltaT)) ,
                         name = "Holling type III",
@@ -254,8 +280,10 @@ hilbertLogan_83 <- list(eq = rT ~ phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/d
                           deltaT = c(3.433),
                           ref = c("Hilbert and Logan 1983")
                         ),
-                        com = ''
+                        com = '',
+                        id = "eq140"
 )
+save(hilbertLogan_83, file = "./data/hilbertLogan_83.RData")
 
 lamb_92 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2) ,
                 name = "Lamb",
@@ -271,8 +299,10 @@ lamb_92 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2) ,
                   To = c(9.9, 10.3),
                   ref = c(rep("Lamb 1992", 2))
                 ),
-                com = ''
+                com = '',
+                id = "eq150"
 )
+save(lamb_92, file = "./data/lamb_92.RData")
 
 lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
                    name = "Lactin-1",
@@ -288,8 +318,10 @@ lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
                      deltaT = c(6.421234, 6.467896, 6.460183, 5.883764, 5.997446),
                      ref = c(rep("Lactin et al. 1995", 5))
                    ),
-                   com = ''
+                   com = '',
+                   id = "eq160"
 )
+save(lactin1_95, file = "./data/lactin1_95.RData")
 
 lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb ,
                    name = "Lactin-2",
@@ -306,8 +338,10 @@ lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + 
                      bb = c(-0.026410, -0.238647, -0.249972, -1.212223, -0.051544),
                      ref = c(rep("Lactin et al. 1995", 5))
                    ),
-                   com = ''
+                   com = '',
+                   id = "eq170"
 )
+save(lactin2_95, file = "./data/lactin2_95.RData")
 
 briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
                    name = "Briere-1",
@@ -323,8 +357,10 @@ briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
                      Tmin = c(),
                      ref = c()
                    ),
-                   com = ''
+                   com = '',
+                   id = "eq180"
 )
+save(briere1_99, file = "./data/briere1_99.RData")
 
 briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
                    name = "Briere-2",
@@ -341,8 +377,18 @@ briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
                      bb = c(),
                      ref = c()
                    ),
-                   com = ''
+                   com = '',
+                   id = "eq190"
 )
+save(briere2_99, file = "./data/briere2_99.RData")
+
+
+
+
+
+
+
+
 
 kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
                       name = "Equation 16",
@@ -358,8 +404,10 @@ kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
                         cc = c(),
                         ref = c()
                       ),
-                      com = ""
+                      com = "",
+                      id = "eq200"
 )
+save(kontodimas_04, file = "./data/kontodimas_04.RData")
 
 damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
                  name = "Simplified beta type",
@@ -375,8 +423,10 @@ damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
                    cc = 4.8760,
                    ref = "Damos and Savopoulou 2008"
                  ),
-                 com = ''
+                 com = '',
+                 id = "eq210"
 )
+save(damos_08, file = "./data/damos_08.RData")
 
 damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
                  name = "Inverse second-order polynomial",
@@ -391,8 +441,10 @@ damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
                    cc = c(),
                    ref = c()
                  ),
-                 com = ''
+                 com = '',
+                 id = "eq220"
 )
+save(damos_11, file = "./data/damos_11.RData")
 
 devRateEqList <- list(
   janisch_32 = janisch_32,
@@ -414,7 +466,9 @@ devRateEqList <- list(
   lactin2_95 = lactin2_95,
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
+  ## other equations
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11
 )
+save(devRateEqList, file = "./data/devRateEqList.RData")
