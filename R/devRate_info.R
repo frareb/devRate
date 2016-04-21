@@ -22,11 +22,36 @@ devRateInfo <- function(eq){
 #' Plot parameter estimates from the literature
 #'
 #' @param eq The name of the equation.
-#' @param sortBy The filter to seperate species ("order", "family", "species", "").
+#' @param sortBy The filter to seperate species ("ordersp", "family"sp, "sp", "").
 #' @return Nothing.
 #' @export
-devRatePlotInfo <- function(eq, sortBy = ""){
-
+devRatePlotInfo <- function(eq, sortBy = "", ...){
+  listPlot <- split(eq$startVal, eq$startVal[sortBy])
+  plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
+  for(i in 1:length(listPlot)){
+    for(j in 1:nrow(listPlot[[i]])){
+      switch(EXPR = eq$id,
+             "eq030" = {
+               aa <- listPlot[[i]][j, 5]
+               bb <- listPlot[[i]][j, 6]
+               T <- seq(from = 0, to = 50, length.out = 100)
+               rT <- aa + bb * T
+               lines(x = T, y = rT, col = i)
+             },
+             {}
+      )
+    }
+  }
+  legend("topleft", legend = names(listPlot), col = 1:length(listPlot), lwd = 1)
 }
 
 # for(i in names(devRateEqList)){devRateInfo(eq = get(i))}
+
+
+devRatePlotInfo(eq = campbell_74, sortBy = "ordersp", xlim = c(0,30), ylim = c(0,0.2))
+devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.2))
+
+
+
+
+
