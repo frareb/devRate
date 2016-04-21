@@ -1,3 +1,5 @@
+### y ~ I(x) ?
+
 
 janisch_32 <- list(eq = rT ~ Tmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))),
                    name = "Janisch",
