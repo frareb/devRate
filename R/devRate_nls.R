@@ -1,3 +1,14 @@
+#' Compute non-linear regression
+#'
+#' @param eq The name of the equation.
+#' @param temp The temperature.
+#' @param devRate The developmental rate \code{(days)^-1}
+#' @param startValues Starting values for the regression.
+#' @param guessStartValues Optional arguments to specify starting values on the basis of previous studies from the literature (see details).
+#' @param ... Additional arguments for the nls function.
+#' @details xxx guessStartingValues xxx
+#'
+#' @export
 devRateModel <- function(eq, temp, devRate, startValues, guessStartValues = list(FALSE, "", ""), ...){
   # cat(eq$name, "model by", eq$refShort, "\n\n")
   if(guessStartValues[[1]] == TRUE){
