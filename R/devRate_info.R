@@ -12,7 +12,7 @@ devRateInfo <- function(eq){
   cat("\n")
   print(eq$eq)
   if(nrow(eq$startVal) > 0){
-    cat("\nParameter estimates from the literature: \n\n")
+    cat("\nParameter estimates from the literature (eq$startVal): \n\n")
     print(eq$startVal)
   }
   if(length(eq$com) > 0){cat("\nComments: ", strwrap(x = eq$com, width = 80), sep = "\n")}
@@ -22,10 +22,10 @@ devRateInfo <- function(eq){
 #' Plot parameter estimates from the literature
 #'
 #' @param eq The name of the equation.
-#' @param sortBy The filter to seperate species ("ordersp", "family"sp, "sp", "").
+#' @param sortBy The filter to seperate species ("ordersp", "family"sp, "sp").
 #' @return Nothing.
 #' @export
-devRatePlotInfo <- function(eq, sortBy = "", ...){
+devRatePlotInfo <- function(eq, sortBy = "sp", ...){
   listPlot <- split(eq$startVal, eq$startVal[sortBy])
   plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
   for(i in 1:length(listPlot)){
@@ -34,9 +34,11 @@ devRatePlotInfo <- function(eq, sortBy = "", ...){
              "eq030" = {
                aa <- listPlot[[i]][j, 5]
                bb <- listPlot[[i]][j, 6]
-               T <- seq(from = 0, to = 50, length.out = 100)
-               rT <- aa + bb * T
-               lines(x = T, y = rT, col = i)
+               x <- seq(from = 0, to = 50, length.out = 100)
+               # rT <- aa + bb * T
+               # lines(x = T, y = rT, col = i)
+               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+               curve(fx, add = TRUE, col = i)
              },
              {}
       )
