@@ -10,9 +10,11 @@ janisch_32 <- list(eq = rT ~ Tmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt)))
                      familysp = c(),
                      sp = c(),
                      stage = c(),
-                     aa = c(),
-                     bb = c(),
-                     cc = c(),
+                     param = list(
+                       aa = c(),
+                       bb = c(),
+                       cc = c()
+                     ),
                      ref = c()
                    ),
                    com = "",
@@ -24,7 +26,18 @@ davidson_44 <- list(eq = rT ~ K / (1 + exp(aa - bb * T)),
                     name = "Logistic",
                     ref = "Davidson, J. (1944). On the relationship between temperature and rate of development of insects at constant temperatures. The Journal of Animal Ecology:26-38.",
                     refShort = "Davidson 1944",
-                    startVal = data.frame(),
+                    startVal = data.frame(
+                      ordersp = c(),
+                      familysp = c(),
+                      sp = c(),
+                      stage = c(),
+                      param = list(
+                        aa = c(),
+                        bb = c(),
+                        K = c()
+                      ),
+                      ref = c()
+                    ),
                     com = '"[...] data on the rate of development at temperatures above the peak should not be included when calculating the formula for the temperature-velocity curve." Davidson 1944.',
                     id = "eq020"
 )
@@ -39,8 +52,10 @@ campbell_74 <- list(eq = rT ~ aa + bb * T,
                       familysp = c(rep("Aphididae", 10), "Gelechiidae", rep("Aphididae", 2)),
                       sp = c("Acyrthosiphon pisum", "Acyrthosiphon pisum", "Acyrthosiphon pisum", "Aphis craccivora", "Brevicoryne brassicae", "Brevicoryne brassicae", "Brevicoryne brassicae", "Brevicoryne brassicae", "Macrosiphon avenae", "Macrosiphon maxima", "Tuta absoluta", "Acyrthosiphon pisum", "Acyrthosiphon pisum"),
                       stage = c(rep("all", 13)),
-                      aa = c(-5.1*1/105, -5.6*1/104, -4*1/118, -8.3*1/80, -7.1*1/136, -5*1/127, -6.5*1/182, -4.7*1/163, -4.8*1/117, -3.9*1/125, -0.021, -3.74/100, -3.11/100),
-                      bb = c(1/105, 1/104, 1/118, 1/80, 1/136, 1/127, 1/182, 1/163, 1/117, 1/125, 0.0024, 0.97/100, 0.91/100),
+                      param = list(
+                        aa = c(-5.1*1/105, -5.6*1/104, -4*1/118, -8.3*1/80, -7.1*1/136, -5*1/127, -6.5*1/182, -4.7*1/163, -4.8*1/117, -3.9*1/125, -0.021, -3.74/100, -3.11/100),
+                        bb = c(1/105, 1/104, 1/118, 1/80, 1/136, 1/127, 1/182, 1/163, 1/117, 1/125, 0.0024, 0.97/100, 0.91/100)
+                      ),
                       ref = c(rep("Campbell et al. 1974", 10), "Ozgokce et al. 2016", rep("Lamb 1992", 2))
                     ),
                     com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974',
@@ -67,10 +82,12 @@ logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/delt
                     familysp = c("Gelechiidae", "Acrididae"),
                     sp = c("Tuta absoluta", "Melanoplus sanguinipes"),
                     stage = c(rep("all", 2)),
-                    phi = c(0.081, 0.9537),
-                    bb = c(0.14, 0.1360),
-                    Tmax = c(38.173, 31.7732),
-                    deltaT = c(7.1, 7.3366),
+                    param = list(
+                      phi = c(0.081, 0.9537),
+                      bb = c(0.14, 0.1360),
+                      Tmax = c(38.173, 31.7732),
+                      deltaT = c(7.1, 7.3366)
+                    ),
                     ref = c("Ozgokce et al. 2016", "Hilbert and Logan 1983")
                   ),
                   com = '',
@@ -87,11 +104,13 @@ logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax -
                      familysp = c("Gelechiidae"),
                      sp = c("Tuta absoluta"),
                      stage = c("all"),
-                     alpha = c(0.056),
-                     bb = c(0.19),
-                     cc = c(57),
-                     Tmax = c(35.891),
-                     deltaT = c(1.1),
+                     param = list(
+                       alpha = c(0.056),
+                       bb = c(0.19),
+                       cc = c(57),
+                       Tmax = c(35.891),
+                       deltaT = c(1.1)
+                     ),
                      ref = c("Ozgokce et al. 2016")
                    ),
                    com = '',
@@ -108,12 +127,14 @@ sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/
                              familysp = c("Drosophilidae"),
                              sp = c("Drosophila melanogaster"),
                              stage = c("prepupal"),
-                             aa = c(19.43),
-                             bb = c(10490),
-                             cc = c(-156.9),
-                             dd = c(-44373),
-                             ff = c(226.6),
-                             gg = c(69113),
+                             param = list(
+                               aa = c(19.43),
+                               bb = c(10490),
+                               cc = c(-156.9),
+                               dd = c(-44373),
+                               ff = c(226.6),
+                               gg = c(69113)
+                             ),
                              ref = c("Sharpe and DeMichele 1977")
                            ),
                            com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
@@ -130,11 +151,13 @@ analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
                       familysp = c(),
                       sp = c(),
                       stage = c(),
-                      aa = c(),
-                      bb = c(),
-                      cc = c(),
-                      Tmin = c(),
-                      Tmax = c(),
+                      param = list(
+                        aa = c(),
+                        bb = c(),
+                        cc = c(),
+                        Tmin = c(),
+                        Tmax = c()
+                      ),
                       ref = c()
                     ),
                     com = '',
@@ -151,12 +174,14 @@ schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1
                          familysp = c("Acrididae"),
                          sp = c("Melanoplus sanguinipes"),
                          stage = c("all"),
-                         p25 = c(0.0455),
-                         aa = c(8814.36),
-                         bb = c(-14877.95),
-                         cc = c(298.81),
-                         dd = c(47258.52),
-                         ee = c(316.695),
+                         param = list(
+                           p25 = c(0.0455),
+                           aa = c(8814.36),
+                           bb = c(-14877.95),
+                           cc = c(298.81),
+                           dd = c(47258.52),
+                           ee = c(316.695)
+                         ),
                          ref = c("Hilbert and Logan 1983")
                        ),
                        com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
@@ -185,21 +210,23 @@ taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
                            "Hippelates bishoppi", "Hippelates pallipes", "Hippelates pusio", "Aedes flavescens", "Aedes vexans", "Anopheles quadrimaculatus", "Toxorhynchites brevipalpis", "Drosophila melanogaster", "Drosophila melanogaster", "Haematobia stimulans", "Lyperosia irritans", "Musca domestica", "Stomoxys calcitans",
                            "Apanteles operculella", "Apanteles scutellaris", "Apanteles subandinus", "Aphelinus semiflavus", "Aphidius rapae", rep("Bracon mellitor", 2), "Praon palitans", "Trioxys utilus"),
                     stage = c(rep("all", 15), rep("all", 7), "45% RH", "60% RH", "75% RH", "90% RH", rep("all", 31), "female", "male", rep("all", 2)),
-                    Rm = c(5.5, 6.3, 4.4, 5.6, 6.2, 16.5, 15.1, 9.7, 10.0, 14.4, 14.0, 12.9, 15.5, 5.2, 7.1,
+                    param = list(
+                      Rm = c(5.5, 6.3, 4.4, 5.6, 6.2, 16.5, 15.1, 9.7, 10.0, 14.4, 14.0, 12.9, 15.5, 5.2, 7.1,
                            3.9, 7.1, 5.1, 4.7, 7.5, 5.8, 7.4, 1.9, 2.5, 3.2, 3.9, 4.9, 3.8,
                            3.1, 2.6, 2.6, 2.7, 3.7, 2.9, 5.6, 1.8, 2.6, 4.3, 3.2,
                            7.5, 8.4, 7.9, 5.1, 14.2, 11.4, 6.2, 13.1, 12.2, 8.1, 12.1, 12.5, 8.6,
                            7.4, 10.0, 8.9, 10.0, 9.8, 11.3, 10.8, 8.2, 10.5),
-                    Tm = c(37.2, 37.0, 33.8, 32.1, 36.2, 26.2, 27.5, 26.4, 26.6, 26.0, 30.6, 24.7, 26.3, 35.2, 30.7,
+                      Tm = c(37.2, 37.0, 33.8, 32.1, 36.2, 26.2, 27.5, 26.4, 26.6, 26.0, 30.6, 24.7, 26.3, 35.2, 30.7,
                            31.2, 37.6, 33.7, 36.5, 36.7, 36.8, 37.8, 31.6, 33.2, 34.0, 34.3, 34.6, 32.8,
                            32.9, 33.9, 28.3, 32.2, 32.5, 37.7, 37.4, 28.8, 29.8, 32.5, 27.2,
                            35.0, 32.1, 32.5, 22.2, 26.3, 32.8, 28.4, 30.2, 29.2, 29.5, 34.1, 33.6, 32.2,
                            38.1, 35.2, 36.1, 31.8, 27.0, 42.5, 36.4, 27.6, 28.7),
-                    To = c(8.8, 8.6, 7.7, 9.8, 12.8, 9.0, 11.0, 10.5, 8.4, 9.1, 14.6, 9.3, 10.4, 9.2, 8.9,
+                      To = c(8.8, 8.6, 7.7, 9.8, 12.8, 9.0, 11.0, 10.5, 8.4, 9.1, 14.6, 9.3, 10.4, 9.2, 8.9,
                            8.0, 13.3, 11.5, 9.4, 9.4, 12.3, 11.9, 6.2, 7.1, 7.7, 8.4, 7.1, 7.2,
                            9.5, 12.1, 9.8, 12.2, 10.8, 13.6, 11.3, 10.2, 9.0, 9.7, 9.0,
                            9.8, 7.3, 7.5, 6.5, 7.7, 9.7, 6.1, 8.6, 8.4, 8.8, 10.1, 9.7, 9.6,
-                           11.4, 10.1, 11.5, 9.8, 9.2, 15.3, 11.9, 7.7, 8.8),
+                           11.4, 10.1, 11.5, 9.8, 9.2, 15.3, 11.9, 7.7, 8.8)
+                    ),
                     ref = c(rep("Taylor 1981", 61))
                   ),
                   com = 'Developmental rate is expressed as "% development per day". "The curve must be truncated to the right of Tm because of lethal effects of short exposures to high temperatures. The rate at which development rate falls away from Tm is measured by To." Taylor 1981',
@@ -216,9 +243,11 @@ poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
                 familysp = c(),
                 sp = c(),
                 stage = c(),
-                a0 = c(),
-                a1 = c(),
-                a2 = c(),
+                param = list(
+                  a0 = c(),
+                  a1 = c(),
+                  a2 = c()
+                ),
                 ref = c()
               ),
               com = '',
@@ -235,10 +264,12 @@ harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
                          familysp = c(rep("Curculionidae", 7)),
                          sp = c(rep("Hypera postica", 7)),
                          stage = c("Egg", "L1", "L2", "L3", "L4", "Prepupa", "Pupa"),
-                         a0 = c(0.14340, 0.07294, -0.0053838, 0.12049, -0.13123, -0.16043, 0.15234),
-                         a1 = c(-0.02827, -0.01538, 0.005996, -0.025729, 0.023465, 0.024015, -0.022886),
-                         a2 = c(0.001824, 0.0015249, -0.000085058, 0.0021796, -0.00093071, -0.00056046, 0.0012900),
-                         a3 = c(-0.000026629, -0.000012930, 0.000020124, -0.000030130, 0.000025595, 0.000022486, -0.000011439),
+                         param = list(
+                           a0 = c(0.14340, 0.07294, -0.0053838, 0.12049, -0.13123, -0.16043, 0.15234),
+                           a1 = c(-0.02827, -0.01538, 0.005996, -0.025729, 0.023465, 0.024015, -0.022886),
+                           a2 = c(0.001824, 0.0015249, -0.000085058, 0.0021796, -0.00093071, -0.00056046, 0.0012900),
+                           a3 = c(-0.000026629, -0.000012930, 0.000020124, -0.000030130, 0.000025595, 0.000022486, -0.000011439)
+                         ),
                          ref = c(rep("Harcourt and Yee 1982", 7))
                        ),
                        com = '',
@@ -255,11 +286,13 @@ poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
                 familysp = c("Gelechiidae"),
                 sp = c("Tuta absoluta"),
                 stage = c("all"),
-                a0 = c(-0.27),
-                a1 = c(0.049),
-                a2 = c(-0.0031),
-                a3 = c(0.000094),
-                a4 = c(-0.000001),
+                param = list(
+                  a0 = c(-0.27),
+                  a1 = c(0.049),
+                  a2 = c(-0.0031),
+                  a3 = c(0.000094),
+                  a4 = c(-0.000001)
+                ),
                 ref = c("Ozgokce et al. 2016")
               ),
               com = '',
@@ -276,10 +309,12 @@ hilbertLogan_83 <- list(eq = rT ~ phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/d
                           familysp = c("Acrididae"),
                           sp = c("Melanoplus sanguinipes"),
                           stage = c("all"),
-                          phi = c(0.2676),
-                          aa = c(58.62),
-                          Tmax = c(45.02),
-                          deltaT = c(3.433),
+                          param = list(
+                            phi = c(0.2676),
+                            aa = c(58.62),
+                            Tmax = c(45.02),
+                            deltaT = c(3.433)
+                          ),
                           ref = c("Hilbert and Logan 1983")
                         ),
                         com = '',
@@ -296,9 +331,11 @@ lamb_92 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2) ,
                   familysp = c(rep("Aphididae", 2)),
                   sp = c(rep("Acyrthosiphon pisum", 2)),
                   stage = c(rep("all", 2)),
-                  Rm = c(19.9, 19.0),
-                  Tmax = c(26.1, 26.3),
-                  To = c(9.9, 10.3),
+                  param = list(
+                    Rm = c(19.9, 19.0),
+                    Tmax = c(26.1, 26.3),
+                    To = c(9.9, 10.3)
+                  ),
                   ref = c(rep("Lamb 1992", 2))
                 ),
                 com = '',
@@ -315,9 +352,11 @@ lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
                      familysp = c(rep("Chrysomelidae", 5)),
                      sp = c(rep("Leptinotarsa decemlineata", 5)),
                      stage = c("Egg", "L1", "L2", "L3", "L4"),
-                     aa = c(0.155430, 0.154034, 0.154035, 0.169451, 0.166364),
-                     Tmax = c(38.048732, 38.953357, 37.526100, 36.397259, 35.914673),
-                     deltaT = c(6.421234, 6.467896, 6.460183, 5.883764, 5.997446),
+                     param = list(
+                       aa = c(0.155430, 0.154034, 0.154035, 0.169451, 0.166364),
+                       Tmax = c(38.048732, 38.953357, 37.526100, 36.397259, 35.914673),
+                       deltaT = c(6.421234, 6.467896, 6.460183, 5.883764, 5.997446)
+                     ),
                      ref = c(rep("Lactin et al. 1995", 5))
                    ),
                    com = '',
@@ -334,10 +373,12 @@ lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + 
                      familysp = c(rep("Chrysomelidae", 5)),
                      sp = c(rep("Leptinotarsa decemlineata", 5)),
                      stage = c("Egg", "L1", "L2", "L3", "L4"),
-                     aa = c(0.139034, 0.096314, 0.105906, 0.019087, 0.146066),
-                     Tmax = c(38.890035, 44.514120, 40.725042, 36.873879, 36.643691),
-                     deltaT = c(7.167110, 10.074502, 9.161844, 1.690717, 6.813403),
-                     bb = c(-0.026410, -0.238647, -0.249972, -1.212223, -0.051544),
+                     param = list(
+                       aa = c(0.139034, 0.096314, 0.105906, 0.019087, 0.146066),
+                       Tmax = c(38.890035, 44.514120, 40.725042, 36.873879, 36.643691),
+                       deltaT = c(7.167110, 10.074502, 9.161844, 1.690717, 6.813403),
+                       bb = c(-0.026410, -0.238647, -0.249972, -1.212223, -0.051544)
+                     ),
                      ref = c(rep("Lactin et al. 1995", 5))
                    ),
                    com = '',
@@ -354,9 +395,11 @@ briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
                      familysp = c(),
                      sp = c(),
                      stage = c(),
-                     aa = c(),
-                     Tmax = c(),
-                     Tmin = c(),
+                     param = list(
+                       aa = c(),
+                       Tmax = c(),
+                       Tmin = c()
+                     ),
                      ref = c()
                    ),
                    com = '',
@@ -373,10 +416,12 @@ briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
                      familysp = c(),
                      sp = c(),
                      stage = c(),
-                     aa = c(),
-                     Tmax = c(),
-                     Tmin = c(),
-                     bb = c(),
+                     param = list(
+                       aa = c(),
+                       Tmax = c(),
+                       Tmin = c(),
+                       bb = c()
+                     ),
                      ref = c()
                    ),
                    com = '',
@@ -401,9 +446,11 @@ kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
                         familysp = c(),
                         sp = c(),
                         stage = c(),
-                        aa = c(),
-                        bb = c(),
-                        cc = c(),
+                        param = list(
+                          aa = c(),
+                          bb = c(),
+                          cc = c()
+                        ),
                         ref = c()
                       ),
                       com = "",
@@ -420,9 +467,11 @@ damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
                    familysp = "Gelechiidae",
                    sp = "Anarsia lineatella",
                    stage = "all",
-                   aa = 0.0003,
-                   bb = 3.8297,
-                   cc = 4.8760,
+                   param = list(
+                     aa = 0.0003,
+                     bb = 3.8297,
+                     cc = 4.8760
+                   ),
                    ref = "Damos and Savopoulou 2008"
                  ),
                  com = '',
@@ -438,9 +487,11 @@ damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
                    familysp = c(),
                    sp = c(),
                    stage = c(),
-                   aa = c(),
-                   bb = c(),
-                   cc = c(),
+                   param = list(
+                     aa = c(),
+                     bb = c(),
+                     cc = c()
+                   ),
                    ref = c()
                  ),
                  com = '',
