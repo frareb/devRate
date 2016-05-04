@@ -1,22 +1,23 @@
 ### y ~ I(x) ?
 
 
-janisch_32 <- list(eq = rT ~ Tmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))),
-                   eqAlt = "Tmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt)))",
-                   name = "Janisch",
-                   ref = "Janisch, E. (1932) The influence of temperature on the life-history of insects. Transactions of the Royal Entomological Society of London 80(2): 137-68.",
+janisch_32 <- list(eq = rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),
+                   eqAlt = "(Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)",
+                   name = "Janisch (Analytis modification)",
+                   ref = "Janisch, E. (1932) The influence of temperature on the life-history of insects. Transactions of the Royal Entomological Society of London 80(2): 137-68.\nAnalytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                    refShort = "Janisch 1932",
                    startVal = data.frame(
-                     ordersp = c(),
-                     familysp = c(),
-                     sp = c(),
-                     stage = c(),
+                     ordersp = c(rep("Coleoptera", 2)),
+                     familysp = c(rep("Coccinellidae", 2)),
+                     sp = c("Nephus includens", "Nephus bisignatus"),
+                     stage = c(rep("all", 2)),
                      param = list(
-                       aa = c(),
-                       bb = c(),
-                       cc = c()
+                       Dmin = c(24.3383, 31.9226),
+                       Topt = c(34.0646, 31.4750),
+                       aa = c(0.1943, 0.2182),
+                       bb = c(0.1111, 0.1147)
                      ),
-                     ref = c()
+                     ref = c(rep("Kontodimas et al. 2004"))
                    ),
                    com = "",
                    id = "eq010"
@@ -29,16 +30,16 @@ davidson_44 <- list(eq = rT ~ K / (1 + exp(aa - bb * T)),
                     ref = "Davidson, J. (1944). On the relationship between temperature and rate of development of insects at constant temperatures. The Journal of Animal Ecology:26-38.",
                     refShort = "Davidson 1944",
                     startVal = data.frame(
-                      ordersp = c(),
-                      familysp = c(),
-                      sp = c(),
-                      stage = c(),
+                      ordersp = c(rep("Coleoptera", 2)),
+                      familysp = c(rep("Coccinellidae", 2)),
+                      sp = c("Nephus includens", "Nephus bisignatus"),
+                      stage = c(rep("all", 2)),
                       param = list(
-                        aa = c(),
-                        bb = c(),
-                        K = c()
+                        aa = c(4.9185, 4.8463),
+                        bb = c(-0.2280, -0.2525),
+                        K = c(0.0438, 0.0324)
                       ),
-                      ref = c()
+                      ref = c(rep("Kontodimas et al. 2004"))
                     ),
                     com = '"[...] data on the rate of development at temperatures above the peak should not be included when calculating the formula for the temperature-velocity curve." Davidson 1944.',
                     id = "eq020"
@@ -71,7 +72,19 @@ stinner_74 <- list(eq = rT ~ C / (1 + exp(k1 + k2 * T)),
                    name = "Logistic",
                    ref = "Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth rate simulation. The Canadian Entomologist, 106, 519-524.",
                    refShort = "Stinner et al. 1974",
-                   startVal = data.frame(),
+                   startVal = data.frame(
+                     ordersp = c(rep("Coleoptera", 2)),
+                     familysp = c(rep("Coccinellidae", 2)),
+                     sp = c("Nephus includens", "Nephus bisignatus"),
+                     stage = c(rep("all", 2)),
+                     param = list(
+                       C = c(0.0553, 0.0419),
+                       k1 = c(4.1518, 4.0354),
+                       k2 = c(-0.1687, -0.1826),
+                       Topt = c(32.3856, 29.5866)
+                     ),
+                     ref = c(rep("Kontodimas et al. 2004"))
+                   ),
                    com = '"[...] the relationship [is] inverted when the temperature is above an optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.',
                    id = "eq040"
 )
