@@ -34,15 +34,38 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
   for(i in 1:length(listPlot)){
     for(j in 1:nrow(listPlot[[i]])){
       switch(EXPR = eq$id,
-             "eq010" = {},
-             "eq020" = {},
+             "eq010" = {
+               Dmin <- listPlot[[i]][j, 5]
+               Topt <- listPlot[[i]][j, 6]
+               aa <- listPlot[[i]][j, 7]
+               bb <- listPlot[[i]][j, 8]
+               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+               curve(fx, add = TRUE, col = i)
+             },
+             "eq020" = {
+               aa <- listPlot[[i]][j, 5]
+               bb <- listPlot[[i]][j, 6]
+               K <- listPlot[[i]][j, 7]
+               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+               curve(fx, add = TRUE, col = i)
+             },
              "eq030" = {
                aa <- listPlot[[i]][j, 5]
                bb <- listPlot[[i]][j, 6]
                fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                curve(fx, add = TRUE, col = i)
              },
-             "eq040" = {},
+             "eq040" = {
+               C <- listPlot[[i]][j, 5]
+               k1 <- listPlot[[i]][j, 6]
+               k2 <- listPlot[[i]][j, 7]
+               x1 <- seq(from = 0, to = listPlot[[i]][j, 8], length.out = 100)
+               x2 <- seq(from = listPlot[[i]][j, 8], to = 60, length.out = 100)
+               x <- x1
+               curve(C / (1 + exp(k1 + k2 * x)), add = TRUE, col = i, from = min(x), to = max(x))
+               x <- x2
+               curve(C / (1 + exp(k1 + k2 * (2 * listPlot[[i]][j, 8] - x))), add = TRUE, col = i, from = min(x), to = max(x))
+             },
              "eq050" = {},
              "eq060" = {},
              "eq070" = {},
@@ -78,8 +101,9 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
 #
 # devRatePlotInfo(eq = campbell_74, sortBy = "ordersp", xlim = c(0,30), ylim = c(0,0.2))
 # devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.2))
-
-
+devRatePlotInfo(eq = janisch_32, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.05))
+devRatePlotInfo(eq = stinner_74, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 
 
 
