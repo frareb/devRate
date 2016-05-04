@@ -2,7 +2,7 @@
 
 
 janisch_32 <- list(eq = rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),
-                   eqAlt = "(Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)",
+                   eqAlt = "(Dmin/2 * (exp(aa*(x - Topt)) + exp(-bb*(x - Topt))))^(-1)",
                    name = "Janisch (Analytis modification)",
                    ref = "Janisch, E. (1932) The influence of temperature on the life-history of insects. Transactions of the Royal Entomological Society of London 80(2): 137-68.\nAnalytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                    refShort = "Janisch 1932",
@@ -24,8 +24,8 @@ janisch_32 <- list(eq = rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))
 )
 save(janisch_32, file = "./data/janisch_32.RData")
 
-davidson_44 <- list(eq = rT ~ K / (1 + exp(aa - bb * T)),
-                    eqAlt = "K / (1 + exp(aa - bb * T))",
+davidson_44 <- list(eq = rT ~ K / (1 + exp(aa + bb * T)),
+                    eqAlt = "K / (1 + exp(aa + bb * x))",
                     name = "Logistic",
                     ref = "Davidson, J. (1944). On the relationship between temperature and rate of development of insects at constant temperatures. The Journal of Animal Ecology:26-38.",
                     refShort = "Davidson 1944",
@@ -68,7 +68,7 @@ campbell_74 <- list(eq = rT ~ aa + bb * T,
 save(campbell_74, file = "./data/campbell_74.RData")
 
 stinner_74 <- list(eq = rT ~ C / (1 + exp(k1 + k2 * T)),
-                   eqAlt = "C / (1 + exp(k1 + k2 * T))",
+                   eqAlt = "C / (1 + exp(k1 + k2 * x))",
                    name = "Logistic",
                    ref = "Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth rate simulation. The Canadian Entomologist, 106, 519-524.",
                    refShort = "Stinner et al. 1974",
@@ -91,7 +91,7 @@ stinner_74 <- list(eq = rT ~ C / (1 + exp(k1 + k2 * T)),
 save(stinner_74, file = "./data/stinner_74.RData")
 
 logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) ,
-                  eqAlt = "phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))",
+                  eqAlt = "phi * (exp(bb * x) - exp(bb * Tmax - (Tmax - x)/deltaT))",
                   name = "Logan-6",
                   ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                   refShort = "Logan et al. 1976",
@@ -114,7 +114,7 @@ logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/delt
 save(logan6_76, file = "./data/logan6_76.RData")
 
 logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))) ,
-                   eqAlt = "alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT)))",
+                   eqAlt = "alpha * (1/(1 + cc * exp(- bb * x)) - exp(-((Tmax - x)/deltaT)))",
                    name = "Logan-10",
                    ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                    refShort = "Logan et al. 1976",
@@ -138,7 +138,7 @@ logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax -
 save(logan10_76, file = "./data/logan10_76.RData")
 
 sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987)) ,
-                           eqAlt = "((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))",
+                           eqAlt = "((x + 273.16) * exp((aa - bb/(x + 273.16))/1.987)) / (1 + exp((cc - dd/(x + 273.16))/1.987) + exp((ff - gg/(x + 273.16))/1.987))",
                            name = "Sharpe and DeMichele",
                            ref = "Sharpe, P.J. & DeMichele, D.W. (1977) Reaction kinetics of poikilotherm development. Journal of Theoretical Biology, 64, 649-670.",
                            refShort = "Sharpe and DeMichele 1977",
@@ -163,7 +163,7 @@ sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/
 save(sharpeDeMichele_77, file = "./data/sharpeDeMichele_77.RData")
 
 analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
-                    eqAlt = "aa * (T - Tmin)^bb * (Tmax - T)^cc",
+                    eqAlt = "aa * (x - Tmin)^bb * (Tmax - x)^cc",
                     name = "Analytis",
                     ref = "Analytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                     refShort = "Analytis 1977",
@@ -187,7 +187,7 @@ analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
 save(analytis_77, file = "./data/analytis_77.RData")
 
 schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(T + 273.16))) + exp(dd/R * (1/ee - 1/(T + 273.16)))),
-                       eqAlt = "(p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(T + 273.16))) + exp(dd/R * (1/ee - 1/(T + 273.16))))",
+                       eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/R * (1/298 - 1/(x + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(x + 273.16))) + exp(dd/R * (1/ee - 1/(x + 273.16))))",
                        name = "Schoolfield",
                        ref = "Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological temperature-dependent rate models based on absolute reaction-rate theory. Journal of theoretical biology, 88, 719-731.",
                        refShort = "Schoolfield et al. 1981",
@@ -212,7 +212,7 @@ schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1
 save(schoolfield_81, file = "./data/schoolfield_81.RData")
 
 taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
-                  eqAlt = "Rm * exp(-1/2 * ((T - Tm)/To)^2)",
+                  eqAlt = "Rm * exp(-1/2 * ((x - Tm)/To)^2)",
                   name = "Taylor",
                   ref = "Taylor, F. (1981) Ecology and evolution of physiological time in insects. American Naturalist, 1-23.",
                   refShort = "Taylor 1981",
@@ -258,7 +258,7 @@ taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
 save(taylor_81, file = "./data/taylor_81.RData")
 
 poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
-              eqAlt = "a0 + a1 * T + a2 * T^2",
+              eqAlt = "a0 + a1 * x + a2 * x^2",
               name = "Second-order polynomial",
               ref = "-",
               refShort = "",
@@ -280,7 +280,7 @@ poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
 save(poly2, file = "./data/poly2.RData")
 
 harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
-                       eqAlt = "a0 + a1 * T + a2 * T^2 + a3 * T^3",
+                       eqAlt = "a0 + a1 * x + a2 * x^2 + a3 * x^3",
                        name = "Third-order polynomial",
                        ref = "Harcourt, D. and Yee, J. (1982) Polynomial algorithm for predicting the duration of insect life stages. Environmental Entomology, 11, 581-584.",
                        refShort = "Harcourt and Yee 1982",
@@ -303,7 +303,7 @@ harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
 save(harcourtYee_82, file = "./data/harcourtYee_82.RData")
 
 poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
-              eqAlt = "a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4",
+              eqAlt = "a0 + a1 * x + a2 * x^2 + a3 * x^3 + a4 * x^4",
               name = "Forth-order polynomial",
               ref = "-",
               refShort = "",
@@ -327,7 +327,7 @@ poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
 save(poly4, file = "./data/poly4.RData")
 
 hilbertLogan_83 <- list(eq = rT ~ phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/deltaT)) ,
-                        eqAlt = "phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/deltaT))",
+                        eqAlt = "phi * ((x^2 / (x^2 + aa^2)) - exp((Tmax - x)/deltaT))",
                         name = "Holling type III",
                         ref = "Hilbert, DW, y JA Logan (1983) Empirical model of nymphal development for the migratory grasshopper, Melanoplus sanguinipes (Orthoptera: Acrididae). Environmental Entomology 12(1): 1-5.",
                         refShort = "Hilbert and Logan 1983",
@@ -350,7 +350,7 @@ hilbertLogan_83 <- list(eq = rT ~ phi * ((T^2 / (T^2 + aa^2)) - exp((Tmax - T)/d
 save(hilbertLogan_83, file = "./data/hilbertLogan_83.RData")
 
 lamb_92 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2) ,
-                eqAlt = "Rm * exp(-1/2 * ((T - Tmax)/To)^2)",
+                eqAlt = "Rm * exp(-1/2 * ((x - Tmax)/To)^2)",
                 name = "Lamb",
                 ref = "Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications for estimating rate parameters for insects. Environmental Entomology 21(1): 10-19.",
                 refShort = "Lamb 1992",
@@ -372,7 +372,7 @@ lamb_92 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2) ,
 save(lamb_92, file = "./data/lamb_92.RData")
 
 lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
-                   eqAlt = "exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT)",
+                   eqAlt = "exp(aa * x) - exp(aa * Tmax - (Tmax - x)/deltaT)",
                    name = "Lactin-1",
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
@@ -394,7 +394,7 @@ lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
 save(lactin1_95, file = "./data/lactin1_95.RData")
 
 lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb ,
-                   eqAlt = "exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb",
+                   eqAlt = "exp(aa * x) - exp(aa * Tmax - (Tmax - x)/deltaT) + bb",
                    name = "Lactin-2",
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
@@ -417,7 +417,7 @@ lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + 
 save(lactin2_95, file = "./data/lactin2_95.RData")
 
 briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
-                   eqAlt = "aa * T * (T - Tmin) * (Tmax - T)^(1 / 2)",
+                   eqAlt = "aa * x * (x - Tmin) * (Tmax - x)^(1 / 2)",
                    name = "Briere-1",
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
@@ -439,7 +439,7 @@ briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
 save(briere1_99, file = "./data/briere1_99.RData")
 
 briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
-                   eqAlt = "aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)",
+                   eqAlt = "aa * x * (x - Tmin) * (Tmax - x)^(1 / bb)",
                    name = "Briere-2",
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
@@ -470,7 +470,7 @@ save(briere2_99, file = "./data/briere2_99.RData")
 
 
 kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
-                      eqAlt = "aa * (T - Tmin)^2 * (Tmax - T)",
+                      eqAlt = "aa * (x - Tmin)^2 * (Tmax - x)",
                       name = "Equation 16",
                       ref = "Kontodimas, D.C., Eliopoulos, P.A., Stathas, G.J. and Economou, L.P. (2004) Comparative temperature-dependent development of Nephus includens (Kirsch) and Nephus bisignatus (Boheman)(Coleoptera: Coccinellidae) preying on Planococcus citri (Risso)(Homoptera: Pseudococcidae): evaluation of a linear and various nonlinear models using specific criteria. Environmental Entomology 33(1): 1-11.",
                       refShort = "Kontodimas et al. 2004",
@@ -492,7 +492,7 @@ kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
 save(kontodimas_04, file = "./data/kontodimas_04.RData")
 
 damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
-                 eqAlt = "aa * (bb - T / 10) * (T / 10)^cc",
+                 eqAlt = "aa * (bb - x / 10) * (x / 10)^cc",
                  name = "Simplified beta type",
                  ref = "Damos, P.T., and Savopoulou-Soultani, M. (2008). Temperature-dependent bionomics and modeling of Anarsia lineatella (Lepidoptera: Gelechiidae) in the laboratory. Journal of economic entomology, 101(5), 1557-1567.",
                  refShort = "Damos and Savopoulou 2008",
@@ -514,7 +514,7 @@ damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
 save(damos_08, file = "./data/damos_08.RData")
 
 damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
-                 eqAlt = "aa / (1 + bb * T + cc * T^2)",
+                 eqAlt = "aa / (1 + bb * x + cc * x^2)",
                  name = "Inverse second-order polynomial",
                  ref = "Damos, P., and Savopoulou-Soultani, M. (2011) Temperature-driven models for insect development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.",
                  startVal = data.frame(
