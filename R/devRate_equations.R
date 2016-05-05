@@ -186,8 +186,8 @@ analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
 )
 save(analytis_77, file = "./data/analytis_77.RData")
 
-schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/R * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(T + 273.16))) + exp(dd/R * (1/ee - 1/(T + 273.16)))),
-                       eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/R * (1/298 - 1/(x + 273.16)))) / (1 + exp(bb/R * (1/cc - 1/(x + 273.16))) + exp(dd/R * (1/ee - 1/(x + 273.16))))",
+schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),
+                       eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(x + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(x + 273.16))) + exp(dd/1.987 * (1/ee - 1/(x + 273.16))))",
                        name = "Schoolfield",
                        ref = "Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological temperature-dependent rate models based on absolute reaction-rate theory. Journal of theoretical biology, 88, 719-731.",
                        refShort = "Schoolfield et al. 1981",
