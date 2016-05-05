@@ -11,20 +11,25 @@
 #' @export
 devRateModel <- function(eq, temp, devRate, startValues, guessStartValues = list(FALSE, "", ""), ...){
   # cat(eq$name, "model by", eq$refShort, "\n\n")
-  if(guessStartValues[[1]] == TRUE){
-    if(guessStartValues[[2]] == ""){
-      meanStartVal <- apply(eq$startVal[,5:(ncol(eq$startVal)-1)], MARGIN = 2, FUN = sum)
-    } else {
 
-      meanStartVal <- apply(eq$startVal[,5:(ncol(eq$startVal)-1)][(eq$startVal[,1] == guessStartValues[[2]] & eq$startVal[,4] == guessStartValues[[3]]),], MARGIN = 2, FUN = sum)
-      # mettre une condition sur l'ordre et le stade et gérer exception si manquant avec warnings
-    }
-    guessSV <- as.list(as.data.frame(t(meanStartVal)))
-    nls_devRate <- nls(eq[[1]], data = data.frame(rT = devRate, T = temp), start = guessSV, ...)
+  ### faire exception pour <stinner_74>
+  if(eq == stinner_74){
+
   } else {
-    nls_devRate <- nls(eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
-  }
+    if(guessStartValues[[1]] == TRUE){
+      if(guessStartValues[[2]] == ""){
+        meanStartVal <- apply(eq$startVal[,5:(ncol(eq$startVal)-1)], MARGIN = 2, FUN = sum)
+      } else {
 
+        meanStartVal <- apply(eq$startVal[,5:(ncol(eq$startVal)-1)][(eq$startVal[,1] == guessStartValues[[2]] & eq$startVal[,4] == guessStartValues[[3]]),], MARGIN = 2, FUN = sum)
+        # mettre une condition sur l'ordre et le stade et gérer exception si manquant avec warnings
+      }
+      guessSV <- as.list(as.data.frame(t(meanStartVal)))
+      nls_devRate <- nls(eq[[1]], data = data.frame(rT = devRate, T = temp), start = guessSV, ...)
+    } else {
+      nls_devRate <- nls(eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
+    }
+  }
 
   # nls_devRate <- minpack.lm::nlsLM(eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues)
   return(nls_devRate)
