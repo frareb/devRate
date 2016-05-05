@@ -67,8 +67,8 @@ campbell_74 <- list(eq = rT ~ aa + bb * T,
 )
 save(campbell_74, file = "./data/campbell_74.RData")
 
-stinner_74 <- list(eq = rT ~ C / (1 + exp(k1 + k2 * T)),
-                   eqAlt = "C / (1 + exp(k1 + k2 * x))",
+stinner_74 <- list(eq = c(rT ~ C / (1 + exp(k1 + k2 * T)), rT ~ C / (1 + exp(k1 + k2 * (2 * Topt - T)))),
+                   eqAlt = c("C / (1 + exp(k1 + k2 * x))", "C / (1 + exp(k1 + k2 * (2 * Topt - x)))"),
                    name = "Logistic",
                    ref = "Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth rate simulation. The Canadian Entomologist, 106, 519-524.",
                    refShort = "Stinner et al. 1974",
