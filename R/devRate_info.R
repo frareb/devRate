@@ -89,6 +89,7 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
                dd <- listPlot[[i]][j, 8]
                ff <- listPlot[[i]][j, 9]
                gg <- listPlot[[i]][j, 10]
+               deg <- listPlot[[i]][j, 11]
                fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                curve(fx, add = TRUE, col = i)
              },
@@ -116,7 +117,7 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
                Tm <- listPlot[[i]][j, 6]
                To <- listPlot[[i]][j, 7]
                fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
-               curve(fx, add = TRUE, col = i)
+               curve(fx, add = TRUE, col = i, to = Tm + To)
              },
              "eq110" = {
                a0 <- listPlot[[i]][j, 5]
@@ -145,8 +146,9 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
              "eq140" = {
                phi <- listPlot[[i]][j, 5]
                aa <- listPlot[[i]][j, 6]
-               Tmax <- listPlot[[i]][j, 7]
-               deltaT <- listPlot[[i]][j, 8]
+               Tb <- listPlot[[i]][j, 7]
+               Tmax <- listPlot[[i]][j, 8]
+               deltaT <- listPlot[[i]][j, 9]
                fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                curve(fx, add = TRUE, col = i)
              },
@@ -154,8 +156,11 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
                Rm <- listPlot[[i]][j, 5]
                Tmax <- listPlot[[i]][j, 6]
                To <- listPlot[[i]][j, 7]
-               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
-               curve(fx, add = TRUE, col = i)
+               T1 <- listPlot[[i]][j, 8]
+               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[1]))))
+               curve(fx, add = TRUE, col = i, from = 0, to = Tmax)
+               fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[2]))))
+               curve(fx, add = TRUE, col = i, from = Tmax, to = 60)
              },
              "eq160" = {
                aa <- listPlot[[i]][j, 5]
@@ -222,9 +227,6 @@ devRatePlotInfo <- function(eq, sortBy = "sp", ...){
 ### testing area
 # for(i in names(devRateEqList)){devRateInfo(eq = get(i))}
 # for(i in names(devRateEqList)){devRatePlotInfo(eq = get(i), sortBy = "ordersp", xlim = c(0,50), ylim = c(0,0.2))}
-#
-# devRatePlotInfo(eq = campbell_74, sortBy = "ordersp", xlim = c(0,30), ylim = c(0,0.2))
-# devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.2))
 devRateInfo(eq = janisch_32)
 devRateInfo(eq = davidson_44)
 devRateInfo(eq = campbell_74)
@@ -250,26 +252,24 @@ devRateInfo(eq = damos_11)
 
 devRatePlotInfo(eq = janisch_32, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 devRatePlotInfo(eq = davidson_44, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.05))
-devRatePlotInfo(eq = campbell_74, sortBy = "sp", xlim = c(0,30), ylim = c(0,0.05))
+devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
 devRatePlotInfo(eq = stinner_74, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 devRatePlotInfo(eq = logan6_76, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.1))
 devRatePlotInfo(eq = logan10_76, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.1))
-devRatePlotInfo(eq = sharpeDeMichele_77, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.2))
-
-
-devRatePlotInfo(eq = analytis_77, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = schoolfield_81, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,20))
+devRatePlotInfo(eq = sharpeDeMichele_77, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.15))
+devRatePlotInfo(eq = analytis_77, sortBy = "sp", xlim = c(0,35), ylim = c(0,0.05))
+devRatePlotInfo(eq = schoolfield_81, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.08))
+devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
 devRatePlotInfo(eq = poly2, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = harcourtYee_82, sortBy = "sp", xlim = c(0,60), ylim = c(0,1))
+devRatePlotInfo(eq = harcourtYee_82, sortBy = "sp", xlim = c(0,50), ylim = c(0,0.1))
 devRatePlotInfo(eq = poly4, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.5))
-# devRatePlotInfo(eq = hilbertLogan_83, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.5))
-# devRatePlotInfo(eq = lamb_92, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
+devRatePlotInfo(eq = hilbertLogan_83, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.06))
+devRatePlotInfo(eq = lamb_92, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.07))
 devRatePlotInfo(eq = lactin1_95, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.8))
 devRatePlotInfo(eq = lactin2_95, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.8))
-# devRatePlotInfo(eq = briere1_99, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
+devRatePlotInfo(eq = briere1_99, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 devRatePlotInfo(eq = briere2_99, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = kontodimas_04, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.8))
+devRatePlotInfo(eq = kontodimas_04, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.08))
 devRatePlotInfo(eq = damos_08, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.08))
 devRatePlotInfo(eq = damos_11, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 
