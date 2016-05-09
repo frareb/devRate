@@ -225,6 +225,7 @@ devRatePlotInfo <- function(eq, sortBy = "sp", stage = "all", ...){
     }
   }
   legend("topleft", legend = names(listPlot), col = 1:length(listPlot), lwd = 1)
+  text(x = par("xaxp")[2], y = par("yaxp")[2], pos = 2, paste0(eq$name, " (", eq$refShort, ")"), ...)
   }
 }
 
@@ -260,15 +261,15 @@ devRatePlotInfo(eq = janisch_32, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05)
 devRatePlotInfo(eq = davidson_44, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.05))
 devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
 devRatePlotInfo(eq = stinner_74, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = logan6_76, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.1))
-devRatePlotInfo(eq = logan10_76, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.1))
-devRatePlotInfo(eq = sharpeDeMichele_77, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.15))
+devRatePlotInfo(eq = logan6_76, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.1))
+devRatePlotInfo(eq = logan10_76, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.1))
+devRatePlotInfo(eq = sharpeDeMichele_77, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.1))
 devRatePlotInfo(eq = analytis_77, sortBy = "sp", xlim = c(0,35), ylim = c(0,0.05))
 devRatePlotInfo(eq = schoolfield_81, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.08))
 devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
 devRatePlotInfo(eq = poly2, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 devRatePlotInfo(eq = harcourtYee_82, sortBy = "sp", xlim = c(0,50), ylim = c(0,0.1))
-devRatePlotInfo(eq = poly4, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.5))
+devRatePlotInfo(eq = poly4, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.2))
 devRatePlotInfo(eq = hilbertLogan_83, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.06))
 devRatePlotInfo(eq = lamb_92, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.07))
 devRatePlotInfo(eq = lactin1_95, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.8))
