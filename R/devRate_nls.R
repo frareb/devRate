@@ -13,7 +13,7 @@ devRateModel <- function(eq, temp, devRate, startValues, guessStartValues = list
   # cat(eq$name, "model by", eq$refShort, "\n\n")
 
   ### faire exception pour <stinner_74> et <lamb_92>
-  if(eq == stinner_74 | eq == lamb_92){
+  if(eq$id == "eq040" | eq$id == "eq150"){
 
   } else {
     if(guessStartValues[[1]] == TRUE){
