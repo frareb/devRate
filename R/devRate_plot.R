@@ -15,9 +15,18 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
   maxX <- 100
   if(spe == TRUE){
     switch(EXPR = eq$id,
-      "eq010" = {},
-      "eq020" = {},
-      "eq030" = { # Campbell et al. 1974
+      "eq010" = { # janisch_32
+        s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
+        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
+        lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+      },
+      "eq020" = { # davidson_44
+        maxX <- temp[devRate == max(devRate, na.rm = TRUE)][!is.na(temp[devRate == max(devRate, na.rm = TRUE)])][1]
+        s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
+        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = c(0, maxX),  ...)
+        lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+      },
+      "eq030" = { # campbell_74
         minX <- -coef(nlsDR)[1]/coef(nlsDR)[2]
         maxX <- max(temp, na.rm = TRUE)
         s1 <- seq(from = min(temp, na.rm = TRUE), to = min(max(temp, na.rm = TRUE), maxX), length = 100)
