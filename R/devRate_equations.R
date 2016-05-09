@@ -1,163 +1,96 @@
-### y ~ I(x) ?
+### y ~ I(x)
+getCSV <- function(myCSV){
+  return(data.frame(
+    ordersp = myCSV$ORDER,
+    familysp = myCSV$FAMILY,
+    genussp = myCSV$GENUS,
+    species = myCSV$SPECIES,
+    genSp = paste(myCSV$GENUS, myCSV$SPECIES),
+    stage = myCSV$STAGE,
+    param = as.list(myCSV[,7:(ncol(myCSV)-1)]),
+    ref = myCSV$REF
+  ))
+}
 
-
+janisch32CSV <- read.table("./data/devRate - janisch_32.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 janisch_32 <- list(eq = rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),
                    eqAlt = "(Dmin/2 * (exp(aa*(x - Topt)) + exp(-bb*(x - Topt))))^(-1)",
                    name = "Janisch (Analytis modification)",
                    ref = "Janisch, E. (1932) The influence of temperature on the life-history of insects. Transactions of the Royal Entomological Society of London 80(2): 137-68.\nAnalytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                    refShort = "Janisch 1932",
-                   startVal = data.frame(
-                     ordersp = c(rep("Coleoptera", 2)),
-                     familysp = c(rep("Coccinellidae", 2)),
-                     sp = c("Nephus includens", "Nephus bisignatus"),
-                     stage = c(rep("all", 2)),
-                     param = list(
-                       Dmin = c(24.3383, 31.9226),
-                       Topt = c(34.0646, 31.4750),
-                       aa = c(0.1943, 0.2182),
-                       bb = c(0.1111, 0.1147)
-                     ),
-                     ref = c(rep("Kontodimas et al. 2004", 2))
-                   ),
+                   startVal = getCSV(myCSV = janisch32CSV),
                    com = "",
                    id = "eq010"
 )
 save(janisch_32, file = "./data/janisch_32.RData")
 
+davidson44CSV <- read.table("./data/devRate - davidson_44.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 davidson_44 <- list(eq = rT ~ K / (1 + exp(aa + bb * T)),
                     eqAlt = "K / (1 + exp(aa + bb * x))",
                     name = "Logistic",
                     ref = "Davidson, J. (1944). On the relationship between temperature and rate of development of insects at constant temperatures. The Journal of Animal Ecology:26-38.",
                     refShort = "Davidson 1944",
-                    startVal = data.frame(
-                      ordersp = c(rep("Coleoptera", 2)),
-                      familysp = c(rep("Coccinellidae", 2)),
-                      sp = c("Nephus includens", "Nephus bisignatus"),
-                      stage = c(rep("all", 2)),
-                      param = list(
-                        aa = c(4.9185, 4.8463),
-                        bb = c(-0.2280, -0.2525),
-                        K = c(0.0438, 0.0324)
-                      ),
-                      ref = c(rep("Kontodimas et al. 2004", 2))
-                    ),
+                    startVal = getCSV(myCSV = davidson44CSV),
                     com = '"[...] data on the rate of development at temperatures above the peak should not be included when calculating the formula for the temperature-velocity curve." Davidson 1944.',
                     id = "eq020"
 )
 save(davidson_44, file = "./data/davidson_44.RData")
 
+campbell74CSV <- read.table("./data/devRate - campbell_74.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 campbell_74 <- list(eq = rT ~ aa + bb * T,
                     eqAlt = "aa + bb * x",
                     name = "Linear",
                     ref = "Campbell, A., B. Frazer, N. Gilbert, A. Gutierrez, and M. Mackauer. (1974). Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.",
                     refShort = "Campbell et al. 1974",
-                    startVal = data.frame(
-                      ordersp = c(rep("Hemiptera", 10), "Lepidoptera", rep("Hemiptera", 2), rep("Coleoptera", 2)),
-                      familysp = c(rep("Aphididae", 10), "Gelechiidae", rep("Aphididae", 2), rep("Coccinellidae", 2)),
-                      sp = c("Acyrthosiphon pisum", "Acyrthosiphon pisum", "Acyrthosiphon pisum", "Aphis craccivora", "Brevicoryne brassicae", "Brevicoryne brassicae", "Brevicoryne brassicae", "Brevicoryne brassicae", "Macrosiphon avenae", "Macrosiphon maxima", "Tuta absoluta", "Acyrthosiphon pisum", "Acyrthosiphon pisum", "Nephus includens", "Nephus bisignatus"),
-                      stage = c(rep("all", 15)),
-                      param = list(
-                        aa = c(-5.1*1/105, -5.6*1/104, -4*1/118, -8.3*1/80, -7.1*1/136, -5*1/127, -6.5*1/182, -4.7*1/163, -4.8*1/117, -3.9*1/125, -0.021, -3.74/100, -3.11/100, -0.0222, -0.0153),
-                        bb = c(1/105, 1/104, 1/118, 1/80, 1/136, 1/127, 1/182, 1/163, 1/117, 1/125, 0.0024, 0.97/100, 0.91/100, 0.0020, 0.0016)
-                      ),
-                      ref = c(rep("Campbell et al. 1974", 10), "Ozgokce et al. 2016", rep("Lamb 1992", 2), rep("Kontodimas et al. 2004", 2))
-                    ),
+                    startVal = getCSV(myCSV = campbell74CSV),
                     com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974',
                     id = "eq030"
 )
 save(campbell_74, file = "./data/campbell_74.RData")
 
+stinner74CSV <- read.table("./data/devRate - stinner_74.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 stinner_74 <- list(eq = c(rT ~ C / (1 + exp(k1 + k2 * T)), rT ~ C / (1 + exp(k1 + k2 * (2 * Topt - T)))),
                    eqAlt = c("C / (1 + exp(k1 + k2 * x))", "C / (1 + exp(k1 + k2 * (2 * Topt - x)))"),
                    name = "Logistic",
                    ref = "Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth rate simulation. The Canadian Entomologist, 106, 519-524.",
                    refShort = "Stinner et al. 1974",
-                   startVal = data.frame(
-                     ordersp = c(rep("Coleoptera", 2)),
-                     familysp = c(rep("Coccinellidae", 2)),
-                     sp = c("Nephus includens", "Nephus bisignatus"),
-                     stage = c(rep("all", 2)),
-                     param = list(
-                       C = c(0.0553, 0.0419),
-                       k1 = c(4.1518, 4.0354),
-                       k2 = c(-0.1687, -0.1826),
-                       Topt = c(32.3856, 29.5866)
-                     ),
-                     ref = c(rep("Kontodimas et al. 2004", 2))
-                   ),
+                   startVal = getCSV(myCSV = stinner74CSV),
                    com = '"[...] the relationship [is] inverted when the temperature is above an optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.',
                    id = "eq040"
 )
 save(stinner_74, file = "./data/stinner_74.RData")
 
+logan676CSV <- read.table("./data/devRate - logan6_76.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) ,
                   eqAlt = "phi * (exp(bb * x) - exp(bb * Tmax - (Tmax - x)/deltaT))",
                   name = "Logan-6",
                   ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                   refShort = "Logan et al. 1976",
-                  startVal = data.frame(
-                    ordersp = c("Lepidoptera", "Orthoptera", rep("Coleoptera", 2)),
-                    familysp = c("Gelechiidae", "Acrididae", rep("Coccinellidae", 2)),
-                    sp = c("Tuta absoluta", "Melanoplus sanguinipes", "Nephus includens", "Nephus bisignatus"),
-                    stage = c(rep("all", 4)),
-                    param = list(
-                      phi = c(0.081, 0.9537, 0.0504, 0.0089),
-                      bb = c(0.14, 0.1360, 0.1611, 0.1653),
-                      Tmax = c(38.173, 31.7732, 38.7675, 35.9410),
-                      deltaT = c(7.1, 7.3366, 6.1762, 5.8911)
-                    ),
-                    ref = c("Ozgokce et al. 2016", "Hilbert and Logan 1983", rep("Kontodimas et al. 2004", 2))
-                  ),
+                  startVal = getCSV(myCSV = logan676CSV),
                   com = '',
                   id = "eq050"
 )
 save(logan6_76, file = "./data/logan6_76.RData")
 
+logan1076CSV <- read.table("./data/devRate - logan10_76.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))) ,
                    eqAlt = "alpha * (1/(1 + cc * exp(- bb * x)) - exp(-((Tmax - x)/deltaT)))",
                    name = "Logan-10",
                    ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                    refShort = "Logan et al. 1976",
-                   startVal = data.frame(
-                     ordersp = c("Lepidoptera", rep("Coleoptera", 2)),
-                     familysp = c("Gelechiidae", rep("Coccinellidae", 2)),
-                     sp = c("Tuta absoluta", "Nephus includens", "Nephus bisignatus"),
-                     stage = c(rep("all", 3)),
-                     param = list(
-                       alpha = c(0.056, 0.0542, 0.0389),
-                       bb = c(0.19, 0.1730, 0.1948),
-                       cc = c(57, 66.8770, 62.6158),
-                       Tmax = c(35.891, 35.0677, 32.7502),
-                       deltaT = c(1.1, 0.0358, 0.1320)
-                     ),
-                     ref = c("Ozgokce et al. 2016", rep("Kontodimas et al. 2004", 2))
-                   ),
+                   startVal = getCSV(myCSV = logan1076CSV),
                    com = '',
                    id = "eq060"
 )
 save(logan10_76, file = "./data/logan10_76.RData")
 
+sharpeDeMichele77CSV <- read.table("./data/devRate - sharpeDeMichele_77.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 sharpeDeMichele_77 <- list(eq = rT ~ ((T + deg) * exp((aa - bb/(T + deg))/1.987)) / (1 + exp((cc - dd/(T + deg))/1.987) + exp((ff - gg/(T + deg))/1.987)) ,
                            eqAlt = "((x + deg) * exp((aa - bb/(x + deg))/1.987)) / (1 + exp((cc - dd/(x + deg))/1.987) + exp((ff - gg/(x + deg))/1.987))",
                            name = "Sharpe and DeMichele",
                            ref = "Sharpe, P.J. & DeMichele, D.W. (1977) Reaction kinetics of poikilotherm development. Journal of Theoretical Biology, 64, 649-670.",
                            refShort = "Sharpe and DeMichele 1977",
-                           startVal = data.frame(
-                             ordersp = c("Diptera", rep("Coleoptera", 2)),
-                             familysp = c("Drosophilidae", rep("Coccinellidae", 2)),
-                             sp = c("Drosophila melanogaster", "Nephus includens", "Nephus bisignatus"),
-                             stage = c("prepupal", rep("all", 2)),
-                             param = list(
-                               aa = c(19.43, -5.69*1.987, -5.9991*1.987),
-                               bb = c(10490, 26.4591*1.987, 21.3241*1.987),
-                               cc = c(-156.9, 3.0189*1.987, 15.8018*1.987),
-                               dd = c(-44373, 170.2647*1.987, 540.7930*1.987),
-                               ff = c(226.6, 7770.7458*1.987, 21698.5226*1.987),
-                               gg = c(69113, 272021*1.987, 754716.4226*1.987),
-                               deg = c(273.16, 0, 0)
-                             ),
-                             ref = c("Sharpe and DeMichele 1977", rep("Kontodimas et al. 2004", 2))
-                           ),
+                           startVal = getCSV(myCSV = sharpeDeMichele77CSV),
                            com = 'Temperature is transformed into Kelvin within the equation when param.deg = 273.16.',
                            id = "eq070"
 )
