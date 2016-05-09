@@ -22,198 +22,199 @@ devRateInfo <- function(eq){
 #' Plot parameter estimates from the literature
 #'
 #' @param eq The name of the equation.
-#' @param sortBy The filter to seperate species ("ordersp", "family"sp, "sp").
+#' @param sortBy The filter to seperate species ("ordersp", "familysp, "genussp", "species", "genSp").
 #' @param stage The life stage of the organism ("all", "Eggs", "L1", "L2", "L3", "L4", "L5",
 #'   "Larvae", "Nymphs", "prepupal", "female", "male", ...)
 #' @return Nothing.
 #' @examples
 #' devRatePlotInfo(eq = campbell_74)
 #' @export
-devRatePlotInfo <- function(eq, sortBy = "sp", stage = "all", ...){
-  listPlot <- split(eq$startVal[as.character(eq$startVal[,4]) == stage,], as.character(eq$startVal[sortBy][as.character(eq$startVal[,4]) == stage,]))
+devRatePlotInfo <- function(eq, sortBy = "species", stage = "all", ...){
+  listPlot <- split(eq$startVal[as.character(eq$startVal[,6]) == stage,], as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,]))
   if(length(listPlot) > 0){
   plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
   x <- seq(from = 0, to = 50, length.out = 100)
   for(i in 1:length(listPlot)){
     for(j in 1:nrow(listPlot[[i]])){
       # if(as.character(listPlot[[i]][j, 4]) == stage){
+      colparam <- 7
         switch(EXPR = eq$id,
                "eq010" = {
-                 Dmin <- listPlot[[i]][j, 5]
-                 Topt <- listPlot[[i]][j, 6]
-                 aa <- listPlot[[i]][j, 7]
-                 bb <- listPlot[[i]][j, 8]
+                 Dmin <- listPlot[[i]][j, colparam]
+                 Topt <- listPlot[[i]][j, colparam + 1]
+                 aa <- listPlot[[i]][j, colparam + 2]
+                 bb <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq020" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 K <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 K <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq030" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq040" = {
-                 C <- listPlot[[i]][j, 5]
-                 k1 <- listPlot[[i]][j, 6]
-                 k2 <- listPlot[[i]][j, 7]
-                 Topt <- listPlot[[i]][j, 8]
+                 C <- listPlot[[i]][j, colparam]
+                 k1 <- listPlot[[i]][j, colparam + 1]
+                 k2 <- listPlot[[i]][j, colparam + 2]
+                 Topt <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[1]))))
                  curve(fx, add = TRUE, col = i, from = 0, to = Topt)
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[2]))))
                  curve(fx, add = TRUE, col = i, from = Topt, to = 60)
                },
                "eq050" = {
-                 phi <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 Tmax <- listPlot[[i]][j, 7]
-                 deltaT <- listPlot[[i]][j, 8]
+                 phi <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 Tmax <- listPlot[[i]][j, colparam + 2]
+                 deltaT <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq060" = {
-                 alpha <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 cc <- listPlot[[i]][j, 7]
-                 Tmax <- listPlot[[i]][j, 8]
-                 deltaT <- listPlot[[i]][j, 9]
+                 alpha <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
+                 Tmax <- listPlot[[i]][j, colparam + 3]
+                 deltaT <- listPlot[[i]][j, colparam + 4]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq070" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 cc <- listPlot[[i]][j, 7]
-                 dd <- listPlot[[i]][j, 8]
-                 ff <- listPlot[[i]][j, 9]
-                 gg <- listPlot[[i]][j, 10]
-                 deg <- listPlot[[i]][j, 11]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
+                 dd <- listPlot[[i]][j, colparam + 3]
+                 ff <- listPlot[[i]][j, colparam + 4]
+                 gg <- listPlot[[i]][j, colparam + 5]
+                 deg <- listPlot[[i]][j, colparam + 6]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq080" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 cc <- listPlot[[i]][j, 7]
-                 Tmin <- listPlot[[i]][j, 8]
-                 Tmax <- listPlot[[i]][j, 9]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
+                 Tmin <- listPlot[[i]][j, colparam + 3]
+                 Tmax <- listPlot[[i]][j, colparam + 4]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq090" = {
-                 p25 <- listPlot[[i]][j, 5]
-                 aa <- listPlot[[i]][j, 6]
-                 bb <- listPlot[[i]][j, 7]
-                 cc <- listPlot[[i]][j, 8]
-                 dd <- listPlot[[i]][j, 9]
-                 ee <- listPlot[[i]][j, 10]
+                 p25 <- listPlot[[i]][j, colparam]
+                 aa <- listPlot[[i]][j, colparam + 1]
+                 bb <- listPlot[[i]][j, colparam + 2]
+                 cc <- listPlot[[i]][j, colparam + 3]
+                 dd <- listPlot[[i]][j, colparam + 4]
+                 ee <- listPlot[[i]][j, colparam + 5]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq100" = {
-                 Rm <- listPlot[[i]][j, 5]
-                 Tm <- listPlot[[i]][j, 6]
-                 To <- listPlot[[i]][j, 7]
+                 Rm <- listPlot[[i]][j, colparam]
+                 Tm <- listPlot[[i]][j, colparam + 1]
+                 To <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i, to = Tm + To)
                },
                "eq110" = {
-                 a0 <- listPlot[[i]][j, 5]
-                 a1 <- listPlot[[i]][j, 6]
-                 a2 <- listPlot[[i]][j, 7]
+                 a0 <- listPlot[[i]][j, colparam]
+                 a1 <- listPlot[[i]][j, colparam + 1]
+                 a2 <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq120" = {
-                 a0 <- listPlot[[i]][j, 5]
-                 a1 <- listPlot[[i]][j, 6]
-                 a2 <- listPlot[[i]][j, 7]
-                 a3 <- listPlot[[i]][j, 8]
+                 a0 <- listPlot[[i]][j, colparam]
+                 a1 <- listPlot[[i]][j, colparam + 1]
+                 a2 <- listPlot[[i]][j, colparam + 2]
+                 a3 <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq130" = {
-                 a0 <- listPlot[[i]][j, 5]
-                 a1 <- listPlot[[i]][j, 6]
-                 a2 <- listPlot[[i]][j, 7]
-                 a3 <- listPlot[[i]][j, 8]
-                 a4 <- listPlot[[i]][j, 9]
+                 a0 <- listPlot[[i]][j, colparam]
+                 a1 <- listPlot[[i]][j, colparam + 1]
+                 a2 <- listPlot[[i]][j, colparam + 2]
+                 a3 <- listPlot[[i]][j, colparam + 3]
+                 a4 <- listPlot[[i]][j, colparam + 4]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq140" = {
-                 phi <- listPlot[[i]][j, 5]
-                 aa <- listPlot[[i]][j, 6]
-                 Tb <- listPlot[[i]][j, 7]
-                 Tmax <- listPlot[[i]][j, 8]
-                 deltaT <- listPlot[[i]][j, 9]
+                 phi <- listPlot[[i]][j, colparam]
+                 aa <- listPlot[[i]][j, colparam + 1]
+                 Tb <- listPlot[[i]][j, colparam + 2]
+                 Tmax <- listPlot[[i]][j, colparam + 3]
+                 deltaT <- listPlot[[i]][j, colparam + 4]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq150" = {
-                 Rm <- listPlot[[i]][j, 5]
-                 Tmax <- listPlot[[i]][j, 6]
-                 To <- listPlot[[i]][j, 7]
-                 T1 <- listPlot[[i]][j, 8]
+                 Rm <- listPlot[[i]][j, colparam]
+                 Tmax <- listPlot[[i]][j, colparam + 1]
+                 To <- listPlot[[i]][j, colparam + 2]
+                 T1 <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[1]))))
                  curve(fx, add = TRUE, col = i, from = 0, to = Tmax)
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[2]))))
                  curve(fx, add = TRUE, col = i, from = Tmax, to = 60)
                },
                "eq160" = {
-                 aa <- listPlot[[i]][j, 5]
-                 Tmax <- listPlot[[i]][j, 6]
-                 deltaT <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 Tmax <- listPlot[[i]][j, colparam + 1]
+                 deltaT <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq170" = {
-                 aa <- listPlot[[i]][j, 5]
-                 Tmax <- listPlot[[i]][j, 6]
-                 deltaT <- listPlot[[i]][j, 7]
-                 bb <- listPlot[[i]][j, 8]
+                 aa <- listPlot[[i]][j, colparam]
+                 Tmax <- listPlot[[i]][j, colparam + 1]
+                 deltaT <- listPlot[[i]][j, colparam + 2]
+                 bb <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq180" = {
-                 aa <- listPlot[[i]][j, 5]
-                 Tmin <- listPlot[[i]][j, 6]
-                 Tmax <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 Tmin <- listPlot[[i]][j, colparam + 1]
+                 Tmax <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq190" = {
-                 aa <- listPlot[[i]][j, 5]
-                 Tmax <- listPlot[[i]][j, 6]
-                 Tmin <- listPlot[[i]][j, 7]
-                 bb <- listPlot[[i]][j, 8]
+                 aa <- listPlot[[i]][j, colparam]
+                 Tmax <- listPlot[[i]][j, colparam + 1]
+                 Tmin <- listPlot[[i]][j, colparam + 2]
+                 bb <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq200" = {
-                 aa <- listPlot[[i]][j, 5]
-                 Tmin <- listPlot[[i]][j, 6]
-                 Tmax <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 Tmin <- listPlot[[i]][j, colparam + 1]
+                 Tmax <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq210" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 cc <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
                "eq220" = {
-                 aa <- listPlot[[i]][j, 5]
-                 bb <- listPlot[[i]][j, 6]
-                 cc <- listPlot[[i]][j, 7]
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
@@ -257,9 +258,15 @@ devRateInfo(eq = kontodimas_04)
 devRateInfo(eq = damos_08)
 devRateInfo(eq = damos_11)
 
-devRatePlotInfo(eq = janisch_32, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
-devRatePlotInfo(eq = davidson_44, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.05))
+
+devRatePlotInfo(eq = janisch_32, sortBy = "genSp", xlim = c(0,60), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "ordersp", xlim = c(0,40), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "familysp", xlim = c(0,40), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "genussp", xlim = c(0,40), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "species", xlim = c(0,40), ylim = c(0,0.05))
+devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0,40), ylim = c(0,0.05))
 devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
+
 devRatePlotInfo(eq = stinner_74, sortBy = "sp", xlim = c(0,60), ylim = c(0,0.05))
 devRatePlotInfo(eq = logan6_76, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.1))
 devRatePlotInfo(eq = logan10_76, sortBy = "sp", xlim = c(0,40), ylim = c(0,0.1))
