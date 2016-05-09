@@ -96,97 +96,37 @@ sharpeDeMichele_77 <- list(eq = rT ~ ((T + deg) * exp((aa - bb/(T + deg))/1.987)
 )
 save(sharpeDeMichele_77, file = "./data/sharpeDeMichele_77.RData")
 
+analytis77CSV <- read.table("./data/devRate - analytis_77.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
                     eqAlt = "aa * (x - Tmin)^bb * (Tmax - x)^cc",
                     name = "Analytis",
                     ref = "Analytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                     refShort = "Analytis 1977",
-                    startVal = data.frame(
-                      ordersp = c(rep("Coleoptera", 1)),
-                      familysp = c(rep("Coccinellidae", 1)),
-                      sp = c("Nephus bisignatus"),
-                      stage = c(rep("all", 1)),
-                      param = list(
-                        aa = c(0.0001),
-                        bb = c(1.7766),
-                        cc = c(0.1740),
-                        Tmin = c(4.9125),
-                        Tmax = c(33.0781)
-                      ),
-                      ref = c(rep("Kontodimas et al. 2004", 1))
-                    ),
+                    startVal = getCSV(myCSV = analytis77CSV),
                     com = '',
                     id = "eq080"
 )
 save(analytis_77, file = "./data/analytis_77.RData")
 
+schoolfield81CSV <- read.table("./data/devRate - schoolfield_81.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),
                        eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(x + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(x + 273.16))) + exp(dd/1.987 * (1/ee - 1/(x + 273.16))))",
                        name = "Schoolfield",
                        ref = "Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological temperature-dependent rate models based on absolute reaction-rate theory. Journal of theoretical biology, 88, 719-731.",
                        refShort = "Schoolfield et al. 1981",
-                       startVal = data.frame(
-                         ordersp = c("Orthoptera"),
-                         familysp = c("Acrididae"),
-                         sp = c("Melanoplus sanguinipes"),
-                         stage = c("all"),
-                         param = list(
-                           p25 = c(0.0455),
-                           aa = c(8814.36),
-                           bb = c(-14877.95),
-                           cc = c(298.81),
-                           dd = c(47258.52),
-                           ee = c(316.695)
-                         ),
-                         ref = c("Hilbert and Logan 1983")
-                       ),
+                       startVal = getCSV(myCSV = schoolfield81CSV),
                        com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
                        id = "eq090"
 )
 save(schoolfield_81, file = "./data/schoolfield_81.RData")
 
+taylor81CSV <- read.table("./data/devRate - taylor_81.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
                   eqAlt = "Rm * exp(-1/2 * ((x - Tm)/To)^2)",
                   name = "Gauss",
                   ref = "Taylor, F. (1981) Ecology and evolution of physiological time in insects. American Naturalist, 1-23. \nLamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications for estimating rate parameters for insects. Environmental Entomology 21(1): 10-19.",
                   refShort = "Taylor 1981",
-                  startVal = data.frame(
-                    ordersp = c(rep("Hemiptera", 15),
-                                rep("Coleoptera", 13),
-                                rep("Lepidoptera", 11),
-                                rep("Diptera", 13),
-                                rep("Hymenoptera", 9),
-                                rep("Hemiptera", 2)),
-                    familysp = c(rep("Lygaeidae",3), rep("Miridae",2), rep("Aphidae",8), rep("Cicadellidae",2),
-                                 "Bruchidae", rep("Chrysomelidae", 2), "Cucujidae", rep("Curculionidae", 3), rep("Dermestidae", 4), rep("Tenebrionidae", 2),
-                                 "Arctiidae", rep("Noctuidae", 7), rep("Pyralidae", 2), "Tortricidae",
-                                 rep("Chloropidae", 3), rep("Culicidae", 4), rep("Drosophilidae", 2), rep("Muscidae", 4),
-                                 rep("Braconidae", 9), rep("Aphididae", 2)),
-                    sp = c("Geocoris articolor", "Geocoris pallens", "Geocoris punctipes", "Lygus desetinus", "Lygus hesperus", "Acyrthosiphon pisum", "Acyrthosiphon pisum", "Brevicoryne brassicae", "Brevicoryne brassicae", "Hyadaphis pseudobrassicae", "Macrosiphum euphorbiae", "Myzus persicae", "Myzus persicae","Circulifer tenelus", "Empoasca fabae",
-                           "Callosobruchus rhodesianus", "Crioceris asparagi", "Oulema melanopus", "Cryptolestes ferrugineus", "Anthonomus grandis", "Hypera brunneipennis", "Hypera postica", rep("Dermestes frischii", 4), "Tribolium castaneum", "Tribolium confusum",
-                           "Hyphantria cunea", "Agrostis segetum", "Amanthes c-nigrum", "Mamestra configurata", "Pseudaletia unipunctata", "Simyra henrici", "Spodoptera frugiperda", "Triphaena pronuba", "Anagasta kuehniella", "Ostrinia nubilalis", "Epiphyas postvittana",
-                           "Hippelates bishoppi", "Hippelates pallipes", "Hippelates pusio", "Aedes flavescens", "Aedes vexans", "Anopheles quadrimaculatus", "Toxorhynchites brevipalpis", "Drosophila melanogaster", "Drosophila melanogaster", "Haematobia stimulans", "Lyperosia irritans", "Musca domestica", "Stomoxys calcitans",
-                           "Apanteles operculella", "Apanteles scutellaris", "Apanteles subandinus", "Aphelinus semiflavus", "Aphidius rapae", rep("Bracon mellitor", 2), "Praon palitans", "Trioxys utilus", rep("Acyrthosiphon pisum", 2)),
-                    stage = c(rep("all", 15), rep("all", 7), "45% RH", "60% RH", "75% RH", "90% RH", rep("all", 31), "female", "male", rep("all", 2), rep("all", 2)),
-                    param = list(
-                      Rm = c(c(5.5, 6.3, 4.4, 5.6, 6.2, 16.5, 15.1, 9.7, 10.0, 14.4, 14.0, 12.9, 15.5, 5.2, 7.1,
-                           3.9, 7.1, 5.1, 4.7, 7.5, 5.8, 7.4, 1.9, 2.5, 3.2, 3.9, 4.9, 3.8,
-                           3.1, 2.6, 2.6, 2.7, 3.7, 2.9, 5.6, 1.8, 2.6, 4.3, 3.2,
-                           7.5, 8.4, 7.9, 5.1, 14.2, 11.4, 6.2, 13.1, 12.2, 8.1, 12.1, 12.5, 8.6,
-                           7.4, 10.0, 8.9, 10.0, 9.8, 11.3, 10.8, 8.2, 10.5, 19.9, 19.0)/100),
-                      Tm = c(37.2, 37.0, 33.8, 32.1, 36.2, 26.2, 27.5, 26.4, 26.6, 26.0, 30.6, 24.7, 26.3, 35.2, 30.7,
-                           31.2, 37.6, 33.7, 36.5, 36.7, 36.8, 37.8, 31.6, 33.2, 34.0, 34.3, 34.6, 32.8,
-                           32.9, 33.9, 28.3, 32.2, 32.5, 37.7, 37.4, 28.8, 29.8, 32.5, 27.2,
-                           35.0, 32.1, 32.5, 22.2, 26.3, 32.8, 28.4, 30.2, 29.2, 29.5, 34.1, 33.6, 32.2,
-                           38.1, 35.2, 36.1, 31.8, 27.0, 42.5, 36.4, 27.6, 28.7, 26.1, 26.3),
-                      To = c(8.8, 8.6, 7.7, 9.8, 12.8, 9.0, 11.0, 10.5, 8.4, 9.1, 14.6, 9.3, 10.4, 9.2, 8.9,
-                           8.0, 13.3, 11.5, 9.4, 9.4, 12.3, 11.9, 6.2, 7.1, 7.7, 8.4, 7.1, 7.2,
-                           9.5, 12.1, 9.8, 12.2, 10.8, 13.6, 11.3, 10.2, 9.0, 9.7, 9.0,
-                           9.8, 7.3, 7.5, 6.5, 7.7, 9.7, 6.1, 8.6, 8.4, 8.8, 10.1, 9.7, 9.6,
-                           11.4, 10.1, 11.5, 9.8, 9.2, 15.3, 11.9, 7.7, 8.8, 9.9, 10.3)
-                    ),
-                    ref = c(rep("Taylor 1981", 61), rep("Lamb 1992", 2))
-                  ),
+                  startVal = getCSV(myCSV = taylor81CSV),
                   com = '"The curve must be truncated to the right of Tm because of lethal effects of short exposures to high temperatures. The rate at which development rate falls away from Tm is measured by To." Taylor 1981',
                   id = "eq100"
 )
