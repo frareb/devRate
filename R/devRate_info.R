@@ -218,6 +218,16 @@ devRatePlotInfo <- function(eq, sortBy = "species", stage = "all", ...){
                  fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
                  curve(fx, add = TRUE, col = i)
                },
+               "eq230" = {
+                 K <- listPlot[[i]][j, colparam]
+                 r <- listPlot[[i]][j, colparam + 1]
+                 T0 <- listPlot[[i]][j, colparam + 2]
+                 TL <- listPlot[[i]][j, colparam + 3]
+                 TH <- listPlot[[i]][j, colparam + 4]
+                 aa <- listPlot[[i]][j, colparam + 5]
+                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 curve(fx, add = TRUE, col = i)
+               },
                {
                 # otherwise
                }
