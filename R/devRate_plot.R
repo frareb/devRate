@@ -54,6 +54,7 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
       "eq200" = {},
       "eq210" = {},
       "eq220" = {},
+      "eq230" = {},
       { # otherwise:
         s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
         plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
