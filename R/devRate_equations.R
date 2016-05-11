@@ -132,284 +132,162 @@ taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
 )
 save(taylor_81, file = "./data/taylor_81.RData")
 
+
+poly2CSV <- read.table("./data/devRate - poly2.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
               eqAlt = "a0 + a1 * x + a2 * x^2",
               name = "Second-order polynomial",
               ref = "-",
               refShort = "-",
-              startVal = data.frame(
-                ordersp = c(""),
-                familysp = c(""),
-                sp = c(""),
-                stage = c(""),
-                param = list(
-                  a0 = c(0),
-                  a1 = c(0),
-                  a2 = c(0)
-                ),
-                ref = c("")
-              ),
+              startVal = getCSV(myCSV = poly2CSV),
               com = '',
               id = "eq110"
 )
 save(poly2, file = "./data/poly2.RData")
 
+harcourtYee82CSV <- read.table("./data/devRate - harcourtYee_82.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
                        eqAlt = "a0 + a1 * x + a2 * x^2 + a3 * x^3",
                        name = "Third-order polynomial",
                        ref = "Harcourt, D. and Yee, J. (1982) Polynomial algorithm for predicting the duration of insect life stages. Environmental Entomology, 11, 581-584.",
                        refShort = "Harcourt and Yee 1982",
-                       startVal = data.frame(
-                         ordersp = c(rep("Coleoptera", 7)),
-                         familysp = c(rep("Curculionidae", 7)),
-                         sp = c(rep("Hypera postica", 7)),
-                         stage = c("Egg", "L1", "L2", "L3", "L4", "Prepupa", "Pupa"),
-                         param = list(
-                           a0 = c(0.14340, 0.07294, -0.0053838, 0.12049, -0.13123, -0.16043, 0.15234),
-                           a1 = c(-0.02827, -0.01538, 0.005996, -0.025729, 0.023465, 0.024015, -0.022886),
-                           a2 = c(0.001824, 0.0015249, -0.000085058, 0.0021796, -0.00093071, -0.00056046, 0.0012900),
-                           a3 = c(-0.000026629, -0.000012930, 0.000020124, -0.000030130, 0.000025595, 0.000022486, -0.000011439)
-                         ),
-                         ref = c(rep("Harcourt and Yee 1982", 7))
-                       ),
+                       startVal = getCSV(myCSV = harcourtYee82CSV),
                        com = '',
                        id = "eq120"
 )
 save(harcourtYee_82, file = "./data/harcourtYee_82.RData")
 
+poly4CSV <- read.table("./data/devRate - poly4.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
               eqAlt = "a0 + a1 * x + a2 * x^2 + a3 * x^3 + a4 * x^4",
               name = "Forth-order polynomial",
               ref = "-",
               refShort = "-",
-              startVal = data.frame(
-                ordersp = c("Lepidoptera"),
-                familysp = c("Gelechiidae"),
-                sp = c("Tuta absoluta"),
-                stage = c("all"),
-                param = list(
-                  a0 = c(-0.27),
-                  a1 = c(0.049),
-                  a2 = c(-0.0031),
-                  a3 = c(0.000094),
-                  a4 = c(-0.000001)
-                ),
-                ref = c("Ozgokce et al. 2016")
-              ),
+              startVal = getCSV(myCSV = poly4CSV),
               com = '',
               id = "eq130"
 )
 save(poly4, file = "./data/poly4.RData")
 
+hilbertLogan83CSV <- read.table("./data/devRate - hilbertLogan_83.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 hilbertLogan_83 <- list(eq = rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT)) ,
                         eqAlt = "phi * (((x-Tb)^2 / ((x-Tb)^2 + aa^2)) - exp(-(Tmax - (x-Tb))/deltaT))",
                         name = "Holling type III",
                         ref = "Hilbert, DW, y JA Logan (1983) Empirical model of nymphal development for the migratory grasshopper, Melanoplus sanguinipes (Orthoptera: Acrididae). Environmental Entomology 12(1): 1-5.",
                         refShort = "Hilbert and Logan 1983",
-                        startVal = data.frame(
-                          ordersp = c("Orthoptera"),
-                          familysp = c("Acrididae"),
-                          sp = c("Melanoplus sanguinipes"),
-                          stage = c("all"),
-                          param = list(
-                            phi = c(0.2676),
-                            aa = c(58.62),
-                            Tb = c(7.657),
-                            Tmax = c(45.02),
-                            deltaT = c(3.433)
-                          ),
-                          ref = c("Hilbert and Logan 1983")
-                        ),
+                        startVal = getCSV(myCSV = hilbertLogan83CSV),
                         com = '',
                         id = "eq140"
 )
 save(hilbertLogan_83, file = "./data/hilbertLogan_83.RData")
 
+lamb92CSV <- read.table("./data/devRate - lamb_92.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 lamb_92 <- list(eq = c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2)) ,
                 eqAlt = c("Rm * exp(-1/2 * ((x - Tmax)/To)^2)", "Rm * exp(-1/2 * ((x - Tmax)/T1)^2)"),
                 name = "Lamb",
                 ref = "Lamb, R. J., Gerber, G. H., & Atkinson, G. F. (1984). Comparison of developmental rate curves applied to egg hatching data of Entomoscelis americana Brown (Coleoptera: Chrysomelidae). Environmental entomology, 13(3), 868-872. \nLamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications for estimating rate parameters for insects. Environmental Entomology 21(1): 10-19.",
                 refShort = "Lamb 1992",
-                startVal = data.frame(
-                  ordersp = c(rep("Coleoptera", 3)),
-                  familysp = c("Chrysomelidae", rep("Coccinellidae", 2)),
-                  sp = c("Entomoscelis americana", "Nephus includens", "Nephus bisignatus"),
-                  stage = c("Eggs"),
-                  param = list(
-                    Rm = c(0.05393, 0.0441, 0.0338),
-                    Tmax = c(33.40, 34.9999, 32.4999),
-                    To = c(10.75, 11.0220, 10.7097),
-                    T1 = c(3.377, -0.000021, 0.000023)
-                  ),
-                  ref = c("Lamb et al. 1984", rep("Kontodimas et al. 2004", 2))
-                ),
+                startVal = getCSV(myCSV = lamb92CSV),
                 com = '',
                 id = "eq150"
 )
 save(lamb_92, file = "./data/lamb_92.RData")
 
+lactin195CSV <- read.table("./data/devRate - lactin1_95.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
                    eqAlt = "exp(aa * x) - exp(aa * Tmax - (Tmax - x)/deltaT)",
                    name = "Lactin-1",
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
-                   startVal = data.frame(
-                     ordersp = c(rep("Coleoptera", 5)),
-                     familysp = c(rep("Chrysomelidae", 5)),
-                     sp = c(rep("Leptinotarsa decemlineata", 5)),
-                     stage = c("Eggs", "L1", "L2", "L3", "L4"),
-                     param = list(
-                       aa = c(0.155430, 0.154034, 0.154035, 0.169451, 0.166364),
-                       Tmax = c(38.048732, 38.953357, 37.526100, 36.397259, 35.914673),
-                       deltaT = c(6.421234, 6.467896, 6.460183, 5.883764, 5.997446)
-                     ),
-                     ref = c(rep("Lactin et al. 1995", 5))
-                   ),
+                   startVal = getCSV(myCSV = lactin195CSV),
                    com = '',
                    id = "eq160"
 )
 save(lactin1_95, file = "./data/lactin1_95.RData")
 
+lactin295CSV <- read.table("./data/devRate - lactin2_95.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb ,
                    eqAlt = "exp(aa * x) - exp(aa * Tmax - (Tmax - x)/deltaT) + bb",
                    name = "Lactin-2",
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
-                   startVal = data.frame(
-                     ordersp = c(rep("Coleoptera", 7)),
-                     familysp = c(rep("Chrysomelidae", 5), rep("Coccinellidae", 2)),
-                     sp = c(rep("Leptinotarsa decemlineata", 5), "Nephus includens", "Nephus bisignatus"),
-                     stage = c("Eggs", "L1", "L2", "L3", "L4", "all", "all"),
-                     param = list(
-                       aa = c(0.139034, 0.096314, 0.105906, 0.019087, 0.146066, 0.0019, 0.0017),
-                       Tmax = c(38.890035, 44.514120, 40.725042, 36.873879, 36.643691, 38.2976, 39.6875),
-                       deltaT = c(7.167110, 10.074502, 9.161844, 1.690717, 6.813403, 0.7152, 1.5488),
-                       bb = c(-0.026410, -0.238647, -0.249972, -1.212223, -0.051544, -1.0214, -1.0168)
-                     ),
-                     ref = c(rep("Lactin et al. 1995", 5), rep("Kontodimas et al. 2004", 2))
-                   ),
+                   startVal = getCSV(myCSV = lactin295CSV),
                    com = '',
                    id = "eq170"
 )
 save(lactin2_95, file = "./data/lactin2_95.RData")
 
+briere199CSV <- read.table("./data/devRate - briere1_99.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
                    eqAlt = "aa * x * (x - Tmin) * (Tmax - x)^(1 / 2)",
                    name = "Briere-1",
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
-                   startVal = data.frame(
-                     ordersp = c(""),
-                     familysp = c(""),
-                     sp = c(""),
-                     stage = c(""),
-                     param = list(
-                       aa = c(0),
-                       Tmin = c(0),
-                       Tmax = c(0)
-                     ),
-                     ref = c("")
-                   ),
+                   startVal = getCSV(myCSV = briere199CSV),
                    com = '',
                    id = "eq180"
 )
 save(briere1_99, file = "./data/briere1_99.RData")
 
+briere299CSV <- read.table("./data/devRate - briere2_99.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
                    eqAlt = "aa * x * (x - Tmin) * (Tmax - x)^(1 / bb)",
                    name = "Briere-2",
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
-                   startVal = data.frame(
-                     ordersp = c(""),
-                     familysp = c(""),
-                     sp = c(""),
-                     stage = c(""),
-                     param = list(
-                       aa = c(0),
-                       Tmax = c(0),
-                       Tmin = c(0),
-                       bb = c(0)
-                     ),
-                     ref = c("")
-                   ),
+                   startVal = getCSV(myCSV = briere299CSV),
                    com = '',
                    id = "eq190"
 )
 save(briere2_99, file = "./data/briere2_99.RData")
 
-
-
-
-
-
-
-
-
+kontodimas04CSV <- read.table("./data/devRate - kontodimas_04.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
                       eqAlt = "aa * (x - Tmin)^2 * (Tmax - x)",
                       name = "Equation 16",
                       ref = "Kontodimas, D.C., Eliopoulos, P.A., Stathas, G.J. and Economou, L.P. (2004) Comparative temperature-dependent development of Nephus includens (Kirsch) and Nephus bisignatus (Boheman)(Coleoptera: Coccinellidae) preying on Planococcus citri (Risso)(Homoptera: Pseudococcidae): evaluation of a linear and various nonlinear models using specific criteria. Environmental Entomology 33(1): 1-11.",
                       refShort = "Kontodimas et al. 2004",
-                      startVal = data.frame(
-                        ordersp = c(""),
-                        familysp = c(""),
-                        sp = c(""),
-                        stage = c(""),
-                        param = list(
-                          aa = c(0),
-                          Tmin = c(0),
-                          Tmax = c(0)
-                        ),
-                        ref = c("")
-                      ),
+                      startVal = getCSV(myCSV = kontodimas04CSV),
                       com = "",
                       id = "eq200"
 )
 save(kontodimas_04, file = "./data/kontodimas_04.RData")
 
+damos08CSV <- read.table("./data/devRate - damos_08.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
                  eqAlt = "aa * (bb - x / 10) * (x / 10)^cc",
                  name = "Simplified beta type",
                  ref = "Damos, P.T., and Savopoulou-Soultani, M. (2008). Temperature-dependent bionomics and modeling of Anarsia lineatella (Lepidoptera: Gelechiidae) in the laboratory. Journal of economic entomology, 101(5), 1557-1567.",
                  refShort = "Damos and Savopoulou 2008",
-                 startVal = data.frame(
-                   ordersp = "Lepidoptera",
-                   familysp = "Gelechiidae",
-                   sp = "Anarsia lineatella",
-                   stage = "all",
-                   param = list(
-                     aa = 0.0003,
-                     bb = 3.8297,
-                     cc = 4.8760
-                   ),
-                   ref = "Damos and Savopoulou 2008"
-                 ),
+                 startVal = getCSV(myCSV = damos08CSV),
                  com = '',
                  id = "eq210"
 )
 save(damos_08, file = "./data/damos_08.RData")
 
+damos11CSV <- read.table("./data/devRate - damos_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
                  eqAlt = "aa / (1 + bb * x + cc * x^2)",
                  name = "Inverse second-order polynomial",
                  ref = "Damos, P., and Savopoulou-Soultani, M. (2011) Temperature-driven models for insect development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.",
-                 startVal = data.frame(
-                   ordersp = c(""),
-                   familysp = c(""),
-                   sp = c(""),
-                   stage = c(""),
-                   param = list(
-                     aa = c(0),
-                     bb = c(0),
-                     cc = c(0)
-                   ),
-                   ref = c("")
-                 ),
+                 refShort = "Damos and Savopoulou 2011",
+                 startVal = getCSV(myCSV = damos11CSV),
                  com = '',
                  id = "eq220"
 )
 save(damos_11, file = "./data/damos_11.RData")
+
+wang82CSV <- read.table("./data/devRate - wang_82.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+wang_82 <- list(eq = rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1-exp(-(TH - T)/aa)),
+                eqAlt = "(K / (1 + exp(-r*(x - T0)))) * (1 - exp(-(x - TL)/aa)) * (1-exp(-(TH - x)/aa))",
+                name = "Wang",
+                ref = "Wang, R., Lan, Z. & Ding, Y. (1982) Studies on mathematical models of the relationship between insect development and temperature. Acta Ecol. Sin, 2, 47–57.",
+                refShort = "Wang et al. 1982",
+                startVal = getCSV(myCSV = wang82CSV),
+                com = '',
+                id = "eq230"
+)
+save(wang_82, file = "./data/wang_82.RData")
 
 devRateEqList <- list(
   janisch_32 = janisch_32,
@@ -434,6 +312,7 @@ devRateEqList <- list(
   ## other equations
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
-  damos_11 = damos_11
+  damos_11 = damos_11,
+  wang_82 = wang_82
 )
 save(devRateEqList, file = "./data/devRateEqList.RData")
