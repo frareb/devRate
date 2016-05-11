@@ -1,0 +1,3 @@
+rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2),,,,,,,,,
+,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,contributor

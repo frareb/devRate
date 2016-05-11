@@ -1,0 +1,10 @@
+rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3,,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,contributor
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,eggs,0.1434,-0.02827,0.001824,-0.000026629,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L1,0.07294,-0.01538,0.0015249,-0.00001293,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L2,-0.0053838,0.005996,-0.000085058,0.000020124,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L3,0.12049,-0.025729,0.0021796,-0.00003013,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L4,-0.13123,0.023465,-0.00093071,0.000025595,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,prepupa,-0.16043,0.024015,-0.00056046,0.000022486,François Rebaudo
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,pupa,0.15234,-0.022886,0.00129,-0.000011439,François Rebaudo

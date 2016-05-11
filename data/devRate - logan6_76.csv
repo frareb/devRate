@@ -1,0 +1,7 @@
+rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)),,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,phi,bb,Tmax,deltaT,contributor
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.081,0.14,38.173,7.1,François Rebaudo
+Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.9537,0.136,31.7732,7.3366,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0504,0.1611,38.7675,6.1762,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0089,0.1653,35.941,5.8911,François Rebaudo

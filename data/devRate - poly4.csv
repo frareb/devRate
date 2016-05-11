@@ -1,0 +1,4 @@
+rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4,,,,,,,,,,,
+,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,a4,contributor
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.27,0.049,-0.0031,0.000094,-0.000001,François Rebaudo

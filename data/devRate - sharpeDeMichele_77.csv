@@ -1,0 +1,6 @@
+rT ~ ((T + deg) * exp((aa - bb/(T + deg))/1.987)) / (1 + exp((cc - dd/(T + deg))/1.987) + exp((ff - gg/(T + deg))/1.987)),,,,,,,,,,,,,
+,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,ff,gg,deg,contributor
+Sharpe and DeMichele 1977,Diptera,Drosophilidae,Drosophila,melanogaster,prepupal,19.43,10490,-156.9,-44373,226.6,69113,273.16,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,-11.30603,52.57423,5.998554,338.316,15440.47,540505.7,0,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,-11.92021,42.37099,31.398177,1074.556,43114.96,1499621.5,0,François Rebaudo

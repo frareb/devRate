@@ -1,0 +1,8 @@
+rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT),,,,,,,,,
+,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,contributor
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.15543,38.048732,6.421234,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.154034,38.953357,6.467896,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.154035,37.5261,6.460183,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.169451,36.397259,5.883764,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.166364,35.914673,5.997446,François Rebaudo

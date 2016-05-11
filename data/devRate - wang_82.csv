@@ -1,0 +1,19 @@
+rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1-exp(-(TH - T)/aa)),,,,,,,,,,,,
+,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,K,r,T0,TL,TH,aa,contributor
+Li and Jackson 1996,Araneae,Titanoecidae,Nurscia,albofasciata,all,0.045,0.15,31,13,40,2,François Rebaudo
+Li and Jackson 1996,Araneae,Dictynidae,Dictyna,felis,all,0.043,0.15,28,14,37,2,François Rebaudo
+Li and Jackson 1996,Araneae,Araneidae,Cyrtophora,cicatrosa,all,0.019,0.12,27,16,42,2,François Rebaudo
+Li and Jackson 1996,Araneae,Araneidae,Neoscona,doenitzi,all,0.052,0.15,28,11,43,4,François Rebaudo
+Li and Jackson 1996,Araneae,Tetragnathidae,Tetragnatha,praedonia,all,0.051,0.15,29,6,38,3,François Rebaudo
+Li and Jackson 1996,Araneae,Tetragnathidae,Tetragnatha,cerniformis,all,0.054,1.5,29,9,40,3,François Rebaudo
+Li and Jackson 1996,Araneae,Theridiidae,Coleosoma,octomaculatum,all,0.093,0.14,29,9,40,3,François Rebaudo
+Li and Jackson 1996,Araneae,Linyphiidae,Erigonidium,graminicolum,all,0.052,0.15,25,9,38,2,François Rebaudo
+Li and Jackson 1996,Araneae,Linyphiidae,Erigonidium,naniwaense,all,0.06,0.15,25,9,38,2,François Rebaudo
+Li and Jackson 1996,Araneae,Linyphiidae,Gnathonarium,gibberum,all,0.05,0.15,25,12,37,2,François Rebaudo
+Li and Jackson 1996,Araneae,Linyphiidae,Ummeliata,insecticeps,all,0.04,0.15,25,5,35,2,François Rebaudo
+Li and Jackson 1996,Araneae,Lycosidae,Pardosa,astrigera,all,0.037,0.15,29,12,37,2,François Rebaudo
+Li and Jackson 1996,Araneae,Lycosidae,Pardosa,pseudoannulata,all,0.045,0.15,28,15,40,2,François Rebaudo
+Li and Jackson 1996,Araneae,Lycosidae,Pirata,tenuisetaceus,all,0.044,0.15,28,10,37,2,François Rebaudo
+Li and Jackson 1996,Araneae,Clubionidae,Clubiona,reichlini,all,0.037,0.15,28,14,38,2,François Rebaudo
+Li and Jackson 1996,Araneae,Thomisidae,Misumenops,tricuspidatus,all,0.037,0.15,28,8,38,2,François Rebaudo

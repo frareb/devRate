@@ -1,0 +1,10 @@
+rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb,,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,bb,contributor
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.139034,38.890035,7.16711,-0.02641,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.096314,44.51412,10.074502,-0.238647,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.105906,40.725042,9.161844,-0.249972,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.019087,36.873879,1.690717,-1.212223,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.146066,36.643691,6.813403,-0.051544,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0019,38.2976,0.7152,-1.0214,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0017,39.6875,1.5488,-1.0168,François Rebaudo

@@ -1,0 +1,18 @@
+rT ~ aa + bb * T,,,,,,,,
+,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,contributor
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.04857143,0.00952381,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.05384615,0.009615385,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.03389831,0.008474576,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Aphis,craccivora,all,-0.10375,0.0125,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.05220588,0.007352941,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03937008,0.007874016,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03571429,0.005494505,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.02883436,0.006134969,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,avenae,all,-0.04102564,0.008547009,François Rebaudo
+Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,maxima,all,-0.0312,0.008,François Rebaudo
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.021,0.0024,François Rebaudo
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0374,0.0097,François Rebaudo
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0311,0.0091,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,-0.0222,0.002,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,-0.0153,0.0016,François Rebaudo

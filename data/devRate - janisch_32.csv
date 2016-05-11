@@ -1,0 +1,5 @@
+rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Dmin,Topt,aa,bb,contributor
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,24.3383,34.0646,0.1943,0.1111,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,31.9226,31.475,0.2182,0.1147,François Rebaudo

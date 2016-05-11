@@ -1,0 +1,4 @@
+rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT)),,,,,,,,,,,
+,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,phi,aa,Tb,Tmax,deltaT,contributor
+Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.2676,58.62,7.657,45.02,3.433,François Rebaudo

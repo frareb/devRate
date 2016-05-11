@@ -1,0 +1,4 @@
+rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc,,,,,,,,,,,
+,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,Tmin,Tmax,contributor
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0001,1.7766,0.174,4.9125,33.0781,François Rebaudo

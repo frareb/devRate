@@ -1,0 +1,6 @@
+"c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))",,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Rm,Tmax,To,T1,contributor
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.05393,33.4,10.75,3.377,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0441,34.9999,11.022,-0.000021,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0338,32.4999,10.7097,0.000023,François Rebaudo

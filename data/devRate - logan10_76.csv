@@ -1,0 +1,6 @@
+rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))),,,,,,,,,,,
+,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,alpha,bb,cc,Tmax,deltaT,contributor
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,François Rebaudo
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,François Rebaudo
