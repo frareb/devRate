@@ -16,3 +16,24 @@ Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0374,0.0097,François R
 Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0311,0.0091,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,-0.0222,0.002,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,-0.0153,0.0016,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.03056,0.00326,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva + pupa,-0.01736,0.00159,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,eggs,-0.13733,0.0109,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.02093,0.0021,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.073,0.00574,François Rebaudo
+Miyashita and Ito 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.07379,0.00579,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,eggs,-0.1589,0.0157,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0467,0.0044,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,prepupa,-0.4379,0.0366,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,pupa,-0.0487,0.0054,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,all,-0.0195,0.0019,François Rebaudo
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0489,0.004,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,eggs,-0.2191,0.0175,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva,-0.0599,0.0049,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva female,-0.0294,0.0049,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva male,-0.0601,0.0049,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa,-0.1752,0.0123,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa female,-0.1847,0.0128,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa male,-0.1672,0.0119,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva + pupa,-0.0432,0.0034,François Rebaudo
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,all,-0.0364,0.0029,François Rebaudo
