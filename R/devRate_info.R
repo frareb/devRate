@@ -33,7 +33,7 @@ devRateInfo <- function(eq){
 #' devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
 #' devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
 #' @export
-devRatePlotInfo <- function(eq, sortBy = "species", stage = "all", ...){
+devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
   listPlot <- split(eq$startVal[as.character(eq$startVal[,6]) == stage,], as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,]))
   if(length(listPlot) > 0){
   plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
