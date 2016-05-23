@@ -85,4 +85,4 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
 
 
 
-devRatePlot(eq = campbell_74, nlsDR = tcampbell_74, temp = sampleDataset$T, devRate = sampleDataset$rT, ylim=c(0, 0.25))
+# devRatePlot(eq = campbell_74, nlsDR = tcampbell_74, temp = sampleDataset$T, devRate = sampleDataset$rT, ylim=c(0, 0.25))
