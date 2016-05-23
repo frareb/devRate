@@ -1,2 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+R/devRate_equations\.R
+R/datosFranz\.R
+^data/.*\.csv$
