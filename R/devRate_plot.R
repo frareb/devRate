@@ -8,7 +8,14 @@
 #'   This argument may be overwritten depending on the equation.
 #' @param optText A logical indcating wether the name of the eqaution should be written
 #'   in the topright corner of the plot.
-#'
+#' @return Nothing.
+#' @examples
+#' myT <- 5:15
+#' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
+#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+#'   startValues = list(aa = 0, bb = 0))
+#' devRatePlot(eq = campbell_74, nlsDR = myNLS, temp = myT, devRate = myDev,
+#'   spe = TRUE, pch = 16, lwd = 2, ylim = c(0, 0.10))
 #' @export
 devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, spe = TRUE, ...){
   minX <- -100
@@ -36,25 +43,7 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
         lines(s2, predict(nlsDR, newdata = list(T = s2)), lty = 2, ...)
       },
       "eq040" = {},
-      "eq050" = {},
-      "eq060" = {},
-      "eq070" = {},
-      "eq080" = {},
-      "eq090" = {},
-      "eq100" = {},
-      "eq110" = {},
-      "eq120" = {},
-      "eq130" = {},
-      "eq140" = {},
       "eq150" = {},
-      "eq160" = {},
-      "eq170" = {},
-      "eq180" = {},
-      "eq190" = {},
-      "eq200" = {},
-      "eq210" = {},
-      "eq220" = {},
-      "eq230" = {},
       { # otherwise:
         s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
         plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
@@ -71,18 +60,3 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
     text(x = par("xaxp")[2], y = par("yaxp")[2], pos = 2, paste0(eq$name, " (", eq$refShort, ")"), ...)
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# devRatePlot(eq = campbell_74, nlsDR = tcampbell_74, temp = sampleDataset$T, devRate = sampleDataset$rT, ylim=c(0, 0.25))
