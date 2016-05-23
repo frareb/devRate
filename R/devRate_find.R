@@ -2,7 +2,7 @@
 #'
 #' @param orderSP Find models by Order.
 #' @param familySP Find models by Family.
-#' @param species Find models by species.
+#' @param species Find models by species (Genus species).
 #' @return Nothing.
 #' @examples
 #' devRateFind(orderSP = "Lepidoptera")
@@ -28,8 +28,8 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
       }
     }
     if(species != ""){
-      if(species %in% eq$startVal[,"sp"] == TRUE){
-        occu <- sum(as.character(eq$startVal[,"sp"]) == species)
+      if(species %in% eq$startVal[,"genSp"] == TRUE){
+        occu <- sum(as.character(eq$startVal[,"genSp"]) == species)
         cat("\n[", i, "] ", strwrap(x = paste0(eq$name, ": ", eq$refShort, " (", occu, " times)"), width = 80))
       }
     }
