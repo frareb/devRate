@@ -1,7 +1,7 @@
 #' Plot the empirical points and the regression
 #'
 #' @param eq The name of the equation.
-#' @param nlsDR The result returned by the \code{devRateModel} function
+#' @param nlsDR The result returned by the \code{devRateModel} function.
 #' @param temp The temperature.
 #' @param devRate The developmental rate \code{(days)^-1}
 #' @param rangeT The range of temperatures over which the regression is plotted.
