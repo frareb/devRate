@@ -5,18 +5,65 @@
 #' @param devRate The developmental rate \code{(days)^-1}
 #' @param startValues Starting values for the regression.
 #' @param ... Additional arguments for the nls function.
+#' @return An object of class \code{nls} (except for Stinner et al. 1974 and Lamb 1992 where the function
+#'   returns a list of two objects of class \code{nls}).
+#' @details \code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
+#'   two equations: one for the temperatures below the optimal temperature and another for the
+#'   tamperatures above the optimal temperature. For these equations, \code{startValues} should
+#'   be a list of two lists, where the second element only contain starting estimates not
+#'   specified in the first element, e.g., for Stinner et al.:
+#'   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
+#'   and for Lamb 1992:
+#'   \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
+#' @examples
+#' myT <- 5:15
+#' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
+#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+#'   startValues = list(aa = 0, bb = 0))
 #' @export
 devRateModel <- function(eq, temp, devRate, startValues, ...){
-  # cat(eq$name, "model by", eq$refShort, "\n\n")
-
   ### handling exception for <stinner_74> et <lamb_92>
   if(eq$id == "eq040" | eq$id == "eq150"){
-    #
-    #
-    #
-    #
+    tTh <- temp[devRate == max(devRate)][1]
+    part1_temp <- temp[temp <= tTh]
+    part2_temp <- temp[temp >= tTh]
+    part1_devRate <- devRate[temp <= tTh]
+    part2_devRate <- devRate[temp >= tTh]
+    if(eq$id == "eq040") {
+      nls_devRate1 <- nls(
+        formula = eq[[1]][[1]],
+        data = data.frame(rT = part1_devRate, T = part1_temp),
+        start = startValues[[1]],
+        ...)
+      newEq <- gsub("C", coef(nls_devRate1)[1], eq$eqAlt[2])
+      newEq <- gsub("k1", coef(nls_devRate1)[2], newEq)
+      newEq <- gsub("k2", coef(nls_devRate1)[3], newEq)
+      newEq <- paste0("rT ~ ", newEq)
+      nls_devRate2 <- nls(
+        formula = newEq,
+        data = data.frame(rT = part2_devRate, x = part2_temp),
+        start = startValues[[2]])
+      nls_devRate <- list(nls_devRate1, nls_devRate2)
+    }
+    if(eq$id == "eq150") {
+      nls_devRate1 <- nls(
+        formula = eq[[1]][[1]],
+        data = data.frame(rT = part1_devRate, T = part1_temp),
+        start = startValues[[1]],
+        ...)
+      newEq <- gsub("Rm", coef(nls_devRate1)[1], eq$eqAlt[2])
+      newEq <- gsub("Tmax", coef(nls_devRate1)[2], newEq)
+      newEq <- gsub("To", coef(nls_devRate1)[3], newEq)
+      newEq <- paste0("rT ~ ", newEq)
+      nls_devRate2 <- nls(
+        formula = newEq,
+        data = data.frame(rT = part2_devRate, x = part2_temp),
+        start = startValues[[2]],
+        ...)
+      nls_devRate <- list(nls_devRate1, nls_devRate2)
+    }
   } else {
-    nls_devRate <- nls(eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
+    nls_devRate <- nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
   }
   return(nls_devRate)
 }
@@ -50,6 +97,23 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
 # 24.10398293757634, 0.2634686346863469,21.870935043839175, 0.12509225092250925), ncol = 2, byrow = TRUE)
 #
 # sampleDataset <- data.frame(T = xxx[,1], rT = xxx[,2])
+#
+# eq <- stinner_74
+# temp <- xxx[,1]
+# devRate <- xxx[,2]
+# startValues <- list(list(C=0.05, k1=5, k2=-0.3), list(Topt=30))
+# nlsDR <- devRateModel(eq, temp, devRate, startValues)
+# devRatePlot(eq, nlsDR, temp, devRate)
+#
+#
+# eq <- lamb_92
+# temp <- xxx[,1]
+# devRate <- xxx[,2]
+# startValues <- list(list(Rm=0.05, Tmax=35, To=15), list(T1=4))
+# nlsDR <- devRateModel(eq, temp, devRate, startValues)
+# devRatePlot(eq, nlsDR, temp, devRate)
+#
+#
 #
 #
 # # devRateModel(eq = campbell_74, temp = sampleDataset$T, devRate = sampleDataset$rT, guessStartValues = list(TRUE, "Hemiptera", "all"))
