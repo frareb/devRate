@@ -17,7 +17,27 @@ devRateModel(eq, temp, devRate, startValues, ...)
 
 \item{...}{Additional arguments for the nls function.}
 }
+\value{
+An object of class \code{nls} (except for Stinner et al. 1974 and Lamb 1992 where the function
+  returns a list of two objects of class \code{nls}).
+}
 \description{
 Compute non-linear regression
+}
+\details{
+\code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
+  two equations: one for the temperatures below the optimal temperature and another for the
+  tamperatures above the optimal temperature. For these equations, \code{startValues} should
+  be a list of two lists, where the second element only contain starting estimates not
+  specified in the first element, e.g., for Stinner et al.:
+  \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
+  and for Lamb 1992:
+  \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
+}
+\examples{
+myT <- 5:15
+myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
+myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+  startValues = list(aa = 0, bb = 0))
 }
 
