@@ -8,6 +8,7 @@
 #'   This argument may be overwritten depending on the equation.
 #' @param optText A logical indcating wether the name of the eqaution should be written
 #'   in the topright corner of the plot.
+#' @param spe A logical indicating if special plotting rules from literature should apply.
 #' @return Nothing.
 #' @examples
 #' myT <- 5:15
