@@ -10,9 +10,7 @@
 #' devRateFind(species = "Tuta absoluta")
 #' @export
 devRateFind <- function(orderSP = "", familySP = "", species = ""){
-  # getVarName <- function (myVar, name=deparse(substitute(myVar))) {
-  #   return(name)
-  # }
+  devRateEqList <- devRateEqList # avoid "no visible binding for global variable devRateEqList" Note
   for(i in names(devRateEqList)){
     eq <- get(i)
     if(orderSP != "" & familySP == "" & species == ""){
