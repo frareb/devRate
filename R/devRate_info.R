@@ -36,7 +36,7 @@ devRateInfo <- function(eq){
 devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
   listPlot <- split(eq$startVal[as.character(eq$startVal[,6]) == stage,], as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,]))
   if(length(listPlot) > 0){
-  plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
+  graphics::plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
   x <- seq(from = 0, to = 50, length.out = 100)
   for(i in 1:length(listPlot)){
     for(j in 1:nrow(listPlot[[i]])){
@@ -47,20 +47,20 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  Topt <- listPlot[[i]][j, colparam + 1]
                  aa <- listPlot[[i]][j, colparam + 2]
                  bb <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq020" = {
                  aa <- listPlot[[i]][j, colparam]
                  bb <- listPlot[[i]][j, colparam + 1]
                  K <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq030" = {
                  aa <- listPlot[[i]][j, colparam]
                  bb <- listPlot[[i]][j, colparam + 1]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq040" = {
@@ -68,9 +68,9 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  k1 <- listPlot[[i]][j, colparam + 1]
                  k2 <- listPlot[[i]][j, colparam + 2]
                  Topt <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[1]))))
+                 fx <- as.function(alist(x=, eval(parse(text = eq$eqAlt[1]))))
                  graphics::curve(fx, add = TRUE, col = i, from = 0, to = Topt)
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[2]))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt[2]))))
                  graphics::curve(fx, add = TRUE, col = i, from = Topt, to = 60)
                },
                "eq050" = {
@@ -78,7 +78,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  bb <- listPlot[[i]][j, colparam + 1]
                  Tmax <- listPlot[[i]][j, colparam + 2]
                  deltaT <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq060" = {
@@ -87,7 +87,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  cc <- listPlot[[i]][j, colparam + 2]
                  Tmax <- listPlot[[i]][j, colparam + 3]
                  deltaT <- listPlot[[i]][j, colparam + 4]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq070" = {
@@ -98,7 +98,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  ff <- listPlot[[i]][j, colparam + 4]
                  gg <- listPlot[[i]][j, colparam + 5]
                  deg <- listPlot[[i]][j, colparam + 6]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq080" = {
@@ -107,7 +107,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  cc <- listPlot[[i]][j, colparam + 2]
                  Tmin <- listPlot[[i]][j, colparam + 3]
                  Tmax <- listPlot[[i]][j, colparam + 4]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq090" = {
@@ -117,21 +117,21 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  cc <- listPlot[[i]][j, colparam + 3]
                  dd <- listPlot[[i]][j, colparam + 4]
                  ee <- listPlot[[i]][j, colparam + 5]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq100" = {
                  Rm <- listPlot[[i]][j, colparam]
                  Tm <- listPlot[[i]][j, colparam + 1]
                  To <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i, to = Tm + To)
                },
                "eq110" = {
                  a0 <- listPlot[[i]][j, colparam]
                  a1 <- listPlot[[i]][j, colparam + 1]
                  a2 <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq120" = {
@@ -139,7 +139,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  a1 <- listPlot[[i]][j, colparam + 1]
                  a2 <- listPlot[[i]][j, colparam + 2]
                  a3 <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq130" = {
@@ -148,7 +148,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  a2 <- listPlot[[i]][j, colparam + 2]
                  a3 <- listPlot[[i]][j, colparam + 3]
                  a4 <- listPlot[[i]][j, colparam + 4]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq140" = {
@@ -157,7 +157,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  Tb <- listPlot[[i]][j, colparam + 2]
                  Tmax <- listPlot[[i]][j, colparam + 3]
                  deltaT <- listPlot[[i]][j, colparam + 4]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq150" = {
@@ -165,16 +165,16 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  Tmax <- listPlot[[i]][j, colparam + 1]
                  To <- listPlot[[i]][j, colparam + 2]
                  T1 <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[1]))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt[1]))))
                  graphics::curve(fx, add = TRUE, col = i, from = 0, to = Tmax)
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt[2]))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt[2]))))
                  graphics::curve(fx, add = TRUE, col = i, from = Tmax, to = 60)
                },
                "eq160" = {
                  aa <- listPlot[[i]][j, colparam]
                  Tmax <- listPlot[[i]][j, colparam + 1]
                  deltaT <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq170" = {
@@ -182,14 +182,14 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  Tmax <- listPlot[[i]][j, colparam + 1]
                  deltaT <- listPlot[[i]][j, colparam + 2]
                  bb <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq180" = {
                  aa <- listPlot[[i]][j, colparam]
                  Tmin <- listPlot[[i]][j, colparam + 1]
                  Tmax <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq190" = {
@@ -197,28 +197,28 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  Tmax <- listPlot[[i]][j, colparam + 1]
                  Tmin <- listPlot[[i]][j, colparam + 2]
                  bb <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq200" = {
                  aa <- listPlot[[i]][j, colparam]
                  Tmin <- listPlot[[i]][j, colparam + 1]
                  Tmax <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq210" = {
                  aa <- listPlot[[i]][j, colparam]
                  bb <- listPlot[[i]][j, colparam + 1]
                  cc <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq220" = {
                  aa <- listPlot[[i]][j, colparam]
                  bb <- listPlot[[i]][j, colparam + 1]
                  cc <- listPlot[[i]][j, colparam + 2]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq230" = {
@@ -228,7 +228,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  TL <- listPlot[[i]][j, colparam + 3]
                  TH <- listPlot[[i]][j, colparam + 4]
                  aa <- listPlot[[i]][j, colparam + 5]
-                 fx <- as.function(alist(x=, eval(parse(text=eq$eqAlt))))
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
                {
