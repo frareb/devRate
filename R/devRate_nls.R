@@ -22,7 +22,7 @@
 #'   startValues = list(aa = 0, bb = 0))
 #' @export
 devRateModel <- function(eq, temp, devRate, startValues, ...){
-  ### handling exception for <stinner_74> et <lamb_92>
+  ### handling exception for <stinner_74> and <lamb_92>
   if(eq$id == "eq040" | eq$id == "eq150"){
     tTh <- temp[devRate == max(devRate)][1]
     part1_temp <- temp[temp <= tTh]
