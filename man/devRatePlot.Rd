@@ -21,6 +21,8 @@ This argument may be overwritten depending on the equation.}
 
 \item{optText}{A logical indcating wether the name of the eqaution should be written
 in the topright corner of the plot.}
+
+\item{spe}{A logical indicating if special plotting rules from literature should apply.}
 }
 \value{
 Nothing.
