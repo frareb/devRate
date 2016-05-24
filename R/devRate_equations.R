@@ -309,7 +309,6 @@ devRateEqList <- list(
   lactin2_95 = lactin2_95,
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
-  ## other equations
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11,
