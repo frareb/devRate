@@ -23,6 +23,8 @@ This argument may be overwritten depending on the equation.}
 in the topright corner of the plot.}
 
 \item{spe}{A logical indicating if special plotting rules from literature should apply.}
+
+\item{...}{Aditional arguments for the plot.}
 }
 \value{
 Nothing.

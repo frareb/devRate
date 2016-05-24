@@ -22,7 +22,7 @@
 wang_82
 }
 \description{
-Wang, R., Lan, Z. & Ding, Y. (1982) Studies on mathematical models of the relationship
+Wang, R., Lan, Z. and Ding, Y. (1982) Studies on mathematical models of the relationship
 between insect development and temperature. Acta Ecol. Sin, 2, 47–57.
 }
 \keyword{datasets}
