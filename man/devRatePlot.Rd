@@ -10,7 +10,7 @@ devRatePlot(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE,
 \arguments{
 \item{eq}{The name of the equation.}
 
-\item{nlsDR}{The result returned by the \code{devRateModel} function}
+\item{nlsDR}{The result returned by the \code{devRateModel} function.}
 
 \item{temp}{The temperature.}
 

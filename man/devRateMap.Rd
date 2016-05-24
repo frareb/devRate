@@ -2,11 +2,26 @@
 % Please edit documentation in R/devRate_map.R
 \name{devRateMap}
 \alias{devRateMap}
-\title{Mapping developmental rate}
+\title{Predict developmental rate from a a map of temperatures}
 \usage{
 devRateMap(nlsDR, tempMap)
 }
+\arguments{
+\item{nlsDR}{The result returned by the \code{devRateModel} function.}
+
+\item{tempMap}{A matrix containing temperatures in degrees.}
+}
+\value{
+A matrix with developmental rates predicted from the model.
+}
 \description{
 Create a map from a temperature matrix and the developmental rate curve
+}
+\examples{
+myT <- 5:15
+myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
+myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+  startValues = list(aa = 0, bb = 0))
+myMap <- devRateMap(nlsDR =  myNLS, tempMap = matrix(rnorm(100, mean = 12, sd = 2), ncol=10))
 }
 
