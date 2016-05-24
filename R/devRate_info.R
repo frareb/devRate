@@ -27,6 +27,7 @@ devRateInfo <- function(eq){
 #' @param sortBy The filter to seperate species ("ordersp", "familysp, "genussp", "species", "genSp").
 #' @param stage The life stage of the organism ("all", "eggs", "L1", "L2", "L3", "L4", "L5",
 #'   "larva", "pupa", "prepupa", "female", "male", ...)
+#' @param ... Aditional arguments for the plot.
 #' @return Nothing.
 #' @examples
 #' devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0,40), ylim = c(0,0.05))
