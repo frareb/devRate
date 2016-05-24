@@ -16,7 +16,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1111/j.1365-2311.1932.tb03305.x}
 "janisch_32"
 
 #' Davidson equation of developmental rate as a function of temperature.
@@ -35,7 +35,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.2307/1326}
 "davidson_44"
 
 #' Campbell et al. equation of developmental rate as a function of temperature.
@@ -54,7 +54,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/10.2307/2402197}
+#' @source \url{http://dx.doi.org/10.2307/2402197}
 "campbell_74"
 
 #' Stinner et al equation of developmental rate as a function of temperature.
@@ -73,7 +73,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.4039/Ent106519-5}
 "stinner_74"
 
 #' Logan et al. equation 6 of developmental rate as a function of temperature.
@@ -93,7 +93,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
 "logan6_76"
 
 #' Logan et al. equation 10 of developmental rate as a function of temperature.
@@ -113,7 +113,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
 "logan10_76"
 
 #' Sharpe and DeMichele equation of developmental rate as a function of temperature.
@@ -132,7 +132,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1016/0022-5193(77)90265-X}
 "sharpeDeMichele_77"
 
 #' Analytis equation of developmental rate as a function of temperature.
@@ -151,7 +151,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1111/j.1439-0434.1977.tb02886.x}
 "analytis_77"
 
 #' Schoolfield et al. equation of developmental rate as a function of temperature.
@@ -171,7 +171,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
 "schoolfield_81"
 
 #' Taylor equation of developmental rate as a function of temperature.
@@ -193,7 +193,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://www.jstor.org/stable/2460694}
 "taylor_81"
 
 #'  Second-order polynomial equation of developmental rate as a function of temperature.
@@ -227,7 +227,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/11.3.581}
 "harcourtYee_82"
 
 #' Fourth-order polynomial equation of developmental rate as a function of temperature.
@@ -262,7 +262,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/12.1.1}
 "hilbertLogan_83"
 
 #' Lamb equation of developmental rate as a function of temperature.
@@ -285,7 +285,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/21.1.10}
 "lamb_92"
 
 #' Lactin et al. equation 1 of developmental rate as a function of temperature.
@@ -304,7 +304,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
 "lactin1_95"
 
 #' Lactin et al. equation 2 of developmental rate as a function of temperature.
@@ -323,7 +323,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
 "lactin2_95"
 
 #' Briere et al equation 1 of developmental rate as a function of temperature.
@@ -342,7 +342,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
 "briere1_99"
 
 #' Briere et al equation 2 of developmental rate as a function of temperature.
@@ -361,7 +361,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
 "briere2_99"
 
 #' Kontodimas et al. equation of developmental rate as a function of temperature.
@@ -383,7 +383,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1603/0046-225X-33.1.1}
 "kontodimas_04"
 
 #' Simplified beta type equation of developmental rate as a function of temperature.
@@ -403,7 +403,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1093/jee/101.5.1557}
 "damos_08"
 
 #' Inverse second-order polynomial equation of developmental rate as a function of temperature.
@@ -422,7 +422,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://dx.doi.org/10.1155/2012/123405}
 "damos_11"
 
 #' Wang et al. equation of developmental rate as a function of temperature.
@@ -441,5 +441,5 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{https://www.doi.org/XXX}
+#' @source \url{http://en.cnki.com.cn/Article_en/CJFDTOTAL-STXB198201007.htm}
 "wang_82"
