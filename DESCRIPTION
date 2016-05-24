@@ -1,6 +1,7 @@
 Package: devRate
 Type: Package
-Title: Quantify Relationships Between Developmental Rate and Temperature in Ectotherms
+Title: Quantify Relationships Between Developmental Rate and Temperature in
+    Ectotherms
 Version: 0.1.0.9000
 Date: 2016-04-20
 Author: Rebaudo Francois (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-
@@ -9,3 +10,4 @@ Maintainer: Rebaudo Francois <francois.rebaudo@ird.fr>
 Description: xxx
 License: GPL-2
 LazyData: TRUE
+RoxygenNote: 5.0.1
