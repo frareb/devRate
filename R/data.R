@@ -428,7 +428,7 @@
 #' Wang et al. equation of developmental rate as a function of temperature.
 #'
 #' Wang, R., Lan, Z. and Ding, Y. (1982) Studies on mathematical models of the relationship
-#' between insect development and temperature. Acta Ecol. Sin, 2, 47–57.
+#' between insect development and temperature. Acta Ecol. Sin, 2, 47-57.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
