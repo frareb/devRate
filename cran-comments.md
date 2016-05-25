@@ -24,4 +24,4 @@ There was 1 NOTE with win-builder (devel and release):
 source: http://www.britannica.com/science/ectotherm
 
 ## Downstream dependencies
-There is no downstream dependencies.
+There are currently no downstream dependencies for this package.
