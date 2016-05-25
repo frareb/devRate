@@ -35,7 +35,10 @@ devRateInfo <- function(eq){
 #' devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
 #' @export
 devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
-  listPlot <- split(eq$startVal[as.character(eq$startVal[,6]) == stage,], as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,]))
+  listPlot <- split(
+    eq$startVal[as.character(eq$startVal[,6]) == stage,],
+    as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,])
+  )
   if(length(listPlot) > 0){
   graphics::plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
   x <- seq(from = 0, to = 50, length.out = 100)
@@ -238,7 +241,12 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
         )
     }
   }
-  legend("topleft", legend = names(listPlot), col = 1:length(listPlot), lwd = 1)
-  text(x = par("xaxp")[2], y = par("yaxp")[2], pos = 2, paste0(eq$name, " (", eq$refShort, ")"), ...)
+  graphics::legend("topleft", legend = names(listPlot), col = 1:length(listPlot), lwd = 1)
+  graphics::text(
+    x = graphics::par("xaxp")[2],
+    y = graphics::par("yaxp")[2],
+    pos = 2,
+    paste0(eq$name, " (", eq$refShort, ")"), ...
+  )
   }
 }
