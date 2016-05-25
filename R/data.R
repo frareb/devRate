@@ -383,7 +383,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{http://dx.doi.org/10.1603/0046-225X-33.1.1}
+#' @source \url{http://ee.oxfordjournals.org/content/33/1/1}
 "kontodimas_04"
 
 #' Simplified beta type equation of developmental rate as a function of temperature.
