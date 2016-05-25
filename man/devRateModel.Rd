@@ -15,14 +15,15 @@ devRateModel(eq, temp, devRate, startValues, ...)
 
 \item{startValues}{Starting values for the regression.}
 
-\item{...}{Additional arguments for the nls function.}
+\item{...}{Additional arguments for the \code{nls} function.}
 }
 \value{
-An object of class \code{nls} (except for Stinner et al. 1974 and Lamb 1992 where the function
-  returns a list of two objects of class \code{nls}).
+An object of class \code{nls} (except for Stinner et al. 1974 and
+  Lamb 1992 where the function returns a list of two objects of class \code{nls}).
 }
 \description{
-Compute non-linear regression
+Determine the nonlinear least-squares estimates of the parameters of a nonlinear model, on
+  the basis of the \code{nls} function from package \code{stats}.
 }
 \details{
 \code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of

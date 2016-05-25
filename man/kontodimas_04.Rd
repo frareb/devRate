@@ -16,7 +16,7 @@
   \item{id}{An id to identificate the equation.}
 }}
 \source{
-\url{http://dx.doi.org/10.1603/0046-225X-33.1.1}
+\url{http://ee.oxfordjournals.org/content/33/1/1}
 }
 \usage{
 kontodimas_04
