@@ -26,51 +26,51 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
     switch(EXPR = eq$id,
       "eq010" = { # janisch_32
         s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
-        lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
+        graphics::lines(s, stats::predict(nlsDR, newdata = list(T = s)), ...)
       },
       "eq020" = { # davidson_44
         maxX <- temp[devRate == max(devRate, na.rm = TRUE)][!is.na(temp[devRate == max(devRate, na.rm = TRUE)])][1]
         s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = c(0, maxX),  ...)
-        lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = c(0, maxX),  ...)
+        graphics::lines(s, stats::predict(nlsDR, newdata = list(T = s)), ...)
       },
       "eq030" = { # campbell_74
-        minX <- -coef(nlsDR)[1]/coef(nlsDR)[2]
+        minX <- -stats::coef(nlsDR)[1]/stats::coef(nlsDR)[2]
         maxX <- max(temp, na.rm = TRUE)
         s1 <- seq(from = min(temp, na.rm = TRUE), to = min(max(temp, na.rm = TRUE), maxX), length = 100)
         s2 <- seq(from = minX, to = min(temp, na.rm = TRUE), length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
-        lines(s1, predict(nlsDR, newdata = list(T = s1)), ...)
-        lines(s2, predict(nlsDR, newdata = list(T = s2)), lty = 2, ...)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
+        graphics::lines(s1, stats::predict(nlsDR, newdata = list(T = s1)), ...)
+        graphics::lines(s2, stats::predict(nlsDR, newdata = list(T = s2)), lty = 2, ...)
       },
       "eq040" = {
-        s1 <- seq(from = min(temp, na.rm = TRUE), to = coef(nlsDR[[2]]), length = 100)
-        s2 <- seq(from = coef(nlsDR[[2]]), to = max(temp, na.rm = TRUE), length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
-        lines(s1, predict(nlsDR[[1]], newdata = list(T = s1)), ...)
-        lines(s2, predict(nlsDR[[2]], newdata = list(x = s2)), ...)
+        s1 <- seq(from = min(temp, na.rm = TRUE), to = stats::coef(nlsDR[[2]]), length = 100)
+        s2 <- seq(from = stats::coef(nlsDR[[2]]), to = max(temp, na.rm = TRUE), length = 100)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
+        graphics::lines(s1, stats::predict(nlsDR[[1]], newdata = list(T = s1)), ...)
+        graphics::lines(s2, stats::predict(nlsDR[[2]], newdata = list(x = s2)), ...)
       },
       "eq150" = {
-        s1 <- seq(from = min(temp, na.rm = TRUE), to = coef(nlsDR[[1]])[2], length = 100)
-        s2 <- seq(from = coef(nlsDR[[1]])[2], to = max(temp, na.rm = TRUE), length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
-        lines(s1, predict(nlsDR[[1]], newdata = list(T = s1)), ...)
-        lines(s2, predict(nlsDR[[2]], newdata = list(x = s2)), ...)
+        s1 <- seq(from = min(temp, na.rm = TRUE), to = stats::coef(nlsDR[[1]])[2], length = 100)
+        s2 <- seq(from = stats::coef(nlsDR[[1]])[2], to = max(temp, na.rm = TRUE), length = 100)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
+        graphics::lines(s1, stats::predict(nlsDR[[1]], newdata = list(T = s1)), ...)
+        graphics::lines(s2, stats::predict(nlsDR[[2]], newdata = list(x = s2)), ...)
       },
       { # otherwise:
         s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
-        plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
-        lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
+        graphics::lines(s, stats::predict(nlsDR, newdata = list(T = s)), ...)
       }
     )
   } else {
     s <- seq(from = min(temp, na.rm = TRUE) - rangeT, to = max(temp, na.rm = TRUE) + rangeT, length = 100)
-    plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
-    lines(s, predict(nlsDR, newdata = list(T = s)), ...)
+    graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
+    graphics::lines(s, stats::predict(nlsDR, newdata = list(T = s)), ...)
   }
 
   if(optText == TRUE){
-    text(x = par("xaxp")[2], y = par("yaxp")[2], pos = 2, paste0(eq$name, " (", eq$refShort, ")"), ...)
+    graphics::text(x = graphics::par("xaxp")[2], y = graphics::par("yaxp")[2], pos = 2, paste0(eq$name, " (", eq$refShort, ")"), ...)
   }
 }
