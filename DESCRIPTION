@@ -8,7 +8,7 @@ Author: Rebaudo Francois (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-
     Univ.ParisSaclay)
 Maintainer: Rebaudo Francois <francois.rebaudo@ird.fr>
 Description: A set of functions to ease quantifying the relationships between developmental
-    rate and temperature. The package comprises a set of models and estimated paramaters
+    rate and temperature. The package comprises a set of models and estimated parameters
     borrowed from a vaste literature review in ectotherms.
 License: GPL-2
 LazyData: TRUE
