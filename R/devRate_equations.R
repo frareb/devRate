@@ -67,7 +67,7 @@ logan6_76 <- list(eq = rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/delt
                   ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                   refShort = "Logan et al. 1976",
                   startVal = getCSV(myCSV = logan676CSV),
-                  com = '',
+                  com = '"[...] developmental rate approaches zero asymptotically and no true lower threshold of development is predicted" Hilbert and Logan, 1983',
                   id = "eq050"
 )
 save(logan6_76, file = "./data/logan6_76.RData")
@@ -79,7 +79,7 @@ logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax -
                    ref = "Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An analytic model for description of temperature dependent rate phenomena in arthropods. Environmental Entomology, 5(6), 1133-1140.",
                    refShort = "Logan et al. 1976",
                    startVal = getCSV(myCSV = logan1076CSV),
-                   com = '',
+                   com = '"[...] developmental rate approaches zero asymptotically and no true lower threshold of development is predicted" Hilbert and Logan, 1983',
                    id = "eq060"
 )
 save(logan10_76, file = "./data/logan10_76.RData")
