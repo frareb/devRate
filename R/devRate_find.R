@@ -11,6 +11,7 @@
 #' @export
 devRateFind <- function(orderSP = "", familySP = "", species = ""){
   devRateEqList <- devRateEqList # avoid "no visible binding for global variable devRateEqList" Note
+  # sum(sapply(devRateEqList, function(i){nrow(i$startVal[,1:5])})) # number of entries
   for(i in names(devRateEqList)){
     eq <- get(i)
     if(orderSP != "" & familySP == "" & species == ""){
