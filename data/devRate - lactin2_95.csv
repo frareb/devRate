@@ -8,3 +8,14 @@ Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.01908
 Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.146066,36.643691,6.813403,-0.051544,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0019,38.2976,0.7152,-1.0214,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0017,39.6875,1.5488,-1.0168,François Rebaudo
+Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,0.009,35.299,0.201,-1.049,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0111,39.6357,2.2536,-1.1216,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0034,41.0808,2.136,-1.0336,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0043,40.9746,2.109,-1.0474,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0018,43.0451,2.2827,-1.0198,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.126278,39.843716,7.715781,-0.20038,François Rebaudo
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.121699,38.429502,8.200914,-0.015152,François Rebaudo
+Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.002245,54.872728,2.426034,-1.035138,François Rebaudo
+Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.158712,31.60617,6.278001,-0.003533,François Rebaudo
+Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.221673,23.292229,4.503865,0.001416,François Rebaudo
+Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.119357,44.186047,8.348083,-0.047561,François Rebaudo

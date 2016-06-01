@@ -1,3 +1,7 @@
 rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb),,,,,,,,,,
 ,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,bb,contributor
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0002634,7.9722,34.444,4.0547,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.000066,6.5188,33.9961,3.9298,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.00009,8.1904,34.3895,3.9046,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.000034,7.7659,34.126,3.8342,François Rebaudo

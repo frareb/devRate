@@ -2,3 +2,7 @@ rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc,,,,,,,,,,,
 ,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,Tmin,Tmax,contributor
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0001,1.7766,0.174,4.9125,33.0781,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0000096,2.8419,0.3555,0.0048,34.8674,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0000000092,4.1114,0.419,-10.11,34.5111,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0000026,2.8903,0.3762,0.0099,34.8576,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0000000073,4.0276,0.4941,-6.9336,35.0121,François Rebaudo

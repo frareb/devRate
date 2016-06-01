@@ -2,3 +2,7 @@ rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT)),,,,,,
 ,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,phi,aa,Tb,Tmax,deltaT,contributor
 Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.2676,58.62,7.657,45.02,3.433,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,0.2125,48.8589,5.5579,35.9055,3.6909,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.634,69.3089,3.2715,38.1625,3.0796,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,1.7924,99.1662,4.4538,41.3152,3.713,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.2125,48.8589,5.5579,35.9055,3.6909,François Rebaudo

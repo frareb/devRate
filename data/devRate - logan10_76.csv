@@ -4,3 +4,7 @@ REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,alpha,bb,cc,Tmax,deltaT,contributor
 Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,François Rebaudo
 Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.4792,0.1866,105.4232,40.0964,6.2452,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2292,0.1574,91.5731,38.8673,6.6197,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.1827,0.1818,105.4656,39.5984,6.4093,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0845,0.1734,102.2182,38.7735,6.4024,François Rebaudo
