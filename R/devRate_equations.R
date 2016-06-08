@@ -343,7 +343,7 @@ wangengel_98 <- list(eq = rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin
                      name = "Wang Engel",
                      ref = "Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops. Agricultural systems 58(1): 1-24.",
                      refShort = "Wang and Engel 1998",
-                     startVal = getCSV(myCSV = wangengel_98),
+                     startVal = getCSV(myCSV = wangengel98CSV),
                      com = '',
                      id = "eq280"
 )
