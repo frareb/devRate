@@ -1,0 +1,3 @@
+rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa)),,,,,,,,,
+,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Tmin,aa,Topt,contributor
