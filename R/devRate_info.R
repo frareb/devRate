@@ -235,6 +235,50 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
+               "eq240" = {
+                 p1 <- listPlot[[i]][j, colparam]
+                 p2 <- listPlot[[i]][j, colparam + 1]
+                 p3 <- listPlot[[i]][j, colparam + 2]
+                 p4 <- listPlot[[i]][j, colparam + 3]
+                 p5 <- listPlot[[i]][j, colparam + 4]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq250" = {
+                 cc <- listPlot[[i]][j, colparam]
+                 k1 <- listPlot[[i]][j, colparam + 1]
+                 k2 <- listPlot[[i]][j, colparam + 2]
+                 T1 <- listPlot[[i]][j, colparam + 3]
+                 T2 <- listPlot[[i]][j, colparam + 4]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq260" = {
+                 phi <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 Tb <- listPlot[[i]][j, colparam + 2]
+                 Tm <- listPlot[[i]][j, colparam + 3]
+                 deltab <- listPlot[[i]][j, colparam + 4]
+                 deltam <- listPlot[[i]][j, colparam + 5]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq270" = {
+                 cc <- listPlot[[i]][j, colparam]
+                 k1 <- listPlot[[i]][j, colparam + 1]
+                 T1 <- listPlot[[i]][j, colparam + 2]
+                 k2 <- listPlot[[i]][j, colparam + 3]
+                 T2 <- listPlot[[i]][j, colparam + 4]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq280" = {
+                 Tmin <- listPlot[[i]][j, colparam]
+                 aa <- listPlot[[i]][j, colparam + 1]
+                 Topt <- listPlot[[i]][j, colparam + 2]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
                {
                 # otherwise
                }
