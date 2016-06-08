@@ -289,6 +289,19 @@ wang_82 <- list(eq = rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa))
 )
 save(wang_82, file = "./data/wang_82.RData")
 
+hansen11CSV <- read.table("./data/devRate - hansen_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+hansen_11 <- list(eq = rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((T - p5) / p4) ),
+                  eqAlt = "p2 * ( (exp(p3 * (x - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((T - p5) / p4) )",
+                  name = "Hansen",
+                  ref = "Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.",
+                  refShort = "Hansen et al. 2011",
+                  startVal = getCSV(myCSV = hansen11CSV),
+                  com = '',
+                  id = "eq240"
+)
+save(hansen_11, file = "./data/hansen_11.RData")
+
+
 devRateEqList <- list(
   janisch_32 = janisch_32,
   davidson_44 = davidson_44,
@@ -300,6 +313,7 @@ devRateEqList <- list(
   analytis_77 = analytis_77,
   schoolfield_81 = schoolfield_81,
   taylor_81 = taylor_81,
+  wang_82 = wang_82,
   poly2 = poly2,
   harcourtYee_82 = harcourtYee_82,
   poly4 = poly4,
@@ -312,6 +326,6 @@ devRateEqList <- list(
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11,
-  wang_82 = wang_82
+  hansen_11 = hansen_11
 )
 save(devRateEqList, file = "./data/devRateEqList.RData")
