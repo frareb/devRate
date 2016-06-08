@@ -301,6 +301,56 @@ hansen_11 <- list(eq = rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1
 )
 save(hansen_11, file = "./data/hansen_11.RData")
 
+shi11CSV <- read.table("./data/devRate - shi_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+shi_11 <- list(eq = rT ~ cc * (exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2))),
+                  eqAlt = "cc * (exp(-k1 * (x - T1))) * (1 - exp(k2 * (x - T2)))",
+                  name = "Shi",
+                  ref = "Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20. doi:10.1016/j.aspen.2010.11.008.",
+                  refShort = "Shi et al. 2011",
+                  startVal = getCSV(myCSV = shi11CSV),
+                  com = '',
+                  id = "eq250"
+)
+save(shi_11, file = "./data/shi_11.RData")
+
+regniere12CSV <- read.table("./data/devRate - regniere_12.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+regniere_12 <- list(eq = rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam)),
+               eqAlt = "phi * (exp(bb * (x - Tb)) - ((Tm - x)/(Tm - Tb)) * exp(-bb * (x - Tb) / deltab) - ((x - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - x)/deltam))",
+               name = "Regniere",
+               ref = "Régnière, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on development, survival and reproduction of insects: experimental design, data analysis and modeling. Journal of Insect Physiology 58(5): 634-47.",
+               refShort = "Regniere et al. 2012",
+               startVal = getCSV(myCSV = regniere12CSV),
+               com = '',
+               id = "eq260"
+)
+save(regniere_12, file = "./data/regniere_12.RData")
+
+ratkowsky82CSV <- read.table("./data/devRate - ratkowsky_82.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+ratkowsky_82 <- list(eq = rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2,
+                    eqAlt = "(sqrt(cc) * k1 * (x - T1) * (1 - exp(k2 * (x - T2))))^2",
+                    name = "Ratkowsky",
+                    ref = "Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.",
+                    refShort = "Ratkowsky et al. 1982",
+                    startVal = getCSV(myCSV = ratkowsky82CSV),
+                    com = '',
+                    id = "eq270"
+)
+save(ratkowsky_82, file = "./data/ratkowsky_82.RData")
+
+wangengel98CSV <- read.table("./data/devRate - wangengel_98.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+wangengel_98 <- list(eq = rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa)),
+                     eqAlt = "(2 * (x - Tmin)^aa * (Topt - Tmin)^aa - (x - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa))",
+                     name = "Wang Engel",
+                     ref = "Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops. Agricultural systems 58(1): 1-24.",
+                     refShort = "Wang and Engel 1998",
+                     startVal = getCSV(myCSV = wangengel_98),
+                     com = '',
+                     id = "eq280"
+)
+save(wangengel_98, file = "./data/wangengel_98.RData")
+
+## https://quantitativeconservationbiology.wordpress.com/2013/07/02/confidence-interval-for-a-model-fitted-with-nls-in-r/
+
 
 devRateEqList <- list(
   janisch_32 = janisch_32,
@@ -317,15 +367,19 @@ devRateEqList <- list(
   poly2 = poly2,
   harcourtYee_82 = harcourtYee_82,
   poly4 = poly4,
+  ratkowsky_82 = ratkowsky_82,
   hilbertLogan_83 = hilbertLogan_83,
   lamb_92 = lamb_92,
   lactin1_95 = lactin1_95,
   lactin2_95 = lactin2_95,
+  wangengel_98 = wangengel_98,
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11,
-  hansen_11 = hansen_11
+  hansen_11 = hansen_11,
+  shi_11 = shi_11,
+  regniere_12 = regniere_12
 )
 save(devRateEqList, file = "./data/devRateEqList.RData")
