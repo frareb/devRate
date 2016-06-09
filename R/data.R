@@ -1,3 +1,41 @@
+#' Beta equation of developmental rate as a function of temperature.
+#'
+#' Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
+#' development as a function of temperature». Agricultural and Forest Meteorology 77(1): 1-16.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
+"beta_95"
+
+#' Performance-2 equation of developmental rate as a function of temperature.
+#'
+#' Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
+#' temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
+"perf2_11"
+
 #' Root square equation of developmental rate as a function of temperature.
 #'
 #' Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
