@@ -349,6 +349,18 @@ wangengel_98 <- list(eq = rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin
 )
 save(wangengel_98, file = "./data/wangengel_98.RData")
 
+rootsq82CSV <- read.table("./data/devRate - rootsq_82.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+rootsq_82 <- list(eq = rT ~ (bb * (T - Tb))^2,
+                     eqAlt = "(bb * (x - Tb))^2",
+                     name = "Root square",
+                     ref = "Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.",
+                     refShort = "Ratkowsky et al. 1982",
+                     startVal = getCSV(myCSV = rootsq82CSV),
+                     com = '',
+                     id = "eq290"
+)
+save(rootsq_82, file = "./data/rootsq_82.RData")
+
 ## https://quantitativeconservationbiology.wordpress.com/2013/07/02/confidence-interval-for-a-model-fitted-with-nls-in-r/
 
 
@@ -368,6 +380,7 @@ devRateEqList <- list(
   harcourtYee_82 = harcourtYee_82,
   poly4 = poly4,
   ratkowsky_82 = ratkowsky_82,
+  rootsq_82 = rootsq_82,
   hilbertLogan_83 = hilbertLogan_83,
   lamb_92 = lamb_92,
   lactin1_95 = lactin1_95,
