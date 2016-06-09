@@ -1,3 +1,119 @@
+#' Root square equation of developmental rate as a function of temperature.
+#'
+#' Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
+#' temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://jb.asm.org/content/149/1/1}
+"rootsq_82"
+
+#' Wang and Engel equation of developmental rate as a function of temperature.
+#'
+#' Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops.
+#' Agricultural systems 58(1): 1-24.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
+"wangengel_98"
+
+#' Ratkowsky equation of developmental rate as a function of temperature.
+#'
+#' Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
+#' temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://jb.asm.org/content/149/1/1}
+"ratkowsky_82"
+
+#' Regniere equation of developmental rate as a function of temperature.
+#'
+#' Régnière, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
+#' development, survival and reproduction of insects: experimental design, data analysis
+#' and modeling. Journal of Insect Physiology 58(5): 634-47.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2012.01.010}
+"regniere_12"
+
+#' Shi equation of developmental rate as a function of temperature.
+#'
+#' Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
+#' temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
+"shi_11"
+
+#' Hansen equation of developmental rate as a function of temperature.
+#'
+#' Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
+#' diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
+#' (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
+"hansen_11"
+
 #' Janisch equation of developmental rate as a function of temperature.
 #'
 #' Janisch, E. (1932) The influence of temperature on the life-history of insects.
