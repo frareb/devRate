@@ -279,6 +279,12 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
+               "eq290" = {
+                 bb <- listPlot[[i]][j, colparam]
+                 Tb <- listPlot[[i]][j, colparam + 1]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
                {
                 # otherwise
                }
