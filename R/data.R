@@ -1,7 +1,7 @@
 #' Beta equation of developmental rate as a function of temperature.
 #'
 #' Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
-#' development as a function of temperature». Agricultural and Forest Meteorology 77(1): 1-16.
+#' development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -95,7 +95,7 @@
 
 #' Regniere equation of developmental rate as a function of temperature.
 #'
-#' Régnière, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
+#' Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
 #' development, survival and reproduction of insects: experimental design, data analysis
 #' and modeling. Journal of Insect Physiology 58(5): 634-47.
 #'

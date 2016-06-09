@@ -22,7 +22,7 @@
 regniere_12
 }
 \description{
-Régnière, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
+Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
 development, survival and reproduction of insects: experimental design, data analysis
 and modeling. Journal of Insect Physiology 58(5): 634-47.
 }

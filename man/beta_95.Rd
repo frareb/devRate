@@ -23,7 +23,7 @@ beta_95
 }
 \description{
 Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
-development as a function of temperature». Agricultural and Forest Meteorology 77(1): 1-16.
+development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
 }
 \keyword{datasets}
 
