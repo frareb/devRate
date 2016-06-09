@@ -1,0 +1,3 @@
+rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,rm,T1,T2,Tm,contributor
