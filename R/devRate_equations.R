@@ -363,6 +363,29 @@ save(rootsq_82, file = "./data/rootsq_82.RData")
 
 ## https://quantitativeconservationbiology.wordpress.com/2013/07/02/confidence-interval-for-a-model-fitted-with-nls-in-r/
 
+perf211CSV <- read.table("./data/devRate - perf2_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+perf2_11 <- list(eq = rT ~ cc * (T - T1) * (1 - exp(k * (T - T2))),
+                  eqAlt = "cc * (x - T1) * (1 - exp(k * (x - T2)))",
+                  name = "Performance-2",
+                  ref = "Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20. doi:10.1016/j.aspen.2010.11.008.",
+                  refShort = "Shi et al. 2011",
+                  startVal = getCSV(myCSV = perf211CSV),
+                  com = '',
+                  id = "eq300"
+)
+save(perf2_11, file = "./data/perf2_11.RData")
+
+beta95CSV <- read.table("./data/devRate - beta_95.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+beta_95 <- list(eq = rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),
+                  eqAlt = "rm * ((T2 - x)/(T2 - Tm)) * ((x - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm))",
+                  name = "Beta",
+                  ref = "",
+                  refShort = "Yin et al. 1995",
+                  startVal = getCSV(myCSV = beta95CSV),
+                  com = '',
+                  id = "eq310"
+)
+save(beta_95, file = "./data/beta_95.RData")
 
 devRateEqList <- list(
   janisch_32 = janisch_32,
@@ -385,6 +408,7 @@ devRateEqList <- list(
   lamb_92 = lamb_92,
   lactin1_95 = lactin1_95,
   lactin2_95 = lactin2_95,
+  beta_95 = beta_95,
   wangengel_98 = wangengel_98,
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
@@ -393,6 +417,7 @@ devRateEqList <- list(
   damos_11 = damos_11,
   hansen_11 = hansen_11,
   shi_11 = shi_11,
+  perf2_11 = perf2_11,
   regniere_12 = regniere_12
 )
 save(devRateEqList, file = "./data/devRateEqList.RData")
