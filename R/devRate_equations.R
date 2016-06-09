@@ -361,8 +361,6 @@ rootsq_82 <- list(eq = rT ~ (bb * (T - Tb))^2,
 )
 save(rootsq_82, file = "./data/rootsq_82.RData")
 
-## https://quantitativeconservationbiology.wordpress.com/2013/07/02/confidence-interval-for-a-model-fitted-with-nls-in-r/
-
 perf211CSV <- read.table("./data/devRate - perf2_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 perf2_11 <- list(eq = rT ~ cc * (T - T1) * (1 - exp(k * (T - T2))),
                   eqAlt = "cc * (x - T1) * (1 - exp(k * (x - T2)))",
@@ -379,7 +377,7 @@ beta95CSV <- read.table("./data/devRate - beta_95.csv", skip = 2, header = TRUE,
 beta_95 <- list(eq = rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),
                   eqAlt = "rm * ((T2 - x)/(T2 - Tm)) * ((x - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm))",
                   name = "Beta",
-                  ref = "",
+                  ref = "Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop development as a function of temperature». Agricultural and Forest Meteorology 77(1): 1-16.",
                   refShort = "Yin et al. 1995",
                   startVal = getCSV(myCSV = beta95CSV),
                   com = '',
