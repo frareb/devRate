@@ -4,7 +4,7 @@
 \name{devRateEqList}
 \alias{devRateEqList}
 \title{The list of all available equations of developmental rate as a function of temperature.}
-\format{An object of class \code{list} of length 23.}
+\format{An object of class \code{list} of length 31.}
 \usage{
 devRateEqList
 }
