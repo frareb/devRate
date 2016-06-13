@@ -44,14 +44,19 @@ devRatePlot <- function(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, s
         graphics::lines(s1, stats::predict(nlsDR, newdata = list(T = s1)), ...)
         graphics::lines(s2, stats::predict(nlsDR, newdata = list(T = s2)), lty = 2, ...)
       },
-      "eq040" = {
+      "eq040" = { # stinner_74
         s1 <- seq(from = min(temp, na.rm = TRUE), to = stats::coef(nlsDR[[2]]), length = 100)
         s2 <- seq(from = stats::coef(nlsDR[[2]]), to = max(temp, na.rm = TRUE), length = 100)
         graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
         graphics::lines(s1, stats::predict(nlsDR[[1]], newdata = list(T = s1)), ...)
         graphics::lines(s2, stats::predict(nlsDR[[2]], newdata = list(x = s2)), ...)
       },
-      "eq150" = {
+      "eq100" = { # taylor_81
+        s1 <- seq(from = min(temp, na.rm = TRUE), to = abs(stats::coef(nlsDR)[2]) + abs(stats::coef(nlsDR)[3]), length = 100)
+        graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", ...)
+        graphics::lines(s1, stats::predict(nlsDR, newdata = list(T = s1)), ...)
+      },
+      "eq150" = { # lamb_92
         s1 <- seq(from = min(temp, na.rm = TRUE), to = stats::coef(nlsDR[[1]])[2], length = 100)
         s2 <- seq(from = stats::coef(nlsDR[[1]])[2], to = max(temp, na.rm = TRUE), length = 100)
         graphics::plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Developmental rate", xlim = range(c(s1, s2)), ...)
