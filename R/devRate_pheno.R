@@ -122,9 +122,9 @@ devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
   if(typeG == "density"){myYlim <- c(0, 0.5)}else{myYlim <- c(0, nrow(ibm[[1]]))}
   graphics::plot(0, type = 'n', xlim = c(0, length(ibm[[3]])), ylim = myYlim,
        xlab = "Time steps", ylab = "Phenology density")
-  colG <- rep(1:8, each = length(ibm[[2]]))
+  colG <- rep(1:30, each = length(ibm[[2]]))
   colGTrans <- grDevices::adjustcolor(colG, alpha.f = 0.3)
-  ltyG <- rep(1:length(ibm[[2]]), 8)
+  ltyG <- rep(1:length(ibm[[2]]), 30)
 
   switch(EXPR = typeG,
     "density" = {
