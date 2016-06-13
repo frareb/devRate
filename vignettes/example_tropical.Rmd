@@ -60,6 +60,13 @@ The empirical data can be fitted to any model in the database with the
     mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
       startValues = list(Rm = 0.05, Tm = 30, To = 5))
 
+    devRatePlot(eq = taylor_81, nlsDR = mEggs, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+      pch = 16, ylim = c(0, 0.2))
+    devRatePlot(eq = taylor_81, nlsDR = mLarva, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+      pch = 16, ylim = c(0, 0.2))
+    devRatePlot(eq = taylor_81, nlsDR = mPupa, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+      pch = 16, ylim = c(0, 0.2))
+
 ```{r, echo=FALSE, results='asis'}
 knitr::kable(data.frame(Stage = c("Eggs", "Larva", "Pupa"), model = rep("Taylor", 3),
   Rm = c(0.1934, 0.06838, 0.0978), Rm_SE = c(0.01781, 0.009473, 0.0087),
@@ -67,23 +74,20 @@ knitr::kable(data.frame(Stage = c("Eggs", "Larva", "Pupa"), model = rep("Taylor"
   To = c(-6.8939, 5.54497, -4.7515), To_SE = c(0.76853, 0.865261, 0.4715)))
 ```
 
-## Figures
+## Forecasting phenologies from empirical temperature
+In this example the temperature dataset is built from a Normal distribution of mean
+15 and a standard deviation of 1, with a time step of one day. The developmental
+models used are those previously fitted with the Taylor model for the three stages.
+We assumed that the average time for female adults to lay eggs was of 1 day. We
+simulated 500 individuals, with a stochasticity in developmental rate centered on
+the developmental rate, with a standard deviation of 0.015 (Normal distribution).
 
-The figure sizes have been customised so that you can easily put two images side-by-side.
+    forecastTsolanivora <- devRateIBM(
+      tempTS = rnorm(n = 100, mean = 15, sd = 1),
+      timeStepTS = 1,
+      models = list(mEggs, mLarva, mPupa),
+      numInd = 500,
+      stocha = 0.015,
+      timeLayEggs = 1)
 
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
-```
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+    devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density")
