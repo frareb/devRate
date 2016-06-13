@@ -85,7 +85,7 @@ devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
 ### testing area ###
 
 forecastTsolanivora <- devRateIBM(
-  tempTS = rnorm(n = 100, mean = 10, sd = 1),
+  tempTS = rnorm(n = 100, mean = 15, sd = 1),
   timeStepTS = 1,
   models = list(mEggs, mLarva, mPupa),
   numInd = 500,
@@ -98,7 +98,7 @@ devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density", threshold = 0.1)
 devRateIBMPlot(ibm = forecastTsolanivora, typeG = "hist")
 
 
-numGen <- sum(!is.na(apply(ibm[[1]], MARGIN = 2, FUN = mean, na.rm = TRUE))) / length(ibm[[2]])
+numGen <- sum(!is.na(apply(forecastTsolanivora[[1]], MARGIN = 2, FUN = mean, na.rm = TRUE))) / length(forecastTsolanivora[[2]])
 
 
 
