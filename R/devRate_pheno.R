@@ -50,27 +50,33 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
             mean = stats::predict(models[[i]], newdata = list(T = tempTS[tx])),
             sd = stocha) * timeStepTS
         }
-        assign(paste0("g", g, "s", i), tx)
+        if(currentDev >= 1){assign(paste0("g", g, "s", i), tx)}
       }
       tx <- tx + as.integer(timeLayEggs)
     }
-    stages <- paste0(rep(paste0("g",1:(g + 10)), each = length(models)),
-                     "s", 1:length(models))
-    if(exists(x = "communityInd")){
-      stages <- c(stages[1:(((g - 1) * length(models) + (i - 1)) - 1)],
-        rep(NA, ((ncol(communityInd) - ((g - 1) * length(models) + (i - 1))) + 1)))
-    }else{
-      stages <- c(stages[1:(((g - 1) * length(models) + (i - 1)) - 1)],
-        rep(NA, ((length(stages) - ((g - 1) * length(models) + (i - 1))) + 1)))
-    }
+    # stages <- paste0(rep(paste0("g",1:(g + 10)), each = length(models)),
+    #                  "s", 1:length(models))
+    # if(exists(x = "communityInd")){
+    #   stages <- c(stages[1:(((g - 1) * length(models) + (i - 2)) - 1)],
+    #     rep(NA, ((ncol(communityInd) - ((g - 1) * length(models) + (i - 1))) + 2)))
+    #   # stages <- c(stages[1:(((g - 1) * length(models) + (i)) - 1)],
+    #     # rep(NA, ((ncol(communityInd) - ((g - 1) * length(models) + (i - 1))) + 1)))
+    # }else{
+    #   stages <- c(stages[1:(((g - 1) * length(models) + (i - 2)) - 1)],
+    #     rep(NA, ((length(stages) - ((g - 1) * length(models) + (i - 1))) + 2)))
+    #   # stages <- c(stages[1:(((g - 1) * length(models) + (i)) - 1)],
+    #     # rep(NA, ((length(stages) - ((g - 1) * length(models) + (i - 1))) + 1)))
+    # }
+    stages <- ls(pattern = "^[g][0-9][s][0-9]$")
     currentInd <- sapply(stages, function(k){
       if(!is.na(k)){return(get(k))}else{return(NA)}
     })
     if(exists(x = "communityInd")){
-      communityInd <- rbind(communityInd, currentInd)
+      communityInd <- rbind(communityInd, c(currentInd, rep(NA, ncol(communityInd) - length(currentInd))))
     }else{
-      communityInd <- matrix(currentInd, ncol = length(currentInd))
+      communityInd <- matrix(c(currentInd, rep(NA, 10)), ncol = length(currentInd) + 10) ### assuming 10G dif.
     }
+    rm(list = ls(pattern = "^[g][0-9][s][0-9]$"))
   }
   bdd <- communityInd
   bdd <- unname(bdd[, !is.na(apply(bdd, MARGIN = 2, FUN = mean, na.rm = TRUE))])
