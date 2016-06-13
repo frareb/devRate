@@ -46,7 +46,7 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
         while(currentDev < 1){
           tx <- tx + 1
           if(tx > length(tempTS)){break}
-          currentDev <- currentDev + rnorm(n = 1,
+          currentDev <- currentDev + stats::rnorm(n = 1,
             mean = stats::predict(models[[i]], newdata = list(T = tempTS[tx])),
             sd = stocha) * timeStepTS
         }
@@ -120,10 +120,10 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
 #' @export
 devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
   if(typeG == "density"){myYlim <- c(0, 0.5)}else{myYlim <- c(0, nrow(ibm[[1]]))}
-  plot(0, type = 'n', xlim = c(0, length(ibm[[3]])), ylim = myYlim,
+  graphics::plot(0, type = 'n', xlim = c(0, length(ibm[[3]])), ylim = myYlim,
        xlab = "Time steps", ylab = "Phenology density")
   colG <- rep(1:8, each = length(ibm[[2]]))
-  colGTrans <- adjustcolor(colG, alpha.f = 0.3)
+  colGTrans <- grDevices::adjustcolor(colG, alpha.f = 0.3)
   ltyG <- rep(1:length(ibm[[2]]), 8)
 
   switch(EXPR = typeG,
@@ -131,18 +131,18 @@ devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
       cat(paste0("Threshold for visualization = ", threshold * 100, "% of individuals"))
       for(j in 1:ncol(ibm[[1]])){
         if(sum((!is.na(ibm[[1]][,j])) / length(ibm[[1]][,j])) >= threshold){
-          points(density(ibm[[1]][,j], na.rm = TRUE, adjust = 2),
+          graphics::points(stats::density(ibm[[1]][,j], na.rm = TRUE, adjust = 2),
                  type ='l', col = colG[j], lty = ltyG[j], lwd = 2)
         }
       }
     },
     "hist" = {
       for(j in 1:ncol(ibm[[1]])){
-        hist(ibm[[1]][,j], add = TRUE, col = colGTrans[j], lty = ltyG[j])
+        graphics::hist(ibm[[1]][,j], add = TRUE, col = colGTrans[j], lty = ltyG[j])
       }
     }
   )
-  legend("topleft",
+  graphics::legend("topleft",
          legend = colnames(ibm[[1]]),
          lty = 1:length(ibm[[2]]),
          lwd = 2,
