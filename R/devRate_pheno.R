@@ -1,4 +1,39 @@
 #' Forecast ectotherm phenology as a function of temperature and developmental rate models
+#'
+#' @param tempTS The temperature time series (a vector).
+#' @param timeStepTS The time step of the temperature time series in days (a numeric).
+#' @param models The models for developmental rate (a list with objects of class nls).
+#' @param numInd The number of individuals for the simulation (an integer).
+#' @param stocha The standard deviation of a Normal distribution centered on
+#'    develomental rate to create stochasticity among individuals (a numeric).
+#' @param timeLayEggs The delay between emergence of adults and the time where
+#'    females lay eggs in days (a numeric).
+#' @return A list with three elements: the table of phenology for each individual,
+#'    the models used (nls objects), and the time series for temperature.
+#' @examples
+#' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+#'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+#'    25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+#' rawDevLarva <- matrix(c(10, 0.010, 10, 0.014, 10, 0.019, 13, 0.034, 15, 0.024,
+#'    15.5, 0.029, 15.5, 0.034, 15.5, 0.039, 17, 0.067, 20, 0.050, 25, 0.076,
+#'    25, 0.056, 30, 0.0003, 35, 0.0002), ncol = 2, byrow = TRUE)
+#' rawDevPupa <- matrix(c(10, 0.001, 10, 0.008, 10, 0.012, 13, 0.044, 15, 0.017,
+#'    15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
+#'    20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
+#'    35, 0.0002), ncol = 2, byrow = TRUE)
+#' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+#'    startValues = list(Rm = 0.05, Tm = 25, To = 5))
+#' mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' forecastTsolanivora <- devRateIBM(
+#'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
+#'    timeStepTS = 1,
+#'    models = list(mEggs, mLarva, mPupa),
+#'    numInd = 500,
+#'    stocha = 0.015,
+#'    timeLayEggs = 1)
 #' @export
 devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLayEggs = 1){
   for(ind in 1:numInd){
@@ -38,7 +73,6 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
     }
   }
   bdd <- communityInd
-  ### TO DO: enlever les colonnes avec des NA et renommer les colonnes restantes ###
   bdd <- unname(bdd[, !is.na(apply(bdd, MARGIN = 2, FUN = mean, na.rm = TRUE))])
   if(!is.matrix(bdd)){bdd <- matrix(bdd)}
   if(ncol(bdd) != 0){
@@ -50,6 +84,40 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
   return(list(bdd, models, tempTS))
 }
 
+#' Plot phenology table
+#'
+#' @param ibm The phenology model returned by devRateIBM function.
+#' @param typeG The type of plot ("density" or "hist").
+#' @param threshold The threshold rate of individuals for being represented
+#'    in a density plot (a numeric between 0 and 1).
+#' @return Nothing.
+#' @examples
+#' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+#'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+#'    25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+#' rawDevLarva <- matrix(c(10, 0.010, 10, 0.014, 10, 0.019, 13, 0.034, 15, 0.024,
+#'    15.5, 0.029, 15.5, 0.034, 15.5, 0.039, 17, 0.067, 20, 0.050, 25, 0.076,
+#'    25, 0.056, 30, 0.0003, 35, 0.0002), ncol = 2, byrow = TRUE)
+#' rawDevPupa <- matrix(c(10, 0.001, 10, 0.008, 10, 0.012, 13, 0.044, 15, 0.017,
+#'    15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
+#'    20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
+#'    35, 0.0002), ncol = 2, byrow = TRUE)
+#' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+#'    startValues = list(Rm = 0.05, Tm = 25, To = 5))
+#' mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' forecastTsolanivora <- devRateIBM(
+#'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
+#'    timeStepTS = 1,
+#'    models = list(mEggs, mLarva, mPupa),
+#'    numInd = 500,
+#'    stocha = 0.015,
+#'    timeLayEggs = 1)
+#' devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density", threshold = 0.1)
+#' devRateIBMPlot(ibm = forecastTsolanivora, typeG = "hist")
+#' @export
 devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
   if(typeG == "density"){myYlim <- c(0, 0.5)}else{myYlim <- c(0, nrow(ibm[[1]]))}
   plot(0, type = 'n', xlim = c(0, length(ibm[[3]])), ylim = myYlim,
@@ -82,30 +150,38 @@ devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
          ncol = ceiling(ncol(ibm[[1]]) / length(ibm[[2]])))
 }
 
-### testing area ###
-
-forecastTsolanivora <- devRateIBM(
-  tempTS = rnorm(n = 100, mean = 15, sd = 1),
-  timeStepTS = 1,
-  models = list(mEggs, mLarva, mPupa),
-  numInd = 500,
-  stocha = 0.015,
-  timeLayEggs = 1)
-
-print(forecastTsolanivora[[1]])
-
-devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density", threshold = 0.1)
-devRateIBMPlot(ibm = forecastTsolanivora, typeG = "hist")
-
-
-numGen <- sum(!is.na(apply(forecastTsolanivora[[1]], MARGIN = 2, FUN = mean, na.rm = TRUE))) / length(forecastTsolanivora[[2]])
-
-
-
-
-
-
-
-
-
-
+#' Number of generations
+#'
+#' Computes the number of generations from the individual-based model fit.
+#' @param ibm The phenology model returned by devRateIBM function.
+#' @return The simulated number of generations.
+#' @examples
+#' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+#'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+#'    25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+#' rawDevLarva <- matrix(c(10, 0.010, 10, 0.014, 10, 0.019, 13, 0.034, 15, 0.024,
+#'    15.5, 0.029, 15.5, 0.034, 15.5, 0.039, 17, 0.067, 20, 0.050, 25, 0.076,
+#'    25, 0.056, 30, 0.0003, 35, 0.0002), ncol = 2, byrow = TRUE)
+#' rawDevPupa <- matrix(c(10, 0.001, 10, 0.008, 10, 0.012, 13, 0.044, 15, 0.017,
+#'    15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
+#'    20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
+#'    35, 0.0002), ncol = 2, byrow = TRUE)
+#' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+#'    startValues = list(Rm = 0.05, Tm = 25, To = 5))
+#' mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' forecastTsolanivora <- devRateIBM(
+#'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
+#'    timeStepTS = 1,
+#'    models = list(mEggs, mLarva, mPupa),
+#'    numInd = 500,
+#'    stocha = 0.015,
+#'    timeLayEggs = 1)
+#' devRateIBMgen(ibm = forecastTsolanivora)
+#' @export
+devRateIBMgen <- function(ibm){
+  numGen <- sum(!is.na(apply(ibm[[1]], MARGIN = 2, FUN = mean, na.rm = TRUE))) / length(ibm[[2]])
+  return(numGen)
+}
