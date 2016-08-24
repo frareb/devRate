@@ -302,7 +302,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  graphics::curve(fx, add = TRUE, col = i)
                },
                {
-                # otherwise
+                # otherwise nothing
                }
         )
     }
