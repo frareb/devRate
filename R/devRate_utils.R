@@ -41,8 +41,8 @@ compDifDays <- function(vecDates, dateFormat = "%d/%m/%y"){
 #' @export
 compDifDaysDf <- function(dfDates, dateFormatDf = "%d/%m/%y"){
   daysDiff <- sapply(1:length(dfDates[,1]), function(j){
-    compDifDays(vecDates = unlist(myDays[j,]), dateFormat = dateFormatDf)
+    compDifDays(vecDates = unlist(dfDates[j,]), dateFormat = dateFormatDf)
   })
-  rownames(daysDiff) <- colnames(myDays[,1:(ncol(myDays)-1)])
+  rownames(daysDiff) <- colnames(dfDates[,1:(ncol(dfDates)-1)])
   return(t(daysDiff))
 }
