@@ -46,9 +46,10 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
         while(currentDev < 1){
           tx <- tx + 1
           if(tx > length(tempTS)){break}
-          currentDev <- currentDev + stats::rnorm(n = 1,
-            mean = stats::predict(models[[i]], newdata = list(T = tempTS[tx])),
-            sd = stocha) * timeStepTS
+          addDev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
+            newdata = list(T = tempTS[tx])), sd = stocha) * timeStepTS
+          if(addDev < 0){addDev <- 0}
+          currentDev <- currentDev + addDev
         }
         if(currentDev >= 1){assign(paste0("g", g, "s", i), tx)}
       }
