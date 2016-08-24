@@ -17,11 +17,19 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
+
+\url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
 }
 \usage{
 hansen_11
+
+hansen_11
 }
 \description{
+Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
+diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
+(Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
+
 Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
 diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
 (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.

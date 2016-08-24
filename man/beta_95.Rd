@@ -17,11 +17,18 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
+
+\url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
 }
 \usage{
 beta_95
+
+beta_95
 }
 \description{
+Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
+development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
+
 Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
 development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
 }

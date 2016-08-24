@@ -17,11 +17,18 @@
 }}
 \source{
 \url{http://jb.asm.org/content/149/1/1}
+
+\url{http://jb.asm.org/}
 }
 \usage{
 rootsq_82
+
+rootsq_82
 }
 \description{
+Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
+temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
+
 Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
 temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
 }

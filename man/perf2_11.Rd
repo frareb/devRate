@@ -17,11 +17,18 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
+
+\url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
 }
 \usage{
 perf2_11
+
+perf2_11
 }
 \description{
+Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
+temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+
 Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
 temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
 }
