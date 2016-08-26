@@ -10,7 +10,7 @@ devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
 \arguments{
 \item{tempTS}{The temperature time series (a vector).}
 
-\item{timeStepTS}{The time step of the temperature time series in days (a numeric).}
+\item{timeStepTS}{The time step of the temperature time series (a numeric).}
 
 \item{models}{The models for developmental rate (a list with objects of class nls).}
 
@@ -20,7 +20,7 @@ devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
 develomental rate to create stochasticity among individuals (a numeric).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
-females lay eggs in days (a numeric).}
+females lay eggs in time steps (a numeric).}
 }
 \value{
 A list with three elements: the table of phenology for each individual,
