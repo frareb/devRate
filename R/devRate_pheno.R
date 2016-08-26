@@ -91,6 +91,57 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
   return(list(bdd, models, tempTS))
 }
 
+devRateIBMALT <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLayEggs = 1){
+  for(ind in 1:numInd){
+    g <- 0
+    tx <- 0
+    vectorGS <- vector()
+    while(tx < length(tempTS)){
+      g <- g + 1
+      for(i in seq_along(models)){
+        currentDev <- 0
+        while(currentDev < 1){
+          tx <- tx + 1
+          if(tx > length(tempTS)){break}
+          addDev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
+                                                              newdata = list(T = tempTS[tx])), sd = stocha) * timeStepTS
+          if(addDev < 0){addDev <- 0}
+          currentDev <- currentDev + addDev
+        }
+        if(currentDev >= 1){
+#           assign(paste0("g", g, "s", i), tx)
+#           gsName <- paste0("g", g, "s", i)
+          vectorGS <- c(vectorGS, tx)
+        }
+      }
+      tx <- tx + as.integer(timeLayEggs)
+    }
+#     stages <- ls(pattern = "^[g][0-9][s][0-9]$")
+    # nameGen <- paste0("g", 1:(ceiling(length(vectorGS) / length(models))))
+    # nameSta <- paste0("s", seq_along(models))
+    currentInd <-  vectorGS
+#     currentInd <- sapply(stages, function(k){
+#       if(!is.na(k)){return(get(k))}else{return(NA)}
+#     })
+    if(exists(x = "communityInd")){
+      communityInd <- rbind(communityInd, c(currentInd, rep(NA, ncol(communityInd) - length(currentInd))))
+    }else{
+      communityInd <- matrix(c(currentInd, rep(NA, 10)), ncol = length(currentInd) + 10) ### assuming 10G dif.
+    }
+    rm(list = ls(pattern = "^[g][0-9][s][0-9]$"))
+  }
+  bdd <- communityInd
+  bdd <- unname(bdd[, !is.na(apply(bdd, MARGIN = 2, FUN = mean, na.rm = TRUE))])
+  if(!is.matrix(bdd)){bdd <- matrix(bdd)}
+  if(ncol(bdd) != 0){
+    colnames(bdd) <- paste0(rep(paste0("g", 1:ncol(bdd)), each = length(models)),
+                            "s", 1:length(models))[1:ncol(bdd)]
+  }
+  rm(communityInd)
+
+  return(list(bdd, models, tempTS))
+}
+
 #' Plot phenology table
 #'
 #' @param ibm The phenology model returned by devRateIBM function.
