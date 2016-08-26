@@ -9,7 +9,7 @@ This is a first submission.
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
 
-There was 1 NOTE with win-builder (devel and release):
+There was 1 NOTE with win-builder (devel):
 
 * Maintainer: 'Rebaudo Francois <francois.rebaudo@ird.fr>'
 => OK
