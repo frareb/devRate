@@ -1,13 +1,13 @@
 #' Forecast ectotherm phenology as a function of temperature and developmental rate models
 #'
 #' @param tempTS The temperature time series (a vector).
-#' @param timeStepTS The time step of the temperature time series in days (a numeric).
+#' @param timeStepTS The time step of the temperature time series (a numeric).
 #' @param models The models for developmental rate (a list with objects of class nls).
 #' @param numInd The number of individuals for the simulation (an integer).
 #' @param stocha The standard deviation of a Normal distribution centered on
 #'    develomental rate to create stochasticity among individuals (a numeric).
 #' @param timeLayEggs The delay between emergence of adults and the time where
-#'    females lay eggs in days (a numeric).
+#'    females lay eggs in time steps (a numeric).
 #' @return A list with three elements: the table of phenology for each individual,
 #'    the models used (nls objects), and the time series for temperature.
 #' @examples
@@ -39,20 +39,35 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
   for(ind in 1:numInd){
     g <- 0
     tx <- 0
+    ratioSupDev <- 0
     vectorGS <- vector()
     while(tx < length(tempTS)){
       g <- g + 1
       for(i in seq_along(models)){
-        currentDev <- 0
+        if(ratioSupDev > 0){
+          add2Dev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
+              newdata = list(T = tempTS[tx])), sd = stocha) * ratioSupDev * timeStepTS
+          if(add2Dev < 0){add2Dev <- 0}
+          currentDev <- add2Dev
+        } else {
+          currentDev <- 0
+        }
         while(currentDev < 1){
           tx <- tx + 1
           if(tx > length(tempTS)){break}
           addDev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
-                                                              newdata = list(T = tempTS[tx])), sd = stocha) * timeStepTS
+            newdata = list(T = tempTS[tx])), sd = stocha) * timeStepTS
           if(addDev < 0){addDev <- 0}
           currentDev <- currentDev + addDev
         }
+        ratioSupDev <- 0
         if(currentDev >= 1){
+          print(currentDev)
+          supDev <- 0
+          if(currentDev > 1){
+            supDev <- currentDev - 1
+            ratioSupDev <- supDev / addDev
+          }
           vectorGS <- c(vectorGS, tx)
         }
       }
