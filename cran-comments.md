@@ -2,9 +2,9 @@
 This is a first submission.
 
 ## Test environments
-* Windows 10, R 3.3.0
+* Windows 10, R 3.3.1
 * Ubuntu 16.04, R 3.3.0
-* win-builder (devel and release)
+* win-builder (devel 2016-08-25 r71150)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
