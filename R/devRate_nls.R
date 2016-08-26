@@ -23,6 +23,10 @@
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
 #' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
 #'   startValues = list(aa = 0, bb = 0))
+#' myT <- seq(from = 0, to = 50, by = 10)
+#' myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
+#' myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
+#'   startValues = list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30)))
 #' @export
 devRateModel <- function(eq, temp, devRate, startValues, ...){
   ### handling exception for <stinner_74> and <lamb_92>
