@@ -19,7 +19,7 @@ janisch_32 <- list(eq = rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))
                    ref = "Janisch, E. (1932) The influence of temperature on the life-history of insects. Transactions of the Royal Entomological Society of London 80(2): 137-68.\nAnalytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                    refShort = "Janisch 1932",
                    startVal = getCSV(myCSV = janisch32CSV),
-                   com = "",
+                   com = "None",
                    id = "eq010"
 )
 save(janisch_32, file = "./data/janisch_32.RData")
@@ -103,7 +103,7 @@ analytis_77 <- list(eq = rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc ,
                     ref = "Analytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.",
                     refShort = "Analytis 1977",
                     startVal = getCSV(myCSV = analytis77CSV),
-                    com = '',
+                    com = 'None',
                     id = "eq080"
 )
 save(analytis_77, file = "./data/analytis_77.RData")
@@ -140,7 +140,7 @@ poly2 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 ,
               ref = "-",
               refShort = "-",
               startVal = getCSV(myCSV = poly2CSV),
-              com = '',
+              com = 'None',
               id = "eq110"
 )
 save(poly2, file = "./data/poly2.RData")
@@ -152,7 +152,7 @@ harcourtYee_82 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 ,
                        ref = "Harcourt, D. and Yee, J. (1982) Polynomial algorithm for predicting the duration of insect life stages. Environmental Entomology, 11, 581-584.",
                        refShort = "Harcourt and Yee 1982",
                        startVal = getCSV(myCSV = harcourtYee82CSV),
-                       com = '',
+                       com = 'None',
                        id = "eq120"
 )
 save(harcourtYee_82, file = "./data/harcourtYee_82.RData")
@@ -164,7 +164,7 @@ poly4 <- list(eq = rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4 ,
               ref = "-",
               refShort = "-",
               startVal = getCSV(myCSV = poly4CSV),
-              com = '',
+              com = 'None',
               id = "eq130"
 )
 save(poly4, file = "./data/poly4.RData")
@@ -176,7 +176,7 @@ hilbertLogan_83 <- list(eq = rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(
                         ref = "Hilbert, DW, y JA Logan (1983) Empirical model of nymphal development for the migratory grasshopper, Melanoplus sanguinipes (Orthoptera: Acrididae). Environmental Entomology 12(1): 1-5.",
                         refShort = "Hilbert and Logan 1983",
                         startVal = getCSV(myCSV = hilbertLogan83CSV),
-                        com = '',
+                        com = 'None',
                         id = "eq140"
 )
 save(hilbertLogan_83, file = "./data/hilbertLogan_83.RData")
@@ -188,7 +188,7 @@ lamb_92 <- list(eq = c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1
                 ref = "Lamb, R. J., Gerber, G. H., & Atkinson, G. F. (1984). Comparison of developmental rate curves applied to egg hatching data of Entomoscelis americana Brown (Coleoptera: Chrysomelidae). Environmental entomology, 13(3), 868-872. \nLamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications for estimating rate parameters for insects. Environmental Entomology 21(1): 10-19.",
                 refShort = "Lamb 1992",
                 startVal = getCSV(myCSV = lamb92CSV),
-                com = '',
+                com = 'None',
                 id = "eq150"
 )
 save(lamb_92, file = "./data/lamb_92.RData")
@@ -200,7 +200,7 @@ lactin1_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) ,
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
                    startVal = getCSV(myCSV = lactin195CSV),
-                   com = '',
+                   com = 'None',
                    id = "eq160"
 )
 save(lactin1_95, file = "./data/lactin1_95.RData")
@@ -212,7 +212,7 @@ lactin2_95 <- list(eq = rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + 
                    ref = "Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.",
                    refShort = "Lactin et al. 1995",
                    startVal = getCSV(myCSV = lactin295CSV),
-                   com = '',
+                   com = 'None',
                    id = "eq170"
 )
 save(lactin2_95, file = "./data/lactin2_95.RData")
@@ -224,7 +224,7 @@ briere1_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2) ,
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
                    startVal = getCSV(myCSV = briere199CSV),
-                   com = '',
+                   com = 'None',
                    id = "eq180"
 )
 save(briere1_99, file = "./data/briere1_99.RData")
@@ -236,7 +236,7 @@ briere2_99 <- list(eq = rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb) ,
                    ref = "Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.",
                    refShort = "Briere et al. 1999",
                    startVal = getCSV(myCSV = briere299CSV),
-                   com = '',
+                   com = 'None',
                    id = "eq190"
 )
 save(briere2_99, file = "./data/briere2_99.RData")
@@ -248,7 +248,7 @@ kontodimas_04 <- list(eq = rT ~ aa * (T - Tmin)^2 * (Tmax - T) ,
                       ref = "Kontodimas, D.C., Eliopoulos, P.A., Stathas, G.J. and Economou, L.P. (2004) Comparative temperature-dependent development of Nephus includens (Kirsch) and Nephus bisignatus (Boheman)(Coleoptera: Coccinellidae) preying on Planococcus citri (Risso)(Homoptera: Pseudococcidae): evaluation of a linear and various nonlinear models using specific criteria. Environmental Entomology 33(1): 1-11.",
                       refShort = "Kontodimas et al. 2004",
                       startVal = getCSV(myCSV = kontodimas04CSV),
-                      com = "",
+                      com = "None",
                       id = "eq200"
 )
 save(kontodimas_04, file = "./data/kontodimas_04.RData")
@@ -260,7 +260,7 @@ damos_08 <- list(eq = rT ~ aa * (bb - T / 10) * (T / 10)^cc,
                  ref = "Damos, P.T., and Savopoulou-Soultani, M. (2008). Temperature-dependent bionomics and modeling of Anarsia lineatella (Lepidoptera: Gelechiidae) in the laboratory. Journal of economic entomology, 101(5), 1557-1567.",
                  refShort = "Damos and Savopoulou 2008",
                  startVal = getCSV(myCSV = damos08CSV),
-                 com = '',
+                 com = 'None',
                  id = "eq210"
 )
 save(damos_08, file = "./data/damos_08.RData")
@@ -272,7 +272,7 @@ damos_11 <- list(eq = rT ~ aa / (1 + bb * T + cc * T^2),
                  ref = "Damos, P., and Savopoulou-Soultani, M. (2011) Temperature-driven models for insect development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.",
                  refShort = "Damos and Savopoulou 2011",
                  startVal = getCSV(myCSV = damos11CSV),
-                 com = '',
+                 com = 'None',
                  id = "eq220"
 )
 save(damos_11, file = "./data/damos_11.RData")
@@ -284,7 +284,7 @@ wang_82 <- list(eq = rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa))
                 ref = "Wang, R., Lan, Z. and Ding, Y. (1982) Studies on mathematical models of the relationship between insect development and temperature. Acta Ecol. Sin, 2, 47-57.",
                 refShort = "Wang et al. 1982",
                 startVal = getCSV(myCSV = wang82CSV),
-                com = '',
+                com = 'None',
                 id = "eq230"
 )
 save(wang_82, file = "./data/wang_82.RData")
@@ -296,7 +296,7 @@ hansen_11 <- list(eq = rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1
                   ref = "Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.",
                   refShort = "Hansen et al. 2011",
                   startVal = getCSV(myCSV = hansen11CSV),
-                  com = '',
+                  com = 'None',
                   id = "eq240"
 )
 save(hansen_11, file = "./data/hansen_11.RData")
@@ -308,7 +308,7 @@ shi_11 <- list(eq = rT ~ cc * (exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2))),
                   ref = "Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20. doi:10.1016/j.aspen.2010.11.008.",
                   refShort = "Shi et al. 2011",
                   startVal = getCSV(myCSV = shi11CSV),
-                  com = '',
+                  com = 'None',
                   id = "eq250"
 )
 save(shi_11, file = "./data/shi_11.RData")
@@ -320,7 +320,7 @@ regniere_12 <- list(eq = rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) *
                ref = "Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on development, survival and reproduction of insects: experimental design, data analysis and modeling. Journal of Insect Physiology 58(5): 634-47.",
                refShort = "Regniere et al. 2012",
                startVal = getCSV(myCSV = regniere12CSV),
-               com = '',
+               com = 'None',
                id = "eq260"
 )
 save(regniere_12, file = "./data/regniere_12.RData")
@@ -332,7 +332,7 @@ ratkowsky_82 <- list(eq = rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2
                     ref = "Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.",
                     refShort = "Ratkowsky et al. 1982",
                     startVal = getCSV(myCSV = ratkowsky82CSV),
-                    com = '',
+                    com = 'None',
                     id = "eq270"
 )
 save(ratkowsky_82, file = "./data/ratkowsky_82.RData")
@@ -344,7 +344,7 @@ wangengel_98 <- list(eq = rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin
                      ref = "Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops. Agricultural systems 58(1): 1-24.",
                      refShort = "Wang and Engel 1998",
                      startVal = getCSV(myCSV = wangengel98CSV),
-                     com = '',
+                     com = 'None',
                      id = "eq280"
 )
 save(wangengel_98, file = "./data/wangengel_98.RData")
@@ -356,7 +356,7 @@ rootsq_82 <- list(eq = rT ~ (bb * (T - Tb))^2,
                      ref = "Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.",
                      refShort = "Ratkowsky et al. 1982",
                      startVal = getCSV(myCSV = rootsq82CSV),
-                     com = '',
+                     com = 'None',
                      id = "eq290"
 )
 save(rootsq_82, file = "./data/rootsq_82.RData")
@@ -368,7 +368,7 @@ perf2_11 <- list(eq = rT ~ cc * (T - T1) * (1 - exp(k * (T - T2))),
                   ref = "Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.",
                   refShort = "Shi et al. 2011",
                   startVal = getCSV(myCSV = perf211CSV),
-                  com = '',
+                  com = 'None',
                   id = "eq300"
 )
 save(perf2_11, file = "./data/perf2_11.RData")
@@ -380,7 +380,7 @@ beta_95 <- list(eq = rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm 
                   ref = "Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.",
                   refShort = "Yin et al. 1995",
                   startVal = getCSV(myCSV = beta95CSV),
-                  com = '',
+                  com = 'None',
                   id = "eq310"
 )
 save(beta_95, file = "./data/beta_95.RData")
