@@ -3,8 +3,8 @@ This is a first submission.
 
 ## Test environments
 * Windows 10, R 3.3.1
-* Ubuntu 16.04, R 3.3.0
-* win-builder (devel 2016-08-25 r71150)
+* Ubuntu 16.04, R 3.3.1
+* win-builder (devel 2016-08-28 r71162)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
