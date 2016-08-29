@@ -31,7 +31,7 @@
 devRateModel <- function(eq, temp, devRate, startValues, ...){
   ### handling exception for <stinner_74> and <lamb_92>
   if(eq$id == "eq040" | eq$id == "eq150"){
-    tTh <- temp[devRate == max(devRate)][1]
+    tTh <- temp[devRate == max(devRate, na.rm = TRUE)][1]
     part1_temp <- temp[temp <= tTh]
     part2_temp <- temp[temp >= tTh]
     part1_devRate <- devRate[temp <= tTh]
