@@ -26,6 +26,7 @@
 #'
 #' - to plot your empirical data sets and the associated fitted model, and/or to plot develpomental curves from the literature.
 #'
+#' Author's affiliation: IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay
 #' @docType package
 #' @name devRate
 NULL
