@@ -4,10 +4,13 @@ Title: Quantify Relationships Between Developmental Rate and Temperature in
     Ectotherms
 Version: 0.1.0
 Date: 2016-08-29
-Author: Rebaudo Francois, Struelens Quentin (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-
-    Univ.ParisSaclay)
+Authors@R: c(person("Francois", "Rebaudo", role = c("aut", "cre"),
+    email = "francois.rebaudo@ird.fr"),
+    person("Quentin", "Struelens", role = "aut"))
+Author: Rebaudo Francois [aut, cre] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay),
+    Struelens Quentin [aut] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay)
 Maintainer: Rebaudo Francois <francois.rebaudo@ird.fr>
-Description: A set of functions to ease quantifying the relationships between developmental
+Description: A set of functions to ease quantifying the relationship between developmental
     rate and temperature. The package comprises a set of models and estimated parameters
     borrowed from a literature review in ectotherms.
 License: GPL-2
