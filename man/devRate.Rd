@@ -32,5 +32,7 @@ The devRate package provides three categories of functions:
 - to relate developmental rate and temperature; and
 
 - to plot your empirical data sets and the associated fitted model, and/or to plot develpomental curves from the literature.
+
+Author's affiliation: IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay
 }
 
