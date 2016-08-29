@@ -4,7 +4,7 @@
 \name{devRate}
 \alias{devRate}
 \alias{devRate-package}
-\title{devRate: A package for quantifying the relationships between developmental rate and temperature in ectotherms.}
+\title{devRate: A package for quantifying the relationship between developmental rate and temperature in ectotherms.}
 \description{
 The devRate package allows quantifying the relationships between developmental rate and temperature in ectotherm organisms.
 }

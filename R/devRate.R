@@ -1,4 +1,4 @@
-#' devRate: A package for quantifying the relationships between developmental rate and temperature in ectotherms.
+#' devRate: A package for quantifying the relationship between developmental rate and temperature in ectotherms.
 #'
 #' The devRate package allows quantifying the relationships between developmental rate and temperature in ectotherm organisms.
 #'
