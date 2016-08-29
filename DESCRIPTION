@@ -7,8 +7,8 @@ Date: 2016-08-29
 Authors@R: c(person("Francois", "Rebaudo", role = c("aut", "cre"),
     email = "francois.rebaudo@ird.fr"),
     person("Quentin", "Struelens", role = "aut"))
-Author: Rebaudo Francois [aut, cre] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay),
-    Struelens Quentin [aut] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay)
+Author: Francois Rebaudo [aut, cre] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay),
+    Quentin Struelens [aut] (IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay)
 Maintainer: Rebaudo Francois <francois.rebaudo@ird.fr>
 Description: A set of functions to ease quantifying the relationship between developmental
     rate and temperature. The package comprises a set of models and estimated parameters
