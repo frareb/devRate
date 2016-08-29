@@ -595,7 +595,7 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
-#' @source \url{http://en.cnki.com.cn/Article_en/CJFDTOTAL-STXB198201007.htm}
+#' @source \url{http://en.cnki.com.cn}
 "wang_82"
 
 #' Hansen equation of developmental rate as a function of temperature.

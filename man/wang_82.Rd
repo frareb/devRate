@@ -16,7 +16,7 @@
   \item{id}{An id to identificate the equation.}
 }}
 \source{
-\url{http://en.cnki.com.cn/Article_en/CJFDTOTAL-STXB198201007.htm}
+\url{http://en.cnki.com.cn}
 }
 \usage{
 wang_82
