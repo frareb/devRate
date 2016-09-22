@@ -1,0 +1,4 @@
+rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),,,,,,,,
+,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,contributor
+Bayoh and Lindsay 2003,Diptera,Culicidae,Anopheles,gambiae,all,-0.050,0.005,-2.139e-16,-281357.656,François Rebaudo
