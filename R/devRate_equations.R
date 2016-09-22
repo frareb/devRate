@@ -389,7 +389,7 @@ bayoh03CSV <- read.table("./data/devRate - bayoh_03.csv", skip = 2, header = TRU
 bayoh_03 <- list(eq = rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),
                 eqAlt = "aa + bb * x + cc * exp(x) + dd * exp(-x)",
                 name = "Bayoh",
-                ref = "Bayoh, M.N., Lindsay, S.W. (2003)Effect of temperature on the development of the aquatic stages of Anopheles gambiae sensu stricto (Diptera: Culicidae). Bulletin of entomological research 93(5): 375-81.",
+                ref = "Bayoh, M.N., Lindsay, S.W. (2003) Effect of temperature on the development of the aquatic stages of Anopheles gambiae sensu stricto (Diptera: Culicidae). Bulletin of entomological research 93(5): 375-81.",
                 refShort = "Bayoh and Lindsay 2003",
                 startVal = getCSV(myCSV = bayoh03CSV),
                 com = 'None',
