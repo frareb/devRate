@@ -85,13 +85,13 @@ logan10_76 <- list(eq = rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax -
 save(logan10_76, file = "./data/logan10_76.RData")
 
 sharpeDeMichele77CSV <- read.table("./data/devRate - sharpeDeMichele_77.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
-sharpeDeMichele_77 <- list(eq = rT ~ ((T + deg) * exp((aa - bb/(T + deg))/1.987)) / (1 + exp((cc - dd/(T + deg))/1.987) + exp((ff - gg/(T + deg))/1.987)) ,
-                           eqAlt = "((x + deg) * exp((aa - bb/(x + deg))/1.987)) / (1 + exp((cc - dd/(x + deg))/1.987) + exp((ff - gg/(x + deg))/1.987))",
+sharpeDeMichele_77 <- list(eq = rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987)) ,
+                           eqAlt = "((x + 273.16) * exp((aa - bb/(x + 273.16))/1.987)) / (1 + exp((cc - dd/(x + 273.16))/1.987) + exp((ff - gg/(x + 273.16))/1.987))",
                            name = "Sharpe and DeMichele",
                            ref = "Sharpe, P.J. & DeMichele, D.W. (1977) Reaction kinetics of poikilotherm development. Journal of Theoretical Biology, 64, 649-670.",
                            refShort = "Sharpe and DeMichele 1977",
                            startVal = getCSV(myCSV = sharpeDeMichele77CSV),
-                           com = 'Temperature is transformed into Kelvin within the equation when param.deg = 273.16.',
+                           com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
                            id = "eq070"
 )
 save(sharpeDeMichele_77, file = "./data/sharpeDeMichele_77.RData")
