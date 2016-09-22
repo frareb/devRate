@@ -38,7 +38,11 @@ Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa male
 Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva + pupa,-0.0432,0.0034,François Rebaudo
 Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,all,-0.0364,0.0029,François Rebaudo
 Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,-0.0638,0.0103,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,-0.1339,0.013,François Rebaudo
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,-0.1339,0.013,François Rebaudo
 Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,-0.0301,0.0033,François Rebaudo
 Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,-0.0459,0.0044,François Rebaudo
 Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,-0.0165,0.0017,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,-0.199,0.017,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,-0.060,0.005,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,-0.133,0.011,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,all,-0.034,0.003,François Rebaudo

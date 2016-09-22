@@ -19,3 +19,6 @@ Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.002245,54.8
 Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.158712,31.60617,6.278001,-0.003533,François Rebaudo
 Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.221673,23.292229,4.503865,0.001416,François Rebaudo
 Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.119357,44.186047,8.348083,-0.047561,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.018,42.049,4.005,-1.263,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.005,34.369,0.096,-1.053,François Rebaudo
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.011,40.296,2.439,-1.154,François Rebaudo
