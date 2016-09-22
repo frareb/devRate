@@ -40,7 +40,7 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
     as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,])
   )
   if(length(listPlot) > 0){
-  graphics::plot(0, type = "n", xlab = "Temperature", ylab = "Developmental rate", ...)
+  graphics::plot(0, type = "n", xlab = "Temperature", ylab = "Development rate", ...)
   x <- seq(from = 0, to = 50, length.out = 100)
   for(i in 1:length(listPlot)){
     for(j in 1:nrow(listPlot[[i]])){
@@ -298,6 +298,14 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  T1 <- listPlot[[i]][j, colparam + 1]
                  T2 <- listPlot[[i]][j, colparam + 2]
                  Tm <- listPlot[[i]][j, colparam + 3]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq320" = {
+                 aa <- listPlot[[i]][j, colparam]
+                 bb <- listPlot[[i]][j, colparam + 1]
+                 cc <- listPlot[[i]][j, colparam + 2]
+                 dd <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
