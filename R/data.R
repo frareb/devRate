@@ -752,5 +752,25 @@
 #' @source \url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
 "beta_95"
 
+#' Bayoh and Lindsay equation of developmental rate as a function of temperature.
+#'
+#' Bayoh, M.N., Lindsay, S.W. (2003) Effect of temperature on the development of the aquatic
+#' stages of Anopheles gambiae sensu stricto (Diptera: Culicidae). Bulletin of entomological
+#' research 93(5): 375-81.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1079/BER2003259}
+"bayoh_03"
+
 #' The list of all available equations of developmental rate as a function of temperature.
 "devRateEqList"
