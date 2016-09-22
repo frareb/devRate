@@ -385,6 +385,18 @@ beta_95 <- list(eq = rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm 
 )
 save(beta_95, file = "./data/beta_95.RData")
 
+bayoh03CSV <- read.table("./data/devRate - bayoh_03.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+bayoh_03 <- list(eq = rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),
+                eqAlt = "aa + bb * x + cc * exp(x) + dd * exp(-x)",
+                name = "Bayoh",
+                ref = "Bayoh, M.N., Lindsay, S.W. (2003)Effect of temperature on the development of the aquatic stages of Anopheles gambiae sensu stricto (Diptera: Culicidae). Bulletin of entomological research 93(5): 375-81.",
+                refShort = "Bayoh and Lindsay 2003",
+                startVal = getCSV(myCSV = bayoh03CSV),
+                com = 'None',
+                id = "eq320"
+)
+save(bayoh_03, file = "./data/bayoh_03.RData")
+
 devRateEqList <- list(
   janisch_32 = janisch_32,
   davidson_44 = davidson_44,
@@ -410,6 +422,7 @@ devRateEqList <- list(
   wangengel_98 = wangengel_98,
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
+  bayoh_03 = bayoh_03,
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11,
