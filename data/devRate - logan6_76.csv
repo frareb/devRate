@@ -23,3 +23,12 @@ Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,-0.016601,0.150
 Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.013,0.158,36.590,5.028,François Rebaudo
 Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.008,0.087,35.514,1.264,François Rebaudo
 Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.005,0.173,36.268,4.612,François Rebaudo
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,eggs,0.029763,0.141571,22.51464,3.164244,François Rebaudo
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L3,0.078989,0.085548,13.04908,1.509073,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.0069,0.13592,32.062,2.126,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.01,0.175,33.77,4.608,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.018,0.162,34.38,5.021,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.036,0.135,36.59,6.201,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.038,0.1414,36.19,6.22,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.024,0.1263,36.608,6.592,François Rebaudo
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.0049,0.1657,36.138,5.015,François Rebaudo
