@@ -120,6 +120,31 @@ schoolfield_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298
 )
 save(schoolfield_81, file = "./data/schoolfield_81.RData")
 
+schoolfield81HIGHCSV <- read.table("./data/devRate - schoolfieldHigh_81.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+schoolfieldHigh_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),
+                       eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(x + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(x + 273.16))))",
+                       name = "Schoolfield High",
+                       ref = "Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological temperature-dependent rate models based on absolute reaction-rate theory. Journal of theoretical biology, 88, 719-731.",
+                       refShort = "Schoolfield et al. 1981",
+                       startVal = getCSV(myCSV = schoolfield81HIGHCSV),
+                       com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
+                       id = "eq091"
+)
+save(schoolfieldHigh_81, file = "./data/schoolfieldHigh_81.RData")
+
+schoolfield81LOWCSV <- read.table("./data/devRate - schoolfieldLow_81.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+schoolfieldLow_81 <- list(eq = rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16)))),
+                       eqAlt = "(p25 * (x + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(x + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(x + 273.16))))",
+                       name = "Schoolfield Low",
+                       ref = "Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological temperature-dependent rate models based on absolute reaction-rate theory. Journal of theoretical biology, 88, 719-731.",
+                       refShort = "Schoolfield et al. 1981",
+                       startVal = getCSV(myCSV = schoolfield81LOWCSV),
+                       com = 'Temperature is transformed into Kelvin within the equation (T + 273.16).',
+                       id = "eq092"
+)
+save(schoolfieldLow_81, file = "./data/schoolfieldLow_81.RData")
+
+
 taylor81CSV <- read.table("./data/devRate - taylor_81.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
 taylor_81 <- list(eq = rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2) ,
                   eqAlt = "Rm * exp(-1/2 * ((x - Tm)/To)^2)",
@@ -419,6 +444,8 @@ devRateEqList <- list(
   sharpeDeMichele_77 = sharpeDeMichele_77,
   analytis_77 = analytis_77,
   schoolfield_81 = schoolfield_81,
+  schoolfieldHigh_81 = schoolfieldHigh_81,
+  schoolfieldLow_81 = schoolfieldLow_81,
   taylor_81 = taylor_81,
   wang_82 = wang_82,
   poly2 = poly2,
@@ -427,6 +454,7 @@ devRateEqList <- list(
   ratkowsky_82 = ratkowsky_82,
   rootsq_82 = rootsq_82,
   hilbertLogan_83 = hilbertLogan_83,
+  wagner_88 = wagner_88,
   lamb_92 = lamb_92,
   lactin1_95 = lactin1_95,
   lactin2_95 = lactin2_95,
