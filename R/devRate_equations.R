@@ -397,17 +397,17 @@ bayoh_03 <- list(eq = rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),
 )
 save(bayoh_03, file = "./data/bayoh_03.RData")
 
-# logan6203CSV <- read.table("./data/devRate - logan6_2_03.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
-# logan6_2_03 <- list(eq = rT ~ (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) + cc,
-#                  eqAlt = "(exp(bb * x) - exp(bb * Tmax - (Tmax - x)/deltaT)) + cc",
-#                  name = "Logan6_2",
-#                  ref = "Fantinou, A.A., Perdikis, D.C., Chatzoglou, C.S. (2003) Development of immature stages of Sesamia nonagrioides (Lepidoptera: Noctuidae) under alternating and constant temperatures. Environmental Entomology 32(6): 1337-42.",
-#                  refShort = "Fatinou et al. 2003",
-#                  startVal = getCSV(myCSV = logan6203CSV),
-#                  com = 'None',
-#                  id = "eq330"
-# )
-# save(logan6_2_03, file = "./data/logan6_2_03.RData")
+wagner88CSV <- read.table("./data/devRate - wagner_88.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+wagner_88 <- list(eq = rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) ),
+                 eqAlt = "1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(x + 273.16))) )) / (aa*(x + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(x + 273.16)) ) ) )",
+                 name = "wagner_88",
+                 ref = "Hagstrum, D.W., Milliken, G.A. (1988) Quantitative analysis of temperature, moisture, and diet factors affecting insect development. Annals of the Entomological Society of America 81(4): 539-46.",
+                 refShort = "Hagstrum et Milliken 1988",
+                 startVal = getCSV(myCSV = wagner88CSV),
+                 com = 'None',
+                 id = "eq330"
+)
+save(wagner_88, file = "./data/wagner_88.RData")
 
 devRateEqList <- list(
   janisch_32 = janisch_32,
