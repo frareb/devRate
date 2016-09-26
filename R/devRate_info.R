@@ -310,12 +310,12 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  graphics::curve(fx, add = TRUE, col = i)
                },
                "eq330" = {
-                 bb <- listPlot[[i]][j, colparam]
-                 Tmax <- listPlot[[i]][j, colparam + 1]
-                 deltaT <- listPlot[[i]][j, colparam + 2]
-                 cc <- listPlot[[i]][j, colparam + 3]
-                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-                 graphics::curve(fx, add = TRUE, col = i)
+#                  bb <- listPlot[[i]][j, colparam]
+#                  Tmax <- listPlot[[i]][j, colparam + 1]
+#                  deltaT <- listPlot[[i]][j, colparam + 2]
+#                  cc <- listPlot[[i]][j, colparam + 3]
+#                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+#                  graphics::curve(fx, add = TRUE, col = i)
                },
                {
                 # otherwise nothing
