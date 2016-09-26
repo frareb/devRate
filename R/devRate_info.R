@@ -124,6 +124,22 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
                },
+               "eq091" = {
+                 p25 <- listPlot[[i]][j, colparam]
+                 aa <- listPlot[[i]][j, colparam + 1]
+                 dd <- listPlot[[i]][j, colparam + 2]
+                 ee <- listPlot[[i]][j, colparam + 3]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
+               "eq092" = {
+                 p25 <- listPlot[[i]][j, colparam]
+                 aa <- listPlot[[i]][j, colparam + 1]
+                 bb <- listPlot[[i]][j, colparam + 2]
+                 cc <- listPlot[[i]][j, colparam + 3]
+                 fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
+                 graphics::curve(fx, add = TRUE, col = i)
+               },
                "eq100" = {
                  Rm <- listPlot[[i]][j, colparam]
                  Tm <- listPlot[[i]][j, colparam + 1]
