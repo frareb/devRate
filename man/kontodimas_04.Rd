@@ -3,7 +3,7 @@
 \docType{data}
 \name{kontodimas_04}
 \alias{kontodimas_04}
-\title{Kontodimas et al. equation of developmental rate as a function of temperature.}
+\title{Kontodimas et al. equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

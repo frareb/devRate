@@ -3,7 +3,7 @@
 \docType{data}
 \name{wangengel_98}
 \alias{wangengel_98}
-\title{Wang and Engel equation of developmental rate as a function of temperature.}
+\title{Wang and Engel equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

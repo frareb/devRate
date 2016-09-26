@@ -3,7 +3,7 @@
 \docType{data}
 \name{regniere_12}
 \alias{regniere_12}
-\title{Regniere equation of developmental rate as a function of temperature.}
+\title{Regniere equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

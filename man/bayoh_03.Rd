@@ -3,7 +3,7 @@
 \docType{data}
 \name{bayoh_03}
 \alias{bayoh_03}
-\title{Bayoh and Lindsay equation of developmental rate as a function of temperature.}
+\title{Bayoh and Lindsay equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

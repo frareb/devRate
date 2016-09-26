@@ -3,7 +3,7 @@
 \docType{data}
 \name{lamb_92}
 \alias{lamb_92}
-\title{Lamb equation of developmental rate as a function of temperature.}
+\title{Lamb equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

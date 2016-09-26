@@ -3,7 +3,7 @@
 \docType{data}
 \name{wang_82}
 \alias{wang_82}
-\title{Wang et al. equation of developmental rate as a function of temperature.}
+\title{Wang et al. equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

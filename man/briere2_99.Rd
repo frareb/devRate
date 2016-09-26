@@ -3,7 +3,7 @@
 \docType{data}
 \name{briere2_99}
 \alias{briere2_99}
-\title{Briere et al equation 2 of developmental rate as a function of temperature.}
+\title{Briere et al equation 2 of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

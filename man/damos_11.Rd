@@ -3,7 +3,7 @@
 \docType{data}
 \name{damos_11}
 \alias{damos_11}
-\title{Inverse second-order polynomial equation of developmental rate as a function of temperature.}
+\title{Inverse second-order polynomial equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

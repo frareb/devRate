@@ -3,7 +3,7 @@
 \docType{data}
 \name{sharpeDeMichele_77}
 \alias{sharpeDeMichele_77}
-\title{Sharpe and DeMichele equation of developmental rate as a function of temperature.}
+\title{Sharpe and DeMichele equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

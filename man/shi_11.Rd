@@ -3,7 +3,7 @@
 \docType{data}
 \name{shi_11}
 \alias{shi_11}
-\title{Shi equation of developmental rate as a function of temperature.}
+\title{Shi equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{schoolfield_81}
 \alias{schoolfield_81}
-\title{Schoolfield et al. equation of developmental rate as a function of temperature.}
+\title{Schoolfield et al. equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

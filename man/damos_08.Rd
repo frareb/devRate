@@ -3,7 +3,7 @@
 \docType{data}
 \name{damos_08}
 \alias{damos_08}
-\title{Simplified beta type equation of developmental rate as a function of temperature.}
+\title{Simplified beta type equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

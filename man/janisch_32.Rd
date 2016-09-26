@@ -3,7 +3,7 @@
 \docType{data}
 \name{janisch_32}
 \alias{janisch_32}
-\title{Janisch equation of developmental rate as a function of temperature.}
+\title{Janisch equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

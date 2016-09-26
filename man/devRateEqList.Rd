@@ -3,13 +3,13 @@
 \docType{data}
 \name{devRateEqList}
 \alias{devRateEqList}
-\title{The list of all available equations of developmental rate as a function of temperature.}
+\title{The list of all available equations of development rate as a function of temperature.}
 \format{An object of class \code{list} of length 32.}
 \usage{
 devRateEqList
 }
 \description{
-The list of all available equations of developmental rate as a function of temperature.
+The list of all available equations of development rate as a function of temperature.
 }
 \keyword{datasets}
 

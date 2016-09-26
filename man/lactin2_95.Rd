@@ -3,7 +3,7 @@
 \docType{data}
 \name{lactin2_95}
 \alias{lactin2_95}
-\title{Lactin et al. equation 2 of developmental rate as a function of temperature.}
+\title{Lactin et al. equation 2 of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

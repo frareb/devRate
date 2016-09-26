@@ -3,7 +3,7 @@
 \docType{data}
 \name{poly2}
 \alias{poly2}
-\title{Second-order polynomial equation of developmental rate as a function of temperature.}
+\title{Second-order polynomial equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}
@@ -19,7 +19,7 @@
 poly2
 }
 \description{
-Second-order polynomial equation of developmental rate as a function of temperature.
+Second-order polynomial equation of development rate as a function of temperature.
 }
 \keyword{datasets}
 

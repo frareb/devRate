@@ -3,7 +3,7 @@
 \docType{data}
 \name{campbell_74}
 \alias{campbell_74}
-\title{Campbell et al. equation of developmental rate as a function of temperature.}
+\title{Campbell et al. equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

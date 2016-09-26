@@ -3,7 +3,7 @@
 \docType{data}
 \name{logan10_76}
 \alias{logan10_76}
-\title{Logan et al. equation 10 of developmental rate as a function of temperature.}
+\title{Logan et al. equation 10 of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

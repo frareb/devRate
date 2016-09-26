@@ -3,7 +3,7 @@
 \docType{data}
 \name{harcourtYee_82}
 \alias{harcourtYee_82}
-\title{Harcourt and Yee equation of developmental rate as a function of temperature.}
+\title{Harcourt and Yee equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

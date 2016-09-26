@@ -3,7 +3,7 @@
 \docType{data}
 \name{ratkowsky_82}
 \alias{ratkowsky_82}
-\title{Ratkowsky equation of developmental rate as a function of temperature.}
+\title{Ratkowsky equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{rootsq_82}
 \alias{rootsq_82}
-\title{Root square equation of developmental rate as a function of temperature.}
+\title{Root square equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

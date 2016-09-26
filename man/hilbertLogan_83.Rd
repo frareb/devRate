@@ -3,7 +3,7 @@
 \docType{data}
 \name{hilbertLogan_83}
 \alias{hilbertLogan_83}
-\title{Holling type III equation of developmental rate as a function of temperature.}
+\title{Holling type III equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

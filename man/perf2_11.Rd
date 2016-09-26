@@ -3,7 +3,7 @@
 \docType{data}
 \name{perf2_11}
 \alias{perf2_11}
-\title{Performance-2 equation of developmental rate as a function of temperature.}
+\title{Performance-2 equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}

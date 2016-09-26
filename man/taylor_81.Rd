@@ -3,7 +3,7 @@
 \docType{data}
 \name{taylor_81}
 \alias{taylor_81}
-\title{Taylor equation of developmental rate as a function of temperature.}
+\title{Taylor equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}
