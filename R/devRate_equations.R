@@ -397,6 +397,18 @@ bayoh_03 <- list(eq = rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),
 )
 save(bayoh_03, file = "./data/bayoh_03.RData")
 
+logan6203CSV <- read.table("./data/devRate - logan6_2_03.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+logan6_2_03 <- list(eq = rT ~ (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) + cc,
+                 eqAlt = "(exp(bb * x) - exp(bb * Tmax - (Tmax - x)/deltaT)) + cc",
+                 name = "Logan6_2",
+                 ref = "Fantinou, A.A., Perdikis, D.C., Chatzoglou, C.S. (2003) Development of immature stages of Sesamia nonagrioides (Lepidoptera: Noctuidae) under alternating and constant temperatures. Environmental Entomology 32(6): 1337-42.",
+                 refShort = "Fatinou et al. 2003",
+                 startVal = getCSV(myCSV = logan6203CSV),
+                 com = 'None',
+                 id = "eq330"
+)
+save(logan6_2_03, file = "./data/logan6_2_03.RData")
+
 devRateEqList <- list(
   janisch_32 = janisch_32,
   davidson_44 = davidson_44,
@@ -423,6 +435,7 @@ devRateEqList <- list(
   briere1_99 = briere1_99,
   briere2_99 = briere2_99,
   bayoh_03 = bayoh_03,
+  logan6_2_03 = logan6_2_03,
   kontodimas_04 = kontodimas_04,
   damos_08 = damos_08,
   damos_11 = damos_11,
