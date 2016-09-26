@@ -85,6 +85,14 @@ Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L2,-0.367,0.0333,Franç
 Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L3,-0.410,0.0346,François Rebaudo
 Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L4,-0.280,0.0257,François Rebaudo
 Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L5,-0.0349,0.0061,François Rebaudo
-Jallow et Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.21,0.02,François Rebaudo
-Jallow et Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.045,0.004,François Rebaudo
-Jallow et Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.083,0.006,François Rebaudo
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.21,0.02,François Rebaudo
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.045,0.004,François Rebaudo
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.083,0.006,François Rebaudo
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,eggs,-0.1054,0.0096,François Rebaudo
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,larva,-0.0348,0.0037,François Rebaudo
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,pupa,-0.0547,0.0053,François Rebaudo
+Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,eggs,-0.1641,0.0171,François Rebaudo
+Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,larva,-0.0293,0.0044,François Rebaudo
+Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,pupa,-0.0555,0.0076,François Rebaudo
+Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.0175,0.0024,François Rebaudo
+Krugner et al. 2007,Hymenoptera,Braconidae,Macrocentrus,iridescens,all,-0.0149,0.0016,François Rebaudo
