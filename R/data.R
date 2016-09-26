@@ -328,6 +328,54 @@
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
 "schoolfield_81"
 
+#' Schoolfield et al. equation of development rate as a function of temperature for
+#' intermediate to high temperatures only.
+#'
+#' Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological
+#' temperature-dependent rate models based on absolute reaction-rate theory.
+#' Journal of theoretical biology, 88, 719-731.
+#' Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) Modeling
+#' insect development rates: a literature review and application of a biophysical model.
+#' Annals of the Entomological Society of America 77(2): 208-20.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
+"schoolfieldHigh_81"
+
+#' Schoolfield et al. equation of development rate as a function of temperature for
+#' intermediqte to low temperatures only.
+#'
+#' Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological
+#' temperature-dependent rate models based on absolute reaction-rate theory.
+#' Journal of theoretical biology, 88, 719-731.
+#' Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) Modeling
+#' insect development rates: a literature review and application of a biophysical model.
+#' Annals of the Entomological Society of America 77(2): 208-20.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
+"schoolfieldLow_81"
+
 #' Taylor equation of development rate as a function of temperature.
 #'
 #' Taylor, F. (1981) Ecology and evolution of physiological time in insects.
