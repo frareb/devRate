@@ -1,0 +1,3 @@
+rT ~ (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)) + cc,,,,,,,,,,
+,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,bb,Tmax,deltaT,cc,contributor
