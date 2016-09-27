@@ -96,3 +96,23 @@ Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,larva,-0.0293,0.0044,
 Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,pupa,-0.0555,0.0076,François Rebaudo
 Krechmer and Foester,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.0175,0.0024,François Rebaudo
 Krugner et al. 2007,Hymenoptera,Braconidae,Macrocentrus,iridescens,all,-0.0149,0.0016,François Rebaudo
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,eggs,-0.4411,0.0343,François Rebaudo
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,larva,-0.0587,0.0070,François Rebaudo
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,pupa,-0.0779,0.0076,François Rebaudo
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,eggs,-0.0866,0.0106,François Rebaudo
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,larva,-0.0219,0.0026,François Rebaudo
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,pupa,-0.0871,0.0076,François Rebaudo
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,all,-0.0164,0.0017,François Rebaudo
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,eggs,-0.143,0.0126,François Rebaudo
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L1-L2,-0.103,0.0097,François Rebaudo
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L3-L4,-0.086,0.0085,François Rebaudo
+Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,-0.012,0.001,François Rebaudo
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,larva,-0.0179,0.0024,François Rebaudo
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,-0.0621,0.0077,François Rebaudo
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,all,-0.0142,0.0019,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,larva,-0.0208,0.0028,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,pupa,-0.0894,0.0092,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,all,-0.0194,0.0022,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,larva,-0.0125,0.0021,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,pupa,-0.0464,0.0060,François Rebaudo
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,all,-0.0121,0.0017,François Rebaudo
