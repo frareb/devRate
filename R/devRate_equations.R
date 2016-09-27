@@ -434,6 +434,25 @@ wagner_88 <- list(eq = rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))
 )
 save(wagner_88, file = "./data/wagner_88.RData")
 
+bieri183CSV <- read.table("./data/devRate - bieri1_83.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
+bieri1_83 <- list(eq = rT ~ aa * (T - Tmin) - (bb * exp(T - Tm)),
+                  eqAlt = "aa * (x - Tmin) - (bb * exp(x - Tm))",
+                  name = "bieri1_83",
+                  ref = "Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983) Development and fecundity of pea aphid (Acyrthosiphon pisum Harris) as affected by constant temperatures and by pea varieties. Mitteilungen der Schweizerischen Entomologischen Gesellschaft, 56, 163–171.",
+                  refShort = "Bieri et al. 1983",
+                  startVal = getCSV(myCSV = bieri183CSV),
+                  com = 'None',
+                  id = "eq340"
+)
+save(bieri1_83, file = "./data/bieri1_83.RData")
+
+
+
+
+
+
+
+
 devRateEqList <- list(
   janisch_32 = janisch_32,
   davidson_44 = davidson_44,
@@ -453,6 +472,7 @@ devRateEqList <- list(
   poly4 = poly4,
   ratkowsky_82 = ratkowsky_82,
   rootsq_82 = rootsq_82,
+  bieri1_83 = bieri1_83,
   hilbertLogan_83 = hilbertLogan_83,
   wagner_88 = wagner_88,
   lamb_92 = lamb_92,

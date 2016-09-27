@@ -844,5 +844,26 @@
 #' @source \url{http://dx.doi.org/10.1093/aesa/81.4.539}
 "wagner_88"
 
+#' Bieri equation 1 of development rate as a function of temperature.
+#'
+#' Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983) Development
+#' and fecundity of pea aphid (Acyrthosiphon pisum Harris) as affected by constant
+#' temperatures and by pea varieties. Mitteilungen der Schweizerischen Entomologischen
+#' Gesellschaft, 56, 163–171.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation as a formula object.}
+#'   \item{eqAlt}{The equation as a string.}
+#'   \item{name}{The equation name.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{com}{An otional comment about the equation use.}
+#'   \item{id}{An id to identificate the equation.}
+#' }
+#' @source \url{http://www.e-periodica.ch}
+"bieri1_83"
+
 #' The list of all available equations of development rate as a function of temperature.
 "devRateEqList"
