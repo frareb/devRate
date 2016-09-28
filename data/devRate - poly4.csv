@@ -2,3 +2,7 @@ rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4,,,,,,,,,,,
 ,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,a4,contributor
 Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.27,0.049,-0.0031,0.000094,-0.000001,François Rebaudo
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,0.39,-0.72e-01,4.73e-03,-0.74e-04,-0.16e-06,François Rebaudo
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,-0.90,2.14e-01,-17.54e-03,6.16e-04,-7.66e-06,François Rebaudo
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,0.03,0.01e-01,-0.52e-03,0.65e-04,-1.33e-06,François Rebaudo
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,-0.45,1.07e-01,8.83e-03,3.13e-04,-3.93e-06,François Rebaudo
