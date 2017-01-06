@@ -1,3 +1,3 @@
-rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),,,,,,,,,,
+rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb,,,,,,,,,,
 ,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,rm,T1,T2,Tm,contributor
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,mu,Tb,aa,Tc,bb,contributor
