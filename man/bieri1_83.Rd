@@ -22,10 +22,10 @@
 bieri1_83
 }
 \description{
-Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983) Development
-and fecundity of pea aphid (Acyrthosiphon pisum Harris) as affected by constant
-temperatures and by pea varieties. Mitteilungen der Schweizerischen Entomologischen
-Gesellschaft, 56, 163–171.
+Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983)
+Developmentand fecundity of pea aphid (Acyrthosiphon pisum Harris) as
+affected by constant temperatures and by pea varieties. Mitteilungen der
+Schweizerischen Entomologischen Gesellschaft, 56, 163-171.
 }
 \keyword{datasets}
 

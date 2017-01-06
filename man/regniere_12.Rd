@@ -17,22 +17,14 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/j.jinsphys.2012.01.010}
-
-\url{http://dx.doi.org/10.1016/j.jinsphys.2012.01.010}
 }
 \usage{
-regniere_12
-
 regniere_12
 }
 \description{
 Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
 development, survival and reproduction of insects: experimental design, data analysis
 and modeling. Journal of Insect Physiology 58(5): 634-47.
-
-Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperature on
-development, survival and reproduction of insects: experimental design, data analysis and
-modeling. Journal of Insect Physiology 58(5): 634-47.
 }
 \keyword{datasets}
 

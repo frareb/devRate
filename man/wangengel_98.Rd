@@ -17,18 +17,11 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
-
-\url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
 }
 \usage{
 wangengel_98
-
-wangengel_98
 }
 \description{
-Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops.
-Agricultural systems 58(1): 1-24.
-
 Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops.
 Agricultural systems 58(1): 1-24.
 }
