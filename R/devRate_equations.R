@@ -327,8 +327,8 @@ hansen_11 <- list(eq = rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1
 save(hansen_11, file = "./data/hansen_11.RData")
 
 shi11CSV <- read.table("./data/devRate - shi_11.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
-shi_11 <- list(eq = rT ~ cc * (exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2))),
-                  eqAlt = "cc * (exp(-k1 * (x - T1))) * (1 - exp(k2 * (x - T2)))",
+shi_11 <- list(eq = rT ~ cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2))),
+                  eqAlt = "cc * (1 - exp(-k1 * (x - T1))) * (1 - exp(k2 * (x - T2)))",
                   name = "Shi",
                   ref = "Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20. doi:10.1016/j.aspen.2010.11.008.",
                   refShort = "Shi et al. 2011",
