@@ -399,8 +399,8 @@ perf2_11 <- list(eq = rT ~ cc * (T - T1) * (1 - exp(k * (T - T2))),
 save(perf2_11, file = "./data/perf2_11.RData")
 
 beta95CSV <- read.table("./data/devRate - beta_95.csv", skip = 2, header = TRUE, sep = ',', dec = '.')
-beta_95 <- list(eq = rT ~ rm * ((T2 - T)/(T2 - Tm)) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),
-                  eqAlt = "rm * ((T2 - x)/(T2 - Tm)) * ((x - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm))",
+beta_95 <- list(eq = rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb,
+                  eqAlt = "exp(mu) * (x - Tb)^aa * (Tc - x)^bb",
                   name = "Beta",
                   ref = "Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.",
                   refShort = "Yin et al. 1995",
@@ -438,7 +438,7 @@ bieri183CSV <- read.table("./data/devRate - bieri1_83.csv", skip = 2, header = T
 bieri1_83 <- list(eq = rT ~ aa * (T - Tmin) - (bb * exp(T - Tm)),
                   eqAlt = "aa * (x - Tmin) - (bb * exp(x - Tm))",
                   name = "bieri1_83",
-                  ref = "Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983) Development and fecundity of pea aphid (Acyrthosiphon pisum Harris) as affected by constant temperatures and by pea varieties. Mitteilungen der Schweizerischen Entomologischen Gesellschaft, 56, 163–171.",
+                  ref = "Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983) Development and fecundity of pea aphid (Acyrthosiphon pisum Harris) as affected by constant temperatures and by pea varieties. Mitteilungen der Schweizerischen Entomologischen Gesellschaft, 56, 163-171.",
                   refShort = "Bieri et al. 1983",
                   startVal = getCSV(myCSV = bieri183CSV),
                   com = 'None',
