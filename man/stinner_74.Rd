@@ -25,5 +25,9 @@ stinner_74
 Stinner, R., Gutierrez, A. & Butler, G. (1974) An algorithm for temperature-dependent growth
 rate simulation. The Canadian Entomologist, 106, 519-524.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

@@ -30,5 +30,9 @@ Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) 
 insect development rates: a literature review and application of a biophysical model.
 Annals of the Entomological Society of America 77(2): 208-20.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

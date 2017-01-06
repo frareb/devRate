@@ -25,5 +25,12 @@ wangengel_98
 Wang, E., and Engel, T. (1998) Simulation of phenological development of wheat crops.
 Agricultural systems 58(1): 1-24.
 }
+\details{
+Equation:
+rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa))
+
+where rT is the development rate, T the temperature, Tmin the minimum temperature,
+Topt the optimum temperature, and aa a constant.
+}
 \keyword{datasets}
 

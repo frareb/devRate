@@ -17,20 +17,21 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
-
-\url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
 }
 \usage{
-shi_11
-
 shi_11
 }
 \description{
 Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
 temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+}
+\details{
+Equation:
+rT ~ cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2)))
 
-Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
-temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+where rT is the development rate, T the temperature, T1 and T2 the conceptual
+lower and upper developmental thresholds at which development rates equal zero,
+and cc k1, and k2 constants.
 }
 \keyword{datasets}
 

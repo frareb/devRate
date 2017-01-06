@@ -25,5 +25,9 @@ damos_11
 Damos, P., and Savopoulou-Soultani, M. (2011) Temperature-driven models for insect
 development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

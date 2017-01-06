@@ -24,8 +24,25 @@ janisch_32
 \description{
 Janisch, E. (1932) The influence of temperature on the life-history of insects.
 Transactions of the Royal Entomological Society of London 80(2): 137-68.
+
 Analytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und
 Temperatur bei phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.
+
+Analytis, S. (1981). Relationship between temperature and development
+times in phytopathogenic fungus and in plant pests: a mathematical model. Agric.
+Res.(Athens), 5, 133-159.
+
+Kontodimas, D.C., Eliopoulos, P.A., Stathas, G.J. and Economou, L.P. (2004) Comparative
+temperature-dependent development of Nephus includens (Kirsch) and Nephus bisignatus
+(Boheman)(Coleoptera: Coccinellidae) preying on Planococcus citri
+(Risso)(Homoptera: Pseudococcidae): evaluation of a linear and various nonlinear models
+using specific criteria. Environmental Entomology 33(1): 1-11.
+}
+\details{
+Equation:
+rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)
+
+where rT is the development rate, T the temperature,
 }
 \keyword{datasets}
 

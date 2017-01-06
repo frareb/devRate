@@ -24,6 +24,21 @@ perf2_11
 \description{
 Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
 temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
+
+Wang, L., P. Shi, C. Chen, and F. Xue. 2013. Effect of temperature on the development
+of Laodelphax striatellus (Homoptera: Delphacidae). J. Econ. Entomol. 106: 107-114.
+
+Shi, P. J., Reddy, G. V., Chen, L., and Ge, F. (2016). Comparison of Thermal
+Performance Equations in Describing Temperature-Dependent Developmental Rates
+of Insects:(I) Empirical Models. Annals of the Entomological Society of America, 109(2), 211-215.
+}
+\details{
+Equation:
+rT ~ cc * (T - T1) * (1 - exp(k * (T - T2)))
+
+where rT is the development rate, T the temperature, T1 and T2 the conceptual
+lower and upper developmental thresholds at which development rates equal zero,
+and cc and k constants.
 }
 \keyword{datasets}
 

@@ -26,5 +26,9 @@ Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biolo
 temperature-dependent rate models based on absolute reaction-rate theory.
 Journal of theoretical biology, 88, 719-731.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

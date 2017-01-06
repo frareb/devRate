@@ -25,5 +25,9 @@ davidson_44
 Davidson, J. (1944). On the relationship between temperature and rate of development of insects
 at constant temperatures. The Journal of Animal Ecology:26-38.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

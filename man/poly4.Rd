@@ -18,8 +18,9 @@
 \usage{
 poly4
 }
-\description{
-Fourth-order polynomial equation of development rate as a function of temperature.
+\details{
+Equation:
+rT ~
 }
 \keyword{datasets}
 

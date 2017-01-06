@@ -25,5 +25,12 @@ rootsq_82
 Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
 temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
 }
+\details{
+Equation:
+rT ~ (bb * (T - Tb))^2
+
+where rT is the development rate, T the temperature, bb the slope of the
+regression line, and Tb a conceptual temperature of no metabolic significance.
+}
 \keyword{datasets}
 

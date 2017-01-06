@@ -26,5 +26,12 @@ Regniere, J., Powell, J., Bentz, B., and Nealis, V. (2012) Effects of temperatur
 development, survival and reproduction of insects: experimental design, data analysis
 and modeling. Journal of Insect Physiology 58(5): 634-47.
 }
+\details{
+Equation:
+rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))
+
+where rT is the development rate, T the temperature, and the others
+biophysical parameters (see source).
+}
 \keyword{datasets}
 

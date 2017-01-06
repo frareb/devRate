@@ -25,5 +25,9 @@ briere1_99
 Briere, J.F., Pracros, P., le Roux, A.Y. and Pierre, S. (1999) A novel rate model of
 temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

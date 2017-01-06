@@ -26,5 +26,9 @@ Hilbert, DW, y JA Logan (1983) Empirical model of nymphal development for the mi
 grasshopper, Melanoplus sanguinipes (Orthoptera: Acrididae).
 Environmental Entomology 12(1): 1-5.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

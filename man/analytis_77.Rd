@@ -25,5 +25,9 @@ analytis_77
 Analytis, S. (1977) Uber die Relation zwischen biologischer Entwicklung und Temperatur bei
 phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

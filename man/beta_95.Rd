@@ -24,9 +24,10 @@ beta_95
 \description{
 Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
   development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
-
+}
+\details{
 Equation:
- rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb
+rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb
 
 where rT is the development rate, T the temperature, mu, aa,
 and bb the model parameters, Tb the base temperature, and Tc the ceiling

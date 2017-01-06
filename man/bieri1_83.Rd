@@ -27,5 +27,9 @@ Developmentand fecundity of pea aphid (Acyrthosiphon pisum Harris) as
 affected by constant temperatures and by pea varieties. Mitteilungen der
 Schweizerischen Entomologischen Gesellschaft, 56, 163-171.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

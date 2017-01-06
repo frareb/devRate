@@ -25,5 +25,9 @@ sharpeDeMichele_77
 Sharpe, P.J. & DeMichele, D.W. (1977) Reaction kinetics of poikilotherm development.
 Journal of Theoretical Biology, 64, 649-670.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

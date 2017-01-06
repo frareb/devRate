@@ -17,6 +17,8 @@
 }}
 \source{
 \url{http://jb.asm.org/content/149/1/1}
+
+\url{http://jb.asm.org/content/154/3/1222}
 }
 \usage{
 ratkowsky_82
@@ -24,6 +26,19 @@ ratkowsky_82
 \description{
 Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
 temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
+
+Ratkowsky, D.A., R.K. Lowry, T.A. McMeekin, A.N. Stokes, and R.E. Chandler. 1983.
+Model for bacterial culture growth rate throughout the entire biokinetic temperature range.
+Journal of Bacteriology 154: 1222-1226.
+}
+\details{
+Equation:
+rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2
+
+where rT is the development rate, T the temperature, T1 and T2 the minimum
+and maximum temperatures at which rate of growth is zero, sqrt(cc) * k1 the slope of the
+regression as in the rootsq_82 equation, and k2 a constant. In Ratkowsky et al. 1983,
+sqrt(cc) * k1 is simplified as a single constant.
 }
 \keyword{datasets}
 

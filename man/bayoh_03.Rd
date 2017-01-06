@@ -26,5 +26,9 @@ Bayoh, M.N., Lindsay, S.W. (2003) Effect of temperature on the development of th
 stages of Anopheles gambiae sensu stricto (Diptera: Culicidae). Bulletin of entomological
 research 93(5): 375-81.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

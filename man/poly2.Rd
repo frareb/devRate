@@ -18,8 +18,9 @@
 \usage{
 poly2
 }
-\description{
-Second-order polynomial equation of development rate as a function of temperature.
+\details{
+Equation:
+rT ~
 }
 \keyword{datasets}
 

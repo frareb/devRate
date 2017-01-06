@@ -17,22 +17,23 @@
 }}
 \source{
 \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
-
-\url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
 }
 \usage{
-hansen_11
-
 hansen_11
 }
 \description{
 Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
 diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
 (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
+}
+\details{
+Equation:
+rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((T - p5) / p4) )
 
-Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
-diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
-(Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
+where rT is the development rate, T the temperature, p1 the lower developmental
+treshold, p2 the peak rate control parameter, p3 the low temperature acceleration of
+rates, p4 the width of upper thermal boundary layer, and p5 the upper developmental
+threshold.
 }
 \keyword{datasets}
 

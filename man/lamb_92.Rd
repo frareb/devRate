@@ -29,5 +29,9 @@ Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae
 temperatures: implications for estimating rate parameters for insects.
 Environmental Entomology 21(1): 10-19.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

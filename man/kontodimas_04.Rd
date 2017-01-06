@@ -28,5 +28,9 @@ temperature-dependent development of Nephus includens (Kirsch) and Nephus bisign
 (Risso)(Homoptera: Pseudococcidae): evaluation of a linear and various nonlinear models
 using specific criteria. Environmental Entomology 33(1): 1-11.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

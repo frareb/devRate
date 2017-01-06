@@ -25,5 +25,9 @@ lactin1_95
 Lactin, Derek J, NJ Holliday, DL Johnson, y R Craigen (995) Improved rate model of
 temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

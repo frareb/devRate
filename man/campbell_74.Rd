@@ -25,5 +25,9 @@ campbell_74
 Campbell, A., Frazer, B. D., Gilbert, N. G. A. P., Gutierrez, A. P., & Mackauer, M. (1974).
 Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

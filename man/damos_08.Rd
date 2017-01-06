@@ -26,5 +26,9 @@ Damos, P.T., and Savopoulou-Soultani, M. (2008). Temperature-dependent bionomics
 of Anarsia lineatella (Lepidoptera: Gelechiidae) in the laboratory.
 Journal of economic entomology, 101(5), 1557-1567.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 

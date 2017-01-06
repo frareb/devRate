@@ -26,5 +26,9 @@ Logan, J. A., Wollkind, D. J., Hoyt, S. C., and Tanigoshi, L. K. (1976). An anal
 for description of temperature dependent rate phenomena in arthropods. Environmental
 Entomology, 5(6), 1133-1140.
 }
+\details{
+Equation:
+rT ~
+}
 \keyword{datasets}
 
