@@ -30,7 +30,11 @@ Environmental Entomology 21(1): 10-19.
 }
 \details{
 Equation:
-rT ~
+rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+
+where rT is the development rate, T the temperature, Rm the maximum
+development rate, Tm the optimum temperature, and To the rate at which development
+rate falls away from Tm.
 }
 \keyword{datasets}
 

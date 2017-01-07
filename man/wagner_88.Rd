@@ -26,13 +26,14 @@ wagner_88
 Hagstrum, D.W., Milliken, G.A. (1988) Quantitative analysis of temperature, moisture, and
 diet factors affecting insect development. Annals of the Entomological Society of America
 81(4): 539-46.
+
 Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) Modeling
 insect development rates: a literature review and application of a biophysical model.
 Annals of the Entomological Society of America 77(2): 208-20.
 }
 \details{
 Equation:
-rT ~
+rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) )
 }
 \keyword{datasets}
 

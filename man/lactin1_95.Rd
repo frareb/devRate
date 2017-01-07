@@ -27,7 +27,10 @@ temperature-dependent development by arthropods. Environmental Entomology 24(1):
 }
 \details{
 Equation:
-rT ~
+rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT)
+
+where rT is the development rate, T the temperature, and aa, Tmax,
+and deltaT fitted parameters.
 }
 \keyword{datasets}
 

@@ -3,7 +3,7 @@
 \docType{data}
 \name{janisch_32}
 \alias{janisch_32}
-\title{Janisch equation of development rate as a function of temperature.}
+\title{Janisch equation of development rate as a function of temperature (Analytis modification).}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}
@@ -42,7 +42,8 @@ using specific criteria. Environmental Entomology 33(1): 1-11.
 Equation:
 rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)
 
-where rT is the development rate, T the temperature,
+where rT is the development rate, T the temperature, Topt the optimum temperature,
+Dmin, aa, and bb constants.
 }
 \keyword{datasets}
 

@@ -28,7 +28,11 @@ Journal of economic entomology, 101(5), 1557-1567.
 }
 \details{
 Equation:
-rT ~
+rT ~ aa * (bb - T / 10) * (T / 10)^cc
+rT ~ aa * (T - Tmin)^2 * (Tmax - T)
+
+where rT is the development rate, T the temperature, and aa, bb, and
+cc empirical constant parameters.
 }
 \keyword{datasets}
 

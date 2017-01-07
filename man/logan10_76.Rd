@@ -28,7 +28,10 @@ Entomology, 5(6), 1133-1140.
 }
 \details{
 Equation:
-rT ~
+rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT)))
+
+where rT is the development rate, T the temperature, Tmax the maximum temperature,
+deltaT the width of the high temperature boundary layer, and alpha and bb constants.
 }
 \keyword{datasets}
 

@@ -27,7 +27,10 @@ phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.
 }
 \details{
 Equation:
-rT ~
+rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc
+
+where rT is the development rate, T the temperature, Tmin the minimum
+temperature, Tmax the maximum temperature, and aa, bb, and cc constants.
 }
 \keyword{datasets}
 

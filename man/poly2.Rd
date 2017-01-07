@@ -18,9 +18,12 @@
 \usage{
 poly2
 }
+\description{
+A simple second-order polynomial equation.
+}
 \details{
 Equation:
-rT ~
+rT ~ a0 + a1 * T + a2 * T^2
 }
 \keyword{datasets}
 

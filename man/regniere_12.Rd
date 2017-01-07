@@ -31,7 +31,7 @@ Equation:
 rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))
 
 where rT is the development rate, T the temperature, and the others
-biophysical parameters (see source).
+thermodynamic parameters (see source).
 }
 \keyword{datasets}
 

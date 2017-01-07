@@ -25,13 +25,18 @@ lamb_92
 Lamb, R. J., Gerber, G. H., & Atkinson, G. F. (1984). Comparison of developmental rate curves
 applied to egg hatching data of Entomoscelis americana Brown (Coleoptera: Chrysomelidae).
 Environmental entomology, 13(3), 868-872.
+
 Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low
 temperatures: implications for estimating rate parameters for insects.
 Environmental Entomology 21(1): 10-19.
 }
 \details{
 Equation:
-rT ~
+c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))
+
+where rT is the development rate, T the temperature, Rm the maximum
+development rate, Tmax the optimum temperature, and To the shape parameter giving
+the spread of the curve.
 }
 \keyword{datasets}
 

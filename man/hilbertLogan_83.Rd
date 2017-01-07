@@ -28,7 +28,11 @@ Environmental Entomology 12(1): 1-5.
 }
 \details{
 Equation:
-rT ~
+rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT))
+
+where rT is the development rate, T the temperature, Tb the minimum
+temperature for development, deltaT the width of high temperature boundary area,
+Tmax the maximum temperature, and aa a constant.
 }
 \keyword{datasets}
 

@@ -26,10 +26,17 @@ Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983)
 Developmentand fecundity of pea aphid (Acyrthosiphon pisum Harris) as
 affected by constant temperatures and by pea varieties. Mitteilungen der
 Schweizerischen Entomologischen Gesellschaft, 56, 163-171.
+
+Kumar, S., and Kontodimas, D.C. (2012). Temperature-dependent
+development of Phenacoccus solenopsis under laboratory conditions.
+Entomologia Hellenica, 21, 25-38.
 }
 \details{
 Equation:
-rT ~
+rT ~ aa * (T - Tmin) - (bb * exp(T - Tm))
+
+where rT is the development rate, T the temperature, Tmin the minimum
+temperature, and aa, bb, and Tm fitted coefficients.
 }
 \keyword{datasets}
 
