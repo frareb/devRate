@@ -146,7 +146,7 @@
 #' rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))
 #'
 #' @details where rT is the development rate, T the temperature, and the others
-#' biophysical parameters (see source).
+#' thermodynamic parameters (see source).
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -216,7 +216,7 @@
 #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
 "hansen_11"
 
-#' @title Janisch equation of development rate as a function of temperature.
+#' @title Janisch equation of development rate as a function of temperature (Analytis modification).
 #'
 #' @description Janisch, E. (1932) The influence of temperature on the life-history of insects.
 #' Transactions of the Royal Entomological Society of London 80(2): 137-68.
@@ -234,7 +234,8 @@
 #' @details Equation:
 #' rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)
 #'
-#' @details where rT is the development rate, T the temperature,
+#' @details where rT is the development rate, T the temperature, Topt the optimum temperature,
+#' Dmin, aa, and bb constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -256,7 +257,12 @@
 #' at constant temperatures. The Journal of Animal Ecology:26-38.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ K / (1 + exp(aa + bb * T))
+#'
+#' @details where rT is the development rate, T the temperature, K the distance between
+#' the upper and lower asymptote of the curve, aa the relative position of the origin of
+#' the curve on the abscissa, bb the degree of acceleration of development of the life stage
+#' in relation to temperature.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -278,7 +284,10 @@
 #' Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa + bb * T
+#'
+#' @details where rT is the development rate, T the temperature, bb the slope, and aa
+#' the point at which the line crosses the rT axis when T = 0.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -300,7 +309,11 @@
 #' rate simulation. The Canadian Entomologist, 106, 519-524.
 #'
 #' @details Equation:
-#' rT ~
+#' c(rT ~ C / (1 + exp(k1 + k2 * T)), rT ~ C / (1 + exp(k1 + k2 * (2 * Topt - T))))
+#'
+#' @details where rT is the development rate, T the temperature, Topt the optimum temperature,
+#' k1 and k2 constants. "[...] the relationship [is] inverted when the temperature is above an
+#' optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -323,7 +336,11 @@
 #' Entomology, 5(6), 1133-1140.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))
+#'
+#' @details where rT is the development rate, T the temperature, Tmax the maximum temperature,
+#' deltaT the width of the high temperature boundary layer, phi the developmental rate at some
+#' base temperature above developmental threshold, and bb a constant.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -346,7 +363,10 @@
 #' Entomology, 5(6), 1133-1140.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT)))
+#'
+#' @details where rT is the development rate, T the temperature, Tmax the maximum temperature,
+#' deltaT the width of the high temperature boundary layer, and alpha and bb constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -368,7 +388,10 @@
 #' Journal of Theoretical Biology, 64, 649-670.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))
+#'
+#' @details where rT is the development rate, T the temperature, and aa, bb, cc,
+#' dd, ff, and gg thermodynamic parameters
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -390,7 +413,10 @@
 #' phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc
+#'
+#' @details where rT is the development rate, T the temperature, Tmin the minimum
+#' temperature, Tmax the maximum temperature, and aa, bb, and cc constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -413,7 +439,16 @@
 #' Journal of theoretical biology, 88, 719-731.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))
+#'
+#' @details where rT is the development rate, T the temperature, p25 the development
+#' rate at 25 degree Celcius assuming no enzyme inactivation, aa the enthalpy of
+#' activation of the reaction that is catalyzed by the enzyme, bb the change in
+#' enthalpy associated with low temperature inactivation of the enzyme, cc the
+#' the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
+#' dd the cange in enthalpy associated with high temperature inactivation of the enzyme,
+#' and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
+#' inactive.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -440,7 +475,16 @@
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))
+#'
+#' @details where rT is the development rate, T the temperature, p25 the development
+#' rate at 25 degrees Celcius assuming no enzyme inactivation, aa the enthalpy of
+#' activation of the reaction that is catalyzed by the enzyme, bb the change in
+#' enthalpy associated with low temperature inactivation of the enzyme, cc the
+#' the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
+#' dd the cange in enthalpy associated with high temperature inactivation of the enzyme,
+#' and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
+#' inactive.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -457,7 +501,7 @@
 "schoolfieldHigh_81"
 
 #' @title Schoolfield et al. equation of development rate as a function of temperature for
-#' intermediqte to low temperatures only.
+#' intermediate to low temperatures only.
 #'
 #' @description Schoolfield, R., Sharpe, P. & Magnuson, C. (1981) Non-linear regression of biological
 #' temperature-dependent rate models based on absolute reaction-rate theory.
@@ -467,7 +511,16 @@
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))))
+#'
+#' @details where rT is the development rate, T the temperature, p25 the development
+#' rate at 25 degrees Celcius assuming no enzyme inactivation, aa the enthalpy of
+#' activation of the reaction that is catalyzed by the enzyme, bb the change in
+#' enthalpy associated with low temperature inactivation of the enzyme, cc the
+#' the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
+#' dd the cange in enthalpy associated with high temperature inactivation of the enzyme,
+#' and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
+#' inactive.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -492,7 +545,11 @@
 #' Environmental Entomology 21(1): 10-19.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+#'
+#' @details where rT is the development rate, T the temperature, Rm the maximum
+#' development rate, Tm the optimum temperature, and To the rate at which development
+#' rate falls away from Tm.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -510,8 +567,10 @@
 
 #' @title Second-order polynomial equation of development rate as a function of temperature.
 #'
+#' @description A simple second-order polynomial equation.
+#'
 #' @details Equation:
-#' rT ~
+#' rT ~ a0 + a1 * T + a2 * T^2
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -532,7 +591,7 @@
 #' life stages. Environmental Entomology, 11, 581-584.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -550,8 +609,10 @@
 
 #' @title Fourth-order polynomial equation of development rate as a function of temperature.
 #'
+#' @description A simple fourth-order polynomial equation.
+#'
 #' @details Equation:
-#' rT ~
+#' rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -573,7 +634,11 @@
 #' Environmental Entomology 12(1): 1-5.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT))
+#'
+#' @details where rT is the development rate, T the temperature, Tb the minimum
+#' temperature for development, deltaT the width of high temperature boundary area,
+#' Tmax the maximum temperature, and aa a constant.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -594,12 +659,16 @@
 #' @description Lamb, R. J., Gerber, G. H., & Atkinson, G. F. (1984). Comparison of developmental rate curves
 #' applied to egg hatching data of Entomoscelis americana Brown (Coleoptera: Chrysomelidae).
 #' Environmental entomology, 13(3), 868-872.
-#' Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low
+#' @description Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low
 #' temperatures: implications for estimating rate parameters for insects.
 #' Environmental Entomology 21(1): 10-19.
 #'
 #' @details Equation:
-#' rT ~
+#' c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))
+#'
+#' @details where rT is the development rate, T the temperature, Rm the maximum
+#' development rate, Tmax the optimum temperature, and To the shape parameter giving
+#' the spread of the curve.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -621,7 +690,10 @@
 #' temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT)
+#'
+#' @details where rT is the development rate, T the temperature, and aa, Tmax,
+#' and deltaT fitted parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -643,7 +715,10 @@
 #' temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb
+#'
+#' @details where rT is the development rate, T the temperature, and aa, bb, Tmax,
+#' and deltaT fitted parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -665,7 +740,11 @@
 #' temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2)
+#'
+#' @details where rT is the development rate, T the temperature, Tmin the low
+#' temperature developmental threshold, Tmax the lethal temperature, and aa
+#' an empirical constant.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -687,7 +766,11 @@
 #' temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)
+#'
+#' @details where rT is the development rate, T the temperature, Tmin the low
+#' temperature developmental threshold, Tmax the lethal temperature, and aa and
+#' bb empirical constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -712,7 +795,10 @@
 #' using specific criteria. Environmental Entomology 33(1): 1-11.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * (T - Tmin)^2 * (Tmax - T)
+#'
+#' @details where rT is the development rate, T the temperature, Tmin the minimum
+#' temperature, Tmax the maximum temperature, and aa a constant.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -735,7 +821,11 @@
 #' Journal of economic entomology, 101(5), 1557-1567.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * (bb - T / 10) * (T / 10)^cc
+#' rT ~ aa * (T - Tmin)^2 * (Tmax - T)
+#'
+#' @details where rT is the development rate, T the temperature, and aa, bb, and
+#' cc empirical constant parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -757,7 +847,10 @@
 #' development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa / (1 + bb * T + cc * T^2)
+#'
+#' @details where rT is the development rate, T the temperature, and aa, bb, and
+#' cc empirical constant parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -779,7 +872,9 @@
 #' between insect development and temperature. Acta Ecol. Sin, 2, 47-57.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1-exp(-(TH - T)/aa))
+#'
+#' @details where rT is the development rate, and T the temperature.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -802,7 +897,10 @@
 #' research 93(5): 375-81.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T)
+#'
+#' @details where rT is the development rate, T the temperature, and aa, bb,
+#' cc, and dd empirical constant parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -824,12 +922,12 @@
 #' @description Hagstrum, D.W., Milliken, G.A. (1988) Quantitative analysis of temperature, moisture, and
 #' diet factors affecting insect development. Annals of the Entomological Society of America
 #' 81(4): 539-46.
-#' Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) Modeling
+#' @description Wagner, T.L., Wu, H.I., Sharpe, P.S.H., Schoolfield, R.M., Coulson, R.N. (1984) Modeling
 #' insect development rates: a literature review and application of a biophysical model.
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) )
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -848,12 +946,18 @@
 #' @title Bieri equation 1 of development rate as a function of temperature.
 #'
 #' @description Bieri, M., Baumgartner, J., Bianchi, G., Delucchi, V., Arx, R. von. (1983)
-#' Developmentand fecundity of pea aphid (Acyrthosiphon pisum Harris) as
+#' Development and fecundity of pea aphid (Acyrthosiphon pisum Harris) as
 #' affected by constant temperatures and by pea varieties. Mitteilungen der
 #' Schweizerischen Entomologischen Gesellschaft, 56, 163-171.
+#' @description Kumar, S., and Kontodimas, D.C. (2012). Temperature-dependent
+#' development of Phenacoccus solenopsis under laboratory conditions.
+#' Entomologia Hellenica, 21, 25-38.
 #'
 #' @details Equation:
-#' rT ~
+#' rT ~ aa * (T - Tmin) - (bb * exp(T - Tm))
+#'
+#' @details where rT is the development rate, T the temperature, Tmin the minimum
+#' temperature, and aa, bb, and Tm fitted coefficients.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
