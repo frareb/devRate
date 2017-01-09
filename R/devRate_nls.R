@@ -80,3 +80,64 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
   }
   return(nls_devRate)
 }
+
+#' Report model output from the NLS fit
+#'
+#' Provide a custom output of the NLS fit.
+#'
+#' @param myNLS An object of class NLS
+#' @param temp The temperature.
+#' @param devRate The developmental rate \code{(days)^-1}
+#' @return A custom output of the NLS fit
+#' @examples
+#' myT <- 5:15
+#' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
+#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+#'   startValues = list(aa = 0, bb = 0))
+#' devRatePrint(myNLS, temp = myT, devRate = myDev)
+#'
+#' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+#'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+#'    25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+#' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' devRatePrint(myNLS = mEggs, temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2])
+#' @export
+devRatePrint <- function(myNLS, temp, devRate){
+  cat("##################################################\n### Parameter estimates and overall model fit\n##################################################\n")
+  print(summary(myNLS))
+  cat("##################################################\n### Confidence intervals for parameters\n##################################################\n")
+  print(confint(myNLS))
+  cat("\n")
+  cat("##################################################\n### Residuals distribution and independence\n##################################################\n")
+  cat("### Normality of the residual distribution\n")
+  print(stats::shapiro.test(stats::residuals(myNLS)))
+  opar <- par(mfrow = c(1,2))
+  plot(temp,
+       devRate,
+       main = paste0("Obs. versus fitted (cor: ", round(cor(devRate, stats::predict(myNLS)), digits = 4),")")
+  ) # cor gives some estimation of the goodness of fit
+  cat("### See plots for observed versus fitted values, and Normal Q-Q Plot\n\n")
+  points(temp,
+         stats::predict(myNLS),
+         lty = 2,
+         lwd = 2,
+         col = 2
+  )
+  stats::qqnorm(stats::residuals(myNLS))
+  stats::qqline(stats::residuals(myNLS))
+  par(opar)
+  cat("### Regression of the residuals against a lagged version of themselves\n")
+  cat("### and testing if the slope of the resulting relationship is significantly\n")
+  cat("### different from 0:\n")
+  N <- length(stats::residuals(myNLS))
+  indTest <- lm(stats::residuals(myNLS)[-N] ~ stats::residuals(myNLS)[-1])
+  print(summary(indTest))
+  cat("##################################################\n### Comparing models\n##################################################\n")
+  cat("### Using AIC and BIC\n")
+  cat(paste0("Akaike Information Criterion (AIC): ", AIC(myNLS), "\n"))
+  cat(paste0("Bayesian Information Criterion (BIC): ", BIC(myNLS), "\n"))
+}
+
+
+
