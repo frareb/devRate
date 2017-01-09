@@ -107,18 +107,18 @@ devRatePrint <- function(myNLS, temp, devRate){
   cat("##################################################\n### Parameter estimates and overall model fit\n##################################################\n")
   print(summary(myNLS))
   cat("##################################################\n### Confidence intervals for parameters\n##################################################\n")
-  print(confint(myNLS))
+  print(stats::confint(myNLS))
   cat("\n")
   cat("##################################################\n### Residuals distribution and independence\n##################################################\n")
   cat("### Normality of the residual distribution\n")
   print(stats::shapiro.test(stats::residuals(myNLS)))
-  opar <- par(mfrow = c(1,2))
-  plot(temp,
+  opar <- graphics::par(mfrow = c(1,2))
+  graphics::plot(temp,
        devRate,
-       main = paste0("Obs. versus fitted (cor: ", round(cor(devRate, stats::predict(myNLS)), digits = 4),")")
+       main = paste0("Obs. versus fitted (cor: ", round(stats::cor(devRate, stats::predict(myNLS)), digits = 4),")")
   ) # cor gives some estimation of the goodness of fit
   cat("### See plots for observed versus fitted values, and Normal Q-Q Plot\n\n")
-  points(temp,
+  graphics::points(temp,
          stats::predict(myNLS),
          lty = 2,
          lwd = 2,
@@ -126,17 +126,17 @@ devRatePrint <- function(myNLS, temp, devRate){
   )
   stats::qqnorm(stats::residuals(myNLS))
   stats::qqline(stats::residuals(myNLS))
-  par(opar)
+  graphics::par(opar)
   cat("### Regression of the residuals against a lagged version of themselves\n")
   cat("### and testing if the slope of the resulting relationship is significantly\n")
   cat("### different from 0:\n")
   N <- length(stats::residuals(myNLS))
-  indTest <- lm(stats::residuals(myNLS)[-N] ~ stats::residuals(myNLS)[-1])
+  indTest <- stats::lm(stats::residuals(myNLS)[-N] ~ stats::residuals(myNLS)[-1])
   print(summary(indTest))
   cat("##################################################\n### Comparing models\n##################################################\n")
   cat("### Using AIC and BIC\n")
-  cat(paste0("Akaike Information Criterion (AIC): ", AIC(myNLS), "\n"))
-  cat(paste0("Bayesian Information Criterion (BIC): ", BIC(myNLS), "\n"))
+  cat(paste0("Akaike Information Criterion (AIC): ", stats::AIC(myNLS), "\n"))
+  cat(paste0("Bayesian Information Criterion (BIC): ", stats::BIC(myNLS), "\n"))
 }
 
 
