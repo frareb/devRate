@@ -194,9 +194,69 @@ test_that("devRateModel schoolfieldLow_81 Melanoplus sanguinipes (Orthoptera:Acr
           0.035106640, 0.038020835, 0.041563266, 0.044988835, 0.048447192,
           0.052393433, 0.056512979, 0.060679163, 0.065064254, 0.069769445,
           0.074526602)
-
   testNLS <- devRateModel(eq = schoolfieldLow_81, temp = xx, devRate = yy,
                           startValues = list(p25 = 0.0455, aa = 8814.36, bb = -14877.95, cc = 298.81))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
+
+test_that("devRateModel taylor_81 Geocoris articolor (Hemiptera:Lygaeidae)", {
+  xx <- seq(from = 0, to = 50, by = 1)
+  yy <- c(0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+          3.243648e-03, 7.814825e-04, 5.814596e-03, 9.819378e-03, 7.814990e-03,
+          0.000000e+00, 5.430783e-05, 1.056332e-02, 0.000000e+00, 1.295533e-02,
+          0.000000e+00, 0.000000e+00, 7.823721e-03, 1.247843e-03, 5.706782e-03,
+          8.286514e-03, 7.482038e-03, 2.459962e-02, 5.102975e-03, 3.485625e-02,
+          3.060154e-02, 1.493131e-02, 2.509750e-02, 2.822221e-02, 2.497632e-02,
+          3.772156e-02, 3.043415e-02, 3.034768e-02, 3.756987e-02, 5.572242e-02,
+          5.400489e-02, 5.740899e-02, 4.994192e-02, 5.559589e-02, 5.372400e-02,
+          4.867726e-02, 5.998619e-02, 4.504179e-02, 2.689224e-02, 4.373311e-02,
+          4.414157e-02, 3.948465e-02, 3.335472e-02, 4.921421e-02, 3.708899e-02,
+          1.838826e-02)
+  testNLS <- devRateModel(eq = taylor_81, temp = xx, devRate = yy,
+                          startValues = list(Rm = 0.0550, Tm = 37.2000, To = 8.8000))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
+
+test_that("devRateModel wang_82 Nurscia albofasciata (Araneae:Titanoecidae)", {
+  xx <- seq(from = 10, to = 40, by = 1)
+  yy <- c(0.000000e+00, 0.000000e+00, 0.000000e+00, 2.189162e-04, 2.153789e-03,
+          2.826689e-03, 3.093816e-03, 4.513258e-03, 3.204745e-03, 6.003303e-03,
+          4.793105e-03, 7.987115e-03, 1.027355e-02, 1.158569e-02, 1.157333e-02,
+          1.267494e-02, 1.388047e-02, 1.725236e-02, 1.623073e-02, 1.928007e-02,
+          2.160226e-02, 2.136966e-02, 2.274513e-02, 2.475865e-02, 2.655935e-02,
+          2.790608e-02, 2.371863e-02, 2.379099e-02, 2.017513e-02, 1.228895e-02,
+          5.543522e-05)
+  testNLS <- devRateModel(eq = wang_82, temp = xx, devRate = yy,
+                          startValues = list(K = 0.045, r = 0.15, T0 = 31, TL = 13, TH = 40,  aa =2))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
+
+test_that("devRateModel poly2 Plodia interplInctella (Lepidoptera:Pyralidae)", {
+  xx <- seq(from = 15, to = 40, by = 1)
+  yy <- c(0.000000000, 0.000000000, 0.008714114, 0.009226288, 0.008974961,
+          0.012786594, 0.022019003, 0.036118170, 0.029093556, 0.032973127,
+          0.031510768, 0.042017463, 0.032786228, 0.042400972, 0.052407155,
+          0.046048385, 0.044539889, 0.047925037, 0.051333902, 0.045657589,
+          0.044514010, 0.041387678, 0.038145555, 0.048391190, 0.045908961,
+          0.050747954)
+  testNLS <- devRateModel(eq = poly2, temp = xx, devRate = yy,
+                          startValues = list(a0 = -0.13003, a1 = 0.01022, a2 = -0.000144))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
+
+test_that("devRateModel harcourtYee_82 Hypera postica (Coleoptera:Curculionidae)", {
+  xx <- seq(from = 15, to = 40, by = 1)
+  yy <- c(0.04787425, 0.07107279, 0.05511158, 0.07248420, 0.08392225, 0.08329395,
+          0.07825801, 0.11772809, 0.14566401, 0.15290571, 0.17476144, 0.16426242,
+          0.20056165, 0.18852016, 0.20116038, 0.23733901, 0.22235097, 0.22490219,
+          0.25511832, 0.21187438, 0.24725272, 0.24015939, 0.25575154, 0.25208030,
+          0.22387521, 0.22734355)
+  testNLS <- devRateModel(eq = harcourtYee_82, temp = xx, devRate = yy,
+                          startValues = list(a0 = 0.1434000, a1 = -0.028270, a2 = 1.8240e-03, a3 = -0.000026629))
   expect_is(testNLS, "nls")
   expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
 })
@@ -211,11 +271,7 @@ test_that("devRateModel schoolfieldLow_81 Melanoplus sanguinipes (Orthoptera:Acr
 # yy[yy < 0] <- 0
 # plot(xx, yy)
 
-
-# taylor_81
-# wang_82
-# poly2
-# harcourtYee_82
+#
 # poly4
 # ratkowsky_82
 # rootsq_82
