@@ -3,7 +3,7 @@
 \docType{data}
 \name{ratkowsky_82}
 \alias{ratkowsky_82}
-\title{Ratkowsky equation of development rate as a function of temperature.}
+\title{Ratkowsky equation of development rate as a function of temperature (Shi modification).}
 \format{A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation as a formula object.}
@@ -30,6 +30,9 @@ temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1
 Ratkowsky, D.A., R.K. Lowry, T.A. McMeekin, A.N. Stokes, and R.E. Chandler. 1983.
 Model for bacterial culture growth rate throughout the entire biokinetic temperature range.
 Journal of Bacteriology 154: 1222-1226.
+
+Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
+temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
 }
 \details{
 Equation:
@@ -37,8 +40,9 @@ rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2
 
 where rT is the development rate, T the temperature, T1 and T2 the minimum
 and maximum temperatures at which rate of growth is zero, sqrt(cc) * k1 the slope of the
-regression as in the rootsq_82 equation, and k2 a constant. In Ratkowsky et al. 1983,
-sqrt(cc) * k1 is simplified as a single constant.
+regression as in the rootsq_82 equation, and k2 a constant. The Ratkowsky model designed
+for microorganisms has been modified by Shi et al. 2011 to describe the temperature-dependent
+developmental rates of insects.
 }
 \keyword{datasets}
 
