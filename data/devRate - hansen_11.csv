@@ -1,4 +1,0 @@
-rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((tt - p5) / p4) ),,,,,,,,,,,
-,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,p1,p2,p3,p4,p5,contributor
-Hansen et al. 2011,Coleoptera,Curculionidae,Dendroctonus,rufipennis,L4,2.9,0.42133,0.008805,1.7847,24,François Rebaudo
