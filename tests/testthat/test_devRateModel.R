@@ -19,6 +19,9 @@ test_that("devRateModel janisch_32 Phthorimaea operculella (Lepidoptera:Gelechii
   expect_is(mEggs, "nls")
   expect_is(mLarva, "nls")
   expect_is(mPupa, "nls")
+  expect_gte(stats::cor(rawDevEggs[, 2], stats::predict(mEggs)), 0.90)
+  expect_gte(stats::cor(rawDevLarva[, 2], stats::predict(mLarva)), 0.90)
+  expect_gte(stats::cor(rawDevPupa[, 2], stats::predict(mPupa)), 0.90)
 })
 
 test_that("devRateModel davidson_44 Phthorimaea operculella (Lepidoptera:Gelechiidae)", {
@@ -40,6 +43,9 @@ test_that("devRateModel davidson_44 Phthorimaea operculella (Lepidoptera:Gelechi
   expect_is(mEggs, "nls")
   expect_is(mLarva, "nls")
   expect_is(mPupa, "nls")
+  expect_gte(stats::cor(rawDevEggs[, 2], stats::predict(mEggs)), 0.90)
+  expect_gte(stats::cor(rawDevLarva[, 2], stats::predict(mLarva)), 0.80)
+  expect_gte(stats::cor(rawDevPupa[, 2], stats::predict(mPupa)), 0.90)
 })
 
 test_that("devRateModel campbell_74 Phthorimaea operculella (Lepidoptera:Gelechiidae)", {
@@ -61,6 +67,9 @@ test_that("devRateModel campbell_74 Phthorimaea operculella (Lepidoptera:Gelechi
   expect_is(mEggs, "nls")
   expect_is(mLarva, "nls")
   expect_is(mPupa, "nls")
+  expect_gte(stats::cor(rawDevEggs[, 2], stats::predict(mEggs)), 0.90)
+  expect_gte(stats::cor(rawDevLarva[, 2], stats::predict(mLarva)), 0.80)
+  expect_gte(stats::cor(rawDevPupa[, 2], stats::predict(mPupa)), 0.90)
 })
 
 test_that("devRateModel stinner_74 Phthorimaea operculella (Lepidoptera:Gelechiidae)", {
@@ -86,6 +95,9 @@ test_that("devRateModel stinner_74 Phthorimaea operculella (Lepidoptera:Gelechii
   expect_is(mEggs[[2]], "nls")
   expect_is(mLarva[[2]], "nls")
   expect_is(mPupa[[2]], "nls")
+  expect_gte(stats::cor(rawDevEggs[1:15, 2], stats::predict(mEggs[[1]])), 0.90)
+  expect_gte(stats::cor(rawDevLarva[1:12, 2], stats::predict(mLarva[[1]])), 0.80)
+  expect_gte(stats::cor(rawDevPupa[1:15, 2], stats::predict(mPupa[[1]])), 0.90)
 })
 
 test_that("devRateModel logan6_76 Episimus utilis (Lepidoptera:Tortricidae)", {
