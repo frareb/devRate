@@ -481,41 +481,43 @@ test_that("devRateModel damos_11 NA", {
   expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
 })
 
+test_that("devRateModel shi_11 NA", {
+  xx <- seq(from = 5, to = 30, by = 1)
+  yy <- c(0.0005995735, 0.0079170372, 0.0171991089, 0.0236537918, 0.0281298713,
+          0.0341454964, 0.0392060208, 0.0420963368, 0.0443013526, 0.0467620208,
+          0.0478385221, 0.0494913515, 0.0514356761, 0.0504533097, 0.0500366659,
+          0.0492914131, 0.0478050231, 0.0459566307, 0.0415589540, 0.0375018619,
+          0.0347461935, 0.0272569814, 0.0224289054, 0.0176117947, 0.0081157601,
+          0.0018878189)
+  testNLS <- devRateModel(eq = shi_11, temp = xx, devRate = yy,
+                          startValues = list(cc = 0.1, k1 = 0.1, k2 = 0.1, T1 = 5, T2 = 30))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
 
+test_that("devRateModel perf2_11 NA", {
+  xx <- seq(from = 5, to = 30, by = 1)
+  yy <- c(0.00000000, 0.09659644, 0.17580803, 0.27372645, 0.34321944,
+          0.43498266, 0.50303890, 0.60765488, 0.66796542, 0.72033052,
+          0.78447114, 0.86140402, 0.87338736, 0.90814892, 0.93825509,
+          0.95255293, 0.92937469, 0.92991574, 0.92638381, 0.86106986,
+          0.78175846, 0.69621604, 0.56833233, 0.41577785, 0.21972773,
+          0.00000000)
+  testNLS <- devRateModel(eq = perf2_11, temp = xx, devRate = yy,
+                          startValues = list(cc = 0.1, T1 = 5, k = 0.1, T2 = 30))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
 
-
-#
-# shi_11
-# perf2_11
-# regniere_12
-# ratkowsky_82
-# bieri1_83
-
-# test_that("devRateModel xxxx", {
-#   xx <- seq(from = 0, to = 35, by = 1)
-#   yy <- c()
-#
-#   aa = xxx
-#   bb = xxx
-#   Tm = xxx
-#   Tmin = xxx
-#   yy <- rnorm(n = length(xx), mean = eval({x = xx; parse(text = xxx$eqAlt[1])}), sd = 0.01)
-#   yy[yy < 0] <- 0
-#   plot(xx, yy)
-#
-#   testNLS <- devRateModel(eq = xxx, temp = xx, devRate = yy,
-#                           startValues = list(aa = xxx, bb = xxx, Tm = xxx, Tmin = xxx))
-#   expect_is(testNLS, "nls")
-#   expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
-# })
-
-
-
-
-### when no data in BDD
-# plot(rawDevLarva[,1], rawDevLarva[,2], lwd = 2)
-# phi <- 0.4
-# bb <- 0.14
-# Tmax <- 30
-# deltaT <- 7.1
-# points(x = 0:50, y = eval({x = 0:50; parse(text = logan6_76$eqAlt[1])}), type = 'l', lwd = 2, col = 2)
+test_that("devRateModel regniere_12 Choristoneura fumiferana (Lepidoptera:Tortricidae)", {
+  xx <- seq(from = 10, to = 37, by = 1)
+  yy <- c(0.02270952, 0.03016126, 0.03866354, 0.04770442, 0.05706395, 0.06602862,
+          0.07615793, 0.08304121, 0.09257196, 0.10285969, 0.11100158, 0.12039677,
+          0.13045528, 0.13883317, 0.14702621, 0.15699092, 0.16491603, 0.17207691,
+          0.17885112, 0.18642188, 0.18838618, 0.19262171, 0.19107004, 0.18812192,
+          0.18038079, 0.16780250, 0.14956308, 0.12607016)
+  testNLS <- devRateModel(eq = regniere_12, temp = xx, devRate = yy,
+                          startValues = list(phi = 0.0469, bb = 0.109, Tb = 7.2, Tm = 39.9, deltab = 1.7, deltam = 8.7))
+  expect_is(testNLS, "nls")
+  expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
+})
