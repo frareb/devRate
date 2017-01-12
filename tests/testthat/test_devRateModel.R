@@ -521,3 +521,4 @@ test_that("devRateModel regniere_12 Choristoneura fumiferana (Lepidoptera:Tortri
   expect_is(testNLS, "nls")
   expect_gte(stats::cor(yy, stats::predict(testNLS)), 0.90)
 })
+
