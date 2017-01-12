@@ -4,14 +4,16 @@
 \alias{devRatePrint}
 \title{Report model output from the NLS fit}
 \usage{
-devRatePrint(myNLS, temp, devRate)
+devRatePrint(myNLS, temp, devRate, doPlots = FALSE)
 }
 \arguments{
 \item{myNLS}{An object of class NLS}
 
-\item{temp}{The temperature.}
+\item{temp}{The temperature}
 
-\item{devRate}{The developmental rate \code{(days)^-1}}
+\item{devRate}{The development rate \code{(days)^-1}}
+
+\item{doPlots}{A boolean to get the residual plot (default = FALSE)}
 }
 \value{
 A custom output of the NLS fit
