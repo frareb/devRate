@@ -86,8 +86,9 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
 #' Provide a custom output of the NLS fit.
 #'
 #' @param myNLS An object of class NLS
-#' @param temp The temperature.
-#' @param devRate The developmental rate \code{(days)^-1}
+#' @param temp The temperature
+#' @param devRate The development rate \code{(days)^-1}
+#' @param doPlots A boolean to get the residual plot (default = FALSE)
 #' @return A custom output of the NLS fit
 #' @examples
 #' myT <- 5:15
@@ -103,30 +104,32 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
 #'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
 #' devRatePrint(myNLS = mEggs, temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2])
 #' @export
-devRatePrint <- function(myNLS, temp, devRate){
+devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
   cat("##################################################\n### Parameter estimates and overall model fit\n##################################################\n")
   print(summary(myNLS))
   cat("##################################################\n### Confidence intervals for parameters\n##################################################\n")
-  print(stats::confint(myNLS))
+  print(stats::confint.default(myNLS))
   cat("\n")
   cat("##################################################\n### Residuals distribution and independence\n##################################################\n")
   cat("### Normality of the residual distribution\n")
   print(stats::shapiro.test(stats::residuals(myNLS)))
-  opar <- graphics::par(mfrow = c(1,2))
-  graphics::plot(temp,
-       devRate,
-       main = paste0("Obs. versus fitted (cor: ", round(stats::cor(devRate, stats::predict(myNLS)), digits = 4),")")
-  ) # cor gives some estimation of the goodness of fit
-  cat("### See plots for observed versus fitted values, and Normal Q-Q Plot\n\n")
-  graphics::points(temp,
-         stats::predict(myNLS),
-         lty = 2,
-         lwd = 2,
-         col = 2
-  )
-  stats::qqnorm(stats::residuals(myNLS))
-  stats::qqline(stats::residuals(myNLS))
-  graphics::par(opar)
+  if(doPlots == TRUE){
+    opar <- graphics::par(mfrow = c(1,2))
+    graphics::plot(temp,
+         devRate,
+         main = paste0("Obs. versus fitted (cor: ", round(stats::cor(devRate, stats::predict(myNLS)), digits = 4),")")
+    ) # cor gives some estimation of the goodness of fit
+    cat("### See plots for observed versus fitted values, and Normal Q-Q Plot\n\n")
+    graphics::points(temp,
+           stats::predict(myNLS),
+           lty = 2,
+           lwd = 2,
+           col = 2
+    )
+    stats::qqnorm(stats::residuals(myNLS))
+    stats::qqline(stats::residuals(myNLS))
+    graphics::par(opar)
+  }
   cat("### Regression of the residuals against a lagged version of themselves\n")
   cat("### and testing if the slope of the resulting relationship is significantly\n")
   cat("### different from 0:\n")
