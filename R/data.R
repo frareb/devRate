@@ -105,21 +105,24 @@
 #' @source \url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
 "wangengel_98"
 
-#' @title Ratkowsky equation of development rate as a function of temperature.
+#' @title Ratkowsky equation of development rate as a function of temperature (Shi modification).
 #'
 #' @description Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
 #' temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
 #' @description Ratkowsky, D.A., R.K. Lowry, T.A. McMeekin, A.N. Stokes, and R.E. Chandler. 1983.
 #' Model for bacterial culture growth rate throughout the entire biokinetic temperature range.
 #' Journal of Bacteriology 154: 1222-1226.
+#' @description Shi, P., Ge, F., Sun, Y., and Chen, C. (2011) A simple model for describing the effect of
+#' temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
 #'
 #' @details Equation:
 #' rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2
 #'
 #' @details where rT is the development rate, T the temperature, T1 and T2 the minimum
 #' and maximum temperatures at which rate of growth is zero, sqrt(cc) * k1 the slope of the
-#' regression as in the rootsq_82 equation, and k2 a constant. In Ratkowsky et al. 1983,
-#' sqrt(cc) * k1 is simplified as a single constant.
+#' regression as in the rootsq_82 equation, and k2 a constant. The Ratkowsky model designed
+#' for microorganisms has been modified by Shi et al. 2011 to describe the temperature-dependent
+#' developmental rates of insects.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -188,33 +191,33 @@
 #' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
 "shi_11"
 
-#' @title Hansen equation of development rate as a function of temperature.
-#'
-#' @description Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
-#' diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
-#' (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
-#'
-#' @details Equation:
-#' rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((T - p5) / p4) )
-#'
-#' @details where rT is the development rate, T the temperature, p1 the lower developmental
-#' treshold, p2 the peak rate control parameter, p3 the low temperature acceleration of
-#' rates, p4 the width of upper thermal boundary layer, and p5 the upper developmental
-#' threshold.
-#'
-#' @format A list of eight elements describing the equation.
-#' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
-#'   \item{ref}{The equation reference.}
-#'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
-#' }
-#' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
-"hansen_11"
+# #' @title Hansen equation of development rate as a function of temperature.
+# #'
+# #' @description Hansen, E.M., Bentz, B.J., Powell, J.A., Gray, D.R., and Vandygriff, J.C. (2011) Prepupal
+# #' diapause and instar IV developmental rates of the spruce beetle, Dendroctonus rufipennis
+# #' (Coleoptera: Curculionidae, Scolytinae). Journal of insect physiology 57(10): 1347-57.
+# #'
+# #' @details Equation:
+# #' rT ~ p2 * ( (exp(p3 * (T - p1)) - 1) * (exp(p3 * (p5 - p1)) - 1) * exp((T - p5) / p4) )
+# #'
+# #' @details where rT is the development rate, T the temperature, p1 the lower developmental
+# #' treshold, p2 the peak rate control parameter, p3 the low temperature acceleration of
+# #' rates, p4 the width of upper thermal boundary layer, and p5 the upper developmental
+# #' threshold.
+# #'
+# #' @format A list of eight elements describing the equation.
+# #' \describe{
+# #'   \item{eq}{The equation as a formula object.}
+# #'   \item{eqAlt}{The equation as a string.}
+# #'   \item{name}{The equation name.}
+# #'   \item{ref}{The equation reference.}
+# #'   \item{refShort}{The equation reference shortened.}
+# #'   \item{startVal}{The parameter values found in the literature with their references.}
+# #'   \item{com}{An otional comment about the equation use.}
+# #'   \item{id}{An id to identificate the equation.}
+# #' }
+# #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
+# "hansen_11"
 
 #' @title Janisch equation of development rate as a function of temperature (Analytis modification).
 #'
