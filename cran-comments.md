@@ -1,10 +1,9 @@
-## devRate version 0.1.0
-This is a first submission.
+## devRate version 0.1.1
 
 ## Test environments
-* Windows 10, R 3.3.1
-* Ubuntu 16.04, R 3.3.1
-* win-builder (devel 2016-08-28 r71162)
+* Windows 10, R 3.3.2
+* Debian Jessie, R 3.3.2
+* win-builder ()
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
