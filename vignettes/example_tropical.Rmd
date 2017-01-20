@@ -140,7 +140,7 @@ The empirical data can be fitted to any model in the database with the
       startValues = list(Rm = 0.05, Tm = 25, To = 10))
       
     mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
-      startValues = list(Rm = 0.05, Tm = 30, To = 10))
+      startValues = list(Rm = 0.1, Tm = 30, To = 10))
       
 The summary of the "devRateModel" can be optained with the "devRatePrint" function.
 
