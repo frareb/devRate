@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_map.R
 \name{devRateMap}
 \alias{devRateMap}
-\title{Predict developmental rate from a a map of temperatures}
+\title{Predict development rate from a a map of temperatures}
 \usage{
 devRateMap(nlsDR, tempMap)
 }
@@ -12,10 +12,17 @@ devRateMap(nlsDR, tempMap)
 \item{tempMap}{A matrix containing temperatures in degrees.}
 }
 \value{
-A matrix with developmental rates predicted from the model.
+A matrix with development rates predicted from the model.
 }
 \description{
-Create a map from a temperature matrix and the developmental rate curve
+Create a map from a temperature matrix and the development rate curve
+}
+\details{
+The \code{devRateMap} function is designed for a single ecthoterm
+  life stage, but the resulted matrix of development rate can be performed
+  for each life stage in order to obtain the whole organism development.
+  Input temperatures should preferably cover the orgnaism development period
+  rather than the whole year.
 }
 \examples{
 myT <- 5:15
