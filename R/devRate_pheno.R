@@ -62,7 +62,7 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
         }
         ratioSupDev <- 0
         if(currentDev >= 1){
-          print(currentDev)
+          # print(currentDev)
           supDev <- 0
           if(currentDev > 1){
             supDev <- currentDev - 1
