@@ -36,12 +36,93 @@ Before attempting to fit any model to the empirical data, the devRate function
 the organism, either by Order, Family, or species.
 
     devRateFind(orderSP = "Lepidoptera")
+    R> [ davidson_44 ]   Logistic: Davidson 1944 (15 times)
+    R> [ campbell_74 ]   Linear: Campbell et al. 1974 (108 times)
+    R> [ logan6_76 ]   Logan-6: Logan et al. 1976 (19 times)
+    R> [ logan10_76 ]   Logan-10: Logan et al. 1976 (12 times)
+    R> [ analytis_77 ]   Analytis: Analytis 1977 (7 times)
+    R> [ schoolfieldHigh_81 ]   Schoolfield High: Schoolfield et al. 1981 (3 times)
+    R> [ taylor_81 ]   Gauss: Taylor 1981 (21 times)
+    R> [ poly2 ]   Second-order polynomial: - (4 times)
+    R> [ harcourtYee_82 ]   Third-order polynomial: Harcourt and Yee 1982 (13 times)
+    R> [ poly4 ]   Forth-order polynomial: - (5 times)
+    R> [ rootsq_82 ]   Root square: Ratkowsky et al. 1982 (1 times)
+    R> [ hilbertLogan_83 ]   Holling type III: Hilbert and Logan 1983 (9 times)
+    R> [ lactin1_95 ]   Lactin-1: Lactin et al. 1995 (7 times)
+    R> [ lactin2_95 ]   Lactin-2: Lactin et al. 1995 (28 times)
+    R> [ briere1_99 ]   Briere-1: Briere et al. 1999 (22 times)
+    R> [ briere2_99 ]   Briere-2: Briere et al. 1999 (17 times)
+    R> [ kontodimas_04 ]   Equation 16: Kontodimas et al. 2004 (4 times)
+    R> [ damos_08 ]   Simplified beta type: Damos and Savopoulou 2008 (1 times)
+    R> [ regniere_12 ]   Regniere: Regniere et al. 2012 (1 times)
+
     devRateFind(familySP = "Gelechiidae")
+    R> [ campbell_74 ]   Linear: Campbell et al. 1974 (12 times)
+    R> [ logan6_76 ]   Logan-6: Logan et al. 1976 (4 times)
+    R> [ logan10_76 ]   Logan-10: Logan et al. 1976 (1 times)
+    R> [ analytis_77 ]   Analytis: Analytis 1977 (3 times)
+    R> [ taylor_81 ]   Gauss: Taylor 1981 (2 times)
+    R> [ harcourtYee_82 ]   Third-order polynomial: Harcourt and Yee 1982 (1 times)
+    R> [ poly4 ]   Forth-order polynomial: - (1 times)
+    R> [ rootsq_82 ]   Root square: Ratkowsky et al. 1982 (1 times)
+    R> [ lactin1_95 ]   Lactin-1: Lactin et al. 1995 (3 times)
+    R> [ lactin2_95 ]   Lactin-2: Lactin et al. 1995 (3 times)
+    R> [ briere1_99 ]   Briere-1: Briere et al. 1999 (3 times)
+    R> [ damos_08 ]   Simplified beta type: Damos and Savopoulou 2008 (1 times)
 
 Then, the "devRateInfo" function provides additional information on these models
 and on parameter estimations.
 
     devRateInfo(eq = taylor_81)
+    R> ----------------------------------------
+    R> Gauss 
+    R> ----------------------------------------
+    R> Taylor, F. (1981) Ecology and evolution of physiological time in insects.
+    R> American Naturalist, 1-23.  Lamb, RJ. (1992) Developmental rate of
+    R> Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications
+    R> for estimating rate parameters for insects. Environmental Entomology 21(1):
+    R> 10-19.
+    R> 
+    R> rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+    R> <environment: namespace:devRate>
+    R> 
+    R> Parameter estimates from the literature (eq$startVal): 
+    R> 
+    R>    ...                      genSp  stage param.Rm param.Tm param.To                     ref
+    R> 1  ...         Geocoris articolor    all   0.0550  37.2000   8.8000             Taylor 1981
+    R> 2  ...           Geocoris pallens    all   0.0630  37.0000   8.6000             Taylor 1981
+    R> 3  ...         Geocoris punctipes    all   0.0440  33.8000   7.7000             Taylor 1981
+    R> 4  ...            Lygus desetinus    all   0.0560  32.1000   9.8000             Taylor 1981
+    R> 5  ...             Lygus hesperus    all   0.0620  36.2000  12.8000             Taylor 1981
+    R> 6  ...        Acyrthosiphon pisum    all   0.1650  26.2000   9.0000             Taylor 1981
+    R> 7  ...        Acyrthosiphon pisum    all   0.1510  27.5000  11.0000             Taylor 1981
+    R> 8  ...      Brevicoryne brassicae    all   0.0970  26.4000  10.5000             Taylor 1981
+    R> 9  ...      Brevicoryne brassicae    all   0.1000  26.6000   8.4000             Taylor 1981
+    R> 10 ...  Hyadaphis pseudobrassicae    all   0.1440  26.0000   9.1000             Taylor 1981
+    R> 11 ...     Macrosiphum euphorbiae    all   0.1400  30.6000  14.6000             Taylor 1981
+    R> 12 ...             Myzus persicae    all   0.1290  24.7000   9.3000             Taylor 1981
+    R> 13 ...             Myzus persicae    all   0.1550  26.3000  10.4000             Taylor 1981
+    R> 14 ...         Circulifer tenelus    all   0.0520  35.2000   9.2000             Taylor 1981
+    R> 15 ...             Empoasca fabae    all   0.0710  30.7000   8.9000             Taylor 1981
+    R> 16 ... Callosobruchus rhodesianus    all   0.0390  31.2000   8.0000             Taylor 1981
+    R> 17 ...         Crioceris asparagi    all   0.0710  37.6000  13.3000             Taylor 1981
+    R> ...
+    R> 62 ...        Acyrthosiphon pisum    all   0.1990  26.1000   9.9000               Lamb 1992
+    R> 63 ...        Acyrthosiphon pisum    all   0.1900  26.3000  10.3000               Lamb 1992
+    R> 64 ...   Symmetrischema tangolias  larva   0.0476  28.5800  10.5000   Sporleder et al. 2016
+    R> 65 ...   Symmetrischema tangolias   pupa   0.0990  31.8000  11.1000   Sporleder et al. 2016
+    R> 66 ...           Nephus includens    all   0.0441  34.9999  11.0220  Kontodimas et al. 2004
+    R> 67 ...          Nephus bisignatus    all   0.0338  32.4999  10.7097  Kontodimas et al. 2004
+    R> 68 ...            Cydia pomonella    egg   0.2468  30.9122   9.0574      Aghdam et al. 2009
+    R> 69 ...            Cydia pomonella  larva   0.0637  29.6918   8.7660      Aghdam et al. 2009
+    R> 70 ...            Cydia pomonella   pupa   0.0836  30.6414   8.8934      Aghdam et al. 2009
+    R> 71 ...            Cydia pomonella    all   0.0316  29.9478   8.5990      Aghdam et al. 2009
+    R> ...
+    R> 
+    R> Comments: 
+    R> "The curve must be truncated to the right of Tm because of lethal effects of
+    R> short exposures to high temperatures. The rate at which development rate falls
+    R> away from Tm is measured by To." Taylor 1981
 
 Information from the database can be plotted using the "devRatePlotInfo" function.
 
@@ -50,29 +131,101 @@ Information from the database can be plotted using the "devRatePlotInfo" functio
 
 ## Fitting models to empirical datasets
 The empirical data can be fitted to any model in the database with the
-"devRateModel" function and empirical data plotted against the model using the
-"devRatePlot" function.
+"devRateModel" function
 
     mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
       startValues = list(Rm = 0.05, Tm = 30, To = 5))
+      
     mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
-      startValues = list(Rm = 0.05, Tm = 25, To = 5))
+      startValues = list(Rm = 0.05, Tm = 25, To = 10))
+      
     mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
-      startValues = list(Rm = 0.05, Tm = 30, To = 5))
+      startValues = list(Rm = 0.05, Tm = 30, To = 10))
+      
+The summary of the "devRateModel" can be optained with the "devRatePrint" function.
+
+    devRatePrint(myNLS = mLarva, temp = rawDevLarva[,1], devRate = rawDevLarva[,2])
+    R> ##################################################
+    R> ### Parameter estimates and overall model fit
+    R> ##################################################
+    R> 
+    R> Formula: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+    R> 
+    R> Parameters:
+    R>     Estimate Std. Error t value Pr(>|t|)    
+    R> Rm  0.068383   0.009473   7.219 1.71e-05 ***
+    R> Tm 21.408732   0.729062  29.365 8.41e-12 ***
+    R> To  5.544986   0.865264   6.408 5.02e-05 ***
+    R> ---
+    R> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+    R> 
+    R> Residual standard error: 0.0133 on 11 degrees of freedom
+    R> 
+    R> Number of iterations to convergence: 13 
+    R> Achieved convergence tolerance: 6.653e-06
+    R> 
+    R> ##################################################
+    R> ### Confidence intervals for parameters
+    R> ##################################################
+    R>          2.5 %      97.5 %
+    R> Rm  0.04981547  0.08694955
+    R> Tm 19.97979621 22.83766817
+    R> To  3.84909961  7.24087239
+    R> 
+    R> ##################################################
+    R> ### Residuals distribution and independence
+    R> ##################################################
+    R> ### Normality of the residual distribution
+    R> 
+    R> 	Shapiro-Wilk normality test
+    R> 
+    R> data:  stats::residuals(myNLS)
+    R> W = 0.97915, p-value = 0.9696
+    R> 
+    R> ### Regression of the residuals against a lagged version of themselves
+    R> ### and testing if the slope of the resulting relationship is significantly
+    R> ### different from 0:
+    R> 
+    R> Call:
+    R> stats::lm(formula = stats::residuals(myNLS)[-N] ~ stats::residuals(myNLS)[-1])
+    R> 
+    R> Residuals:
+    R>       Min        1Q    Median        3Q       Max 
+    R> -0.021388 -0.011116  0.002149  0.009943  0.020078 
+    R> 
+    R> Coefficients:
+    R>                               Estimate Std. Error t value Pr(>|t|)
+    R> (Intercept)                  0.0005691  0.0036255   0.157    0.878
+    R> stats::residuals(myNLS)[-1] -0.1654787  0.2965227  -0.558    0.588
+    R> 
+    R> Residual standard error: 0.01307 on 11 degrees of freedom
+    R> Multiple R-squared:  0.02753,	Adjusted R-squared:  -0.06087 
+    R> F-statistic: 0.3114 on 1 and 11 DF,  p-value: 0.588
+    R> 
+    R> ##################################################
+    R> ### Comparing models
+    R> ##################################################
+    R> ### Using AIC and BIC
+    R> Akaike Information Criterion (AIC): -76.6001352945075
+    R> Bayesian Information Criterion (BIC): -74.0439059760465
+
+Empirical data can be plotted against the model using the "devRatePlot" function.
 
     devRatePlot(eq = taylor_81, nlsDR = mEggs, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
       pch = 16, ylim = c(0, 0.2))
+      
     devRatePlot(eq = taylor_81, nlsDR = mLarva, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
       pch = 16, ylim = c(0, 0.2))
+      
     devRatePlot(eq = taylor_81, nlsDR = mPupa, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
       pch = 16, ylim = c(0, 0.2))
 
-```{r, echo=FALSE, results='asis'}
-knitr::kable(data.frame(Stage = c("Eggs", "Larva", "Pupa"), model = rep("Taylor", 3),
-  Rm = c(0.1934, 0.06838, 0.0978), Rm_SE = c(0.01781, 0.009473, 0.0087),
-  Tm = c(25.3418, 21.40871, 22.0114), Tm_SE = c(0.76013, 0.729058, 0.4556),
-  To = c(-6.8939, 5.54497, -4.7515), To_SE = c(0.76853, 0.865261, 0.4715)))
-```
+<!-- ```{r, echo=FALSE, results='asis'} -->
+<!-- knitr::kable(data.frame(Stage = c("Eggs", "Larva", "Pupa"), model = rep("Taylor", 3), -->
+<!--   Rm = c(0.1934, 0.06838, 0.0978), Rm_SE = c(0.01781, 0.009473, 0.0087), -->
+<!--   Tm = c(25.3418, 21.40871, 22.0114), Tm_SE = c(0.76013, 0.729058, 0.4556), -->
+<!--   To = c(-6.8939, 5.54497, -4.7515), To_SE = c(0.76853, 0.865261, 0.4715))) -->
+<!-- ``` -->
 
 ## Forecasting phenologies from empirical temperature
 In this example the temperature dataset is built from a Normal distribution of mean
@@ -89,5 +242,63 @@ the developmental rate, with a standard deviation of 0.015 (Normal distribution)
       numInd = 500,
       stocha = 0.015,
       timeLayEggs = 1)
+    
+    print(forecastTsolanivora)
+    R> [[1]]
+    R>        g1s1 g1s2 g1s3 g2s1
+    R>   [1,]   14   43   68   83
+    R>   [2,]   14   41   67   83
+    R>   [3,]   14   44   79   96
+    R>   [4,]   13   43   75   92
+    R>   [5,]   15   43   68   84
+    R>   [6,]   13   37   65   80
+    R>   [7,]   14   42   68   85
+    R>   [8,]   14   40   67   84
+    R>   [9,]   15   44   78   94
+    R>  [10,]   14   45   76   91
+    R>  ...
+    R> [500,]   14   40   70   87
+    R> 
+    R> [[2]]
+    R> [[2]][[1]]
+    R> Nonlinear regression model
+    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+    R>    data: data.frame(rT = devRate, T = temp)
+    R>      Rm      Tm      To 
+    R>  0.1934 25.3418 -6.8939 
+    R>  residual sum-of-squares: 0.01303
+    R> 
+    R> Number of iterations to convergence: 13 
+    R> Achieved convergence tolerance: 8.264e-06
+    R> 
+    R> [[2]][[2]]
+    R> Nonlinear regression model
+    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+    R>    data: data.frame(rT = devRate, T = temp)
+    R>       Rm       Tm       To 
+    R>  0.06838 21.40873  5.54499 
+    R>  residual sum-of-squares: 0.001947
+    R> 
+    R> Number of iterations to convergence: 13 
+    R> Achieved convergence tolerance: 6.653e-06
+    R> 
+    R> [[2]][[3]]
+    R> Nonlinear regression model
+    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+    R>    data: data.frame(rT = devRate, T = temp)
+    R>      Rm      Tm      To 
+    R>  0.0978 22.0114  4.7515 
+    R>  residual sum-of-squares: 0.002394
+    R> 
+    R> Number of iterations to convergence: 14 
+    R> Achieved convergence tolerance: 3.032e-06
+    R> 
+    R> 
+    R> [[3]]
+    R>   [1] 13.73130 16.34298 15.14231 17.88713 13.84732 14.35198 16.15267 ...
+    R>  [21] 14.88865 15.13143 14.41983 15.66492 14.32055 16.48751 16.47430 ...
+    R>  [41] 13.86618 15.10432 15.81162 15.54097 13.39031 16.13360 15.25043 ...
+    R>  [61] 14.62629 15.47062 14.06978 15.24159 14.68912 14.90124 16.97001 ...
+    R>  [81] 15.80832 15.33636 16.05875 16.28860 14.14241 13.81280 16.15399 ...
 
     devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density")
