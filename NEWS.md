@@ -1,3 +1,6 @@
+# devRate 0.1.2.
+* ...
+
 # devRate 0.1.1.
 * vignette improved
 * help page for function devRateMap improved
