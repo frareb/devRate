@@ -1,9 +1,17 @@
 ## devRate version 0.1.1
+* vignette improved
+* help page for function devRateMap improved
+* new devRatePrint function (custom output for nls object)
+* bug in phenological model corrected
+* Sharpe and DeMichele equation now in degree Celsius
+* Structural equations of each regression model in the package manual
+* testing units using testthat package
+* BDD update: 35 models ; 543 entries ; 131 species
 
 ## Test environments
 * Windows 10, R 3.3.2
-* Debian Jessie, R 3.3.2
-* win-builder ()
+* Linux Debian Jessie, R 3.3.2
+* win-builder (2017-01-19 r72014)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
@@ -13,12 +21,9 @@ There was 1 NOTE with win-builder (devel):
 * Maintainer: 'Rebaudo Francois <francois.rebaudo@ird.fr>'
 => OK
 
-* New submission
-=> OK
-
 * Possibly mis-spelled words in DESCRIPTION:
-  Ectotherms (4:24)
-  ectotherms (12:42)
+  Ectotherms (4:12)
+  ectotherms (15:42)
 => OK: "Ectotherm, Any so-called cold-blooded animal; that is, any animal whose regulation of body temperature depends on external sources, such as sunlight or a heated rock surface. The ectotherms include the fishes, amphibians, reptiles, and invertebrates. The body temperatures of aquatic ectotherms are usually very close to those of the water. Ectotherms do not require as much food as warm-blooded animals (endotherms) of the same size, but most cannot deal as well with cold surroundings."
 source: http://www.britannica.com/science/ectotherm
 
