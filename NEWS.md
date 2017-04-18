@@ -1,5 +1,5 @@
 # devRate 0.1.2.
-* new function to obtain thermal performance curve metrics
+* 
 
 # devRate 0.1.1.
 * vignette improved

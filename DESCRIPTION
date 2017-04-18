@@ -1,6 +1,6 @@
 Package: devRate
 Type: Package
-Title: Quantify Relationship Between Developmental Rate and Temperature in
+Title: Quantify Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.1.2
 Date: 2017-01-22
@@ -10,7 +10,7 @@ Authors@R: c(person("Francois", "Rebaudo", role = c("aut", "cre"),
 Author: Francois Rebaudo [aut, cre],
     Quentin Struelens [aut]
 Maintainer: Francois Rebaudo <francois.rebaudo@ird.fr>
-Description: A set of functions to ease quantifying the relationship between developmental
+Description: A set of functions to ease quantifying the relationship between development
     rate and temperature. The package comprises a set of models and estimated parameters
     borrowed from a literature review in ectotherms.
 License: GPL-2
