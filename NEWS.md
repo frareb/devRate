@@ -1,4 +1,5 @@
 # devRate 0.1.2.
+* equations in latex in PDF manual using \eqn{latex}{ascii}
 * 
 
 # devRate 0.1.1.
