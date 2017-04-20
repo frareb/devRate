@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 R/devRate_equations\.R
+R/devRate_forRstudioUsers\.R
 ^data/.*\.csv$
 cran-comments\.md
