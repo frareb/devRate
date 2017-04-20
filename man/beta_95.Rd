@@ -27,11 +27,11 @@ Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model 
 }
 \details{
 Equation:
-rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb
+\deqn{rT = e^{mu} * (T - Tb)^{aa} * (Tc - T)^{bb}}{%
+      rT = exp(mu) * (T - Tb)^aa * (Tc - T)^bb}
 
 where rT is the development rate, T the temperature, mu, aa,
 and bb the model parameters, Tb the base temperature, and Tc the ceiling
 temperature.
 }
 \keyword{datasets}
-

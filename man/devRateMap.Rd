@@ -31,4 +31,3 @@ myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
   startValues = list(aa = 0, bb = 0))
 myMap <- devRateMap(nlsDR =  myNLS, tempMap = matrix(rnorm(100, mean = 12, sd = 2), ncol=10))
 }
-

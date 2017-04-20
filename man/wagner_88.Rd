@@ -33,7 +33,7 @@ Annals of the Entomological Society of America 77(2): 208-20.
 }
 \details{
 Equation:
-rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) )
+\deqn{rT = \frac{1}{\frac{1 + e^{\frac{cc}{1.987} * (\frac{1}{dd} - \frac{1}{T + 273.16})}}{aa*\frac{T + 273.16}{298.15}*e^{\frac{bb}{1.987}*(\frac{1}{298.15} - \frac{1}{T + 273.16})}}}}{%
+      rT = 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa * (T + 273.16)/298.15 * exp( (bb/1.987) * ((1/298.15) - 1/(T + 273.16)) ) ) )}
 }
 \keyword{datasets}
-

@@ -26,4 +26,3 @@ myDays <- data.frame(egg =  c("28/12/15", "28/12/15", "28/12/15", "28/12/15"),
                          death = c("15/03/16", "12/03/16", "19/03/16", "20/03/16"))
 compDifDaysDf(dfDates = myDays, dateFormat = "\%d/\%m/\%y")
 }
-

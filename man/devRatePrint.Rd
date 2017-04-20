@@ -35,4 +35,3 @@ mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEgg
    startValues = list(Rm = 0.05, Tm = 30, To = 5))
 devRatePrint(myNLS = mEggs, temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2])
 }
-

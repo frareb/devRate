@@ -40,4 +40,3 @@ myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
 devRatePlot(eq = campbell_74, nlsDR = myNLS, temp = myT, devRate = myDev,
   spe = TRUE, pch = 16, lwd = 2, ylim = c(0, 0.10))
 }
-

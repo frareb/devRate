@@ -32,11 +32,14 @@ Environmental Entomology 21(1): 10-19.
 }
 \details{
 Equation:
-c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))
+\deqn{rT = Rm * e^{-\frac{1}{2} * (\frac{T - Tmax}{To})^{2}}}{%
+      rT = Rm * exp(-1/2 * ((T - Tmax)/To)^2)}
+and
+\deqn{rT = Rm * e^{-\frac{1}{2} * (\frac{T - Tmax}{T1})^{2}}}{%
+      rT = Rm * exp(-1/2 * ((T - Tmax)/T1)^2)}
 
 where rT is the development rate, T the temperature, Rm the maximum
-development rate, Tmax the optimum temperature, and To the shape parameter giving
+development rate, Tmax the optimum temperature, and To and T1 the shape parameter giving
 the spread of the curve.
 }
 \keyword{datasets}
-

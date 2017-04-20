@@ -47,4 +47,3 @@ forecastTsolanivora <- devRateIBM(
 devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density", threshold = 0.1)
 devRateIBMPlot(ibm = forecastTsolanivora, typeG = "hist")
 }
-

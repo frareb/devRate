@@ -28,10 +28,10 @@ and modeling. Journal of Insect Physiology 58(5): 634-47.
 }
 \details{
 Equation:
-rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))
+\deqn{rT = phi * (e^{bb * (T - Tb)} - \frac{Tm - T}{Tm - Tb} * e^{-bb * \frac{T - Tb}{deltab}} - \frac{T - Tb}{Tm - Tb} * e^{\frac{bb * (Tm - Tb) - (Tm - T)}{deltam}})}{%
+      rT = phi * (exp(bb * (T - Tb)) - ((Tm - T) / (Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))}
 
 where rT is the development rate, T the temperature, and the others
 thermodynamic parameters (see source).
 }
 \keyword{datasets}
-

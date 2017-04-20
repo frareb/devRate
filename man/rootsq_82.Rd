@@ -27,10 +27,10 @@ temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1
 }
 \details{
 Equation:
-rT ~ (bb * (T - Tb))^2
+\deqn{rT = (bb * (T - Tb))^{2}}{%
+      rT = (bb * (T - Tb))^2}
 
 where rT is the development rate, T the temperature, bb the slope of the
 regression line, and Tb a conceptual temperature of no metabolic significance.
 }
 \keyword{datasets}
-

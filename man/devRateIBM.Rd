@@ -54,4 +54,3 @@ forecastTsolanivora <- devRateIBM(
    stocha = 0.015,
    timeLayEggs = 1)
 }
-

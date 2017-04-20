@@ -27,10 +27,10 @@ Temperature requirements of some aphids and their parasites. Journal of applied 
 }
 \details{
 Equation:
-rT ~ aa + bb * T
+\deqn{rT = aa + bb * T}{%
+      rT = aa + bb * T}
 
 where rT is the development rate, T the temperature, bb the slope, and aa
 the point at which the line crosses the rT axis when T = 0.
 }
 \keyword{datasets}
-

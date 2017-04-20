@@ -27,11 +27,11 @@ temperature-dependent development for arthropods. Environmental Entomology, 28, 
 }
 \details{
 Equation:
-rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)
+\deqn{rT = aa * T * (T - Tmin) * (Tmax - T)^{\frac{1}{bb}}}{%
+      rT = aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)}
 
 where rT is the development rate, T the temperature, Tmin the low
 temperature developmental threshold, Tmax the lethal temperature, and aa and
 bb empirical constants.
 }
 \keyword{datasets}
-

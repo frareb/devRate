@@ -35,4 +35,3 @@ The devRate package provides three categories of functions:
 
 Author's affiliation: IRD, UMR EGCE, Univ.ParisSud-CNRS-IRD-Univ.ParisSaclay
 }
-

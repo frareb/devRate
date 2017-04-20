@@ -27,10 +27,10 @@ Journal of Theoretical Biology, 64, 649-670.
 }
 \details{
 Equation:
-rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))
+\deqn{rT = \frac{(T + 273.16) * e^{\frac{aa - \frac{bb}{T + 273.16}}{1.987}}}{1 + e^{\frac{cc - \frac{dd}{T + 273.16}}{1.987}} + e^{\frac{ff - \frac{gg}{T + 273.16}}{1.987}}}}{%
+      rT = ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))}
 
 where rT is the development rate, T the temperature, and aa, bb, cc,
 dd, ff, and gg thermodynamic parameters
 }
 \keyword{datasets}
-

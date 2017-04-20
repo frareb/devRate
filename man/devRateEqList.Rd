@@ -12,4 +12,3 @@ devRateEqList
 The list of all available equations of development rate as a function of temperature.
 }
 \keyword{datasets}
-

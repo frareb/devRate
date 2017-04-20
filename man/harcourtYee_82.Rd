@@ -27,7 +27,7 @@ life stages. Environmental Entomology, 11, 581-584.
 }
 \details{
 Equation:
-rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3
+\deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3}}{%
+      rT = a0 + a1 * T + a2 * T^2 + a3 * T^3}
 }
 \keyword{datasets}
-

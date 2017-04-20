@@ -27,11 +27,11 @@ temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(
 }
 \details{
 Equation:
-rT ~ cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2)))
+\deqn{rT = cc * (1 - e^{-k1 * (T - T1)}) * (1 - e^{k2 * (T - T2)})}{%
+      rT = cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2)))}
 
 where rT is the development rate, T the temperature, T1 and T2 the conceptual
 lower and upper developmental thresholds at which development rates equal zero,
 and cc k1, and k2 constants.
 }
 \keyword{datasets}
-

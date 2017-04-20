@@ -33,10 +33,10 @@ Entomologia Hellenica, 21, 25-38.
 }
 \details{
 Equation:
-rT ~ aa * (T - Tmin) - (bb * exp(T - Tm))
+\deqn{rT = aa * (T - Tmin) - (bb * e^{T - Tm})}{%
+      rT = aa * (T - Tmin) - (bb * exp(T - Tm))}
 
 where rT is the development rate, T the temperature, Tmin the minimum
 temperature, and aa, bb, and Tm fitted coefficients.
 }
 \keyword{datasets}
-

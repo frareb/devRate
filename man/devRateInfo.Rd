@@ -20,4 +20,3 @@ devRateInfo(eq = davidson_44)
 devRateInfo(eq = campbell_74)
 devRateInfo(eq = taylor_81)
 }
-

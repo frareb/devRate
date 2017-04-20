@@ -27,7 +27,8 @@ at constant temperatures. The Journal of Animal Ecology:26-38.
 }
 \details{
 Equation:
-rT ~ K / (1 + exp(aa + bb * T))
+\deqn{rT = \frac{K}{1 + e^{aa + bb * T}}}{%
+      rT = K / (1 + exp(aa + bb * T))}
 
 where rT is the development rate, T the temperature, K the distance between
 the upper and lower asymptote of the curve, aa the relative position of the origin of
@@ -35,4 +36,3 @@ the curve on the abscissa, bb the degree of acceleration of development of the l
 in relation to temperature.
 }
 \keyword{datasets}
-

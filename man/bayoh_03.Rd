@@ -28,10 +28,10 @@ research 93(5): 375-81.
 }
 \details{
 Equation:
-rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T)
+\deqn{rT = aa + bb * T + cc * e^{T} + dd * e^{-T}}{%
+      rT = aa + bb * T + cc * exp(T) + dd * exp(-T)}
 
 where rT is the development rate, T the temperature, and aa, bb,
 cc, and dd empirical constant parameters.
 }
 \keyword{datasets}
-

@@ -34,11 +34,11 @@ of Insects:(I) Empirical Models. Annals of the Entomological Society of America,
 }
 \details{
 Equation:
-rT ~ cc * (T - T1) * (1 - exp(k * (T - T2)))
+\deqn{rT = cc * (T - T1) * (1 - e^{k * (T - T2)})}{%
+      rT = cc * (T - T1) * (1 - exp(k * (T - T2)))}
 
 where rT is the development rate, T the temperature, T1 and T2 the conceptual
 lower and upper developmental thresholds at which development rates equal zero,
 and cc and k constants.
 }
 \keyword{datasets}
-

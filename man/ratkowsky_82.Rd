@@ -36,13 +36,13 @@ temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(
 }
 \details{
 Equation:
-rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2
+\deqn{rT = (\sqrt{cc} * k1 * (T - T1) * (1 - e^{k2 * (T - T2)}))^{2}}{%
+      rT = (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2}
 
 where rT is the development rate, T the temperature, T1 and T2 the minimum
 and maximum temperatures at which rate of growth is zero, sqrt(cc) * k1 the slope of the
 regression as in the rootsq_82 equation, and k2 a constant. The Ratkowsky model designed
 for microorganisms has been modified by Shi et al. 2011 to describe the temperature-dependent
-developmental rates of insects.
+development rates of insects.
 }
 \keyword{datasets}
-

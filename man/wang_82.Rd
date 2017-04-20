@@ -27,9 +27,9 @@ between insect development and temperature. Acta Ecol. Sin, 2, 47-57.
 }
 \details{
 Equation:
-rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1-exp(-(TH - T)/aa))
+\deqn{rT = \frac{K}{1 + e^{-r*(T - T0)}} * (1 - e^{-\frac{T - TL}{aa}}) * (1 - e^{-\frac{TH - T}{aa}})}{%
+      rT = (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1 - exp(-(TH - T)/aa))}
 
 where rT is the development rate, and T the temperature.
 }
 \keyword{datasets}
-

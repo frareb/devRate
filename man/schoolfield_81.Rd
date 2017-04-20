@@ -28,7 +28,8 @@ Journal of theoretical biology, 88, 719-731.
 }
 \details{
 Equation:
-rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))
+\deqn{rT = \frac{p25 * \frac{T + 273.16}{298} * e^{\frac{aa}{1.987} * (\frac{1}{298} - \frac{1}{T + 273.16})}}{1 + e^{\frac{bb}{1.987} * (\frac{1}{cc} - \frac{1}{T + 273.16})} + e^{\frac{dd}{1.987} * (\frac{1}{ee} - \frac{1}{T + 273.16})}}}{%
+      rT = (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))}
 
 where rT is the development rate, T the temperature, p25 the development
 rate at 25 degree Celcius assuming no enzyme inactivation, aa the enthalpy of
@@ -40,4 +41,3 @@ and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperatur
 inactive.
 }
 \keyword{datasets}
-

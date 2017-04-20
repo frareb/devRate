@@ -41,4 +41,3 @@ forecastTsolanivora <- devRateIBM(
    timeLayEggs = 1)
 devRateIBMgen(ibm = forecastTsolanivora)
 }
-

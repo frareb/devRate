@@ -28,11 +28,11 @@ Entomology, 5(6), 1133-1140.
 }
 \details{
 Equation:
-rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))
+\deqn{rT = phi * (e^{bb * T} - e^{bb * Tmax - \frac{Tmax - T}{deltaT}})}{%
+      rT = phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))}
 
 where rT is the development rate, T the temperature, Tmax the maximum temperature,
 deltaT the width of the high temperature boundary layer, phi the developmental rate at some
 base temperature above developmental threshold, and bb a constant.
 }
 \keyword{datasets}
-

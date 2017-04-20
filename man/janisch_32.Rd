@@ -40,10 +40,10 @@ using specific criteria. Environmental Entomology 33(1): 1-11.
 }
 \details{
 Equation:
-rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)
+\deqn{rT = (\frac{Dmin}{2} * (e^{aa*(T - Topt)} + e^{-bb*(T - Topt)}))^{-1}}{%
+      rT = (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)}
 
 where rT is the development rate, T the temperature, Topt the optimum temperature,
 Dmin, aa, and bb constants.
 }
 \keyword{datasets}
-

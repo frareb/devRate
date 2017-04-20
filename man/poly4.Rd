@@ -23,7 +23,7 @@ A simple fourth-order polynomial equation.
 }
 \details{
 Equation:
-rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4
+\deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3} + a4 * T^{4}}{%
+      rT = a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4}
 }
 \keyword{datasets}
-

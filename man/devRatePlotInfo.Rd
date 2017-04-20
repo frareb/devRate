@@ -27,4 +27,3 @@ devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0,40), ylim = c(0,0
 devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
 devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
 }
-

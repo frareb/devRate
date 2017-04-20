@@ -24,4 +24,3 @@ devRateFind(orderSP = "Lepidoptera")
 devRateFind(familySP = "Gelechiidae")
 devRateFind(species = "Tuta absoluta")
 }
-

@@ -27,10 +27,10 @@ development and vital thermal requirements. Psyche: A Journal of Entomology, 201
 }
 \details{
 Equation:
-rT ~ aa / (1 + bb * T + cc * T^2)
+\deqn{rT = \frac{aa}{1 + bb * T + cc * T^{2}}}{%
+      rT = aa / (1 + bb * T + cc * T^2)}
 
 where rT is the development rate, T the temperature, and aa, bb, and
 cc empirical constant parameters.
 }
 \keyword{datasets}
-
