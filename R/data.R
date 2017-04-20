@@ -4,7 +4,8 @@
 #'   development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
 #'
 #' @details Equation:
-#' rT ~ exp(mu) * (T - Tb)^aa * (Tc - T)^bb
+#' \deqn{rT = e^{mu} * (T - Tb)^{aa} * (Tc - T)^{bb}}{%
+#'       rT = exp(mu) * (T - Tb)^aa * (Tc - T)^bb}
 #'
 #' @details where rT is the development rate, T the temperature, mu, aa,
 #' and bb the model parameters, Tb the base temperature, and Tc the ceiling
@@ -35,7 +36,8 @@
 #' of Insects:(I) Empirical Models. Annals of the Entomological Society of America, 109(2), 211-215.
 #'
 #' @details Equation:
-#' rT ~ cc * (T - T1) * (1 - exp(k * (T - T2)))
+#' \deqn{rT = cc * (T - T1) * (1 - e^{k * (T - T2)})}{%
+#'       rT = cc * (T - T1) * (1 - exp(k * (T - T2)))}
 #'
 #' @details where rT is the development rate, T the temperature, T1 and T2 the conceptual
 #' lower and upper developmental thresholds at which development rates equal zero,
@@ -61,7 +63,8 @@
 #' temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
 #'
 #' @details Equation:
-#' rT ~ (bb * (T - Tb))^2
+#' \deqn{rT = (bb * (T - Tb))^{2}}{%
+#'       rT = (bb * (T - Tb))^2}
 #'
 #' @details where rT is the development rate, T the temperature, bb the slope of the
 #' regression line, and Tb a conceptual temperature of no metabolic significance.
@@ -86,7 +89,8 @@
 #' Agricultural systems 58(1): 1-24.
 #'
 #' @details Equation:
-#' rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa))
+#' \deqn{rT = \frac{2 * (T - Tmin)^{aa} * (Topt - Tmin)^{aa} - (T - Tmin)^{2 * aa}}{(Topt - Tmin)^{2 * aa}}}{%
+#'       rT = (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa))}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the minimum temperature,
 #' Topt the optimum temperature, and aa a constant.
@@ -116,13 +120,14 @@
 #' temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
 #'
 #' @details Equation:
-#' rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2
+#' \deqn{rT = (\sqrt{cc} * k1 * (T - T1) * (1 - e^{k2 * (T - T2)}))^{2}}{%
+#'       rT = (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2}
 #'
 #' @details where rT is the development rate, T the temperature, T1 and T2 the minimum
 #' and maximum temperatures at which rate of growth is zero, sqrt(cc) * k1 the slope of the
 #' regression as in the rootsq_82 equation, and k2 a constant. The Ratkowsky model designed
 #' for microorganisms has been modified by Shi et al. 2011 to describe the temperature-dependent
-#' developmental rates of insects.
+#' development rates of insects.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -146,7 +151,8 @@
 #' and modeling. Journal of Insect Physiology 58(5): 634-47.
 #'
 #' @details Equation:
-#' rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))
+#' \deqn{rT = phi * (e^{bb * (T - Tb)} - \frac{Tm - T}{Tm - Tb} * e^{-bb * \frac{T - Tb}{deltab}} - \frac{T - Tb}{Tm - Tb} * e^{\frac{bb * (Tm - Tb) - (Tm - T)}{deltam}})}{%
+#'       rT = phi * (exp(bb * (T - Tb)) - ((Tm - T) / (Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))}
 #'
 #' @details where rT is the development rate, T the temperature, and the others
 #' thermodynamic parameters (see source).
@@ -171,7 +177,8 @@
 #' temperature on insect developmental rate. Journal of Asia-Pacific Entomology 14(1): 15-20.
 #'
 #' @details Equation:
-#' rT ~ cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2)))
+#' \deqn{rT = cc * (1 - e^{-k1 * (T - T1)}) * (1 - e^{k2 * (T - T2)})}{%
+#'       rT = cc * (1 - exp(-k1 * (T - T1))) * (1 - exp(k2 * (T - T2)))}
 #'
 #' @details where rT is the development rate, T the temperature, T1 and T2 the conceptual
 #' lower and upper developmental thresholds at which development rates equal zero,
@@ -235,7 +242,8 @@
 #' using specific criteria. Environmental Entomology 33(1): 1-11.
 #'
 #' @details Equation:
-#' rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)
+#' \deqn{rT = (\frac{Dmin}{2} * (e^{aa*(T - Topt)} + e^{-bb*(T - Topt)}))^{-1}}{%
+#'       rT = (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1)}
 #'
 #' @details where rT is the development rate, T the temperature, Topt the optimum temperature,
 #' Dmin, aa, and bb constants.
@@ -260,7 +268,8 @@
 #' at constant temperatures. The Journal of Animal Ecology:26-38.
 #'
 #' @details Equation:
-#' rT ~ K / (1 + exp(aa + bb * T))
+#' \deqn{rT = \frac{K}{1 + e^{aa + bb * T}}}{%
+#'       rT = K / (1 + exp(aa + bb * T))}
 #'
 #' @details where rT is the development rate, T the temperature, K the distance between
 #' the upper and lower asymptote of the curve, aa the relative position of the origin of
@@ -287,7 +296,8 @@
 #' Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.
 #'
 #' @details Equation:
-#' rT ~ aa + bb * T
+#' \deqn{rT = aa + bb * T}{%
+#'       rT = aa + bb * T}
 #'
 #' @details where rT is the development rate, T the temperature, bb the slope, and aa
 #' the point at which the line crosses the rT axis when T = 0.
@@ -312,7 +322,11 @@
 #' rate simulation. The Canadian Entomologist, 106, 519-524.
 #'
 #' @details Equation:
-#' c(rT ~ C / (1 + exp(k1 + k2 * T)), rT ~ C / (1 + exp(k1 + k2 * (2 * Topt - T))))
+#' \deqn{rT = \frac{C}{1 + e^{k1 + k2 * T}}}{%
+#'       rT = C / (1 + exp(k1 + k2 * T))}
+#' and
+#' \deqn{rT = \frac{C}{1 + e^{k1 + k2 * (2 * Topt - T)}}}{%
+#'       rT = C / (1 + exp(k1 + k2 * (2 * Topt - T)))}
 #'
 #' @details where rT is the development rate, T the temperature, Topt the optimum temperature,
 #' k1 and k2 constants. "[...] the relationship [is] inverted when the temperature is above an
@@ -339,7 +353,8 @@
 #' Entomology, 5(6), 1133-1140.
 #'
 #' @details Equation:
-#' rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))
+#' \deqn{rT = phi * (e^{bb * T} - e^{bb * Tmax - \frac{Tmax - T}{deltaT}})}{%
+#'       rT = phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT))}
 #'
 #' @details where rT is the development rate, T the temperature, Tmax the maximum temperature,
 #' deltaT the width of the high temperature boundary layer, phi the developmental rate at some
@@ -366,7 +381,8 @@
 #' Entomology, 5(6), 1133-1140.
 #'
 #' @details Equation:
-#' rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT)))
+#' \deqn{rT = alpha * (\frac{1}{1 + cc * e^{- bb * T}} - e^{-\frac{Tmax - T}{deltaT}})}{%
+#'       rT = alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT)))}
 #'
 #' @details where rT is the development rate, T the temperature, Tmax the maximum temperature,
 #' deltaT the width of the high temperature boundary layer, and alpha and bb constants.
@@ -391,7 +407,8 @@
 #' Journal of Theoretical Biology, 64, 649-670.
 #'
 #' @details Equation:
-#' rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))
+#' \deqn{rT = \frac{(T + 273.16) * e^{\frac{aa - \frac{bb}{T + 273.16}}{1.987}}}{1 + e^{\frac{cc - \frac{dd}{T + 273.16}}{1.987}} + e^{\frac{ff - \frac{gg}{T + 273.16}}{1.987}}}}{%
+#'       rT = ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb, cc,
 #' dd, ff, and gg thermodynamic parameters
@@ -416,7 +433,8 @@
 #' phytopathogenen Pilzen. Journal of Phytopathology 90(1): 64-76.
 #'
 #' @details Equation:
-#' rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc
+#' \deqn{rT = aa * (T - Tmin)^{bb} * (Tmax - T)^{cc}}{%
+#'       rT = aa * (T - Tmin)^bb * (Tmax - T)^cc}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the minimum
 #' temperature, Tmax the maximum temperature, and aa, bb, and cc constants.
@@ -442,7 +460,8 @@
 #' Journal of theoretical biology, 88, 719-731.
 #'
 #' @details Equation:
-#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))
+#' \deqn{rT = \frac{p25 * \frac{T + 273.16}{298} * e^{\frac{aa}{1.987} * (\frac{1}{298} - \frac{1}{T + 273.16})}}{1 + e^{\frac{bb}{1.987} * (\frac{1}{cc} - \frac{1}{T + 273.16})} + e^{\frac{dd}{1.987} * (\frac{1}{ee} - \frac{1}{T + 273.16})}}}{%
+#'       rT = (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))}
 #'
 #' @details where rT is the development rate, T the temperature, p25 the development
 #' rate at 25 degree Celcius assuming no enzyme inactivation, aa the enthalpy of
@@ -478,7 +497,8 @@
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))
+#' \deqn{rT = \frac{p25 * \frac{T + 273.16}{298} * e^{\frac{aa}{1.987} * (\frac{1}{298} - \frac{1}{T + 273.16})}}{1 + e^{\frac{dd}{1.987} * (\frac{1}{ee} - \frac{1}{T + 273.16})}}}{%
+#'       rT = (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(T + 273.16))))}
 #'
 #' @details where rT is the development rate, T the temperature, p25 the development
 #' rate at 25 degrees Celcius assuming no enzyme inactivation, aa the enthalpy of
@@ -514,7 +534,8 @@
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))))
+#' \deqn{rT = \frac{p25 * \frac{T + 273.16}{298} * e^{\frac{aa}{1.987} * (\frac{1}{298} - \frac{1}{T + 273.16})}}{1 + e^{\frac{bb}{1.987} * (\frac{1}{cc} - \frac{1}{T + 273.16})}}}{%
+#'       rT = (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))))}
 #'
 #' @details where rT is the development rate, T the temperature, p25 the development
 #' rate at 25 degrees Celcius assuming no enzyme inactivation, aa the enthalpy of
@@ -548,7 +569,8 @@
 #' Environmental Entomology 21(1): 10-19.
 #'
 #' @details Equation:
-#' rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
+#' \deqn{rT = Rm * e^{-\frac{1}{2} * (\frac{T - Tm}{To})^{2}}}{%
+#'       rT = Rm * exp(-1/2 * ((T - Tm)/To)^2)}
 #'
 #' @details where rT is the development rate, T the temperature, Rm the maximum
 #' development rate, Tm the optimum temperature, and To the rate at which development
@@ -573,7 +595,8 @@
 #' @description A simple second-order polynomial equation.
 #'
 #' @details Equation:
-#' rT ~ a0 + a1 * T + a2 * T^2
+#' \deqn{rT = a0 + a1 * T + a2 * T^{2}}{%
+#'       rT = a0 + a1 * T + a2 * T^2}
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -594,7 +617,8 @@
 #' life stages. Environmental Entomology, 11, 581-584.
 #'
 #' @details Equation:
-#' rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3
+#' \deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3}}{%
+#'       rT = a0 + a1 * T + a2 * T^2 + a3 * T^3}
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -615,7 +639,8 @@
 #' @description A simple fourth-order polynomial equation.
 #'
 #' @details Equation:
-#' rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4
+#' \deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3} + a4 * T^{4}}{%
+#'       rT = a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4}
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -637,7 +662,8 @@
 #' Environmental Entomology 12(1): 1-5.
 #'
 #' @details Equation:
-#' rT ~ phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT))
+#' \deqn{rT = phi * ((\frac{(T-Tb)^{2}}{(T-Tb)^{2} + aa^{2}}) - e^{-\frac{Tmax - (T-Tb)}{deltaT}})}{%
+#'       rT = phi * (((T-Tb)^2 / ((T-Tb)^2 + aa^2)) - exp(-(Tmax - (T-Tb))/deltaT))}
 #'
 #' @details where rT is the development rate, T the temperature, Tb the minimum
 #' temperature for development, deltaT the width of high temperature boundary area,
@@ -667,10 +693,14 @@
 #' Environmental Entomology 21(1): 10-19.
 #'
 #' @details Equation:
-#' c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))
+#' \deqn{rT = Rm * e^{-\frac{1}{2} * (\frac{T - Tmax}{To})^{2}}}{%
+#'       rT = Rm * exp(-1/2 * ((T - Tmax)/To)^2)}
+#' and
+#' \deqn{rT = Rm * e^{-\frac{1}{2} * (\frac{T - Tmax}{T1})^{2}}}{%
+#'       rT = Rm * exp(-1/2 * ((T - Tmax)/T1)^2)}
 #'
 #' @details where rT is the development rate, T the temperature, Rm the maximum
-#' development rate, Tmax the optimum temperature, and To the shape parameter giving
+#' development rate, Tmax the optimum temperature, and To and T1 the shape parameter giving
 #' the spread of the curve.
 #'
 #' @format A list of eight elements describing the equation.
@@ -693,7 +723,8 @@
 #' temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.
 #'
 #' @details Equation:
-#' rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT)
+#' \deqn{rT = e^{aa * T} - e^{aa * Tmax - \frac{Tmax - T}{deltaT}}}{%
+#'       rT = exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT)}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, Tmax,
 #' and deltaT fitted parameters.
@@ -718,7 +749,8 @@
 #' temperature-dependent development by arthropods. Environmental Entomology 24(1): 68-75.
 #'
 #' @details Equation:
-#' rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb
+#' \deqn{rT = e^{aa * T} - e^{aa * Tmax - \frac{Tmax - T}{deltaT}} + bb}{%
+#'       rT = exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb, Tmax,
 #' and deltaT fitted parameters.
@@ -743,7 +775,8 @@
 #' temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.
 #'
 #' @details Equation:
-#' rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2)
+#' \deqn{rT = aa * T * (T - Tmin) * (Tmax - T)^{\frac{1}{2}}}{%
+#'       rT = aa * T * (T - Tmin) * (Tmax - T)^(1 / 2)}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the low
 #' temperature developmental threshold, Tmax the lethal temperature, and aa
@@ -769,7 +802,8 @@
 #' temperature-dependent development for arthropods. Environmental Entomology, 28, 22-29.
 #'
 #' @details Equation:
-#' rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)
+#' \deqn{rT = aa * T * (T - Tmin) * (Tmax - T)^{\frac{1}{bb}}}{%
+#'       rT = aa * T * (T - Tmin) * (Tmax - T)^(1 / bb)}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the low
 #' temperature developmental threshold, Tmax the lethal temperature, and aa and
@@ -798,7 +832,8 @@
 #' using specific criteria. Environmental Entomology 33(1): 1-11.
 #'
 #' @details Equation:
-#' rT ~ aa * (T - Tmin)^2 * (Tmax - T)
+#' \deqn{rT = aa * (T - Tmin)^{2} * (Tmax - T)}{%
+#'       rT = aa * (T - Tmin)^2 * (Tmax - T)}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the minimum
 #' temperature, Tmax the maximum temperature, and aa a constant.
@@ -824,8 +859,8 @@
 #' Journal of economic entomology, 101(5), 1557-1567.
 #'
 #' @details Equation:
-#' rT ~ aa * (bb - T / 10) * (T / 10)^cc
-#' rT ~ aa * (T - Tmin)^2 * (Tmax - T)
+#' \deqn{rT = aa * (bb - \frac{T}{10}) * (\frac{T}{10})^{cc}}{%
+#'       rT = aa * (bb - T / 10) * (T / 10)^cc}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb, and
 #' cc empirical constant parameters.
@@ -850,7 +885,8 @@
 #' development and vital thermal requirements. Psyche: A Journal of Entomology, 2012.
 #'
 #' @details Equation:
-#' rT ~ aa / (1 + bb * T + cc * T^2)
+#' \deqn{rT = \frac{aa}{1 + bb * T + cc * T^{2}}}{%
+#'       rT = aa / (1 + bb * T + cc * T^2)}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb, and
 #' cc empirical constant parameters.
@@ -875,7 +911,8 @@
 #' between insect development and temperature. Acta Ecol. Sin, 2, 47-57.
 #'
 #' @details Equation:
-#' rT ~ (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1-exp(-(TH - T)/aa))
+#' \deqn{rT = \frac{K}{1 + e^{-r*(T - T0)}} * (1 - e^{-\frac{T - TL}{aa}}) * (1 - e^{-\frac{TH - T}{aa}})}{%
+#'       rT = (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1 - exp(-(TH - T)/aa))}
 #'
 #' @details where rT is the development rate, and T the temperature.
 #'
@@ -900,7 +937,8 @@
 #' research 93(5): 375-81.
 #'
 #' @details Equation:
-#' rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T)
+#' \deqn{rT = aa + bb * T + cc * e^{T} + dd * e^{-T}}{%
+#'       rT = aa + bb * T + cc * exp(T) + dd * exp(-T)}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb,
 #' cc, and dd empirical constant parameters.
@@ -930,7 +968,8 @@
 #' Annals of the Entomological Society of America 77(2): 208-20.
 #'
 #' @details Equation:
-#' rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) )
+#' \deqn{rT = \frac{1}{\frac{1 + e^{\frac{cc}{1.987} * (\frac{1}{dd} - \frac{1}{T + 273.16})}}{aa*\frac{T + 273.16}{298.15}*e^{\frac{bb}{1.987}*(\frac{1}{298.15} - \frac{1}{T + 273.16})}}}}{%
+#'       rT = 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa * (T + 273.16)/298.15 * exp( (bb/1.987) * ((1/298.15) - 1/(T + 273.16)) ) ) )}
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -957,7 +996,8 @@
 #' Entomologia Hellenica, 21, 25-38.
 #'
 #' @details Equation:
-#' rT ~ aa * (T - Tmin) - (bb * exp(T - Tm))
+#' \deqn{rT = aa * (T - Tmin) - (bb * e^{T - Tm})}{%
+#'       rT = aa * (T - Tmin) - (bb * exp(T - Tm))}
 #'
 #' @details where rT is the development rate, T the temperature, Tmin the minimum
 #' temperature, and aa, bb, and Tm fitted coefficients.
