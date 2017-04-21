@@ -411,7 +411,7 @@
 #'       rT = ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987))}
 #'
 #' @details where rT is the development rate, T the temperature, and aa, bb, cc,
-#' dd, ff, and gg thermodynamic parameters
+#' dd, ff, and gg thermodynamic parameters.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -598,6 +598,9 @@
 #' \deqn{rT = a0 + a1 * T + a2 * T^{2}}{%
 #'       rT = a0 + a1 * T + a2 * T^2}
 #'
+#' @details where rT is the development rate, T the temperature, and a0, a1, and a2 are
+#' constants.
+#'
 #' @format A list of eight elements describing the equation.
 #' \describe{
 #'   \item{eq}{The equation as a formula object.}
@@ -620,6 +623,9 @@
 #' \deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3}}{%
 #'       rT = a0 + a1 * T + a2 * T^2 + a3 * T^3}
 #'
+#' @details where rT is the development rate, T the temperature, and a0, a1, a2, and a3 are
+#' constants.
+#'
 #' @format A list of eight elements describing the equation.
 #' \describe{
 #'   \item{eq}{The equation as a formula object.}
@@ -641,6 +647,9 @@
 #' @details Equation:
 #' \deqn{rT = a0 + a1 * T + a2 * T^{2} + a3 * T^{3} + a4 * T^{4}}{%
 #'       rT = a0 + a1 * T + a2 * T^2 + a3 * T^3 + a4 * T^4}
+#'
+#' @details where rT is the development rate, T the temperature, and a0, a1, a2, a3, and a4 are
+#' constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -971,6 +980,9 @@
 #' \deqn{rT = \frac{1}{\frac{1 + e^{\frac{cc}{1.987} * (\frac{1}{dd} - \frac{1}{T + 273.16})}}{aa*\frac{T + 273.16}{298.15}*e^{\frac{bb}{1.987}*(\frac{1}{298.15} - \frac{1}{T + 273.16})}}}}{%
 #'       rT = 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa * (T + 273.16)/298.15 * exp( (bb/1.987) * ((1/298.15) - 1/(T + 273.16)) ) ) )}
 #'
+#' @details where rT is the development rate, T the temperature, and aa, bb, cc,
+#' and dd are thermodynamic parameters.
+#'
 #' @format A list of eight elements describing the equation.
 #' \describe{
 #'   \item{eq}{The equation as a formula object.}
@@ -982,6 +994,8 @@
 #'   \item{com}{An otional comment about the equation use.}
 #'   \item{id}{An id to identificate the equation.}
 #' }
+#'
+#' @source \url{https://doi.org/10.1093/aesa/77.2.208}
 #' @source \url{http://dx.doi.org/10.1093/aesa/81.4.539}
 "wagner_88"
 
