@@ -154,8 +154,9 @@
 #' \deqn{rT = phi * (e^{bb * (T - Tb)} - \frac{Tm - T}{Tm - Tb} * e^{-bb * \frac{T - Tb}{deltab}} - \frac{T - Tb}{Tm - Tb} * e^{\frac{bb * (Tm - Tb) - (Tm - T)}{deltam}})}{%
 #'       rT = phi * (exp(bb * (T - Tb)) - ((Tm - T) / (Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))}
 #'
-#' @details where rT is the development rate, T the temperature, and the others
-#' thermodynamic parameters (see source).
+#' @details where rT is the development rate, T the temperature, Tb the minimum
+#' temperature, Tm the maximum temperature and phi, bb, deltab,
+#' and deltam constants (see source for more details).
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
@@ -467,8 +468,8 @@
 #' rate at 25 degree Celcius assuming no enzyme inactivation, aa the enthalpy of
 #' activation of the reaction that is catalyzed by the enzyme, bb the change in
 #' enthalpy associated with low temperature inactivation of the enzyme, cc the
-#' the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
-#' dd the cange in enthalpy associated with high temperature inactivation of the enzyme,
+#' temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
+#' dd the change in enthalpy associated with high temperature inactivation of the enzyme,
 #' and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
 #' inactive.
 #'
@@ -923,7 +924,7 @@
 #' \deqn{rT = \frac{K}{1 + e^{-r*(T - T0)}} * (1 - e^{-\frac{T - TL}{aa}}) * (1 - e^{-\frac{TH - T}{aa}})}{%
 #'       rT = (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1 - exp(-(TH - T)/aa))}
 #'
-#' @details where rT is the development rate, and T the temperature.
+#' @details where rT is the development rate, T the temperature, .
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
