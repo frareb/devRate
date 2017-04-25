@@ -1,12 +1,6 @@
-## devRate version 0.1.1
-* vignette improved
-* help page for function devRateMap improved
-* new devRatePrint function (custom output for nls object)
-* bug in phenological model corrected
-* Sharpe and DeMichele equation now in degree Celsius
-* Structural equations of each regression model in the package manual
-* testing units using testthat package
-* BDD update: 35 models ; 543 entries ; 131 species
+## devRate version 0.1.2
+* equations in latex in PDF manual using \eqn{latex}{ascii}
+* fixed some tipo in manual
 
 ## Test environments
 * Windows 10, R 3.3.2
