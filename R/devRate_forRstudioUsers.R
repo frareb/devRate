@@ -1,11 +1,30 @@
-rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
-                       16, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
-                       25, 0.200, 30, 0.200, 30, 0.180), ncol = 2, byrow = TRUE)
+
+
 temp <- rawDevEggs[, 1]
 devRate <- rawDevEggs[, 2]
-# eq <- analytis_77
+eq <- poly2
 
 
+# A wrapper for the manipulate function to get parameter estimates for NLS
+#
+# This is a wrapper for manipulate function using sliders for all equations
+# in the devRate package in order to have good first guess estimates of the
+# parameters in the NLS process (devRateModel function).
+#
+# devRateFindStartNls is not part of the R CRAN package because it depends
+# on the manipulate package which works only for Rstudio. This function is
+# available online in the GitHub page of the devRate package.
+#
+# There are three parameters:
+# - temp: the dataset temperatures
+# - devRate: the dataset development rate
+# - eq: the equation to be fitted to the dataset
+#
+# example:
+# rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+#   16, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+#   25, 0.200, 30, 0.200, 30, 0.180, 50, 0.01), ncol = 2, byrow = TRUE)
+# devRateFindStartNls(temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2], eq = taylor_81)
 devRateFindStartNls <- function(temp, devRate, eq){
   library(manipulate)
   switch(EXPR = eq$id,
@@ -141,39 +160,84 @@ devRateFindStartNls <- function(temp, devRate, eq){
          )
        },
        "eq090" = {
-         p25 <- listPlot[[i]][j, colparam]
-         aa <- listPlot[[i]][j, colparam + 1]
-         bb <- listPlot[[i]][j, colparam + 2]
-         cc <- listPlot[[i]][j, colparam + 3]
-         dd <- listPlot[[i]][j, colparam + 4]
-         ee <- listPlot[[i]][j, colparam + 5]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = (p25 * (xx + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(xx + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(xx + 273.16))) + exp(dd/1.987 * (1/ee - 1/(xx + 273.16)))),
+                    type = 'l', lwd = 3),
+           p25 = slider(0, 1, step = 0.001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           aa = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           bb = slider(-50000, 0, step = 1, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           cc = slider(0, 1000, step = 0.1, initial = mean(eq$startVal[, 10], na.rm = TRUE)),
+           dd = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 11], na.rm = TRUE)),
+           ee = slider(0, 10000, step = 1, initial = mean(eq$startVal[, 12], na.rm = TRUE))
+         )
        },
        "eq091" = {
-         p25 <- listPlot[[i]][j, colparam]
-         aa <- listPlot[[i]][j, colparam + 1]
-         dd <- listPlot[[i]][j, colparam + 2]
-         ee <- listPlot[[i]][j, colparam + 3]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = (p25 * (xx + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(xx + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(xx + 273.16)))),
+                    type = 'l', lwd = 3),
+           p25 = slider(0, 1, step = 0.001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           aa = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           dd = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 11], na.rm = TRUE)),
+           ee = slider(0, 10000, step = 1, initial = mean(eq$startVal[, 12], na.rm = TRUE))
+         )
        },
        "eq092" = {
-         p25 <- listPlot[[i]][j, colparam]
-         aa <- listPlot[[i]][j, colparam + 1]
-         bb <- listPlot[[i]][j, colparam + 2]
-         cc <- listPlot[[i]][j, colparam + 3]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = (p25 * (xx + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(xx + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(xx + 273.16)))),
+                    type = 'l', lwd = 3),
+           p25 = slider(0, 1, step = 0.001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           aa = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           bb = slider(-50000, 0, step = 1, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           cc = slider(0, 1000, step = 0.1, initial = mean(eq$startVal[, 10], na.rm = TRUE))
+         )
        },
        "eq100" = {
-         Rm <- listPlot[[i]][j, colparam]
-         Tm <- listPlot[[i]][j, colparam + 1]
-         To <- listPlot[[i]][j, colparam + 2]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i, to = Tm + To)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = Rm * exp(-1/2 * ((xx - Tm)/To)^2),
+                    type = 'l', lwd = 3),
+           Rm = slider(0, 1, step = 0.001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tm = slider(0, 50, step = 0.01, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           To = slider(-10, 15, step = 0.01, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
        },
        "eq110" = {
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = a0 + a1 * xx + a2 * xx^2,
+                    type = 'l', lwd = 3),
+           a0 = slider(-0.2, 0, step = 0.001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           a1 = slider(0, 0.1, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           a2 = slider(-0.005, 0, step = 0.00001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
          a0 <- listPlot[[i]][j, colparam]
          a1 <- listPlot[[i]][j, colparam + 1]
          a2 <- listPlot[[i]][j, colparam + 2]
