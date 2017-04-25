@@ -1,6 +1,6 @@
 # devRate 0.1.2.
 * equations in latex in PDF manual using \eqn{latex}{ascii}
-* 
+* fixed some tipo in manual
 
 # devRate 0.1.1.
 * vignette improved
