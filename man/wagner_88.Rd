@@ -17,6 +17,8 @@ from Wagner 1984.}
   \item{id}{An id to identificate the equation.}
 }}
 \source{
+\url{https://doi.org/10.1093/aesa/77.2.208}
+
 \url{http://dx.doi.org/10.1093/aesa/81.4.539}
 }
 \usage{
@@ -35,5 +37,8 @@ Annals of the Entomological Society of America 77(2): 208-20.
 Equation:
 \deqn{rT = \frac{1}{\frac{1 + e^{\frac{cc}{1.987} * (\frac{1}{dd} - \frac{1}{T + 273.16})}}{aa*\frac{T + 273.16}{298.15}*e^{\frac{bb}{1.987}*(\frac{1}{298.15} - \frac{1}{T + 273.16})}}}}{%
       rT = 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa * (T + 273.16)/298.15 * exp( (bb/1.987) * ((1/298.15) - 1/(T + 273.16)) ) ) )}
+
+where rT is the development rate, T the temperature, and aa, bb, cc,
+and dd are thermodynamic parameters.
 }
 \keyword{datasets}
