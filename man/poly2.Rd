@@ -25,5 +25,8 @@ A simple second-order polynomial equation.
 Equation:
 \deqn{rT = a0 + a1 * T + a2 * T^{2}}{%
       rT = a0 + a1 * T + a2 * T^2}
+
+where rT is the development rate, T the temperature, and a0, a1, and a2 are
+constants.
 }
 \keyword{datasets}
