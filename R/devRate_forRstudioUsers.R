@@ -74,7 +74,7 @@ devRateFindStartNls <- function(temp, devRate, eq){
            aa = slider(-1, 0, step = 0.005, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
            bb = slider(0, 0.1, step = 0.0005, initial = mean(eq$startVal[, 8], na.rm = TRUE))
          )
-       },
+       }, # linear model: no need for starting estimates
        "eq040" = {
          manipulate(
            {
@@ -240,7 +240,7 @@ devRateFindStartNls <- function(temp, devRate, eq){
            a1 = slider(0, 0.1, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
            a2 = slider(-0.005, 0, step = 0.00001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
          )
-       },
+       }, # linear model: no need for starting estimates
        "eq120" = {
          manipulate(
            {
@@ -256,7 +256,7 @@ devRateFindStartNls <- function(temp, devRate, eq){
            a2 = slider(-2, 0.1, step = 0.00001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
            a3 = slider(-0.1, 15, step = 0.00001, initial = mean(eq$startVal[, 10], na.rm = TRUE))
          )
-       },
+       }, # linear model: no need for starting estimates
        "eq130" = {
          manipulate(
            {
@@ -273,15 +273,23 @@ devRateFindStartNls <- function(temp, devRate, eq){
            a3 = slider(-0.001, 0.001, step = 0.00001, initial = mean(eq$startVal[, 10], na.rm = TRUE)),
            a4 = slider(-0.00001, 0.00001, step = 0.0000001, initial = mean(eq$startVal[, 11], na.rm = TRUE))
          )
-       },
+       }, # linear model: no need for starting estimates
        "eq140" = {
-         phi <- listPlot[[i]][j, colparam]
-         aa <- listPlot[[i]][j, colparam + 1]
-         Tb <- listPlot[[i]][j, colparam + 2]
-         Tmax <- listPlot[[i]][j, colparam + 3]
-         deltaT <- listPlot[[i]][j, colparam + 4]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = phi * (((xx-Tb)^2 / ((xx-Tb)^2 + aa^2)) - exp(-(Tmax - (xx-Tb))/deltaT)),
+                    type = 'l', lwd = 3),
+           phi = slider(0, 2, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           aa = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           Tb = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           Tmax = slider(10, 50, step = 0.0001, initial = mean(eq$startVal[, 10], na.rm = TRUE)),
+           deltaT = slider(0, 10, step = 0.0001, initial = mean(eq$startVal[, 11], na.rm = TRUE))
+         )
        },
        "eq150" = {
          Rm <- listPlot[[i]][j, colparam]
