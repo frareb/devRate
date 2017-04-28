@@ -31,7 +31,8 @@ Equation:
 \deqn{rT = phi * (e^{bb * (T - Tb)} - \frac{Tm - T}{Tm - Tb} * e^{-bb * \frac{T - Tb}{deltab}} - \frac{T - Tb}{Tm - Tb} * e^{\frac{bb * (Tm - Tb) - (Tm - T)}{deltam}})}{%
       rT = phi * (exp(bb * (T - Tb)) - ((Tm - T) / (Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam))}
 
-where rT is the development rate, T the temperature, and the others
-thermodynamic parameters (see source).
+where rT is the development rate, T the temperature, Tb the minimum
+temperature, Tm the maximum temperature and phi, bb, deltab,
+and deltam constants (see source for more details).
 }
 \keyword{datasets}
