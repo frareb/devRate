@@ -924,7 +924,7 @@
 #' \deqn{rT = \frac{K}{1 + e^{-r*(T - T0)}} * (1 - e^{-\frac{T - TL}{aa}}) * (1 - e^{-\frac{TH - T}{aa}})}{%
 #'       rT = (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1 - exp(-(TH - T)/aa))}
 #'
-#' @details where rT is the development rate, T the temperature, .
+#' @details where rT is the development rate, T the temperature, and K, r, T0, TH, and TL constants.
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
