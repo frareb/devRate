@@ -35,8 +35,8 @@ where rT is the development rate, T the temperature, p25 the development
 rate at 25 degree Celcius assuming no enzyme inactivation, aa the enthalpy of
 activation of the reaction that is catalyzed by the enzyme, bb the change in
 enthalpy associated with low temperature inactivation of the enzyme, cc the
-the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
-dd the cange in enthalpy associated with high temperature inactivation of the enzyme,
+temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
+dd the change in enthalpy associated with high temperature inactivation of the enzyme,
 and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
 inactive.
 }
