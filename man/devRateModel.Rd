@@ -36,10 +36,11 @@ Determine the nonlinear least-squares estimates of the parameters of a nonlinear
   \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
 }
 \examples{
+## Example with a linear model (no starting estimates)
 myT <- 5:15
 myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
-myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
-  startValues = list(aa = 0, bb = 0))
+myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev)
+## Example with a non-linear model (starting estimates)
 myT <- seq(from = 0, to = 50, by = 10)
 myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
 myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
