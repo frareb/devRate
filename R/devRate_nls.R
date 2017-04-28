@@ -19,10 +19,11 @@
 #'   and for Lamb 1992:
 #'   \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
 #' @examples
+#' ## Example with a linear model (no starting estimates)
 #' myT <- 5:15
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
-#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
-#'   startValues = list(aa = 0, bb = 0))
+#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev)
+#' ## Example with a non-linear model (starting estimates)
 #' myT <- seq(from = 0, to = 50, by = 10)
 #' myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
 #' myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
@@ -76,7 +77,24 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
       nls_devRate <- list(nls_devRate1, nls_devRate2)
     }
   } else {
-    nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
+
+    if(eq$id == "eq030"){
+      nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(aa = 1, bb = 1), ...)
+    } else {
+      if(eq$id == "eq110"){
+        nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1), ...)
+      } else {
+        if(eq$id == "eq120"){
+          nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
+        } else {
+          if(eq$id == "eq130"){
+            nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
+          } else {
+            nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
+          }
+        }
+      }
+    }
   }
   return(nls_devRate)
 }
