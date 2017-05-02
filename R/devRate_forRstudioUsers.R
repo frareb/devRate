@@ -292,58 +292,124 @@ devRateFindStartNls <- function(temp, devRate, eq){
          )
        },
        "eq150" = {
-         Rm <- listPlot[[i]][j, colparam]
-         Tmax <- listPlot[[i]][j, colparam + 1]
-         To <- listPlot[[i]][j, colparam + 2]
-         T1 <- listPlot[[i]][j, colparam + 3]
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, max(devRate, na.rm = TRUE)),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+           } +
+             points(x = xx, y = Rm * exp(-1/2 * ((xx - Tmax)/To)^2),
+                    type = 'l', lwd = 3, col = 4) +
+             points(x = xx, y = Rm * exp(-1/2 * ((xx - Tmax)/T1)^2),
+                    type = 'l', lwd = 3, col = 2),
+           Rm = slider(0, 1, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmax = slider(0, 50, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           To = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           T1 = slider(-1, 5, step = 0.0001, initial = mean(eq$startVal[, 10], na.rm = TRUE))
+         )
          fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt[1]))))
          graphics::curve(fx, add = TRUE, col = i, from = 0, to = Tmax)
          fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt[2]))))
          graphics::curve(fx, add = TRUE, col = i, from = Tmax, to = 60)
        },
        "eq160" = {
-         aa <- listPlot[[i]][j, colparam]
-         Tmax <- listPlot[[i]][j, colparam + 1]
-         deltaT <- listPlot[[i]][j, colparam + 2]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = exp(aa * xx) - exp(aa * Tmax - (Tmax - xx)/deltaT),
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 10, step = 0.01, initial = 1),
+           aa = slider(0, 1, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmax = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           deltaT = slider(0, 10, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
        },
        "eq170" = {
-         aa <- listPlot[[i]][j, colparam]
-         Tmax <- listPlot[[i]][j, colparam + 1]
-         deltaT <- listPlot[[i]][j, colparam + 2]
-         bb <- listPlot[[i]][j, colparam + 3]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = exp(aa * xx) - exp(aa * Tmax - (Tmax - xx)/deltaT) + bb,
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 10, step = 0.01, initial = 1),
+           aa = slider(0, 1, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmax = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           deltaT = slider(0, 10, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           bb = slider(-2, 0, step = 0.0001, initial = mean(eq$startVal[, 10], na.rm = TRUE))
+         )
        },
        "eq180" = {
-         aa <- listPlot[[i]][j, colparam]
-         Tmin <- listPlot[[i]][j, colparam + 1]
-         Tmax <- listPlot[[i]][j, colparam + 2]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = aa * xx * (xx - Tmin) * (Tmax - xx)^(1 / 2),
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 10, step = 0.01, initial = 1),
+           aa = slider(0, 1, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmin = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           Tmax = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
        },
        "eq190" = {
-         aa <- listPlot[[i]][j, colparam]
-         Tmax <- listPlot[[i]][j, colparam + 1]
-         Tmin <- listPlot[[i]][j, colparam + 2]
-         bb <- listPlot[[i]][j, colparam + 3]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = aa * xx * (xx - Tmin) * (Tmax - xx)^(1 / bb),
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 5, step = 0.0001, initial = 1),
+           aa = slider(0, 5, step = 0.0001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmax = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
+           Tmin = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           bb = slider(0, 10, step = 0.0001, initial = mean(eq$startVal[, 10], na.rm = TRUE))
+         )
        },
        "eq200" = {
-         aa <- listPlot[[i]][j, colparam]
-         Tmin <- listPlot[[i]][j, colparam + 1]
-         Tmax <- listPlot[[i]][j, colparam + 2]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = aa * (xx - Tmin)^2 * (Tmax - xx),
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 5, step = 0.01, initial = 1),
+           aa = slider(0, 0.001, step = 0.000001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           Tmin = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           Tmax = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
        },
        "eq210" = {
-         aa <- listPlot[[i]][j, colparam]
-         bb <- listPlot[[i]][j, colparam + 1]
-         cc <- listPlot[[i]][j, colparam + 2]
-         fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
-         graphics::curve(fx, add = TRUE, col = i)
+         manipulate(
+           {
+             plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                  ylim = c(0, defYlim),
+                  lwd = 2, pch = 3)
+             xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+             points(x = xx, y = aa * (bb - xx / 10) * (xx / 10)^cc,
+                    type = 'l', lwd = 3)
+           },
+           defYlim = slider(0, 10, step = 0.0001, initial = 1),
+           aa = slider(0, 0.001, step = 0.000001, initial = mean(eq$startVal[, 7], na.rm = TRUE)),
+           bb = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
+           cc = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE))
+         )
        },
        "eq220" = {
          aa <- listPlot[[i]][j, colparam]
