@@ -3,7 +3,7 @@ Type: Package
 Title: Quantify Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.1.2
-Date: 2017-04-25
+Date: 2017-05-05
 Authors@R: c(person("Francois", "Rebaudo", role = c("aut", "cre"),
     email = "francois.rebaudo@ird.fr"),
     person("Quentin", "Struelens", role = "aut"))
