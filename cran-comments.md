@@ -1,16 +1,17 @@
 ## devRate version 0.1.2
 * equations in latex in PDF manual using \eqn{latex}{ascii}
 * fixed some tipo in manual
+* linear models with auto-starting values
 
 ## Test environments
-* Windows 10, R 3.3.2
-* Linux Debian Jessie, R 3.3.2
-* win-builder (2017-01-19 r72014)
+* Windows 10, R 3.4.0
+* Linux Ubuntu R 3.4.0
+* win-builder (2017-05-09 r72665)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
 
-There was 1 NOTE with win-builder (devel):
+There was 1 NOTE with win-builder (devel 2017-05-09 r72665):
 
 * Maintainer: 'Rebaudo Francois <francois.rebaudo@ird.fr>'
 => OK
