@@ -1,3 +1,6 @@
+## devRate version 0.1.3
+* 
+
 ## devRate version 0.1.2
 * equations in latex in PDF manual using \eqn{latex}{ascii}
 * fixed some tipo in manual
