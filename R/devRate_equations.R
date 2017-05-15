@@ -7,7 +7,11 @@ getCSV <- function(myCSV){
     species = myCSV$SPECIES,
     genSp = paste(myCSV$GENUS, myCSV$SPECIES),
     stage = myCSV$STAGE,
-    param = as.list(myCSV[,7:(ncol(myCSV)-1)]),
+    # param = as.list(myCSV[,7:(ncol(myCSV)-1)]),
+    param = as.list(myCSV[,7:(which(names(myCSV)=="contributor") - 1)]),
+    # DOI = myCSV$DOI,
+    # journal = myCSV$journal,
+    # year = myCSV$year,
     ref = myCSV$REF
   ))
 }
