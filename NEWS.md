@@ -1,6 +1,6 @@
 ## devRate version 0.1.3
 * BDD modif: refs with DOI, journal, year, and NA if no values
-* BDD update: 
+* BDD update: 35 models and 555 entries ; 138 species
 
 # devRate 0.1.2.
 * equations in latex in PDF manual using \eqn{latex}{ascii}
