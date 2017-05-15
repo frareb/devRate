@@ -1,3 +1,7 @@
+## devRate version 0.1.3
+* BDD modif: refs with DOI, journal, year, and NA if no values
+* BDD update: 
+
 # devRate 0.1.2.
 * equations in latex in PDF manual using \eqn{latex}{ascii}
 * fixed some tipo in manual
