@@ -1,30 +1,31 @@
 rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3,,,,,,,,,,
 ,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,contributor
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,eggs,0.1434,-0.02827,0.001824,-0.000026629,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L1,0.07294,-0.01538,0.0015249,-0.00001293,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L2,-0.0053838,0.005996,-0.000085058,0.000020124,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L3,0.12049,-0.025729,0.0021796,-0.00003013,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L4,-0.13123,0.023465,-0.00093071,0.000025595,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,prepupa,-0.16043,0.024015,-0.00056046,0.000022486,François Rebaudo
-Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,pupa,0.15234,-0.022886,0.00129,-0.000011439,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.7308,-0.1138,0.0059,-0.00009,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2531,-0.0385,0.00196,-0.00003,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.2453,-0.0385,0.00201,-0.00003,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.1161,-0.0179,0.00092,-0.000014,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.2784,-0.0695,0.005,-9.5e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.2436,-0.0592,0.00437,-7.9e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.1970,-0.0500,0.00400,-7.4e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.21363,-0.0546,0.0044,-8.2e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.311,-0.0699,0.00505,-9.15e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.105,-0.0268,0.00221,-4.19e-05,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1729,-0.03957,0.002632,-4.54e-05,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,-0.0008,0.0579,-1.3621,10.2747,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,-0.0001,0.0069,-0.1482,1.0969,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,-7.8e-06,0.0051,-0.0933,0.6567,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,-8.1e-06,0.0055,-0.1105,0.8416,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,-5.1e-06,0.0036,-0.0781,0.6196,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all female,-3.0e-06,0.0021,-0.0443,0.3270,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all male,-2.4e-06,0.0017,-0.0362,0.2730,François Rebaudo
-Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,pupa,0.637,-0.087,0.004,-0.00006,François Rebaudo
-Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,0.6813,0.0823,0.0033,-4e-05,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,contributor,DOI,journal,year
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,eggs,0.1434,-0.02827,0.001824,-0.000026629,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L1,0.07294,-0.01538,0.0015249,-0.00001293,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L2,-0.0053838,0.005996,-0.000085058,0.000020124,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L3,0.12049,-0.025729,0.0021796,-0.00003013,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L4,-0.13123,0.023465,-0.00093071,0.000025595,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,prepupa,-0.16043,0.024015,-0.00056046,0.000022486,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,pupa,0.15234,-0.022886,0.00129,-0.000011439,François Rebaudo,10.1093/ee/11.3.581,Environmental Entomology,1982
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.7308,-0.1138,0.0059,-0.00009,François Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2531,-0.0385,0.00196,-0.00003,François Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.2453,-0.0385,0.00201,-0.00003,François Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.1161,-0.0179,0.00092,-0.000014,François Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.2784,-0.0695,0.005,-9.5e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.2436,-0.0592,0.00437,-7.9e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.1970,-0.0500,0.00400,-7.4e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.21363,-0.0546,0.0044,-8.2e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.311,-0.0699,0.00505,-9.15e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.105,-0.0268,0.00221,-4.19e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1729,-0.03957,0.002632,-4.54e-05,François Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,-0.0008,0.0579,-1.3621,10.2747,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,-0.0001,0.0069,-0.1482,1.0969,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,-7.8e-06,0.0051,-0.0933,0.6567,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,-8.1e-06,0.0055,-0.1105,0.8416,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,-5.1e-06,0.0036,-0.0781,0.6196,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all female,-3.0e-06,0.0021,-0.0443,0.3270,François Rebaudo,NA,Entomologia Hellenica,2012
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all male,-2.4e-06,0.0017,-0.0362,0.2730,François Rebaudo,NA,Entomologia Hellenica,2012
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,pupa,0.637,-0.087,0.004,-0.00006,François Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985
+Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,0.6813,0.0823,0.0033,-4e-05,François Rebaudo,10.1111/aen.12195,Austral Entomology,2016
+Al-Saffar et al. 1996,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.441,-0.0615,0.0028,-0.000034,Francois Rebaudo,10.1016/S0306-4565(96)00025-3,Journal of Thermal Biology,1996
