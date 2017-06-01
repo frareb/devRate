@@ -1,157 +1,157 @@
 rT ~ aa + bb * T,,,,,,,,
 ,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,contributor,DOI,journal,year
-Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.04857143,0.00952381,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.05384615,0.009615385,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.03389831,0.008474576,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Aphis,craccivora,all,-0.10375,0.0125,Francois Rebaudo, 10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.05220588,0.007352941,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03937008,0.007874016,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03571429,0.005494505,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.02883436,0.006134969,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,avenae,all,-0.04102564,0.008547009,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,maxima,all,-0.0312,0.008,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,smithi,all,-0.03388889,0.005555556,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,smithi,all,-0.02790698,0.005813953,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi ervi,all,-0.03045685,0.005076142,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi pulcher,all,-0.03244681,0.005319149,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Praon,pequodorum,all,-0.03467337,0.005025126,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi ervi,all,-0.01826087,0.004347826,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.01452282,0.004149378,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.07216495,0.010309280,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.03457447,0.005319149,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.04224138,0.008620690,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,rubifolii,all,-0.03011364,0.005681818,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Ceraphronoidea,Dendrocerus,niger,all,-0.03532609,0.005434783,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Campbell et al. 1974,Hymenoptera,Pteromalidae,Asaphes,lucens,all,-0.03476395,0.004291845,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974
-Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.021,0.0024,Francois Rebaudo,10.16970/ted.64743,Turkish Journal of Entomology,2016
-Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0374,0.0097,Francois Rebaudo,10.1093/ee/21.1.10,Environmental Entomology,1992
-Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0311,0.0091,Francois Rebaudo,10.1093/ee/21.1.10,Environmental Entomology,1992
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,-0.0222,0.002,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,-0.0153,0.0016,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.03056,0.00326,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva + pupa,-0.01736,0.00159,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,eggs,-0.13733,0.0109,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.02093,0.0021,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.073,0.00574,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.07379,0.00579,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,eggs,-0.1589,0.0157,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0467,0.0044,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,prepupa,-0.4379,0.0366,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,pupa,-0.0487,0.0054,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,all,-0.0195,0.0019,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0489,0.004,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,eggs,-0.2191,0.0175,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva,-0.0599,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva female,-0.0294,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva male,-0.0601,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa,-0.1752,0.0123,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa female,-0.1847,0.0128,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa male,-0.1672,0.0119,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva + pupa,-0.0432,0.0034,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,all,-0.0364,0.0029,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979
-Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,-0.0638,0.0103,Francois Rebaudo,10.1111/j.1439-0418.2006.01088.x,Journal of Applied Entomology,1979
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,-0.1339,0.013,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,-0.0301,0.0033,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,-0.0459,0.0044,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,-0.0165,0.0017,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009
-Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,-0.199,0.017,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012
-Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,-0.060,0.005,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012
-Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,-0.133,0.011,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012
-Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,all,-0.034,0.003,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012
-Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,all,-0.018793,0.002023,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003
-Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,larva+pupa,-0.036238,0.003436,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003
-Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,pupa,-0.074145,0.006871,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003
-Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L4,-0.1094786,0.010013,Francois Rebaudo,10.4039/Ent1231083-5,Canadian Entomologist,1991
-Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L5,-0.2914841,0.022251,Francois Rebaudo,10.4039/Ent1231083-5,Canadian Entomologist,1991
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,-0.0134,0.0110,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,-0.1433,0.0155,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,-0.1472,0.0176,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,-0.1164,0.0160,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,-0.1255,0.0153,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,-0.5170,0.0080,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,-0.0827,0.0074,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998
-Bryant et al. 1997,Lepidoptera,Nymphalidae,Aglais,all,urticae,-0.03485,0.003303,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997
-Bryant et al. 1997,Lepidoptera,Nymphalidae,Aglais,io,all,-0.02195,0.002377,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997
-Bryant et al. 1997,Lepidoptera,Nymphalidae,Polygonia,c-album,all,-0.01623,0.002428,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997
-Bryant et al. 1997,Lepidoptera,Nymphalidae,Vanessa,atalanta,all,-0.01761,0.002419,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,eggs,-0.0885,0.0134,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L1,-0.1895,0.0192,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L2,-0.1466,0.0188,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L3,-0.1047,0.0159,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L4,-0.0703,0.0138,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L5,-0.1387,0.0200,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L6,-0.0508,0.0070,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,larva,-0.014,0.0021,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,pupa,-0.0156,0.0032,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,eggs+larva,-0.0701,0.0093,Francois Rebaudo,NA,Environmental Entomology,2008
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,pupa,-0.0377,0.0056,Francois Rebaudo,NA,Environmental Entomology,2008
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,-0.0248,0.0035,Francois Rebaudo,NA,Environmental Entomology,2008
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,eggs+larva,-0.0672,0.0091,Francois Rebaudo,NA,Environmental Entomology,2008
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,pupa,-0.0392,0.0058,Francois Rebaudo,NA,Environmental Entomology,2008
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,-0.0249,0.0036,Francois Rebaudo,NA,Environmental Entomology,2008
-Graf et al. 2015,Lepidoptera,Tortricidae,Grapholita,lobarzewskii,eggs,-0.1067,0.01104,Francois Rebaudo,10.1111/eea.12386,Entomologia Experimentalis et Applicata,2015
-Graf et al. 2015,Lepidoptera,Tortricidae,Grapholita,lobarzewskii,larva,-0.0181,0.00257,Francois Rebaudo,10.1111/eea.12386,Entomologia Experimentalis et Applicata,2015
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,eggs,-0.170,0.0156,Francois Rebaudo,NA,Proc.,1988
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L1,-0.257,0.0255,Francois Rebaudo,NA,Proc.,1988
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L2,-0.367,0.0333,Francois Rebaudo,NA,Proc.,1988
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L3,-0.410,0.0346,Francois Rebaudo,NA,Proc.,1988
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L4,-0.280,0.0257,Francois Rebaudo,NA,Proc.,1988
-Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L5,-0.0349,0.0061,Francois Rebaudo,NA,Proc.,1988
-Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.21,0.02,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001
-Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.045,0.004,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001
-Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.083,0.006,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001
-Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,eggs,-0.1054,0.0096,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001
-Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,larva,-0.0348,0.0037,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001
-Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,pupa,-0.0547,0.0053,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001
-Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,eggs,-0.1641,0.0171,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015
-Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,larva,-0.0293,0.0044,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015
-Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,pupa,-0.0555,0.0076,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015
-Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.0175,0.0024,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015
-Krugner et al. 2007,Hymenoptera,Braconidae,Macrocentrus,iridescens,all,-0.0149,0.0016,Francois Rebaudo,10.1016/j.biocontrol.2007.04.018,Biological Control,2007
-Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,eggs,-0.4411,0.0343,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984
-Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,larva,-0.0587,0.0070,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984
-Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,pupa,-0.0779,0.0076,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,eggs,-0.0866,0.0106,Francois Rebaudo,NA,Environmental Entomology,2008
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,larva,-0.0219,0.0026,Francois Rebaudo,NA,Environmental Entomology,2008
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,pupa,-0.0871,0.0076,Francois Rebaudo,NA,Environmental Entomology,2008
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,all,-0.0164,0.0017,Francois Rebaudo,NA,Environmental Entomology,2008
-Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,eggs,-0.143,0.0126,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985
-Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L1-L2,-0.103,0.0097,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985
-Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L3-L4,-0.086,0.0085,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985
-Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,-0.012,0.001,Francois Rebaudo,10.1111/aen.12195,Austral Entomology,2016
-Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,larva,-0.0179,0.0024,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,-0.0621,0.0077,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,all,-0.0142,0.0019,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,larva,-0.0208,0.0028,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,pupa,-0.0894,0.0092,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,all,-0.0194,0.0022,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,larva,-0.0125,0.0021,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,pupa,-0.0464,0.0060,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,all,-0.0121,0.0017,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L1,-0.041,0.006,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L2,-0.240,0.021,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L3,-0.295,0.026,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L4,-0.204,0.021,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L5,-0.167,0.019,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L6,-0.105,0.014,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L7,-0.068,0.009,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,-0.100,0.009,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,-0.1483,0.0191,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,-0.0272,0.0054,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,-0.0855,0.0124,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,-0.0203,0.0032,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L1,-0.006,0.011,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L2,-0.145,0.020,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L3,-0.115,0.018,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L4,-0.081,0.014,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L5,0.025,0.005,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,all,-0.017,0.003,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.3013,0.0252,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.0963,0.0174,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.0442,0.0042,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.0052,0.0024,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.0529,0.0052,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.0037,0.0035,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,-0.0201,0.0021,Francois Rebaudo,NA,Environmental Entomology,2008
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,-0.0029,0.0013,Francois Rebaudo,NA,Environmental Entomology,2008
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.04857143,0.00952381,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,USA,37.873304,-122.273584,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.05384615,0.009615385,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.03389831,0.008474576,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Aphis,craccivora,all,-0.10375,0.0125,Francois Rebaudo, 10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Australia,-32.528814,146.102676,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.05220588,0.007352941,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,USA,37.873304,-122.273584,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03937008,0.007874016,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Australia,-35.280666,149.129914,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.03571429,0.005494505,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Holland,51.969281,5.662367,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Brevicoryne,brassicae,all,-0.02883436,0.006134969,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,avenae,all,-0.04102564,0.008547009,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hemiptera,Aphididae,Macrosiphon,maxima,all,-0.0312,0.008,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,smithi,all,-0.03388889,0.005555556,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,smithi,all,-0.02790698,0.005813953,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,USA,37.873304,-122.273584,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi ervi,all,-0.03045685,0.005076142,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi pulcher,all,-0.03244681,0.005319149,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Praon,pequodorum,all,-0.03467337,0.005025126,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,ervi ervi,all,-0.01826087,0.004347826,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.01452282,0.004149378,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,USA,37.873304,-122.273584,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.07216495,0.010309280,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Australia,-35.280666,149.129914,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.03457447,0.005319149,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Holland,51.969281,5.662367,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Diaeretiella,rapae,all,-0.04224138,0.008620690,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hymenoptera,Braconidae,Aphidius,rubifolii,all,-0.03011364,0.005681818,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,49.282356,-123.121502,NA
+Campbell et al. 1974,Hymenoptera,Ceraphronoidea,Dendrocerus,niger,all,-0.03532609,0.005434783,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Campbell et al. 1974,Hymenoptera,Pteromalidae,Asaphes,lucens,all,-0.03476395,0.004291845,Francois Rebaudo,10.2307/2402197,Journal of Applied Ecology,1974,NA,NA,NA,NA,NA,NA,Canada,50.672966,-120.329028,NA
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.021,0.0024,Francois Rebaudo,10.16970/ted.64743,Turkish Journal of Entomology,2016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0374,0.0097,Francois Rebaudo,10.1093/ee/21.1.10,Environmental Entomology,1992,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,-0.0311,0.0091,Francois Rebaudo,10.1093/ee/21.1.10,Environmental Entomology,1992,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,-0.0222,0.002,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,-0.0153,0.0016,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.03056,0.00326,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva + pupa,-0.01736,0.00159,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,eggs,-0.13733,0.0109,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,larva,-0.02093,0.0021,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.073,0.00574,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ito et al. 1968,Lepidoptera,Arctiidae,Hyphantria,cunea,pupa,-0.07379,0.00579,Francois Rebaudo,10.1303/aez.3.163,Applied Entomology and Zoology,1968,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,eggs,-0.1589,0.0157,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0467,0.0044,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,prepupa,-0.4379,0.0366,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,pupa,-0.0487,0.0054,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,all,-0.0195,0.0019,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Miyashita 1971,Lepidoptera,Noctuidae,Spodoptera,litura,larva,-0.0489,0.004,Francois Rebaudo,10.1303/aez.6.105,Applied entomology and zoology,1971,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,eggs,-0.2191,0.0175,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva,-0.0599,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva female,-0.0294,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva male,-0.0601,0.0049,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa,-0.1752,0.0123,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa female,-0.1847,0.0128,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,pupa male,-0.1672,0.0119,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,larva + pupa,-0.0432,0.0034,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Wada and Kobayashi 1979,Lepidoptera,Pyralidae,Cnaphalocrocis,medinalis,all,-0.0364,0.0029,Francois Rebaudo,10.1303/aez.15.207,Applied Entomology and Zoology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,-0.0638,0.0103,Francois Rebaudo,10.1111/j.1439-0418.2006.01088.x,Journal of Applied Entomology,1979,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,-0.1339,0.013,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,-0.0301,0.0033,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,-0.0459,0.0044,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,-0.0165,0.0017,Francois Rebaudo,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,-0.199,0.017,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,-0.060,0.005,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,-0.133,0.011,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh and Zalucki 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,all,-0.034,0.003,Francois Rebaudo,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,all,-0.018793,0.002023,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,larva+pupa,-0.036238,0.003436,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Braby et al. 2003,Lepidoptera,Pieridae,Delias,nigrina,pupa,-0.074145,0.006871,Francois Rebaudo,10.1046/j.1440-6055.2003.00342.x,Australian Journal of Entomology,2003,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L4,-0.1094786,0.010013,Francois Rebaudo,10.4039/Ent1231083-5,Canadian Entomologist,1991,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L5,-0.2914841,0.022251,Francois Rebaudo,10.4039/Ent1231083-5,Canadian Entomologist,1991,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,-0.0134,0.0110,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,-0.1433,0.0155,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,-0.1472,0.0176,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,-0.1164,0.0160,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,-0.1255,0.0153,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,-0.5170,0.0080,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,-0.0827,0.0074,Francois Rebaudo,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bryant et al. 1997,Lepidoptera,Nymphalidae,Aglais,all,urticae,-0.03485,0.003303,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bryant et al. 1997,Lepidoptera,Nymphalidae,Aglais,io,all,-0.02195,0.002377,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bryant et al. 1997,Lepidoptera,Nymphalidae,Polygonia,c-album,all,-0.01623,0.002428,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bryant et al. 1997,Lepidoptera,Nymphalidae,Vanessa,atalanta,all,-0.01761,0.002419,Francois Rebaudo,10.1046/j.1365-2311.1997.00082.x,Ecological Entomology,1997,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,eggs,-0.0885,0.0134,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L1,-0.1895,0.0192,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L2,-0.1466,0.0188,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L3,-0.1047,0.0159,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L4,-0.0703,0.0138,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L5,-0.1387,0.0200,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,L6,-0.0508,0.0070,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,larva,-0.014,0.0021,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Doerr et al. 2002,Lepidoptera,Noctuidae,Lacanobia,subjuncta,pupa,-0.0156,0.0032,Francois Rebaudo,10.1603/0046-225X-31.6.995,Environmental Entomology,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,eggs+larva,-0.0701,0.0093,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,pupa,-0.0377,0.0056,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,-0.0248,0.0035,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,eggs+larva,-0.0672,0.0091,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,pupa,-0.0392,0.0058,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,-0.0249,0.0036,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Graf et al. 2015,Lepidoptera,Tortricidae,Grapholita,lobarzewskii,eggs,-0.1067,0.01104,Francois Rebaudo,10.1111/eea.12386,Entomologia Experimentalis et Applicata,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Graf et al. 2015,Lepidoptera,Tortricidae,Grapholita,lobarzewskii,larva,-0.0181,0.00257,Francois Rebaudo,10.1111/eea.12386,Entomologia Experimentalis et Applicata,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,eggs,-0.170,0.0156,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L1,-0.257,0.0255,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L2,-0.367,0.0333,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L3,-0.410,0.0346,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L4,-0.280,0.0257,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Harman et al. 1988,Lepidoptera,Arctiidae,Tyria,jacobaeae,L5,-0.0349,0.0061,Francois Rebaudo,NA,Proc.,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.21,0.02,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.045,0.004,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Jallow and Matsumura 2001,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.083,0.006,Francois Rebaudo,10.1303/aez.2001.427,Applied Entomology and Zoology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,eggs,-0.1054,0.0096,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,larva,-0.0348,0.0037,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,pupa,-0.0547,0.0053,Francois Rebaudo,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,eggs,-0.1641,0.0171,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,larva,-0.0293,0.0044,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,pupa,-0.0555,0.0076,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Krechemer and Foerster 2015,Lepidoptera,Gelechiidae,Tuta,absoluta,all,-0.0175,0.0024,Francois Rebaudo,10.14411/eje.2015.103,European Journal of Entomology,2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Krugner et al. 2007,Hymenoptera,Braconidae,Macrocentrus,iridescens,all,-0.0149,0.0016,Francois Rebaudo,10.1016/j.biocontrol.2007.04.018,Biological Control,2007,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,eggs,-0.4411,0.0343,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,larva,-0.0587,0.0070,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Leibee 1984,Diptera,Agromysidae,Liriomysa,trifolii,pupa,-0.0779,0.0076,Francois Rebaudo,10.1093/ee/13.2.497,Environmental Entomology,1984,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,eggs,-0.0866,0.0106,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,larva,-0.0219,0.0026,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,pupa,-0.0871,0.0076,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,all,-0.0164,0.0017,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,eggs,-0.143,0.0126,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L1-L2,-0.103,0.0097,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,L3-L4,-0.086,0.0085,Francois Rebaudo,10.1093/ee/14.6.855,Environmental Entomology,1985,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,-0.012,0.001,Francois Rebaudo,10.1111/aen.12195,Austral Entomology,2016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,larva,-0.0179,0.0024,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,-0.0621,0.0077,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,all,-0.0142,0.0019,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,larva,-0.0208,0.0028,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,pupa,-0.0894,0.0092,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Braconidae,Apanteles,fumiferanae,all,-0.0194,0.0022,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,larva,-0.0125,0.0021,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,pupa,-0.0464,0.0060,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk and Nealis 1988,Hymenoptera,Ichneumonoidea,Glypta,fumiferanae,all,-0.0121,0.0017,Francois Rebaudo,10.1093/jee/81.4.1045,Journal of Economic Entomology,1988,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L1,-0.041,0.006,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L2,-0.240,0.021,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L3,-0.295,0.026,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L4,-0.204,0.021,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L5,-0.167,0.019,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L6,-0.105,0.014,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L7,-0.068,0.009,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,-0.100,0.009,Francois Rebaudo,10.4039/Ent121373-4,Canadian Entomologist,1989,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,-0.1483,0.0191,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,-0.0272,0.0054,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,-0.0855,0.0124,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,-0.0203,0.0032,Francois Rebaudo,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L1,-0.006,0.011,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L2,-0.145,0.020,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L3,-0.115,0.018,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L4,-0.081,0.014,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,L5,0.025,0.005,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Milonas and Savopoulou-Soultani 2000,Lepidoptera,Tortricidae,Adoxophyes,orana,all,-0.017,0.003,Francois Rebaudo,NA,Annals of the Entomological Society of America,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.3013,0.0252,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,-0.0963,0.0174,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.0442,0.0042,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,-0.0052,0.0024,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.0529,0.0052,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,-0.0037,0.0035,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,-0.0201,0.0021,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,-0.0029,0.0013,Francois Rebaudo,NA,Environmental Entomology,2008,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
