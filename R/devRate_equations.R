@@ -47,7 +47,7 @@ campbell_74 <- list(eq = rT ~ aa + bb * T,
                     ref = "Campbell, A., B. Frazer, N. Gilbert, A. Gutierrez, and M. Mackauer. (1974). Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.",
                     refShort = "Campbell et al. 1974",
                     startVal = getCSV(myCSV = campbell74CSV),
-                    com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974',
+                    com = '"Occasionally, the value for the highest temperature had to be rejected when it did not fit the straight line through the other points." Campbell et al. 1974 ; "To obtain an accurate estimate of t, at least fifty individuals must be reared at each of three or four constant temperatures, and checked twice or three times daily at temperatures between 5 and 150 C, and every 2 or 3 h at temperatures between 16 and 300 C." Campbell et al. 1974',
                     id = "eq030"
 )
 save(campbell_74, file = "./data/campbell_74.RData")
