@@ -1,23 +1,23 @@
 rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT),,,,,,,,,
 ,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,contributor
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.15543,38.048732,6.421234,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.154034,38.953357,6.467896,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.154035,37.5261,6.460183,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.169451,36.397259,5.883764,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.166364,35.914673,5.997446,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.147574,39.239755,6.704902,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.159722,36.350091,6.257617,François Rebaudo
-Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.121649,49.732275,8.217372,François Rebaudo
-Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.163142,31.419509,6.1101,François Rebaudo
-Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.216847,23.406443,4.603325,François Rebaudo
-Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.146438,42.881958,6.821329,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.177,36.586,5.631,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.169,37.914,5.912,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.193,36.291,5.180,François Rebaudo
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.165,35.001,6.048,François Rebaudo
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.166,35.007,5.984,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,0.14,38.02,6.95,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,0.17,35.15,5.88,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,0.16,36.49,6.22,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,0.17,35.10,5.70,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.15543,38.048732,6.421234,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.154034,38.953357,6.467896,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.154035,37.5261,6.460183,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.169451,36.397259,5.883764,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.166364,35.914673,5.997446,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.147574,39.239755,6.704902,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.159722,36.350091,6.257617,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.121649,49.732275,8.217372,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.163142,31.419509,6.1101,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.216847,23.406443,4.603325,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.146438,42.881958,6.821329,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.177,36.586,5.631,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.169,37.914,5.912,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.193,36.291,5.180,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.165,35.001,6.048,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.166,35.007,5.984,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,0.14,38.02,6.95,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,0.17,35.15,5.88,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,0.16,36.49,6.22,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,0.17,35.10,5.70,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

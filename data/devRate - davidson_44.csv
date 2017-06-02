@@ -1,26 +1,26 @@
 rT ~ K / (1 + exp(aa + bb * T)),,,,,,,,,
 ,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,K,contributor
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,4.9185,-0.228,0.0438,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,4.8463,-0.2525,0.0324,François Rebaudo
-Davidson 1944,Diptera,Drosophilidae,Drosophila,melanogaster,pupa,4.435754,-0.20036,0.3676,François Rebaudo
-Davidson 1944,Diptera,Drosophilidae,Drosophila,melanogaster,eggs,4.4514215,-0.2071879,0.070953,François Rebaudo
-Davidson 1944,Diptera,Muscidae,Musca,domestica,eggs,4.480468,-0.172223,0.1517,François Rebaudo
-Davidson 1944,Diptera,Calliphoridae,Cochliomyia,macellaria,eggs,4.665104,-0.176068,0.17173,François Rebaudo
-Davidson 1944,Diptera,Calliphoridae,Lucilia,sericata,eggs,4.107601,-0.159571,0.15568,François Rebaudo
-Davidson 1944,Diptera,Calliphoridae,Phormia,regina,eggs,4.308795,-0.157424,0.15695,François Rebaudo
-Davidson 1944,Lepidoptera,Pyralidae,Ephestia,kuehniella,eggs,4.595759,-0.20667,0.3635,François Rebaudo
-Kay 1981,Lepidoptera,Noctuidae,Heliothis,armiger,all,5.468,-0.235,0.02259,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,eggs,3.8161,-0.1685,0.6082,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L1,4.2279,-0.2917,0.4877,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L2,4.2865,-0.1975,0.9159,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L3,4.1488,-0.1925,1.0389,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L4,4.2616,-0.2966,0.4096,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,prepupa,3.8902,-0.1707,2.5489,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,pupa,4.2366,-0.2039,0.4083,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,pupa,4.274,-0.1971,0.3959,François Rebaudo
-Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,all,3.9548,-0.1839,0.1079,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,5.3482,-0.2616,0.2591,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,5.0324,-0.2608,0.0657,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,5.3938,-0.266,0.0873,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,5.4117,-0.2736,0.0326,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,K,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,4.9185,-0.228,0.0438,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,4.8463,-0.2525,0.0324,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Drosophilidae,Drosophila,melanogaster,pupa,4.435754,-0.20036,0.3676,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Drosophilidae,Drosophila,melanogaster,eggs,4.4514215,-0.2071879,0.070953,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Muscidae,Musca,domestica,eggs,4.480468,-0.172223,0.1517,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Calliphoridae,Cochliomyia,macellaria,eggs,4.665104,-0.176068,0.17173,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Calliphoridae,Lucilia,sericata,eggs,4.107601,-0.159571,0.15568,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Diptera,Calliphoridae,Phormia,regina,eggs,4.308795,-0.157424,0.15695,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Davidson 1944,Lepidoptera,Pyralidae,Ephestia,kuehniella,eggs,4.595759,-0.20667,0.3635,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kay 1981,Lepidoptera,Noctuidae,Heliothis,armiger,all,5.468,-0.235,0.02259,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,eggs,3.8161,-0.1685,0.6082,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L1,4.2279,-0.2917,0.4877,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L2,4.2865,-0.1975,0.9159,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L3,4.1488,-0.1925,1.0389,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,L4,4.2616,-0.2966,0.4096,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,prepupa,3.8902,-0.1707,2.5489,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,pupa,4.2366,-0.2039,0.4083,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,pupa,4.274,-0.1971,0.3959,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Liu et al. 2002,Lepidoptera,Plutellidae,Plutella,xylostella,all,3.9548,-0.1839,0.1079,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,5.3482,-0.2616,0.2591,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,5.0324,-0.2608,0.0657,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,5.3938,-0.266,0.0873,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,5.4117,-0.2736,0.0326,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

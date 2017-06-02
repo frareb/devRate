@@ -1,5 +1,5 @@
 "c(rT ~ C / (1 + exp(k1 + k2 * T)), rT ~ C / (1 + exp(k1 + k2 * (2 * Topt - T))))",,,,,,,,,,
 ,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,C,k1,k2,Topt,contributor
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0553,4.1518,-0.1687,32.3856,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0419,4.0354,-0.1826,29.5866,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,C,k1,k2,Topt,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0553,4.1518,-0.1687,32.3856,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0419,4.0354,-0.1826,29.5866,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

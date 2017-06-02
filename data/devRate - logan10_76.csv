@@ -1,17 +1,17 @@
 rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))),,,,,,,,,,,
 ,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,alpha,bb,cc,Tmax,deltaT,contributor
-Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.4792,0.1866,105.4232,40.0964,6.2452,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2292,0.1574,91.5731,38.8673,6.6197,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.1827,0.1818,105.4656,39.5984,6.4093,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0845,0.1734,102.2182,38.7735,6.4024,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.23367,-0.2757,230.75,32.01,0.842,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.35642,-0.260059,209.2775,34.103,1.97463,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.60678,-0.2137,108.0436,37.4719,6.07027,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.508,-0.195,67.05,37.18,4.34,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.87809,-0.16,71.59,37.48,6.32,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.237,-0.215,70.65,37.18,4.58,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1523,-0.25,235,36.16,1.77,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,alpha,bb,cc,Tmax,deltaT,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.4792,0.1866,105.4232,40.0964,6.2452,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2292,0.1574,91.5731,38.8673,6.6197,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.1827,0.1818,105.4656,39.5984,6.4093,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0845,0.1734,102.2182,38.7735,6.4024,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.23367,-0.2757,230.75,32.01,0.842,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.35642,-0.260059,209.2775,34.103,1.97463,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.60678,-0.2137,108.0436,37.4719,6.07027,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.508,-0.195,67.05,37.18,4.34,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.87809,-0.16,71.59,37.48,6.32,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.237,-0.215,70.65,37.18,4.58,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1523,-0.25,235,36.16,1.77,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

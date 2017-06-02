@@ -1,54 +1,54 @@
 rT ~ exp(aa * T) - exp(aa * Tmax - (Tmax - T)/deltaT) + bb,,,,,,,,,,
 ,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,bb,contributor
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.139034,38.890035,7.16711,-0.02641,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.096314,44.51412,10.074502,-0.238647,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.105906,40.725042,9.161844,-0.249972,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.019087,36.873879,1.690717,-1.212223,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.146066,36.643691,6.813403,-0.051544,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0019,38.2976,0.7152,-1.0214,François Rebaudo
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0017,39.6875,1.5488,-1.0168,François Rebaudo
-Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,0.009,35.299,0.201,-1.049,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0111,39.6357,2.2536,-1.1216,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0034,41.0808,2.136,-1.0336,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0043,40.9746,2.109,-1.0474,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0018,43.0451,2.2827,-1.0198,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.126278,39.843716,7.715781,-0.20038,François Rebaudo
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.121699,38.429502,8.200914,-0.015152,François Rebaudo
-Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.002245,54.872728,2.426034,-1.035138,François Rebaudo
-Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.158712,31.60617,6.278001,-0.003533,François Rebaudo
-Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.221673,23.292229,4.503865,0.001416,François Rebaudo
-Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.119357,44.186047,8.348083,-0.047561,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.018,42.049,4.005,-1.263,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.005,34.369,0.096,-1.053,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.011,40.296,2.439,-1.154,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.00924,33.63,0.99,-1.0814,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.011,35.72,1.63,-1.09,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.0139,37.03,2.168,-1.1,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.014,41.076,3.814,-1.106,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.0122,40.22,3.227,-1.082,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.008,43.63,4.348,-1.06,François Rebaudo
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.0056,39.68,1.827,-1.051,François Rebaudo
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.003,39.821,2.045,-1.031,François Rebaudo
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.003,38.466,1.444,-1.025,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,eggs,0.0073,30.3896,0.1144,-1.0757,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,eggs alt temp,0.0061,40.8473,0.5375,-1.0403,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,larva,0.0017,44.2713,0.4165,-1.0151,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,larva alt temp,0.0014,48.4214,0.6937,-1.0083,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,pupa,0.0091,48.1542,6.3328,-1.1307,François Rebaudo
-Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,pupa alt temp,0.0077,45.9451,5.5673,-1.0983,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,0.034,41.378,2.733,-1.609,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,0.008,43.973,2.752,-1.054,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,0.011,45.493,4.666,-1.052,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,0.009,44.849,3.769,-1.015,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,0.003,40.693,0.364,-0.966,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all female,0.003,45.818,2.481,-1.014,François Rebaudo
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all male,0.002,45.445,2.111,-1.006,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,0.0165,42.024,2.0503,-1.1906,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,0.0125,40.8390,0.2781,-1.0295,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,0.0042,43.1521,1.8197,-1.048,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,0.002,41.8090,0.3410,-1.0034,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,0.0053,43.3886,1.6854,-1.0674,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,0.0032,44.2448,0.3409,-1.0000,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,0.0020,45.1604,1.8842,-1.0197,François Rebaudo
-Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,0.0012,43.2127,0.0957,-1.0023,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmax,deltaT,bb,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.139034,38.890035,7.16711,-0.02641,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.096314,44.51412,10.074502,-0.238647,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.105906,40.725042,9.161844,-0.249972,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.019087,36.873879,1.690717,-1.212223,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.146066,36.643691,6.813403,-0.051544,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0019,38.2976,0.7152,-1.0214,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0017,39.6875,1.5488,-1.0168,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Zamani et al. 2006,Hemiptera,Aphididae,Aphis,gossypii,all,0.009,35.299,0.201,-1.049,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0111,39.6357,2.2536,-1.1216,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0034,41.0808,2.136,-1.0336,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0043,40.9746,2.109,-1.0474,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0018,43.0451,2.2827,-1.0198,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.126278,39.843716,7.715781,-0.20038,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.121699,38.429502,8.200914,-0.015152,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.002245,54.872728,2.426034,-1.035138,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.158712,31.60617,6.278001,-0.003533,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.221673,23.292229,4.503865,0.001416,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,0.119357,44.186047,8.348083,-0.047561,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.018,42.049,4.005,-1.263,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.005,34.369,0.096,-1.053,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.011,40.296,2.439,-1.154,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.00924,33.63,0.99,-1.0814,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.011,35.72,1.63,-1.09,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.0139,37.03,2.168,-1.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.014,41.076,3.814,-1.106,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.0122,40.22,3.227,-1.082,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.008,43.63,4.348,-1.06,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.0056,39.68,1.827,-1.051,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.003,39.821,2.045,-1.031,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.003,38.466,1.444,-1.025,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,eggs,0.0073,30.3896,0.1144,-1.0757,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,eggs alt temp,0.0061,40.8473,0.5375,-1.0403,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,larva,0.0017,44.2713,0.4165,-1.0151,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,larva alt temp,0.0014,48.4214,0.6937,-1.0083,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,pupa,0.0091,48.1542,6.3328,-1.1307,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fatinou et al. 2003,Lepidoptera,Noctuidae,Sesamia,nonagrioides,pupa alt temp,0.0077,45.9451,5.5673,-1.0983,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,0.034,41.378,2.733,-1.609,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,0.008,43.973,2.752,-1.054,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,0.011,45.493,4.666,-1.052,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,0.009,44.849,3.769,-1.015,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,0.003,40.693,0.364,-0.966,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all female,0.003,45.818,2.481,-1.014,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all male,0.002,45.445,2.111,-1.006,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,0.0165,42.024,2.0503,-1.1906,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,eggs,0.0125,40.8390,0.2781,-1.0295,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,0.0042,43.1521,1.8197,-1.048,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,larva,0.002,41.8090,0.3410,-1.0034,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,0.0053,43.3886,1.6854,-1.0674,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,pupa,0.0032,44.2448,0.3409,-1.0000,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,0.0020,45.1604,1.8842,-1.0197,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Mironidis and Savopoulou 2008,Lepidoptera,Noctuidae,Helicoverpa,armigera,all,0.0012,43.2127,0.0957,-1.0023,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

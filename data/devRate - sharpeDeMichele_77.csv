@@ -1,5 +1,5 @@
 rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987)),,,,,,,,,,,,,
 ,,,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,ff,gg,contributor
-Sharpe and DeMichele 1977,Diptera,Drosophilidae,Drosophila,melanogaster,prepupal,19.43,10490,-156.9,-44373,226.6,69113,François Rebaudo
-Sharpe and DeMichele 1977,Araneae,Salticidae,Pellenes,seriatus,nymphal,55.64,21600,-589,-168143,177.1,54671,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,ff,gg,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Sharpe and DeMichele 1977,Diptera,Drosophilidae,Drosophila,melanogaster,prepupal,19.43,10490,-156.9,-44373,226.6,69113,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Sharpe and DeMichele 1977,Araneae,Salticidae,Pellenes,seriatus,nymphal,55.64,21600,-589,-168143,177.1,54671,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

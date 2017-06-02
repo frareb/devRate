@@ -1,3 +1,3 @@
 rT ~ (sqrt(cc) * k1 * (T - T1) * (1 - exp(k2 * (T - T2))))^2,,,,,,,,,,,
 ,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,cc,k1,T1,k2,T2,contributor
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,cc,k1,T1,k2,T2,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments

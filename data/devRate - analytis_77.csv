@@ -1,11 +1,11 @@
 rT ~ aa * (T - Tmin)^bb * (Tmax - T)^cc,,,,,,,,,,,
 ,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,Tmin,Tmax,contributor
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0001,1.7766,0.174,4.9125,33.0781,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0000096,2.8419,0.3555,0.0048,34.8674,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0000000092,4.1114,0.419,-10.11,34.5111,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0000026,2.8903,0.3762,0.0099,34.8576,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0000000073,4.0276,0.4941,-6.9336,35.0121,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.0004,1.895,0.594,10.224,36.854,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.0032,1.150,0.017,10.253,34.000,François Rebaudo
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.0003,1.998,0.402,10.260,35.227,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,Tmin,Tmax,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0001,1.7766,0.174,4.9125,33.0781,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0000096,2.8419,0.3555,0.0048,34.8674,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0000000092,4.1114,0.419,-10.11,34.5111,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0000026,2.8903,0.3762,0.0099,34.8576,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0000000073,4.0276,0.4941,-6.9336,35.0121,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.0004,1.895,0.594,10.224,36.854,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.0032,1.150,0.017,10.253,34.000,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.0003,1.998,0.402,10.260,35.227,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

@@ -1,24 +1,24 @@
 rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / bb),,,,,,,,,,
 ,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,bb,contributor
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0002634,7.9722,34.444,4.0547,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.000066,6.5188,33.9961,3.9298,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.00009,8.1904,34.3895,3.9046,François Rebaudo
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.000034,7.7659,34.126,3.8342,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,1.57,11.26,34.00,1.75,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L1,2.34,8.60,34.64,2.31,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L2,2.14,8.33,34.77,1.88,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L3,2.47,7.72,34.00,2.10,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L4,2.5,7.70,34.00,2.46,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L5,1.28,7.40,34.00,2.00,François Rebaudo
-Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,1.2,10.00,36.10,2.84,François Rebaudo
-Briere et al. 1999,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.323,12.76,46.64,3.92,François Rebaudo
-Briere et al. 1999,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,2,-6.24,28.57,5.40,François Rebaudo
-Briere et al. 1999,Coleoptera,Chrysomelidae,Aphthona,abdominalis,eggs,2,11.26,38.85,4.50,François Rebaudo
-Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,larva+pupa,0.463,9.33,36.80,5.10,François Rebaudo
-Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,eggs,3.41,9.98,37.70,2.90,François Rebaudo
-Briere et al. 1999,Coleoptera,Chrysomeloidea,Entomoscelis,americana,eggs,5,5.37,38.90,1.80,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,17.57e-05,5.59,37.96,1.88,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,9.03e-05,4.52,35.00,2.35,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,22.73e-05,2.58,34.84,3.81,François Rebaudo
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,5.17e-05,6.06,35.00,2.92,François Rebaudo
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,bb,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0002634,7.9722,34.444,4.0547,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.000066,6.5188,33.9961,3.9298,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.00009,8.1904,34.3895,3.9046,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.000034,7.7659,34.126,3.8342,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,1.57,11.26,34.00,1.75,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L1,2.34,8.60,34.64,2.31,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L2,2.14,8.33,34.77,1.88,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L3,2.47,7.72,34.00,2.10,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L4,2.5,7.70,34.00,2.46,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L5,1.28,7.40,34.00,2.00,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,1.2,10.00,36.10,2.84,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.323,12.76,46.64,3.92,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,2,-6.24,28.57,5.40,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Coleoptera,Chrysomelidae,Aphthona,abdominalis,eggs,2,11.26,38.85,4.50,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,larva+pupa,0.463,9.33,36.80,5.10,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,eggs,3.41,9.98,37.70,2.90,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Briere et al. 1999,Coleoptera,Chrysomeloidea,Entomoscelis,americana,eggs,5,5.37,38.90,1.80,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,17.57e-05,5.59,37.96,1.88,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,9.03e-05,4.52,35.00,2.35,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,22.73e-05,2.58,34.84,3.81,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,5.17e-05,6.06,35.00,2.92,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
