@@ -1,5 +1,5 @@
 ## devRate version 0.1.3
-* BDD modif: refs with DOI, journal, year, and NA if no values
+* BDD modif: refs with DOI, journal, year, TminExpe, TmaxExpe, numT, numIndEgg, lightDark, rh, country, coorX, coorY, comments, and NA if no values
 * BDD update: 35 models and 555 entries ; 138 species
 
 # devRate 0.1.2.
