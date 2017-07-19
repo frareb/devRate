@@ -1,5 +1,6 @@
 ## devRate version 0.1.3
 * BDD modif: refs with DOI, journal, year, TminExpe, TmaxExpe, numT, numIndEgg, lightDark, rh, country, coorX, coorY, comments, and NA if no values
+* new life traits functions
 * BDD update: 35 models and 555 entries ; 138 species
 
 # devRate 0.1.2.
