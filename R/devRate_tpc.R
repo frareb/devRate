@@ -111,3 +111,11 @@ dRGetMetricsInfo <- function(eq, prec = 0.1, lowTempLim = 0, highTempLimit = 60,
   colnames(dfMetrics) <- colNamesId
   return(dfMetrics)
 }
+
+
+# xxx <- lapply(devRateEqList, function(k){
+#   lifeTraits <- dRGetMetricsInfo(eq = k)
+#   print(paste0(k$name, ": ", ncol(lifeTraits)))
+#   return(lifeTraits)
+# })
+
