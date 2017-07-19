@@ -63,6 +63,7 @@ dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, 
 #'   are the names of each row.
 #' @examples
 #' dRGetMetricsInfo(eq = taylor_81)
+#' @export
 dRGetMetricsInfo <- function(eq, prec = 0.1, lowTempLim = 0, highTempLimit = 60, devLimit = 0.01, devThresh = 0.1,
                              lifeStage = "all", colId = "ordersp", printOut = FALSE){
 
