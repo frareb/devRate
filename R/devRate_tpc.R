@@ -18,7 +18,7 @@
 #' @export
 dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, devLimit = 0.01, printOut = FALSE){
   devT <- seq(from = lowTempLim, to = highTempLimit, by = prec)
-  devRT <- predict(nlsDR, newdata = list(T = devT))
+  devRT <- stats::predict(nlsDR, newdata = list(T = devT))
   devRT[devRT < devLimit] <- 0 # for asymptotic functions
 
   ### TO DO ###
