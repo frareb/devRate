@@ -1,16 +1,30 @@
-
-
+#' Model phenology from database
+#'
 #' @param tempTS The temperature time series (a vector).
 #' @param timeStepTS The time step of the temperature time series (a numeric with 1 = one day).
-#' @param eq
-#' @param species
-#' @param lifeStages
+#' @param eq The name of the equation (e.g., lactin2_95).
+#' @param species The species for the model (e.g., "Sesamia nonagrioides").
+#' @param lifeStages The life stages available for the species and the model.
 #' @param numInd The number of individuals for the simulation (an integer).
 #' @param stocha The standard deviation of a Normal distribution centered on
 #'    develomental rate to create stochasticity among individuals (a numeric).
 #' @param timeLayEggs The delay between emergence of adults and the time where
 #'    females lay eggs in time steps (a numeric).
-devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numInd = 100, stocha, timeLayEggs = 1){
+#' @return A list with three elements: the table of phenology for each individual,
+#'    the models used (nls objects), and the time series for temperature.
+#' @examples
+#' forecastLactin2_95 <- devRateIBMdataBase(
+#'   tempTS = rnorm(n = 120, mean = 20, sd = 1),
+#'   timeStepTS = 1,
+#'   eq = lactin2_95,
+#'   species = "Sesamia nonagrioides",
+#'   lifeStages = c("eggs", "larva", "pupa"),
+#'   numInd = 10,
+#'   stocha = 0.015,
+#'   timeLayEggs = 1
+#' )
+#' @export
+devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numInd = 10, stocha, timeLayEggs = 1){
   models <- lapply(seq_along(lifeStages), function(z){ # get list of parameters for each model
     eq$startVal[ , grepl( "param." , names( eq$startVal ) ) ][(eq$startVal[ , "genSp"] == species & eq$startVal[ , "stage"] == lifeStages[z]), ]
   })
@@ -79,18 +93,3 @@ devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numI
   rm(communityInd)
   return(list(bdd, models, tempTS))
 }
-
-
-
-devRateFind(species = "Sesamia nonagrioides")
-forecastLactin2_95 <- devRateIBMdataBase(
-  tempTS = c(rnorm(n = 60, mean = 20, sd = 1), rnorm(n = 30, mean = 25, sd = 1), rnorm(n = 30, mean = 20, sd = 1)),
-  timeStepTS = 1,
-  eq = lactin2_95,
-  species = "Sesamia nonagrioides",
-  lifeStages = c("eggs", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-devRateIBMPlot(ibm = forecastLactin2_95, typeG = "hist")
