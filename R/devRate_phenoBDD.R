@@ -82,137 +82,15 @@ devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numI
 
 
 
-devRateFind(species = "Cydia pomonella")
-forecastCpomonella_logan6_76 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = logan6_76,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_logan10_76 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = logan10_76,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_analytis_77 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = analytis_77,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_taylor_81 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = taylor_81,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_harcourtYee_82 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = harcourtYee_82,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_hilbertLogan_83 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = hilbertLogan_83,
-  species = "Cydia pomonella",
-  lifeStages = c("eggs", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_lactin2_95 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
+devRateFind(species = "Sesamia nonagrioides")
+forecastLactin2_95 <- devRateIBMdataBase(
+  tempTS = c(rnorm(n = 60, mean = 20, sd = 1), rnorm(n = 30, mean = 25, sd = 1), rnorm(n = 30, mean = 20, sd = 1)),
   timeStepTS = 1,
   eq = lactin2_95,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_kontodimas_04 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = kontodimas_04,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_Campbell <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = campbell_74,
-  species = "Cydia pomonella",
+  species = "Sesamia nonagrioides",
   lifeStages = c("eggs", "larva", "pupa"),
   numInd = 100,
   stocha = 0.015,
   timeLayEggs = 1
 )
-forecastCpomonella_Davidson <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = davidson_44,
-  species = "Cydia pomonella",
-  lifeStages = c("eggs", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastCpomonella_Briere1 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = briere1_99,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-devRateIBMPlot(ibm = forecastCydiaPomonellaBriere1, typeG = "hist")
-forecastCpomonella_Briere2 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 60, mean = 25, sd = 1),
-  timeStepTS = 1,
-  eq = briere2_99,
-  species = "Cydia pomonella",
-  lifeStages = c("egg", "larva", "pupa"),
-  numInd = 100,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-devRateIBMPlot(ibm = forecastCpomonella_kontodimas_04, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_logan6_76, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_Campbell, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_Davidson, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_logan10_76, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_analytis_77, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_taylor_81, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_harcourtYee_82, typeG = "hist")
-# devRateIBMPlot(ibm = forecastCpomonella_hilbertLogan_83, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_lactin2_95, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_Briere1, typeG = "hist")
-devRateIBMPlot(ibm = forecastCpomonella_Briere2, typeG = "hist")
+devRateIBMPlot(ibm = forecastLactin2_95, typeG = "hist")
