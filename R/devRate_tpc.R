@@ -15,7 +15,7 @@
 #' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
 #'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
 #' myMetrics <- dRGetMetrics(nlsDR = mEggs, printOut = TRUE)
-#' @export
+# #' @export
 dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, devLimit = 0.01, printOut = FALSE){
   devT <- seq(from = lowTempLim, to = highTempLimit, by = prec)
   devRT <- stats::predict(nlsDR, newdata = list(T = devT))
@@ -63,7 +63,7 @@ dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, 
 #'   are the names of each row.
 #' @examples
 #' dRGetMetricsInfo(eq = taylor_81)
-#' @export
+# #' @export
 dRGetMetricsInfo <- function(eq, prec = 0.1, lowTempLim = 0, highTempLimit = 60, devLimit = 0.01, devThresh = 0.1,
                              lifeStage = "all", colId = "ordersp", printOut = FALSE){
 
