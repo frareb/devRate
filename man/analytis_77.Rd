@@ -32,15 +32,5 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmin the minimum
 temperature, Tmax the maximum temperature, and aa, bb, and cc constants.
-
-References included in the data base:
-\itemize{
- \item{}{Kontodimas D.C., Eliopoulos P.A., Stathas G.J., Economou L.P. 2004.
-  Comparative Temperature-Dependent Development of Nephus Includens (Kirsch) and Nephus Bisignatus
-  (Boheman)(Coleoptera: Coccinellidae) Preying on Planococcus Citri (Risso)(Homoptera: Pseudococcidae):
-  Evaluation of a Linear and Various Nonlinear Models Using Specific Criteria. Environmental Entomology 33(1):
-  1-11. doi:10.1603/0046-225X-33.1.1.}
- \item{"parameter 2"}{Stuff}
-}
 }
 \keyword{datasets}

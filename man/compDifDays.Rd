@@ -15,7 +15,7 @@ compDifDays(vecDates, dateFormat = "\%d/\%m/\%y")
 A vector with the inverse of the difference between dates.
 }
 \description{
-compDifDays computes the inverse of the difference between dates form a vector made of dates.
+compDifDays computes the inverse of the difference between dates from a vector made of dates.
 }
 \examples{
 compDifDays(vecDates = c("28/12/15", "12/01/16", "25/01/16", "28/02/16", "15/03/16"))
