@@ -13,14 +13,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
 "beta_95"
@@ -45,14 +45,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
 "perf2_11"
@@ -71,14 +71,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://jb.asm.org/content/149/1/1}
 "rootsq_82"
@@ -97,14 +97,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
 "wangengel_98"
@@ -131,14 +131,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://jb.asm.org/content/149/1/1}
 #' @source \url{http://jb.asm.org/content/154/3/1222}
@@ -160,14 +160,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2012.01.010}
 "regniere_12"
@@ -187,14 +187,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
 "shi_11"
@@ -215,14 +215,14 @@
 # #'
 # #' @format A list of eight elements describing the equation.
 # #' \describe{
-# #'   \item{eq}{The equation as a formula object.}
-# #'   \item{eqAlt}{The equation as a string.}
-# #'   \item{name}{The equation name.}
+# #'   \item{eq}{The equation (formula object).}
+# #'   \item{eqAlt}{The equation (string).}
+# #'   \item{name}{The name of the equation.}
 # #'   \item{ref}{The equation reference.}
 # #'   \item{refShort}{The equation reference shortened.}
-# #'   \item{startVal}{The parameter values found in the literature with their references.}
+# #'   \item{startVal}{The parameters found in the literature with their references.}
 # #'   \item{com}{An otional comment about the equation use.}
-# #'   \item{id}{An id to identificate the equation.}
+# #'   \item{id}{An id to identify the equation.}
 # #' }
 # #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
 # "hansen_11"
@@ -251,14 +251,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1111/j.1365-2311.1932.tb03305.x}
 "janisch_32"
@@ -279,14 +279,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.2307/1326}
 "davidson_44"
@@ -305,14 +305,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.2307/2402197}
 "campbell_74"
@@ -335,14 +335,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.4039/Ent106519-5}
 "stinner_74"
@@ -363,14 +363,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
 "logan6_76"
@@ -390,14 +390,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
 "logan10_76"
@@ -416,14 +416,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(77)90265-X}
 "sharpeDeMichele_77"
@@ -442,14 +442,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1111/j.1439-0434.1977.tb02886.x}
 "analytis_77"
@@ -475,14 +475,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
 "schoolfield_81"
@@ -512,14 +512,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
 "schoolfieldHigh_81"
@@ -549,14 +549,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
 "schoolfieldLow_81"
@@ -579,14 +579,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://www.jstor.org/stable/2460694}
 "taylor_81"
@@ -604,14 +604,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 "poly2"
 
@@ -629,14 +629,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/11.3.581}
 "harcourtYee_82"
@@ -654,14 +654,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 "poly4"
 
@@ -681,14 +681,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/12.1.1}
 "hilbertLogan_83"
@@ -715,14 +715,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/21.1.10}
 "lamb_92"
@@ -741,14 +741,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
 "lactin1_95"
@@ -767,14 +767,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
 "lactin2_95"
@@ -794,14 +794,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
 "briere1_99"
@@ -821,14 +821,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
 "briere2_99"
@@ -850,14 +850,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://ee.oxfordjournals.org/content/33/1/1}
 "kontodimas_04"
@@ -877,14 +877,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/jee/101.5.1557}
 "damos_08"
@@ -903,14 +903,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1155/2012/123405}
 "damos_11"
@@ -928,14 +928,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://en.cnki.com.cn}
 "wang_82"
@@ -955,14 +955,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1079/BER2003259}
 "bayoh_03"
@@ -986,14 +986,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #'
 #' @source \url{https://doi.org/10.1093/aesa/77.2.208}
@@ -1019,14 +1019,14 @@
 #'
 #' @format A list of eight elements describing the equation.
 #' \describe{
-#'   \item{eq}{The equation as a formula object.}
-#'   \item{eqAlt}{The equation as a string.}
-#'   \item{name}{The equation name.}
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
-#'   \item{startVal}{The parameter values found in the literature with their references.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
 #'   \item{com}{An otional comment about the equation use.}
-#'   \item{id}{An id to identificate the equation.}
+#'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://www.e-periodica.ch}
 "bieri1_83"
