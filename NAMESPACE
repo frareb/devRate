@@ -2,8 +2,6 @@
 
 export(compDifDays)
 export(compDifDaysDf)
-export(dRGetMetrics)
-export(dRGetMetricsInfo)
 export(devRateFind)
 export(devRateIBM)
 export(devRateIBMPlot)
