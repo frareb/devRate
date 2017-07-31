@@ -7,14 +7,14 @@
 from Wagner 1984.}
 \format{A list of eight elements describing the equation.
 \describe{
-  \item{eq}{The equation as a formula object.}
-  \item{eqAlt}{The equation as a string.}
-  \item{name}{The equation name.}
+  \item{eq}{The equation (formula object).}
+  \item{eqAlt}{The equation (string).}
+  \item{name}{The name of the equation.}
   \item{ref}{The equation reference.}
   \item{refShort}{The equation reference shortened.}
-  \item{startVal}{The parameter values found in the literature with their references.}
+  \item{startVal}{The parameters found in the literature with their references.}
   \item{com}{An otional comment about the equation use.}
-  \item{id}{An id to identificate the equation.}
+  \item{id}{An id to identify the equation.}
 }}
 \source{
 \url{https://doi.org/10.1093/aesa/77.2.208}

@@ -6,14 +6,14 @@
 \title{Analytis equation of development rate as a function of temperature.}
 \format{A list of eight elements describing the equation.
 \describe{
-  \item{eq}{The equation as a formula object.}
-  \item{eqAlt}{The equation as a string.}
-  \item{name}{The equation name.}
+  \item{eq}{The equation (formula object).}
+  \item{eqAlt}{The equation (string).}
+  \item{name}{The name of the equation.}
   \item{ref}{The equation reference.}
   \item{refShort}{The equation reference shortened.}
-  \item{startVal}{The parameter values found in the literature with their references.}
+  \item{startVal}{The parameters found in the literature with their references.}
   \item{com}{An otional comment about the equation use.}
-  \item{id}{An id to identificate the equation.}
+  \item{id}{An id to identify the equation.}
 }}
 \source{
 \url{http://dx.doi.org/10.1111/j.1439-0434.1977.tb02886.x}
@@ -32,5 +32,15 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmin the minimum
 temperature, Tmax the maximum temperature, and aa, bb, and cc constants.
+
+References included in the data base:
+\itemize{
+ \item{}{Kontodimas D.C., Eliopoulos P.A., Stathas G.J., Economou L.P. 2004.
+  Comparative Temperature-Dependent Development of Nephus Includens (Kirsch) and Nephus Bisignatus
+  (Boheman)(Coleoptera: Coccinellidae) Preying on Planococcus Citri (Risso)(Homoptera: Pseudococcidae):
+  Evaluation of a Linear and Various Nonlinear Models Using Specific Criteria. Environmental Entomology 33(1):
+  1-11. doi:10.1603/0046-225X-33.1.1.}
+ \item{"parameter 2"}{Stuff}
+}
 }
 \keyword{datasets}
