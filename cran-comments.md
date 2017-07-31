@@ -3,9 +3,9 @@
 * database improved
 
 ## Test environments
-* Windows 10, R 3.4.0
-* Linux Ubuntu R 3.4.0
-* win-builder (2017-05-09 r72665)
+* Windows 10, R XXX
+* Linux Ubuntu R XXX
+* win-builder (XXX)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
