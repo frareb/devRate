@@ -1,7 +1,6 @@
 ## devRate version 0.1.3
+* typos and grammatical errors in manual fixed
 * BDD modif: refs with DOI, journal, year, TminExpe, TmaxExpe, numT, numIndEgg, lightDark, rh, country, coorX, coorY, comments, and NA if no values
-* new life traits functions
-* new function to make phenology simulations from the database
 * BDD update: 35 models and 556 entries ; 138 species
 
 # devRate 0.1.2.
