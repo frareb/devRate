@@ -1,6 +1,6 @@
 #' Compute the inverse of number of days between dates
 #'
-#' compDifDays computes the inverse of the difference between dates form a vector made of dates.
+#' compDifDays computes the inverse of the difference between dates from a vector made of dates.
 #'
 #' @param vecDates A vector with dates.
 #' @param dateFormat The format of dates (see \code{\link[base]{strptime}}).
