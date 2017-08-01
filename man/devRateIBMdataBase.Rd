@@ -2,7 +2,8 @@
 % Please edit documentation in R/devRate_phenoBDD.R
 \name{devRateIBMdataBase}
 \alias{devRateIBMdataBase}
-\title{Model phenology from database}
+\title{Forecast ectotherm phenology as a function of temperature and development rate models
+aivalable in the package database}
 \usage{
 devRateIBMdataBase(tempTS, timeStepTS, eq, species, lifeStages, numInd = 10,
   stocha, timeLayEggs = 1)
@@ -31,7 +32,8 @@ A list with three elements: the table of phenology for each individual,
    the models used (nls objects), and the time series for temperature.
 }
 \description{
-Model phenology from database
+Forecast ectotherm phenology as a function of temperature and development rate models
+aivalable in the package database
 }
 \examples{
 forecastLactin2_95 <- devRateIBMdataBase(

@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_info.R
 \name{devRatePlotInfo}
 \alias{devRatePlotInfo}
-\title{Plot parameter estimates from the literature}
+\title{Plot thermal performance curves from the literature}
 \usage{
 devRatePlotInfo(eq, sortBy = "genSp", stage = "all", ...)
 }
@@ -20,7 +20,7 @@ devRatePlotInfo(eq, sortBy = "genSp", stage = "all", ...)
 Nothing.
 }
 \description{
-Plot parameter estimates from the literature
+Plot thermal performance curves from the literature
 }
 \examples{
 devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0,40), ylim = c(0,0.05))

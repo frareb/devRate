@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_utils.R
 \name{compDifDaysDf}
 \alias{compDifDaysDf}
-\title{Compute the inverse of number of days between dates from a data frame.}
+\title{Compute the inverse of the number of days between dates from a data frame.}
 \usage{
 compDifDaysDf(dfDates, dateFormatDf = "\%d/\%m/\%y")
 }
@@ -15,7 +15,7 @@ compDifDaysDf(dfDates, dateFormatDf = "\%d/\%m/\%y")
 A data.frame with the inverse of the difference between dates.
 }
 \description{
-Compute the inverse of number of days between dates from a data frame.
+Compute the inverse of the number of days between dates from a data frame.
 }
 \examples{
 myDays <- data.frame(egg =  c("28/12/15", "28/12/15", "28/12/15", "28/12/15"),

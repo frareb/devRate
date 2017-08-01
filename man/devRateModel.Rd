@@ -11,7 +11,7 @@ devRateModel(eq, temp, devRate, startValues, ...)
 
 \item{temp}{The temperature.}
 
-\item{devRate}{The developmental rate \code{(days)^-1}}
+\item{devRate}{The development rate \code{(days)^-1}}
 
 \item{startValues}{Starting values for the regression.}
 

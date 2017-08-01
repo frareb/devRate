@@ -14,7 +14,7 @@ devRateFind(orderSP = "", familySP = "", species = "")
 \item{species}{Find models by species (Genus species).}
 }
 \value{
-A data.frame with the name of the equation and the number of occurrences in the database.
+A data.frame with the name of the equations and the number of occurrences in the database.
 }
 \description{
 Find models for species

@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_pheno.R
 \name{devRateIBM}
 \alias{devRateIBM}
-\title{Forecast ectotherm phenology as a function of temperature and developmental rate models}
+\title{Forecast ectotherm phenology as a function of temperature and development rate models}
 \usage{
 devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
   timeLayEggs = 1)
@@ -10,14 +10,14 @@ devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
 \arguments{
 \item{tempTS}{The temperature time series (a vector).}
 
-\item{timeStepTS}{The time step of the temperature time series (a numeric).}
+\item{timeStepTS}{The time step of the temperature time series (a numeric in days).}
 
-\item{models}{The models for developmental rate (a list with objects of class nls).}
+\item{models}{The models for development rate (a list with objects of class nls).}
 
 \item{numInd}{The number of individuals for the simulation (an integer).}
 
 \item{stocha}{The standard deviation of a Normal distribution centered on
-develomental rate to create stochasticity among individuals (a numeric).}
+develoment rate to create stochasticity among individuals (a numeric).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
 females lay eggs in time steps (a numeric).}
@@ -27,30 +27,15 @@ A list with three elements: the table of phenology for each individual,
    the models used (nls objects), and the time series for temperature.
 }
 \description{
-Forecast ectotherm phenology as a function of temperature and developmental rate models
+Forecast ectotherm phenology as a function of temperature and development rate models
 }
 \examples{
-rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
-   13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
-   25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
-rawDevLarva <- matrix(c(10, 0.010, 10, 0.014, 10, 0.019, 13, 0.034, 15, 0.024,
-   15.5, 0.029, 15.5, 0.034, 15.5, 0.039, 17, 0.067, 20, 0.050, 25, 0.076,
-   25, 0.056, 30, 0.0003, 35, 0.0002), ncol = 2, byrow = TRUE)
-rawDevPupa <- matrix(c(10, 0.001, 10, 0.008, 10, 0.012, 13, 0.044, 15, 0.017,
-   15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
-   20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
-   35, 0.0002), ncol = 2, byrow = TRUE)
-mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
-   startValues = list(Rm = 0.05, Tm = 30, To = 5))
-mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
-   startValues = list(Rm = 0.05, Tm = 25, To = 5))
-mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
-   startValues = list(Rm = 0.05, Tm = 30, To = 5))
+data(exTropicalMoth)
 forecastTsolanivora <- devRateIBM(
    tempTS = rnorm(n = 100, mean = 15, sd = 1),
    timeStepTS = 1,
-   models = list(mEggs, mLarva, mPupa),
-   numInd = 500,
+   models = exTropicalMoth[[2]],
+   numInd = 100,
    stocha = 0.015,
    timeLayEggs = 1)
 }

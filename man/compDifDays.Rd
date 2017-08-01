@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_utils.R
 \name{compDifDays}
 \alias{compDifDays}
-\title{Compute the inverse of number of days between dates}
+\title{Compute the inverse of the number of days between dates}
 \usage{
 compDifDays(vecDates, dateFormat = "\%d/\%m/\%y")
 }

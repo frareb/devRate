@@ -14,7 +14,7 @@ devRatePlot(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE,
 
 \item{temp}{The temperature.}
 
-\item{devRate}{The developmental rate \code{(days)^-1}}
+\item{devRate}{The development rate \code{(days)^-1}}
 
 \item{rangeT}{The range of temperatures over which the regression is plotted.
 This argument may be overwritten depending on the equation.}
