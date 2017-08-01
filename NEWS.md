@@ -1,4 +1,4 @@
-## devRate version 0.1.3
+## devRate 0.1.3
 * typos and grammatical errors in manual fixed
 * devRateFind function returns a data.frame
 * new function to model phenology from the package database
