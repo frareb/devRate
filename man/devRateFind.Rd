@@ -14,13 +14,21 @@ devRateFind(orderSP = "", familySP = "", species = "")
 \item{species}{Find models by species (Genus species).}
 }
 \value{
-Nothing.
+A data.frame with the name of the equation and the number of occurrences in the database.
 }
 \description{
 Find models for species
 }
+\details{
+The function looks for the species in the database and returns the number
+  of occurrences for each model.
+}
 \examples{
 devRateFind(orderSP = "Lepidoptera")
 devRateFind(familySP = "Gelechiidae")
+## detailed example:
 devRateFind(species = "Tuta absoluta")
+## campbell_74 model has been used for T. absoluta
+## Parameters from the campbell equation can be accessed by:
+## campbell_74$startVal[campbell_74$startVal["genSp"] == "Tuta absoluta",]
 }
