@@ -13,7 +13,7 @@ intermediate to low temperatures only.}
   \item{ref}{The equation reference.}
   \item{refShort}{The equation reference shortened.}
   \item{startVal}{The parameters found in the literature with their references.}
-  \item{com}{An otional comment about the equation use.}
+  \item{com}{An optional comment about the equation use.}
   \item{id}{An id to identify the equation.}
 }}
 \source{

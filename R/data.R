@@ -19,7 +19,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0168-1923(95)02236-Q}
@@ -53,7 +53,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
@@ -81,7 +81,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://jb.asm.org/content/149/1/1}
@@ -109,7 +109,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
@@ -145,7 +145,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://jb.asm.org/content/149/1/1}
@@ -176,7 +176,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2012.01.010}
@@ -205,7 +205,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
@@ -235,7 +235,7 @@
 # #'   \item{ref}{The equation reference.}
 # #'   \item{refShort}{The equation reference shortened.}
 # #'   \item{startVal}{The parameters found in the literature with their references.}
-# #'   \item{com}{An otional comment about the equation use.}
+# #'   \item{com}{An optional comment about the equation use.}
 # #'   \item{id}{An id to identify the equation.}
 # #' }
 # #' @source \url{http://dx.doi.org/10.1016/j.jinsphys.2011.06.011}
@@ -271,7 +271,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1111/j.1365-2311.1932.tb03305.x}
@@ -301,7 +301,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.2307/1326}
@@ -329,7 +329,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.2307/2402197}
@@ -361,7 +361,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.4039/Ent106519-5}
@@ -391,7 +391,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
@@ -420,7 +420,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/5.6.1133}
@@ -448,7 +448,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(77)90265-X}
@@ -476,7 +476,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1111/j.1439-0434.1977.tb02886.x}
@@ -511,7 +511,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
@@ -550,7 +550,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
@@ -589,7 +589,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
@@ -621,7 +621,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://www.jstor.org/stable/2460694}
@@ -648,7 +648,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @docType data
@@ -675,7 +675,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/11.3.581}
@@ -702,7 +702,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @docType data
@@ -731,7 +731,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/12.1.1}
@@ -767,7 +767,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/21.1.10}
@@ -795,7 +795,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
@@ -823,7 +823,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/24.1.68}
@@ -852,7 +852,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
@@ -881,7 +881,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/ee/28.1.22 }
@@ -912,7 +912,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://ee.oxfordjournals.org/content/33/1/1}
@@ -941,7 +941,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1093/jee/101.5.1557}
@@ -969,7 +969,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1155/2012/123405}
@@ -996,7 +996,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://en.cnki.com.cn}
@@ -1025,7 +1025,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://dx.doi.org/10.1079/BER2003259}
@@ -1058,7 +1058,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #'
@@ -1093,7 +1093,7 @@
 #'   \item{ref}{The equation reference.}
 #'   \item{refShort}{The equation reference shortened.}
 #'   \item{startVal}{The parameters found in the literature with their references.}
-#'   \item{com}{An otional comment about the equation use.}
+#'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
 #' @source \url{http://www.e-periodica.ch}
