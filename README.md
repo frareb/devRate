@@ -7,7 +7,7 @@ The devRate package allows quantifying the relationship between development rate
 You can use the package: 
 - to get development rate curves as a function of temperature for a specific organism (hundred of examples from the literature are included in the package);
 - to know which equations exists and which are most used in the literature; and
-- to relate developmental rate with temperature from your empirical data, using the equations from the package.
+- to relate development rate with temperature from your empirical data, using the equations from the package database.
 
 ### Installation instructions
 install.packages("devRate")
@@ -18,3 +18,5 @@ The devRate package provides three categories of functions:
 - to relate development rate and temperature; and
 - to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
 
+### Author's affiliation
+UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
