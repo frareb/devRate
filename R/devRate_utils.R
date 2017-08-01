@@ -1,4 +1,4 @@
-#' Compute the inverse of number of days between dates
+#' Compute the inverse of the number of days between dates
 #'
 #' compDifDays computes the inverse of the difference between dates from a vector made of dates.
 #'
@@ -25,7 +25,7 @@ compDifDays <- function(vecDates, dateFormat = "%d/%m/%y"){
   return(1 / vecDif)
 }
 
-#' Compute the inverse of number of days between dates from a data frame.
+#' Compute the inverse of the number of days between dates from a data frame.
 #'
 #' @param dfDates A data.frame with dates (samples in columns and dates in rows).
 #' @param dateFormatDf The format of dates (see \code{\link[base]{strptime}}).

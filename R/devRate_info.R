@@ -21,7 +21,7 @@ devRateInfo <- function(eq){
 }
 
 
-#' Plot parameter estimates from the literature
+#' Plot thermal performance curves from the literature
 #'
 #' @param eq The name of the equation.
 #' @param sortBy The filter to seperate species ("ordersp", "familysp, "genussp", "species", "genSp").

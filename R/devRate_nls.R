@@ -5,7 +5,7 @@
 #'
 #' @param eq The name of the equation.
 #' @param temp The temperature.
-#' @param devRate The developmental rate \code{(days)^-1}
+#' @param devRate The development rate \code{(days)^-1}
 #' @param startValues Starting values for the regression.
 #' @param ... Additional arguments for the \code{nls} function.
 #' @return An object of class \code{nls} (except for Stinner et al. 1974 and

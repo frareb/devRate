@@ -1,6 +1,6 @@
-#' Predict development rate from a a map of temperatures
+#' Predict development rate from a matrix of temperatures
 #'
-#' Create a map from a temperature matrix and the development rate curve
+#' Create a map from a temperature matrix and a development rate curve
 #'
 #' @param nlsDR The result returned by the \code{devRateModel} function.
 #' @param tempMap A matrix containing temperatures in degrees.
@@ -8,7 +8,7 @@
 #' @details The \code{devRateMap} function is designed for a single ecthoterm
 #'   life stage, but the resulted matrix of development rate can be performed
 #'   for each life stage in order to obtain the whole organism development.
-#'   Input temperatures should preferably cover the orgnaism development period
+#'   Input temperatures should preferably cover the organism development period
 #'   rather than the whole year.
 #' @examples
 #' myT <- 5:15

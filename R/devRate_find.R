@@ -5,7 +5,7 @@
 #' @param orderSP Find models by Order.
 #' @param familySP Find models by Family.
 #' @param species Find models by species (Genus species).
-#' @return A data.frame with the name of the equation and the number of occurrences in the database.
+#' @return A data.frame with the name of the equations and the number of occurrences in the database.
 #' @examples
 #' devRateFind(orderSP = "Lepidoptera")
 #' devRateFind(familySP = "Gelechiidae")
