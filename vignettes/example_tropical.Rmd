@@ -9,13 +9,21 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+This vignette exemplifies the use of the devRate package to fit a development rate 
+model to an empirical dataset (laboratory experiments at air constant temperatures) 
+and to build a simple phenological model.
+
 ## T. solanivora dataset
-Dataset for T. solanivora was retrieved from Crespo-Perez et al.
+The dataset for T. solanivora was retrieved from Crespo-Perez et al.
 2011^[Crespo-Pérez, V., Rebaudo, F., Silvain, J.-F. and Dangles, O. (2011)
       Modeling invasive species spread in complex landscapes: the case of
       potato moth in Ecuador. Landscape Ecology, 26, 1447–1461.], using Web
 Plot Digitizer^[Rohatgi, A. (2015) WebPlotDigitalizer: HTML5 Based Online Tool
-                to Extract Numerical Data from Plot Images.].
+                to Extract Numerical Data from Plot Images.]. The dataset is 
+also included in the package in the exTropicalMoth object which is a list of the 
+raw data presented below (a list of three elements for eggs, larva, and pupa), and a 
+list of the NLS fit to the Taylor model (taylor_81; a list of three elements  for 
+eggs, larva, and pupa).
 
     rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
       13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
