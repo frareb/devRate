@@ -13,7 +13,7 @@
 #' @examples
 #' data(exTropicalMoth)
 #' forecastTsolanivora <- devRateIBM(
-#'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
+#'    tempTS = rnorm(n = 10, mean = 15, sd = 1),
 #'    timeStepTS = 1,
 #'    models = exTropicalMoth[[2]],
 #'    numInd = 100,
@@ -89,7 +89,7 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
 #'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
 #'    timeStepTS = 1,
 #'    models = exTropicalMoth[[2]],
-#'    numInd = 500,
+#'    numInd = 10,
 #'    stocha = 0.015,
 #'    timeLayEggs = 1)
 #' devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density", threshold = 0.1)
@@ -138,7 +138,7 @@ devRateIBMPlot <- function(ibm, typeG = "density", threshold = 0.1){
 #'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
 #'    timeStepTS = 1,
 #'    models = exTropicalMoth[[2]],
-#'    numInd = 500,
+#'    numInd = 10,
 #'    stocha = 0.015,
 #'    timeLayEggs = 1)
 #' devRateIBMgen(ibm = forecastTsolanivora)
