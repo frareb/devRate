@@ -46,4 +46,14 @@ forecastLactin2_95 <- devRateIBMdataBase(
   stocha = 0.015,
   timeLayEggs = 1
 )
+forecastWang_82 <- devRateIBMdataBase(
+  tempTS = rnorm(n = 120, mean = 20, sd = 1),
+  timeStepTS = 1,
+  eq = wang_82,
+  species = "Neoscona doenitzi",
+  lifeStages = c("all"),
+  numInd = 10,
+  stocha = 0.015,
+  timeLayEggs = 1
+)
 }

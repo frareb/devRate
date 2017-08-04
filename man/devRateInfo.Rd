@@ -19,4 +19,5 @@ Display information about an equation
 devRateInfo(eq = davidson_44)
 devRateInfo(eq = campbell_74)
 devRateInfo(eq = taylor_81)
+devRateInfo(eq = wang_82)
 }
