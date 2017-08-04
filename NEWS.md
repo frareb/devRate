@@ -4,7 +4,7 @@
 * vignette with more information and interpretation
 * devRateFind function now returns a data.frame
 * new function to model phenology from the package database
-* BDD modif: refs with DOI, journal, year, TminExpe, TmaxExpe, numT, numIndEgg, lightDark, rh, country, coorX, coorY, comments, and NA if no values
+* BDD modif: refs with new column entries
 * BDD update: 35 models and 619 entries ; 138 species
 
 # devRate 0.1.2.
