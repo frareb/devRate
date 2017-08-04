@@ -32,7 +32,7 @@ Forecast ectotherm phenology as a function of temperature and development rate m
 \examples{
 data(exTropicalMoth)
 forecastTsolanivora <- devRateIBM(
-   tempTS = rnorm(n = 100, mean = 15, sd = 1),
+   tempTS = rnorm(n = 10, mean = 15, sd = 1),
    timeStepTS = 1,
    models = exTropicalMoth[[2]],
    numInd = 100,

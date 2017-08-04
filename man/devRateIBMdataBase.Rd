@@ -37,21 +37,11 @@ aivalable in the package database
 }
 \examples{
 forecastLactin2_95 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 120, mean = 20, sd = 1),
-  timeStepTS = 1,
+  tempTS = rnorm(n = 20, mean = 20, sd = 1),
+  timeStepTS = 10,
   eq = lactin2_95,
   species = "Sesamia nonagrioides",
   lifeStages = c("eggs", "larva", "pupa"),
-  numInd = 10,
-  stocha = 0.015,
-  timeLayEggs = 1
-)
-forecastWang_82 <- devRateIBMdataBase(
-  tempTS = rnorm(n = 120, mean = 20, sd = 1),
-  timeStepTS = 1,
-  eq = wang_82,
-  species = "Neoscona doenitzi",
-  lifeStages = c("all"),
   numInd = 10,
   stocha = 0.015,
   timeLayEggs = 1
