@@ -16,7 +16,7 @@ compDifDays <- function(vecDates, dateFormat = "%d/%m/%y"){
     date2 <- as.POSIXlt(as.Date(vecDates[i], dateFormat))
     daysDiff <- (date2 - date1)
     if(!is.na(daysDiff) && daysDiff < 0){
-      msg <- paste0("Check your data for incorrect dates or tipo at position ", i, ". ",
+      msg <- paste0("Check your data for incorrect dates or typo at position ", i, ". ",
                     vecDates[i], " is prior to ", vecDates[i - 1],". ")
       warning(msg)
     }
