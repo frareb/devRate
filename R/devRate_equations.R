@@ -496,3 +496,5 @@ devRateEqList <- list(
   regniere_12 = regniere_12
 )
 save(devRateEqList, file = "./data/devRateEqList.RData")
+
+# lapply(lapply(devRateEqList, "[[", 6), function(i){str(i)})
