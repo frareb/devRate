@@ -1,6 +1,11 @@
 ## devRate version 0.1.3
 * typos and grammatical errors in manual fixed
-* database improved
+* example from the vignette included in the package
+* vignette with more information and interpretation
+* devRateFind function now returns a data.frame
+* new function to model phenology from the package database
+* BDD modif: refs with new column entries
+* BDD update: 35 models and 619 entries ; 138 species
 
 ## Test environments
 * Windows 10, R 3.4.1
