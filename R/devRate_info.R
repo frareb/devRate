@@ -6,6 +6,7 @@
 #' devRateInfo(eq = davidson_44)
 #' devRateInfo(eq = campbell_74)
 #' devRateInfo(eq = taylor_81)
+#' devRateInfo(eq = wang_82)
 #' @export
 devRateInfo <- function(eq){
   cat("----------------------------------------\n")
@@ -30,9 +31,10 @@ devRateInfo <- function(eq){
 #' @param ... Aditional arguments for the plot.
 #' @return Nothing.
 #' @examples
-#' devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0,40), ylim = c(0,0.05))
-#' devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(0,30), ylim = c(0,0.05))
-#' devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20,80), ylim = c(0,0.2))
+#' devRatePlotInfo(eq = davidson_44, sortBy = "genSp", xlim = c(0, 40), ylim = c(0, 0.05))
+#' devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(-10, 30), ylim = c(0, 0.05))
+#' devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20, 60), ylim = c(0, 0.2))
+#' devRatePlotInfo(eq = wang_82, sortBy = "ordersp", xlim = c(0, 50), ylim = c(0, 0.06))
 #' @export
 devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
   listPlot <- split(
