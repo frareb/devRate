@@ -15,8 +15,8 @@
 #'    the models used (nls objects), and the time series for temperature.
 #' @examples
 #' forecastLactin2_95 <- devRateIBMdataBase(
-#'   tempTS = rnorm(n = 120, mean = 20, sd = 1),
-#'   timeStepTS = 1,
+#'   tempTS = rnorm(n = 20, mean = 20, sd = 1),
+#'   timeStepTS = 10,
 #'   eq = lactin2_95,
 #'   species = "Sesamia nonagrioides",
 #'   lifeStages = c("eggs", "larva", "pupa"),
