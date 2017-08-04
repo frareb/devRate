@@ -1,40 +1,40 @@
-rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)),,,,,,,,,,
-,,,,,,,,,,
+rT ~ phi * (exp(bb * T) - exp(bb * Tmax - (Tmax - T)/deltaT)),,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,phi,bb,Tmax,deltaT,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.081,0.14,38.173,7.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.9537,0.136,31.7732,7.3366,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0504,0.1611,38.7675,6.1762,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0089,0.1653,35.941,5.8911,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0613,0.1689,36.6712,5.7836,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0266,0.1657,36.1734,5.9324,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0359,0.1711,36.5002,5.7683,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0118,0.1704,36.1906,5.7743,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.220825,0.154863,38.050106,6.399328,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.545306,0.153768,38.955903,6.458533,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.716037,0.153872,37.526915,6.454157,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.584851,0.169272,36.397124,5.877274,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.783492,0.166264,35.927247,6.013279,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.542713,0.146887,39.239596,6.672903,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.021555,0.156977,36.392994,6.203333,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.051115,0.123126,49.595394,8.066803,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.037578,0.154748,31.412453,5.784563,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.024266,0.206986,23.421583,4.40532,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,-0.016601,0.150975,42.856701,6.995978,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.013,0.158,36.590,5.028,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.008,0.087,35.514,1.264,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.005,0.173,36.268,4.612,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,eggs,0.029763,0.141571,22.51464,3.164244,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L3,0.078989,0.085548,13.04908,1.509073,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.0069,0.13592,32.062,2.126,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.01,0.175,33.77,4.608,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.018,0.162,34.38,5.021,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.036,0.135,36.59,6.201,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.038,0.1414,36.19,6.22,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.024,0.1263,36.608,6.592,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.0049,0.1657,36.138,5.015,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.005,0.116,34.999,4.140,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.007,0.091,34.999,2.922,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,eggs,0.021,0.086,35.005,1.716,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,larva,0.002,0.133,32.005,2.497,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,pupa,0.002,0.1702,33.002,2.869,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,all,0.0008,0.169,33.003,3.895,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.081,0.14,38.173,7.1,FR,10.16970/ted.64743,Turkish Journal of Entomology,2016,15,34.1,10,NA,16:8,65,Turquia,36.896819,30.71055,NA
+Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.9537,0.136,31.7732,7.3366,FR,10.1093/ee/12.1.1,Environmental Entomology,1983,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0504,0.1611,38.7675,6.1762,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0089,0.1653,35.941,5.8911,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.0613,0.1689,36.6712,5.7836,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0266,0.1657,36.1734,5.9324,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0359,0.1711,36.5002,5.7683,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0118,0.1704,36.1906,5.7743,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,eggs,0.220825,0.154863,38.050106,6.399328,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L1,0.545306,0.153768,38.955903,6.458533,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L2,0.716037,0.153872,37.526915,6.454157,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L3,0.584851,0.169272,36.397124,5.877274,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Leptinotarsa,decemlineata,L4,0.783492,0.166264,35.927247,6.013279,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.542713,0.146887,39.239596,6.672903,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Coleoptera,Chrysomelidae,Entomoscelis,americana,larva,0.021555,0.156977,36.392994,6.203333,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.051115,0.123126,49.595394,8.066803,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Homoptera,Aphididae,Acyrthosiphon,pisum,all,0.037578,0.154748,31.412453,5.784563,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Simuliidae,Simulium,arcticum,eggs,0.024266,0.206986,23.421583,4.40532,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lactin et al. 1995,Diptera,Muscidae,Musca,domestica,eggs + larva,-0.016601,0.150975,42.856701,6.995978,FR,10.1093/ee/24.1.68,Environmental Entomology,1995,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.013,0.158,36.590,5.028,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.008,0.087,35.514,1.264,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.005,0.173,36.268,4.612,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.0069,0.13592,32.062,2.126,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.01,0.175,33.77,4.608,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.018,0.162,34.38,5.021,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.036,0.135,36.59,6.201,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.038,0.1414,36.19,6.22,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.024,0.1263,36.608,6.592,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.0049,0.1657,36.138,5.015,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.005,0.116,34.999,4.140,FR,10.1093/ee/37.1.38,Environmental Entomology,2008,15,35,5,NA,14:10,65,Iran,35.705563,51.398871,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,0.007,0.091,34.999,2.922,FR,10.1093/ee/37.1.38,Environmental Entomology,2008,15,35,5,NA,14:10,65,Iran,35.705563,51.398871,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,eggs,0.021,0.086,35.005,1.716,FR,10.1603/0046-225X(2008)37[862:TDAPDO]2.0.CO;2,Environmental Entomology,2008,10,35,7,170,14:10,65,Brazil,-25.428145,-49.266797,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,larva,0.002,0.133,32.005,2.497,FR,10.1603/0046-225X(2008)37[862:TDAPDO]2.0.CO;2,Environmental Entomology,2008,10,35,7,170,14:10,65,Brazil,-25.428145,-49.266797,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,pupa,0.002,0.1702,33.002,2.869,FR,10.1603/0046-225X(2008)37[862:TDAPDO]2.0.CO;2,Environmental Entomology,2008,10,35,7,170,14:10,65,Brazil,-25.428145,-49.266797,NA
+Manrique et al. 2008,Lepidoptera,Tortricidae,Episimus,utilis,all,0.0008,0.169,33.003,3.895,FR,10.1603/0046-225X(2008)37[862:TDAPDO]2.0.CO;2,Environmental Entomology,2008,10,35,7,170,14:10,65,Brazil,-25.428145,-49.266797,NA
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,eggs,0.029763,0.141571,22.51464,3.164244,FR,10.4039/Ent1231083-5,The Canadian Entomologist,1991,5,30,11,6,NA,NA,USA,41.833805,-111.601063,NA
+Bentz et al. 1991,Coleoptera,Scolytidae,Dendroctonus,ponderosae,L3,0.078989,0.085548,13.04908,1.509073,FR,10.4039/Ent1231083-5,The Canadian Entomologist,1991,5,30,11,6,NA,NA,USA,41.833805,-111.601063,NA

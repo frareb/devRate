@@ -1,17 +1,18 @@
-rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))),,,,,,,,,,,
-,,,,,,,,,,,
+rT ~ alpha * (1/(1 + cc * exp(- bb * T)) - exp(-((Tmax - T)/deltaT))),,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,alpha,bb,cc,Tmax,deltaT,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.4792,0.1866,105.4232,40.0964,6.2452,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2292,0.1574,91.5731,38.8673,6.6197,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.1827,0.1818,105.4656,39.5984,6.4093,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0845,0.1734,102.2182,38.7735,6.4024,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.23367,-0.2757,230.75,32.01,0.842,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.35642,-0.260059,209.2775,34.103,1.97463,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.60678,-0.2137,108.0436,37.4719,6.07027,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.508,-0.195,67.05,37.18,4.34,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.87809,-0.16,71.59,37.48,6.32,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.237,-0.215,70.65,37.18,4.58,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1523,-0.25,235,36.16,1.77,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.056,0.19,57,35.891,1.1,FR,10.16970/ted.64743,Turkish Journal of Entomology,2016,15,34.1,10,NA,16:8,65,Turquia,36.896819,30.71055,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0542,0.173,66.877,35.0677,0.0358,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0389,0.1948,62.6158,32.7502,0.132,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.4792,0.1866,105.4232,40.0964,6.2452,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2292,0.1574,91.5731,38.8673,6.6197,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.1827,0.1818,105.4656,39.5984,6.4093,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0845,0.1734,102.2182,38.7735,6.4024,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.23367,-0.2757,230.75,32.01,0.842,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.35642,-0.260059,209.2775,34.103,1.97463,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.60678,-0.2137,108.0436,37.4719,6.07027,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.508,-0.195,67.05,37.18,4.34,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.87809,-0.16,71.59,37.48,6.32,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.237,-0.215,70.65,37.18,4.58,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1523,-0.25,235,36.16,1.77,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.07212,0.1769,67.37,38.99,2.603,FR,10.1093/ee/13.3.868,Environmental Entomology,1984,5,38.5,13,100,16:8,60,Canada,49.89887,-97.134378,NA

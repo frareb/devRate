@@ -1,6 +1,10 @@
-"c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2))",,,,,,,,,,
-,,,,,,,,,,
+c(rT ~ Rm * exp(-1/2 * ((T - Tmax)/To)^2), rT ~ Rm * exp(-1/2 * ((T - Tmax)/T1)^2)),,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Rm,Tmax,To,T1,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.05393,33.4,10.75,3.377,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0441,34.9999,11.022,-0.000021,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0338,32.4999,10.7097,0.000023,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.05393,33.4,10.75,3.377,FR,10.1093/ee/13.3.868,Environmental Entomology,1984,5,38.5,13,100,16:8,60,Canada,49.89887,-97.134378,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0441,34.9999,11.022,-0.000021,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0338,32.4999,10.7097,0.000023,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,NA,NA,NA,NA,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,NA,NA,NA,NA,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,NA,NA,NA,NA,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,NA,NA,NA,NA,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA

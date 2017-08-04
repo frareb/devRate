@@ -1,5 +1,5 @@
-rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3,,,,,,,,,,
-,,,,,,,,,,
+rT ~ a0 + a1 * T + a2 * T^2 + a3 * T^3,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,a3,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
 Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,eggs,0.1434,-0.02827,0.001824,-0.000026629,FR,10.1093/ee/11.3.581,Environmental Entomology,1982,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L1,0.07294,-0.01538,0.0015249,-0.00001293,FR,10.1093/ee/11.3.581,Environmental Entomology,1982,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -8,24 +8,27 @@ Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L3,0.12049,-0.0257
 Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,L4,-0.13123,0.023465,-0.00093071,0.000025595,FR,10.1093/ee/11.3.581,Environmental Entomology,1982,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,prepupa,-0.16043,0.024015,-0.00056046,0.000022486,FR,10.1093/ee/11.3.581,Environmental Entomology,1982,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Harcourt and Yee 1982,Coleoptera,Curculionidae,Hypera,postica,pupa,0.15234,-0.022886,0.00129,-0.000011439,FR,10.1093/ee/11.3.581,Environmental Entomology,1982,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.7308,-0.1138,0.0059,-0.00009,FR,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2531,-0.0385,0.00196,-0.00003,FR,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.2453,-0.0385,0.00201,-0.00003,FR,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.1161,-0.0179,0.00092,-0.000014,FR,10.1603/022.038.0343,Environmental Entomology,2009,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.2784,-0.0695,0.005,-9.5e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.2436,-0.0592,0.00437,-7.9e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.1970,-0.0500,0.00400,-7.4e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.21363,-0.0546,0.0044,-8.2e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.311,-0.0699,0.00505,-9.15e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.105,-0.0268,0.00221,-4.19e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1729,-0.03957,0.002632,-4.54e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,-0.0008,0.0579,-1.3621,10.2747,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,-0.0001,0.0069,-0.1482,1.0969,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,-7.8e-06,0.0051,-0.0933,0.6567,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,-8.1e-06,0.0055,-0.1105,0.8416,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,-5.1e-06,0.0036,-0.0781,0.6196,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all,-3.0e-06,0.0021,-0.0443,0.3270,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all,-2.4e-06,0.0017,-0.0362,0.2730,FR,NA,Entomologia Hellenica,2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,pupa,0.637,-0.087,0.004,-0.00006,FR,10.1093/ee/14.6.855,Environmental Entomology,1985,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,0.6813,0.0823,0.0033,-4e-05,FR,10.1111/aen.12195,Austral Entomology,2016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Al-Saffar et al. 1996,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.441,-0.0615,0.0028,-0.000034,FR,10.1016/S0306-4565(96)00025-3,Journal of Thermal Biology,1996,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lin and Trumble 1985,Lepidoptera,Gelechiidae,Keiferia,lycopersicella,pupa,0.637,-0.087,0.004,-0.00006,FR,10.1093/ee/14.6.855,Environmental Entomology,1985,8,44,11,50,12:12,60,USA,33.788229,-117.849183,NA
+Lu et al. 2016,Lepidoptera,Xyloryctidae,Opisina,arenosella,all,0.6813,0.0823,0.0033,-0.00004,FR,10.1111/aen.12195,Austral Entomology,2016,20,35,6,100,12:12,75,China,19.160776,109.724082,NA
+Al-Saffar et al. 1996,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.441,-0.0615,0.0028,-0.000034,FR,10.1016/S0306-4565(96)00025-3,Journal of Thermal Biology,1996,15,30,6,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,NA,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,NA,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,3.462,-0.7699,0.0547,-0.000911,FR,10.1093/ee/13.3.868,Environmental Entomology,1984,5,38.5,13,100,16:8,60,Canada,49.89887,-97.134378,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.7308,-0.1138,0.0059,-0.00009,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.2531,-0.0385,0.00196,-0.00003,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.2453,-0.0385,0.00201,-0.00003,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.1161,-0.0179,0.00092,-0.000014,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,0.2784,-0.0695,0.005,-9.5e-05,FR,10.1093/ee/27.1.94,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L1,0.2436,-0.0592,0.00437,-7.9e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L2,0.1970,-0.0500,0.00400,-7.4e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L3,0.21363,-0.0546,0.0044,-8.2e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L4,0.311,-0.0699,0.00505,-9.15e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,L5,0.105,-0.0268,0.00221,-4.19e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Briere and Pracros 1998,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.1729,-0.03957,0.002632,-4.54e-05,FR,10.1093/jee/85.2.561,Environmental Entomology,1998,8,34,14,28,16:8,65,France,44.837557,-0.578932,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,eggs,-0.0008,0.0579,-1.3621,10.2747,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L1,-0.0001,0.0069,-0.1482,1.0969,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L2,-7.8e-06,0.0051,-0.0933,0.6567,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,L3 female,-8.1e-06,0.0055,-0.1105,0.8416,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,prepupa+pupa male,-5.1e-06,0.0036,-0.0781,0.6196,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all,-3.0e-06,0.0021,-0.0443,0.3270,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA
+Kumar and Kontodimas 2012,Hemiptera,Pseudococcidae,Phenacoccus,solenopsis,all,-2.4e-06,0.0017,-0.0362,0.2730,FR,NA,Entomologia Hellenica,2012,15,40,9,NA,14:10,75,NA,NA,NA,NA

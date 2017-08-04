@@ -1,78 +1,81 @@
-rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2),,,,,,,,,
-,,,,,,,,,
+rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2),,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Rm,Tm,To,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Taylor 1981,Hemiptera,Lygaeidae,Geocoris,articolor,all,0.055,37.2,8.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Lygaeidae,Geocoris,pallens,all,0.063,37,8.6,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Lygaeidae,Geocoris,punctipes,all,0.044,33.8,7.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Miridae,Lygus,desetinus,all,0.056,32.1,9.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Miridae,Lygus,hesperus,all,0.062,36.2,12.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.165,26.2,9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.151,27.5,11,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Brevicoryne,brassicae,all,0.097,26.4,10.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Brevicoryne,brassicae,all,0.1,26.6,8.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Hyadaphis,pseudobrassicae,all,0.144,26,9.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Macrosiphum,euphorbiae,all,0.14,30.6,14.6,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Myzus,persicae,all,0.129,24.7,9.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Aphididae,Myzus,persicae,all,0.155,26.3,10.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Cicadellidae,Circulifer,tenelus,all,0.052,35.2,9.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hemiptera,Cicadellidae,Empoasca,fabae,all,0.071,30.7,8.9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Bruchidae,Callosobruchus,rhodesianus,all,0.039,31.2,8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Chrysomelidae,Crioceris,asparagi,all,0.071,37.6,13.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Chrysomelidae,Oulema,melanopus,all,0.051,33.7,11.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Cucujidae,Cryptolestes,ferrugineus,all,0.047,36.5,9.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Curculionidae,Anthonomus,grandis,all,0.075,36.7,9.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Curculionidae,Hypera,brunneipennis,all,0.058,36.8,12.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Curculionidae,Hypera,postica,all,0.074,37.8,11.9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,45% RH,0.019,31.6,6.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,60% RH,0.025,33.2,7.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,75% RH,0.032,34,7.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,90% RH,0.039,34.3,8.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Tenebrionidae,Tribolium,castaneum,all,0.049,34.6,7.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Coleoptera,Tenebrionidae,Tribolium,confusum,all,0.038,32.8,7.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Arctiidae,Hyphantria,cunea,all,0.031,32.9,9.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Agrostis,segetum,all,0.026,33.9,12.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Amanthes,c-nigrum,all,0.026,28.3,9.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Mamestra,configurata,all,0.027,32.2,12.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Pseudaletia,unipunctata,all,0.037,32.5,10.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Simyra,henrici,all,0.029,37.7,13.6,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Spodoptera,frugiperda,all,0.056,37.4,11.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Noctuidae,Triphaena,pronuba,all,0.018,28.8,10.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Pyralidae,Anagasta,kuehniella,all,0.026,29.8,9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Pyralidae,Ostrinia,nubilalis,all,0.043,32.5,9.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Lepidoptera,Tortricidae,Epiphyas,postvittana,all,0.032,27.2,9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Chloropidae,Hippelates,bishoppi,all,0.075,35,9.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Chloropidae,Hippelates,pallipes,all,0.084,32.1,7.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Chloropidae,Hippelates,pusio,all,0.079,32.5,7.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Culicidae,Aedes,flavescens,all,0.051,22.2,6.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Culicidae,Aedes,vexans,all,0.142,26.3,7.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Culicidae,Anopheles,quadrimaculatus,all,0.114,32.8,9.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Culicidae,Toxorhynchites,brevipalpis,all,0.062,28.4,6.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.131,30.2,8.6,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.122,29.2,8.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Muscidae,Haematobia,stimulans,all,0.081,29.5,8.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Muscidae,Lyperosia,irritans,all,0.121,34.1,10.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Muscidae,Musca,domestica,all,0.125,33.6,9.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Diptera,Muscidae,Stomoxys,calcitans,all,0.086,32.2,9.6,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Apanteles,operculella,all,0.074,38.1,11.4,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Apanteles,scutellaris,all,0.1,35.2,10.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Apanteles,subandinus,all,0.089,36.1,11.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Aphelinus,semiflavus,all,0.1,31.8,9.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Aphidius,rapae,all,0.098,27,9.2,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Bracon,mellitor,female,0.113,42.5,15.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Bracon,mellitor,male,0.108,36.4,11.9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Praon,palitans,all,0.082,27.6,7.7,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Taylor 1981,Hymenoptera,Braconidae,Trioxys,utilus,all,0.105,28.7,8.8,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.199,26.1,9.9,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.19,26.3,10.3,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Sporleder et al. 2016,Lepidoptera,Gelechiidae,Symmetrischema,tangolias,larva,0.0476,28.58,10.5,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Sporleder et al. 2016,Lepidoptera,Gelechiidae,Symmetrischema,tangolias,pupa,0.099,31.8,11.1,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0441,34.9999,11.022,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0338,32.4999,10.7097,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.2468,30.9122,9.0574,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0637,29.6918,8.766,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0836,30.6414,8.8934,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0316,29.9478,8.599,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,0.39e-01,29.52,9.38,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,1.41e-01,26.68,6.45,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,2.81e-01,31.28,1.73,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,0.78e-01,26.76,6.14,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Lygaeidae,Geocoris,articolor,all,0.055,37.2,8.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Lygaeidae,Geocoris,pallens,all,0.063,37,8.6,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Lygaeidae,Geocoris,punctipes,all,0.044,33.8,7.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Miridae,Lygus,desetinus,all,0.056,32.1,9.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Miridae,Lygus,hesperus,all,0.062,36.2,12.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.165,26.2,9,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.151,27.5,11,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Brevicoryne,brassicae,all,0.097,26.4,10.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Brevicoryne,brassicae,all,0.1,26.6,8.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Hyadaphis,pseudobrassicae,all,0.144,26,9.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Macrosiphum,euphorbiae,all,0.14,30.6,14.6,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Myzus,persicae,all,0.129,24.7,9.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Aphididae,Myzus,persicae,all,0.155,26.3,10.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Cicadellidae,Circulifer,tenelus,all,0.052,35.2,9.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,11,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hemiptera,Cicadellidae,Empoasca,fabae,all,0.071,30.7,8.9,FR,10.1086/283683,American Naturalist,1981,NA,NA,11,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Bruchidae,Callosobruchus,rhodesianus,all,0.039,31.2,8,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Chrysomelidae,Crioceris,asparagi,all,0.071,37.6,13.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Chrysomelidae,Oulema,melanopus,all,0.051,33.7,11.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Cucujidae,Cryptolestes,ferrugineus,all,0.047,36.5,9.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,10,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Curculionidae,Anthonomus,grandis,all,0.075,36.7,9.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Curculionidae,Hypera,brunneipennis,all,0.058,36.8,12.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Curculionidae,Hypera,postica,all,0.074,37.8,11.9,FR,10.1086/283683,American Naturalist,1981,NA,NA,8,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,45% RH,0.019,31.6,6.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,60% RH,0.025,33.2,7.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,75% RH,0.032,34,7.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Dermestidae,Dermestes,frischii,90% RH,0.039,34.3,8.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Tenebrionidae,Tribolium,castaneum,all,0.049,34.6,7.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Coleoptera,Tenebrionidae,Tribolium,confusum,all,0.038,32.8,7.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,8,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Arctiidae,Hyphantria,cunea,all,0.031,32.9,9.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Agrostis,segetum,all,0.026,33.9,12.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Amanthes,c-nigrum,all,0.026,28.3,9.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Mamestra,configurata,all,0.027,32.2,12.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Pseudaletia,unipunctata,all,0.037,32.5,10.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Simyra,henrici,all,0.029,37.7,13.6,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Spodoptera,frugiperda,all,0.056,37.4,11.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Noctuidae,Triphaena,pronuba,all,0.018,28.8,10.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Pyralidae,Anagasta,kuehniella,all,0.026,29.8,9,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Pyralidae,Ostrinia,nubilalis,all,0.043,32.5,9.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Lepidoptera,Tortricidae,Epiphyas,postvittana,all,0.032,27.2,9,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Chloropidae,Hippelates,bishoppi,all,0.075,35,9.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Chloropidae,Hippelates,pallipes,all,0.084,32.1,7.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Chloropidae,Hippelates,pusio,all,0.079,32.5,7.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Culicidae,Aedes,flavescens,all,0.051,22.2,6.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Culicidae,Aedes,vexans,all,0.142,26.3,7.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Culicidae,Anopheles,quadrimaculatus,all,0.114,32.8,9.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,8,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Culicidae,Toxorhynchites,brevipalpis,all,0.062,28.4,6.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.131,30.2,8.6,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Drosophilidae,Drosophila,melanogaster,all,0.122,29.2,8.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Muscidae,Haematobia,stimulans,all,0.081,29.5,8.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Muscidae,Lyperosia,irritans,all,0.121,34.1,10.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Muscidae,Musca,domestica,all,0.125,33.6,9.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Diptera,Muscidae,Stomoxys,calcitans,all,0.086,32.2,9.6,FR,10.1086/283683,American Naturalist,1981,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Apanteles,operculella,all,0.074,38.1,11.4,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Apanteles,scutellaris,all,0.1,35.2,10.1,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Apanteles,subandinus,all,0.089,36.1,11.5,FR,10.1086/283683,American Naturalist,1981,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Aphelinus,semiflavus,all,0.1,31.8,9.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Aphidius,rapae,all,0.098,27,9.2,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Bracon,mellitor,female,0.113,42.5,15.3,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Bracon,mellitor,male,0.108,36.4,11.9,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Praon,palitans,all,0.082,27.6,7.7,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Taylor 1981,Hymenoptera,Braconidae,Trioxys,utilus,all,0.105,28.7,8.8,FR,10.1086/283683,American Naturalist,1981,NA,NA,5,NA,NA,NA,NA,NA,NA,NA
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.199,26.1,9.9,FR,10.1093/ee/21.1.10,Environmental Entomology,1992,5,28,20,7,NA,NA,NA,NA,NA,NA
+Lamb 1992,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,0.19,26.3,10.3,FR,10.1093/ee/21.1.10,Environmental Entomology,1992,5,28,20,16,NA,NA,NA,NA,NA,NA
+Sporleder et al. 2016,Lepidoptera,Gelechiidae,Symmetrischema,tangolias,larva,0.0476,28.58,10.5,FR,10.1111/jen.12321,Journal of Applied Entomology,2016,10,28,6,708,12:12,60,Peru,-12.067057,-75.202983,NA
+Sporleder et al. 2016,Lepidoptera,Gelechiidae,Symmetrischema,tangolias,pupa,0.099,31.8,11.1,FR,10.1111/jen.12321,Journal of Applied Entomology,2016,10,28,6,708,12:12,60,Peru,-12.067057,-75.202983,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,0.0441,34.9999,11.022,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,0.0338,32.4999,10.7097,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.2468,30.9122,9.0574,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.0637,29.6918,8.766,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.0836,30.6414,8.8934,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0316,29.9478,8.599,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,0.39e-01,29.52,9.38,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,1.41e-01,26.68,6.45,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,2.81e-01,31.28,1.73,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,0.78e-01,26.76,6.14,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Regniere et al. 2012,Lepidoptera,Tortricidae,Choristoneura,occidentalis,eggs,0.19,29.7,9.5,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,4.7,28,7,20,NA,NA,NA,NA,NA,NA
+Regniere et al. 2012,Coleoptera,Curculionidae,Dendroctonus,ponderosae,eggs,0.194,24.5,7.6,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,7.6,31.9,7,NA,NA,NA,NA,NA,NA,NA
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,0.05063,30.52,8.962,FR,10.1093/ee/13.3.868,Environmental Entomology,1984,5,38.5,13,100,16:8,60,Canada,49.89887,-97.134378,NA

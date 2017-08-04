@@ -1,5 +1,5 @@
-rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),,,,,,,,,,
-,,,,,,,,,,
+rT ~ (Dmin/2 * (exp(aa*(T - Topt)) + exp(-bb*(T - Topt))))^(-1),,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Dmin,Topt,aa,bb,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,24.3383,34.0646,0.1943,0.1111,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,31.9226,31.475,0.2182,0.1147,Francois Rebaudo,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,24.3383,34.0646,0.1943,0.1111,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,31.9226,31.475,0.2182,0.1147,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA

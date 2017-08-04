@@ -1,4 +1,6 @@
-rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),,,,,,,,,,,,
-,,,,,,,,,,,,
+rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))) + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
 REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,p25,aa,bb,cc,dd,ee,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.0455,8814.36,-14877.95,298.81,47258.52,316.695,FR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Hilbert and Logan 1983,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.0455,8814.36,-14877.95,298.81,47258.52,316.695,FR,10.1093/ee/12.1.1,Environmental Entomology,1983,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Regniere et al. 2012,Lepidoptera,Tortricidae,Choristoneura,occidentalis,eggs,0.158,11443,-59715,283.9,99958,308.22,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,4.7,28,7,20,NA,NA,NA,NA,NA,NA
+Regniere et al. 2012,Coleoptera,Curculionidae,Dendroctonus,ponderosae,eggs,0.248,16783,-69985,280.9,100003,301.1,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,7.6,31.9,7,NA,NA,NA,NA,NA,NA,NA
