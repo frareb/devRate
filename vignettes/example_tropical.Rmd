@@ -37,48 +37,86 @@ eggs, larva, and pupa).
       15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
       20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
       35, 0.0002), ncol = 2, byrow = TRUE)
+      
+    data(exTropicalMoth)
+    str(exTropicalMoth)
+    R> List of 2
+    R> $ raw     :List of 3
+    R>  ..$ eggs : num [1:16, 1:2] 10 10 13 15 15 15.5 16 16 17 20 ...
+    R>  ..$ larva: num [1:14, 1:2] 10 10 10 13 15 15.5 15.5 15.5 17 20 ...
+    R>  ..$ pupa : num [1:17, 1:2] 10 10 10 13 15 15 15.5 15.5 16 16 ...
+    R> $ NLSmodel:List of 3
+    R>  ..$ eggs :List of 6
+    R> ...
+    R>  ..$ larva:List of 6
+    R> ...
+    R>  ..$ pupa :List of 6
+    R> ...
 
 ## Finding models in the literature
 Before attempting to fit any model to the empirical data, the devRate function
 "devRateFind" search the database for previous articles fitting which models to
-the organism, either by Order, Family, or species.
+the organism, either by Order, Family, or species. The most used models are
+presented at the top of the data.frame.
 
     devRateFind(orderSP = "Lepidoptera")
-    R> [ davidson_44 ]   Logistic: Davidson 1944 (15 times)
-    R> [ campbell_74 ]   Linear: Campbell et al. 1974 (108 times)
-    R> [ logan6_76 ]   Logan-6: Logan et al. 1976 (19 times)
-    R> [ logan10_76 ]   Logan-10: Logan et al. 1976 (12 times)
-    R> [ analytis_77 ]   Analytis: Analytis 1977 (7 times)
-    R> [ schoolfieldHigh_81 ]   Schoolfield High: Schoolfield et al. 1981 (3 times)
-    R> [ taylor_81 ]   Gauss: Taylor 1981 (21 times)
-    R> [ poly2 ]   Second-order polynomial: - (4 times)
-    R> [ harcourtYee_82 ]   Third-order polynomial: Harcourt and Yee 1982 (13 times)
-    R> [ poly4 ]   Forth-order polynomial: - (5 times)
-    R> [ rootsq_82 ]   Root square: Ratkowsky et al. 1982 (1 times)
-    R> [ hilbertLogan_83 ]   Holling type III: Hilbert and Logan 1983 (9 times)
-    R> [ lactin1_95 ]   Lactin-1: Lactin et al. 1995 (7 times)
-    R> [ lactin2_95 ]   Lactin-2: Lactin et al. 1995 (28 times)
-    R> [ briere1_99 ]   Briere-1: Briere et al. 1999 (22 times)
-    R> [ briere2_99 ]   Briere-2: Briere et al. 1999 (17 times)
-    R> [ kontodimas_04 ]   Equation 16: Kontodimas et al. 2004 (4 times)
-    R> [ damos_08 ]   Simplified beta type: Damos and Savopoulou 2008 (1 times)
-    R> [ regniere_12 ]   Regniere: Regniere et al. 2012 (1 times)
+    R>              equation occu
+    R> 2         campbell_74  108
+    R> 19         lactin2_95   32
+    R> 21         briere1_99   23
+    R> 10          taylor_81   22
+    R> 4           logan6_76   19
+    R> 22         briere2_99   18
+    R> 1         davidson_44   15
+    R> 13     harcourtYee_82   13
+    R> 5          logan10_76   12
+    R> 16    hilbertLogan_83   10
+    R> 11            wang_82    9
+    R> 6  sharpeDeMichele_77    8
+    R> 18         lactin1_95    8
+    R> 7         analytis_77    7
+    R> 14              poly4    5
+    R> 3          stinner_74    4
+    R> 12              poly2    4
+    R> 17            lamb_92    4
+    R> 23      kontodimas_04    4
+    R> 24           damos_08    4
+    R> 9  schoolfieldHigh_81    3
+    R> 8      schoolfield_81    1
+    R> 15          rootsq_82    1
+    R> 20       wangengel_98    1
+    R> 25        regniere_12    1
+    
+Here we can see that at the time of thie vignette, campbell_74 model was used 
+108 times to characterize the relatiohship between development rate and temperature 
+for the Lepidoptera Order, and the taylor_81 model 22 times.
 
     devRateFind(familySP = "Gelechiidae")
-    R> [ campbell_74 ]   Linear: Campbell et al. 1974 (12 times)
-    R> [ logan6_76 ]   Logan-6: Logan et al. 1976 (4 times)
-    R> [ logan10_76 ]   Logan-10: Logan et al. 1976 (1 times)
-    R> [ analytis_77 ]   Analytis: Analytis 1977 (3 times)
-    R> [ taylor_81 ]   Gauss: Taylor 1981 (2 times)
-    R> [ harcourtYee_82 ]   Third-order polynomial: Harcourt and Yee 1982 (1 times)
-    R> [ poly4 ]   Forth-order polynomial: - (1 times)
-    R> [ rootsq_82 ]   Root square: Ratkowsky et al. 1982 (1 times)
-    R> [ lactin1_95 ]   Lactin-1: Lactin et al. 1995 (3 times)
-    R> [ lactin2_95 ]   Lactin-2: Lactin et al. 1995 (3 times)
-    R> [ briere1_99 ]   Briere-1: Briere et al. 1999 (3 times)
-    R> [ damos_08 ]   Simplified beta type: Damos and Savopoulou 2008 (1 times)
+    R>          equation occu
+    R> 1     campbell_74   12
+    R> 10     lactin2_95    7
+    R> 2       logan6_76    4
+    R> 9      lactin1_95    4
+    R> 11     briere1_99    4
+    R> 12       damos_08    4
+    R> 4     analytis_77    3
+    R> 5       taylor_81    2
+    R> 3      logan10_76    1
+    R> 6  harcourtYee_82    1
+    R> 7           poly4    1
+    R> 8       rootsq_82    1
+    
+If we focus on the Family (Gelechiidae), campbell_74 has been used 12 times, and
+taylor_81 2 times.
 
-Then, the "devRateInfo" function provides additional information on these models
+    devRateFind(species = "Tecia solanivora")
+    R> [1] equation occu    
+    R> <0 rows> (or 0-length row.names)
+    
+Unfortunately, the species Tecia solanivora is not in the package database, so 
+that we have to find a closely-related species.
+
+The "devRateInfo" function provides additional information on these models
 and on parameter estimations.
 
     devRateInfo(eq = taylor_81)
@@ -132,27 +170,41 @@ and on parameter estimations.
     R> short exposures to high temperatures. The rate at which development rate falls
     R> away from Tm is measured by To." Taylor 1981
 
-Information from the database can be plotted using the "devRatePlotInfo" function.
+Here we can see that Symmetrischema tangolias study by Sporleder et al. 2016 has 
+used the taylor_81 model. 
+
+Information from the database can be plotted using the "devRatePlotInfo" function 
+if we want to have a first look on the taylor_81 model.
 
     devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
       ylim = c(0, 0.20), xlim = c(0, 50))
 
 ## Fitting models to empirical datasets
-The empirical data can be fitted to any model in the database with the
-"devRateModel" function
+Now that we have a model candidate and starting parameter estimates from a 
+closely-related species, we can start the fitting process with our empirical 
+data (NLS fit). The empirical data can be fitted to any model in the database 
+with the "devRateModel" function, which returns an object of class "nls".
 
-    mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+    mEggs <- devRateModel(eq = taylor_81, 
+      temp = exTropicalMoth$raw$eggs[,1], 
+      devRate = exTropicalMoth$raw$eggs[,2],
       startValues = list(Rm = 0.05, Tm = 30, To = 5))
       
-    mLarva <- devRateModel(eq = taylor_81, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+    mLarva <- devRateModel(eq = taylor_81, 
+      temp = exTropicalMoth$raw$larva[,1], 
+      devRate = exTropicalMoth$raw$larva[,2],
       startValues = list(Rm = 0.05, Tm = 25, To = 10))
       
-    mPupa <- devRateModel(eq = taylor_81, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+    mPupa <- devRateModel(eq = taylor_81, 
+      temp = exTropicalMoth$raw$pupa[,1], 
+      devRate = exTropicalMoth$raw$pupa[,2],
       startValues = list(Rm = 0.1, Tm = 30, To = 10))
       
 The summary of the "devRateModel" can be optained with the "devRatePrint" function.
 
-    devRatePrint(myNLS = mLarva, temp = rawDevLarva[,1], devRate = rawDevLarva[,2])
+    devRatePrint(myNLS = mLarva, 
+      temp = exTropicalMoth$raw$larva[,1], 
+      devRate = exTropicalMoth$raw$larva[,2])
     R> ##################################################
     R> ### Parameter estimates and overall model fit
     R> ##################################################
@@ -219,13 +271,22 @@ The summary of the "devRateModel" can be optained with the "devRatePrint" functi
 
 Empirical data can be plotted against the model using the "devRatePlot" function.
 
-    devRatePlot(eq = taylor_81, nlsDR = mEggs, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
+    devRatePlot(eq = taylor_81, 
+      nlsDR = mEggs, 
+      temp = exTropicalMoth$raw$eggs[,1], 
+      devRate = exTropicalMoth$raw$eggs[,2],
       pch = 16, ylim = c(0, 0.2))
       
-    devRatePlot(eq = taylor_81, nlsDR = mLarva, temp = rawDevLarva[,1], devRate = rawDevLarva[,2],
+    devRatePlot(eq = taylor_81, 
+      nlsDR = mLarva, 
+      temp = exTropicalMoth$raw$larva[,1], 
+      devRate = exTropicalMoth$raw$larva[,2],
       pch = 16, ylim = c(0, 0.2))
       
-    devRatePlot(eq = taylor_81, nlsDR = mPupa, temp = rawDevPupa[,1], devRate = rawDevPupa[,2],
+    devRatePlot(eq = taylor_81, 
+      nlsDR = mPupa, 
+      temp = exTropicalMoth$raw$pupa[,1], 
+      devRate = exTropicalMoth$raw$pupa[,2],
       pch = 16, ylim = c(0, 0.2))
 
 <!-- ```{r, echo=FALSE, results='asis'} -->
@@ -236,12 +297,14 @@ Empirical data can be plotted against the model using the "devRatePlot" function
 <!-- ``` -->
 
 ## Forecasting phenologies from empirical temperature
+From the "nls" object obtained above, we can build a simple phenology model using 
+temperature time series (e.g., to forecast the organism outbreaks).
 In this example the temperature dataset is built from a Normal distribution of mean
-15 and a standard deviation of 1, with a time step of one day. The developmental
+15 and a standard deviation of 1, with a time step of one day. The development
 models used are those previously fitted with the Taylor model for the three stages.
 We assumed that the average time for female adults to lay eggs was of 1 day. We
-simulated 500 individuals, with a stochasticity in developmental rate centered on
-the developmental rate, with a standard deviation of 0.015 (Normal distribution).
+simulated 500 individuals, with a stochasticity in development rate centered on
+the development rate, with a standard deviation of 0.015 (Normal distribution).
 
     forecastTsolanivora <- devRateIBM(
       tempTS = rnorm(n = 100, mean = 15, sd = 1),
@@ -308,5 +371,11 @@ the developmental rate, with a standard deviation of 0.015 (Normal distribution)
     R>  [41] 13.86618 15.10432 15.81162 15.54097 13.39031 16.13360 15.25043 ...
     R>  [61] 14.62629 15.47062 14.06978 15.24159 14.68912 14.90124 16.97001 ...
     R>  [81] 15.80832 15.33636 16.05875 16.28860 14.14241 13.81280 16.15399 ...
+
+Results can be plotted using the "devRateIBMPlot" function. From this simple 
+model we can observe that if eggs of the first generation are layed at time t = 0, 
+adults should be seen at t = [65:85], if the temperature time series correspond 
+to the temperatures experienced by the organism and in the absence of other 
+limiting factors.
 
     devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density")
