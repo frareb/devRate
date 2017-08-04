@@ -1,3 +1,4 @@
+### TESTING MODELS
 
 test_that("devRateModel janisch_32 Phthorimaea operculella (Lepidoptera:Gelechiidae)", {
   rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
