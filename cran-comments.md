@@ -3,14 +3,14 @@
 * database improved
 
 ## Test environments
-* Windows 10, R XXX
-* Linux Ubuntu R XXX
-* win-builder (XXX)
+* Windows 10, R 3.4.1
+* Linux Ubuntu R XXXX
+* win-builder (R Under development 2017-08-03 r73028)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
 
-There was 1 NOTE with win-builder (devel 2017-05-09 r72665):
+There was 1 NOTE with win-builder:
 
 * Maintainer: 'Rebaudo Francois <francois.rebaudo@ird.fr>'
 => OK
