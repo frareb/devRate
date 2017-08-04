@@ -24,6 +24,16 @@
 #'   stocha = 0.015,
 #'   timeLayEggs = 1
 #' )
+#' forecastWang_82 <- devRateIBMdataBase(
+#'   tempTS = rnorm(n = 120, mean = 20, sd = 1),
+#'   timeStepTS = 1,
+#'   eq = wang_82,
+#'   species = "Neoscona doenitzi",
+#'   lifeStages = c("all"),
+#'   numInd = 10,
+#'   stocha = 0.015,
+#'   timeLayEggs = 1
+#' )
 #' @export
 devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numInd = 10, stocha, timeLayEggs = 1){
   models <- lapply(seq_along(lifeStages), function(z){ # get list of parameters for each model
