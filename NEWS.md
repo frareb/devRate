@@ -1,3 +1,6 @@
+## devRate 0.1.4
+* 
+
 ## devRate 0.1.3
 * typos and grammatical errors in manual fixed
 * example from the vignette included in the package
