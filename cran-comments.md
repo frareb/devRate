@@ -4,13 +4,13 @@
 * vignette with more information and interpretation
 * devRateFind function now returns a data.frame
 * new function to model phenology from the package database
-* BDD modif: refs with new column entries
+* BDD modif: references with new column entries
 * BDD update: 35 models and 619 entries ; 138 species
 
 ## Test environments
 * Windows 10, R 3.4.1
-* Linux Ubuntu R XXXX
-* win-builder (R Under development 2017-08-03 r73028)
+* Linux Ubuntu 16.04 R 3.4.1
+* win-builder (R Under development 2017-08-06 r73048)
 
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
