@@ -601,7 +601,7 @@
 #'
 #' @description Taylor, F. (1981) Ecology and evolution of physiological time in insects.
 #' American Naturalist, 1-23.
-#' Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low
+#' @description Lamb, RJ. (1992) Developmental rate of Acyrthosiphon pisum (Homoptera: Aphididae) at low
 #' temperatures: implications for estimating rate parameters for insects.
 #' Environmental Entomology 21(1): 10-19.
 #'
