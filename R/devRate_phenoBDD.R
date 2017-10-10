@@ -1,5 +1,5 @@
 #' Forecast ectotherm phenology as a function of temperature and development rate models
-#' aivalable in the package database
+#' available in the package database
 #'
 #' @param tempTS The temperature time series (a vector).
 #' @param timeStepTS The time step of the temperature time series (a numeric with 1 = one day).
