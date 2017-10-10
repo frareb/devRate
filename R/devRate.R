@@ -20,7 +20,7 @@
 #'
 #' The devRate package provides three categories of functions:
 #'
-#' - to find development rate information about a specific organism (Order, Family, Genus, species): which equations were used and which are the asociated parameters (e.g., helpful to estimate starting values for your empirical data sets);
+#' - to find development rate information about a specific organism (Order, Family, Genus, species): which equations were used and which are the associated parameters (e.g., helpful to estimate starting values for your empirical data sets);
 #'
 #' - to relate development rate and temperature; and
 #'
