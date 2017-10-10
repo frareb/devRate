@@ -8,7 +8,7 @@
 #' @param lifeStages The life stages available for the species and the model.
 #' @param numInd The number of individuals for the simulation (an integer).
 #' @param stocha The standard deviation of a Normal distribution centered on
-#'    develomental rate to create stochasticity among individuals (a numeric).
+#'    development rate to create stochasticity among individuals (a numeric).
 #' @param timeLayEggs The delay between emergence of adults and the time where
 #'    females lay eggs in time steps (a numeric).
 #' @return A list with three elements: the table of phenology for each individual,

@@ -5,7 +5,7 @@
 #' @param nlsDR The result returned by the \code{devRateModel} function.
 #' @param tempMap A matrix containing temperatures in degrees.
 #' @return A matrix with development rates predicted from the model.
-#' @details The \code{devRateMap} function is designed for a single ecthoterm
+#' @details The \code{devRateMap} function is designed for a single ectotherm
 #'   life stage, but the resulted matrix of development rate can be performed
 #'   for each life stage in order to obtain the whole organism development.
 #'   Input temperatures should preferably cover the organism development period
