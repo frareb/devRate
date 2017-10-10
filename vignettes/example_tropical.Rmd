@@ -88,7 +88,7 @@ presented at the top of the data.frame.
     R> 25        regniere_12    1
     
 Here we can see that at the time of thie vignette, campbell_74 model was used 
-108 times to characterize the relatiohship between development rate and temperature 
+108 times to characterize the relationship between development rate and temperature 
 for the Lepidoptera Order, and the taylor_81 model 22 times.
 
     devRateFind(familySP = "Gelechiidae")
@@ -200,7 +200,7 @@ with the "devRateModel" function, which returns an object of class "nls".
       devRate = exTropicalMoth$raw$pupa[,2],
       startValues = list(Rm = 0.1, Tm = 30, To = 10))
       
-The summary of the "devRateModel" can be optained with the "devRatePrint" function.
+The summary of the "devRateModel" can be obtained with the "devRatePrint" function.
 
     devRatePrint(myNLS = mLarva, 
       temp = exTropicalMoth$raw$larva[,1], 
@@ -373,7 +373,7 @@ the development rate, with a standard deviation of 0.015 (Normal distribution).
     R>  [81] 15.80832 15.33636 16.05875 16.28860 14.14241 13.81280 16.15399 ...
 
 Results can be plotted using the "devRateIBMPlot" function. From this simple 
-model we can observe that if eggs of the first generation are layed at time t = 0, 
+model we can observe that if eggs of the first generation are laid at time t = 0, 
 adults should be seen at t = [65:85], if the temperature time series correspond 
 to the temperatures experienced by the organism and in the absence of other 
 limiting factors.
