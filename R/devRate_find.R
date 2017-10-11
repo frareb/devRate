@@ -22,7 +22,7 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
   for(i in names(devRateEqList)){
     eq <- get(i)
     if(orderSP != "" & familySP == "" & species == ""){
-      if(orderSP %in% eq$startVal[,"ordersp"] == TRUE){
+      if(orderSP %in% eq$startVal[,"ordersp"]){ #  == TRUE
         occu <- sum(as.character(eq$startVal[,"ordersp"]) == orderSP)
         # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
         vFind <- c(vFind, occu)
@@ -30,7 +30,7 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
       }
     }
     if(familySP != "" & species == ""){
-      if(familySP %in% eq$startVal[,"familysp"] == TRUE){
+      if(familySP %in% eq$startVal[,"familysp"]){ # == TRUE
         occu <- sum(as.character(eq$startVal[,"familysp"]) == familySP)
         # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
         vFind <- c(vFind, occu)
@@ -38,7 +38,7 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
       }
     }
     if(species != ""){
-      if(species %in% eq$startVal[,"genSp"] == TRUE){
+      if(species %in% eq$startVal[,"genSp"]){ # == TRUE
         occu <- sum(as.character(eq$startVal[,"genSp"]) == species)
         # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
         vFind <- c(vFind, occu)
