@@ -17,36 +17,40 @@
 #' @export
 devRateFind <- function(orderSP = "", familySP = "", species = ""){
   devRateEqList <- devRateEqList # avoid "no visible binding for global variable devRateEqList" Note
-  vFind <- vector()
-  vEq <- vector()
-  for(i in names(devRateEqList)){
-    eq <- get(i)
-    if(orderSP != "" & familySP == "" & species == ""){
-      if(orderSP %in% eq$startVal[,"ordersp"]){ #  == TRUE
-        occu <- sum(as.character(eq$startVal[,"ordersp"]) == orderSP)
-        # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
-        vFind <- c(vFind, occu)
-        vEq <- c(vEq, i)
+  if(length(c(orderSP, familySP, species)) == 3 &&
+     is.character(orderSP) &&
+     is.character(familySP) &&
+     is.character(species)){
+    vFind <- vector()
+    vEq <- vector()
+    for(i in names(devRateEqList)){
+      eq <- get(i)
+      if(orderSP != "" & familySP == "" & species == ""){
+        if(orderSP %in% eq$startVal[,"ordersp"]){ #  == TRUE
+          occu <- sum(as.character(eq$startVal[,"ordersp"]) == orderSP)
+          vFind <- c(vFind, occu)
+          vEq <- c(vEq, i)
+        }
+      }
+      if(familySP != "" & species == ""){
+        if(familySP %in% eq$startVal[,"familysp"]){ # == TRUE
+          occu <- sum(as.character(eq$startVal[,"familysp"]) == familySP)
+          vFind <- c(vFind, occu)
+          vEq <- c(vEq, i)
+        }
+      }
+      if(species != ""){
+        if(species %in% eq$startVal[,"genSp"]){ # == TRUE
+          occu <- sum(as.character(eq$startVal[,"genSp"]) == species)
+          vFind <- c(vFind, occu)
+          vEq <- c(vEq, i)
+        }
       }
     }
-    if(familySP != "" & species == ""){
-      if(familySP %in% eq$startVal[,"familysp"]){ # == TRUE
-        occu <- sum(as.character(eq$startVal[,"familysp"]) == familySP)
-        # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
-        vFind <- c(vFind, occu)
-        vEq <- c(vEq, i)
-      }
-    }
-    if(species != ""){
-      if(species %in% eq$startVal[,"genSp"]){ # == TRUE
-        occu <- sum(as.character(eq$startVal[,"genSp"]) == species)
-        # cat("\n[", i, "]", strwrap(x = paste0(": ", occu, " times"), width = 80))
-        vFind <- c(vFind, occu)
-        vEq <- c(vEq, i)
-      }
-    }
+    dfFind <- data.frame(equation = vEq, occu = vFind)
+    dfFind <- dfFind[order(dfFind[, 2], decreasing = TRUE), ]
+    return(dfFind)
+  } else {
+    print("Error in arguments provided: only one argument of type character is allowed")
   }
-  dfFind <- data.frame(equation = vEq, occu = vFind)
-  dfFind <- dfFind[order(dfFind[, 2], decreasing = TRUE), ]
-  return(dfFind)
 }
