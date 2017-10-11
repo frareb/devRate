@@ -5,7 +5,8 @@
 #' @param orderSP Find models by Order.
 #' @param familySP Find models by Family.
 #' @param species Find models by species (Genus species).
-#' @return A data.frame with the name of the equations and the number of occurrences in the database.
+#' @return A data.frame with the name of the equations, the number of occurrences in the database,
+#'   and the number of parameters for each equation.
 #' @examples
 #' devRateFind(orderSP = "Lepidoptera")
 #' devRateFind(familySP = "Gelechiidae")
@@ -47,8 +48,12 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
         }
       }
     }
-    dfFind <- data.frame(equation = vEq, occu = vFind)
+    vParam <- sapply(vEq, function(j){
+      sum(grepl(names(get(j)$startVal), pattern = "^(param)"))
+    })
+    dfFind <- data.frame(equation = vEq, occu = vFind, paramNumb = vParam)
     dfFind <- dfFind[order(dfFind[, 2], decreasing = TRUE), ]
+    rownames(dfFind) <- NULL
     return(dfFind)
   } else {
     print("Error in arguments provided: only one argument of type character is allowed")
