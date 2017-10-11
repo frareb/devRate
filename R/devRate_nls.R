@@ -12,7 +12,7 @@
 #'   Lamb 1992 where the function returns a list of two objects of class \code{nls}).
 #' @details \code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
 #'   two equations: one for the temperatures below the optimal temperature and another for the
-#'   tamperatures above the optimal temperature. For these equations, \code{startValues} should
+#'   temperatures above the optimal temperature. For these equations, \code{startValues} should
 #'   be a list of two lists, where the second element only contain starting estimates not
 #'   specified in the first element, e.g., for Stinner et al.:
 #'   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
