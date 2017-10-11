@@ -21,7 +21,14 @@
 #   25, 0.200, 30, 0.200, 30, 0.180, 50, 0.01), ncol = 2, byrow = TRUE)
 # devRateFindStartNls(temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2], eq = taylor_81)
 devRateFindStartNls <- function(temp, devRate, eq){
-  library(manipulate)
+  # library(manipulate)
+
+  if (requireNamepace("manipulate", quietly = TRUE)) {
+    ...
+  } else {
+    stop("To use this functionality, you need the package: manipulate")
+  }
+
   switch(EXPR = eq$id,
        "eq010" = {
         manipulate(
