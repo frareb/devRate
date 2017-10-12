@@ -25,33 +25,33 @@ raw data presented below (a list of three elements for eggs, larva, and pupa), a
 list of the NLS fit to the Taylor model (taylor_81; a list of three elements  for 
 eggs, larva, and pupa).
 
-    rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
-      13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
-      25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+```{r}
+## Experimental temperatures and development rate for the eggs
+expeTempEggs <- c(10.0, 10.0, 15.0, 15.0, 15.5, 13.0, 16.0, 16.0, 17.0, 20.0, 20.0, 
+              25.0, 25.0, 30.0, 30.0, 35.0)
+expeDevEggs <- c(0.031, 0.039, 0.047, 0.059, 0.066, 0.072, 0.083, 0.1, 0.1, 0.1, 0.143, 
+             0.171, 0.2, 0.2, 0.18, 0.001)
+rawDevEggs <- matrix(c(expeTempEggs, expeDevEggs), ncol = 2)
 
-    rawDevLarva <- matrix(c(10, 0.010, 10, 0.014, 10, 0.019, 13, 0.034, 15, 0.024,
-      15.5, 0.029, 15.5, 0.034, 15.5, 0.039, 17, 0.067, 20, 0.050, 25, 0.076,
-      25, 0.056, 30, 0.0003, 35, 0.0002), ncol = 2, byrow = TRUE)
+## Experimental temperatures and development rate for the larva
+expeTempLarva <- c(10.0, 10.0, 10.0, 13.0, 15.0, 15.5, 15.5, 15.5, 17.0, 20.0, 25.0, 
+                   25.0, 30.0, 35.0)
+expeDevLarva <- c(0.01, 0.014, 0.019, 0.034, 0.024, 0.029, 0.034, 0.039, 0.067, 0.05, 
+                  0.076, 0.056, 0.0003, 0.0002)
+rawDevLarva <- matrix(c(expeTempLarva, expeDevLarva), ncol = 2)
 
-    rawDevPupa <- matrix(c(10, 0.001, 10, 0.008, 10, 0.012, 13, 0.044, 15, 0.017,
-      15, 0.044, 15.5, 0.039, 16, 0.034, 15.5, 0.037, 16, 0.051, 17, 0.051,
-      20, 0.080, 20, 0.092, 25, 0.102, 25, 0.073, 30, 0.005,
-      35, 0.0002), ncol = 2, byrow = TRUE)
-      
-    data(exTropicalMoth)
-    str(exTropicalMoth)
-    R> List of 2
-    R> $ raw     :List of 3
-    R>  ..$ eggs : num [1:16, 1:2] 10 10 13 15 15 15.5 16 16 17 20 ...
-    R>  ..$ larva: num [1:14, 1:2] 10 10 10 13 15 15.5 15.5 15.5 17 20 ...
-    R>  ..$ pupa : num [1:17, 1:2] 10 10 10 13 15 15 15.5 15.5 16 16 ...
-    R> $ NLSmodel:List of 3
-    R>  ..$ eggs :List of 6
-    R> ...
-    R>  ..$ larva:List of 6
-    R> ...
-    R>  ..$ pupa :List of 6
-    R> ...
+## Experimental temperatures and development rate for the pupa
+expeTempPupa <- c(10.0, 10.0, 10.0, 13.0, 15.0, 15.0, 15.5, 15.5, 16.0, 16.0, 17.0, 
+                  20.0, 20.0, 25.0, 25.0, 30.0, 35.0)
+expeDevPupa <- c(0.001, 0.008, 0.012, 0.044, 0.017, 0.044, 0.017, 0.044, 0.039, 0.034, 
+                 0.037, 0.051, 0.051, 0.08, 0.092, 0.102, 0.073, 0.005, 0.0002)
+rawDevPupa <- matrix(c(expeTempPupa, expeDevPupa), ncol = 2)
+
+## Same dataset included in the package
+library("devRate")
+data(exTropicalMoth)
+str(exTropicalMoth[[1]])
+```
 
 ## Finding models in the literature
 Before attempting to fit any model to the empirical data, the devRate function
@@ -59,116 +59,34 @@ Before attempting to fit any model to the empirical data, the devRate function
 the organism, either by Order, Family, or species. The most used models are
 presented at the top of the data.frame.
 
-    devRateFind(orderSP = "Lepidoptera")
-    R>              equation occu
-    R> 2         campbell_74  108
-    R> 19         lactin2_95   32
-    R> 21         briere1_99   23
-    R> 10          taylor_81   22
-    R> 4           logan6_76   19
-    R> 22         briere2_99   18
-    R> 1         davidson_44   15
-    R> 13     harcourtYee_82   13
-    R> 5          logan10_76   12
-    R> 16    hilbertLogan_83   10
-    R> 11            wang_82    9
-    R> 6  sharpeDeMichele_77    8
-    R> 18         lactin1_95    8
-    R> 7         analytis_77    7
-    R> 14              poly4    5
-    R> 3          stinner_74    4
-    R> 12              poly2    4
-    R> 17            lamb_92    4
-    R> 23      kontodimas_04    4
-    R> 24           damos_08    4
-    R> 9  schoolfieldHigh_81    3
-    R> 8      schoolfield_81    1
-    R> 15          rootsq_82    1
-    R> 20       wangengel_98    1
-    R> 25        regniere_12    1
+```{r}
+devRateFind(orderSP = "Lepidoptera")
+```
     
 Here we can see that at the time of thie vignette, campbell_74 model was used 
 108 times to characterize the relationship between development rate and temperature 
 for the Lepidoptera Order, and the taylor_81 model 22 times.
 
-    devRateFind(familySP = "Gelechiidae")
-    R>          equation occu
-    R> 1     campbell_74   12
-    R> 10     lactin2_95    7
-    R> 2       logan6_76    4
-    R> 9      lactin1_95    4
-    R> 11     briere1_99    4
-    R> 12       damos_08    4
-    R> 4     analytis_77    3
-    R> 5       taylor_81    2
-    R> 3      logan10_76    1
-    R> 6  harcourtYee_82    1
-    R> 7           poly4    1
-    R> 8       rootsq_82    1
-    
+```{r}
+devRateFind(familySP = "Gelechiidae")
+```
+
 If we focus on the Family (Gelechiidae), campbell_74 has been used 12 times, and
 taylor_81 2 times.
 
-    devRateFind(species = "Tecia solanivora")
-    R> [1] equation occu    
-    R> <0 rows> (or 0-length row.names)
-    
+```{r}
+devRateFind(species = "Tecia solanivora")
+```
+
 Unfortunately, the species Tecia solanivora is not in the package database, so 
 that we have to find a closely-related species.
 
 The "devRateInfo" function provides additional information on these models
 and on parameter estimations.
 
-    devRateInfo(eq = taylor_81)
-    R> ----------------------------------------
-    R> Gauss 
-    R> ----------------------------------------
-    R> Taylor, F. (1981) Ecology and evolution of physiological time in insects.
-    R> American Naturalist, 1-23.  Lamb, RJ. (1992) Developmental rate of
-    R> Acyrthosiphon pisum (Homoptera: Aphididae) at low temperatures: implications
-    R> for estimating rate parameters for insects. Environmental Entomology 21(1):
-    R> 10-19.
-    R> 
-    R> rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
-    R> <environment: namespace:devRate>
-    R> 
-    R> Parameter estimates from the literature (eq$startVal): 
-    R> 
-    R>    ...                      genSp  stage param.Rm param.Tm param.To                     ref
-    R> 1  ...         Geocoris articolor    all   0.0550  37.2000   8.8000             Taylor 1981
-    R> 2  ...           Geocoris pallens    all   0.0630  37.0000   8.6000             Taylor 1981
-    R> 3  ...         Geocoris punctipes    all   0.0440  33.8000   7.7000             Taylor 1981
-    R> 4  ...            Lygus desetinus    all   0.0560  32.1000   9.8000             Taylor 1981
-    R> 5  ...             Lygus hesperus    all   0.0620  36.2000  12.8000             Taylor 1981
-    R> 6  ...        Acyrthosiphon pisum    all   0.1650  26.2000   9.0000             Taylor 1981
-    R> 7  ...        Acyrthosiphon pisum    all   0.1510  27.5000  11.0000             Taylor 1981
-    R> 8  ...      Brevicoryne brassicae    all   0.0970  26.4000  10.5000             Taylor 1981
-    R> 9  ...      Brevicoryne brassicae    all   0.1000  26.6000   8.4000             Taylor 1981
-    R> 10 ...  Hyadaphis pseudobrassicae    all   0.1440  26.0000   9.1000             Taylor 1981
-    R> 11 ...     Macrosiphum euphorbiae    all   0.1400  30.6000  14.6000             Taylor 1981
-    R> 12 ...             Myzus persicae    all   0.1290  24.7000   9.3000             Taylor 1981
-    R> 13 ...             Myzus persicae    all   0.1550  26.3000  10.4000             Taylor 1981
-    R> 14 ...         Circulifer tenelus    all   0.0520  35.2000   9.2000             Taylor 1981
-    R> 15 ...             Empoasca fabae    all   0.0710  30.7000   8.9000             Taylor 1981
-    R> 16 ... Callosobruchus rhodesianus    all   0.0390  31.2000   8.0000             Taylor 1981
-    R> 17 ...         Crioceris asparagi    all   0.0710  37.6000  13.3000             Taylor 1981
-    R> ...
-    R> 62 ...        Acyrthosiphon pisum    all   0.1990  26.1000   9.9000               Lamb 1992
-    R> 63 ...        Acyrthosiphon pisum    all   0.1900  26.3000  10.3000               Lamb 1992
-    R> 64 ...   Symmetrischema tangolias  larva   0.0476  28.5800  10.5000   Sporleder et al. 2016
-    R> 65 ...   Symmetrischema tangolias   pupa   0.0990  31.8000  11.1000   Sporleder et al. 2016
-    R> 66 ...           Nephus includens    all   0.0441  34.9999  11.0220  Kontodimas et al. 2004
-    R> 67 ...          Nephus bisignatus    all   0.0338  32.4999  10.7097  Kontodimas et al. 2004
-    R> 68 ...            Cydia pomonella    egg   0.2468  30.9122   9.0574      Aghdam et al. 2009
-    R> 69 ...            Cydia pomonella  larva   0.0637  29.6918   8.7660      Aghdam et al. 2009
-    R> 70 ...            Cydia pomonella   pupa   0.0836  30.6414   8.8934      Aghdam et al. 2009
-    R> 71 ...            Cydia pomonella    all   0.0316  29.9478   8.5990      Aghdam et al. 2009
-    R> ...
-    R> 
-    R> Comments: 
-    R> "The curve must be truncated to the right of Tm because of lethal effects of
-    R> short exposures to high temperatures. The rate at which development rate falls
-    R> away from Tm is measured by To." Taylor 1981
+```{r}
+devRateInfo(eq = taylor_81)
+```
 
 Here we can see that Symmetrischema tangolias study by Sporleder et al. 2016 has 
 used the taylor_81 model. 
@@ -176,8 +94,10 @@ used the taylor_81 model.
 Information from the database can be plotted using the "devRatePlotInfo" function 
 if we want to have a first look on the taylor_81 model.
 
-    devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
-      ylim = c(0, 0.20), xlim = c(0, 50))
+```{r, fig.width = 6, fig.height = 6}
+devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
+  ylim = c(0, 0.20), xlim = c(0, 50))
+```
 
 ## Fitting models to empirical datasets
 Now that we have a model candidate and starting parameter estimates from a 
@@ -185,116 +105,52 @@ closely-related species, we can start the fitting process with our empirical
 data (NLS fit). The empirical data can be fitted to any model in the database 
 with the "devRateModel" function, which returns an object of class "nls".
 
-    mEggs <- devRateModel(eq = taylor_81, 
-      temp = exTropicalMoth$raw$eggs[,1], 
-      devRate = exTropicalMoth$raw$eggs[,2],
-      startValues = list(Rm = 0.05, Tm = 30, To = 5))
+```{r}
+mEggs <- devRateModel(eq = taylor_81, 
+  temp = exTropicalMoth$raw$eggs[,1], 
+  devRate = exTropicalMoth$raw$eggs[,2],
+  startValues = list(Rm = 0.05, Tm = 30, To = 5))
       
-    mLarva <- devRateModel(eq = taylor_81, 
-      temp = exTropicalMoth$raw$larva[,1], 
-      devRate = exTropicalMoth$raw$larva[,2],
-      startValues = list(Rm = 0.05, Tm = 25, To = 10))
+mLarva <- devRateModel(eq = taylor_81, 
+  temp = exTropicalMoth$raw$larva[,1], 
+  devRate = exTropicalMoth$raw$larva[,2],
+  startValues = list(Rm = 0.05, Tm = 25, To = 10))
       
-    mPupa <- devRateModel(eq = taylor_81, 
-      temp = exTropicalMoth$raw$pupa[,1], 
-      devRate = exTropicalMoth$raw$pupa[,2],
-      startValues = list(Rm = 0.1, Tm = 30, To = 10))
+mPupa <- devRateModel(eq = taylor_81, 
+  temp = exTropicalMoth$raw$pupa[,1], 
+  devRate = exTropicalMoth$raw$pupa[,2],
+  startValues = list(Rm = 0.1, Tm = 30, To = 10))
+```
       
 The summary of the "devRateModel" can be obtained with the "devRatePrint" function.
 
-    devRatePrint(myNLS = mLarva, 
-      temp = exTropicalMoth$raw$larva[,1], 
-      devRate = exTropicalMoth$raw$larva[,2])
-    R> ##################################################
-    R> ### Parameter estimates and overall model fit
-    R> ##################################################
-    R> 
-    R> Formula: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
-    R> 
-    R> Parameters:
-    R>     Estimate Std. Error t value Pr(>|t|)    
-    R> Rm  0.068383   0.009473   7.219 1.71e-05 ***
-    R> Tm 21.408732   0.729062  29.365 8.41e-12 ***
-    R> To  5.544986   0.865264   6.408 5.02e-05 ***
-    R> ---
-    R> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-    R> 
-    R> Residual standard error: 0.0133 on 11 degrees of freedom
-    R> 
-    R> Number of iterations to convergence: 13 
-    R> Achieved convergence tolerance: 6.653e-06
-    R> 
-    R> ##################################################
-    R> ### Confidence intervals for parameters
-    R> ##################################################
-    R>          2.5 %      97.5 %
-    R> Rm  0.04981547  0.08694955
-    R> Tm 19.97979621 22.83766817
-    R> To  3.84909961  7.24087239
-    R> 
-    R> ##################################################
-    R> ### Residuals distribution and independence
-    R> ##################################################
-    R> ### Normality of the residual distribution
-    R> 
-    R> 	Shapiro-Wilk normality test
-    R> 
-    R> data:  stats::residuals(myNLS)
-    R> W = 0.97915, p-value = 0.9696
-    R> 
-    R> ### Regression of the residuals against a lagged version of themselves
-    R> ### and testing if the slope of the resulting relationship is significantly
-    R> ### different from 0:
-    R> 
-    R> Call:
-    R> stats::lm(formula = stats::residuals(myNLS)[-N] ~ stats::residuals(myNLS)[-1])
-    R> 
-    R> Residuals:
-    R>       Min        1Q    Median        3Q       Max 
-    R> -0.021388 -0.011116  0.002149  0.009943  0.020078 
-    R> 
-    R> Coefficients:
-    R>                               Estimate Std. Error t value Pr(>|t|)
-    R> (Intercept)                  0.0005691  0.0036255   0.157    0.878
-    R> stats::residuals(myNLS)[-1] -0.1654787  0.2965227  -0.558    0.588
-    R> 
-    R> Residual standard error: 0.01307 on 11 degrees of freedom
-    R> Multiple R-squared:  0.02753,	Adjusted R-squared:  -0.06087 
-    R> F-statistic: 0.3114 on 1 and 11 DF,  p-value: 0.588
-    R> 
-    R> ##################################################
-    R> ### Comparing models
-    R> ##################################################
-    R> ### Using AIC and BIC
-    R> Akaike Information Criterion (AIC): -76.6001352945075
-    R> Bayesian Information Criterion (BIC): -74.0439059760465
+```{r}
+devRatePrint(myNLS = mLarva, 
+  temp = exTropicalMoth$raw$larva[,1], 
+  devRate = exTropicalMoth$raw$larva[,2])
+```
 
 Empirical data can be plotted against the model using the "devRatePlot" function.
 
-    devRatePlot(eq = taylor_81, 
-      nlsDR = mEggs, 
-      temp = exTropicalMoth$raw$eggs[,1], 
-      devRate = exTropicalMoth$raw$eggs[,2],
-      pch = 16, ylim = c(0, 0.2))
+```{r, fig.width = 6, fig.height = 6}
+devRatePlot(eq = taylor_81, 
+  nlsDR = mEggs, 
+  temp = exTropicalMoth$raw$eggs[,1], 
+  devRate = exTropicalMoth$raw$eggs[,2],
+  pch = 16, ylim = c(0, 0.2))
       
-    devRatePlot(eq = taylor_81, 
-      nlsDR = mLarva, 
-      temp = exTropicalMoth$raw$larva[,1], 
-      devRate = exTropicalMoth$raw$larva[,2],
-      pch = 16, ylim = c(0, 0.2))
+devRatePlot(eq = taylor_81, 
+  nlsDR = mLarva, 
+  temp = exTropicalMoth$raw$larva[,1], 
+  devRate = exTropicalMoth$raw$larva[,2],
+  pch = 16, ylim = c(0, 0.1))
       
-    devRatePlot(eq = taylor_81, 
-      nlsDR = mPupa, 
-      temp = exTropicalMoth$raw$pupa[,1], 
-      devRate = exTropicalMoth$raw$pupa[,2],
-      pch = 16, ylim = c(0, 0.2))
-
-<!-- ```{r, echo=FALSE, results='asis'} -->
-<!-- knitr::kable(data.frame(Stage = c("Eggs", "Larva", "Pupa"), model = rep("Taylor", 3), -->
-<!--   Rm = c(0.1934, 0.06838, 0.0978), Rm_SE = c(0.01781, 0.009473, 0.0087), -->
-<!--   Tm = c(25.3418, 21.40871, 22.0114), Tm_SE = c(0.76013, 0.729058, 0.4556), -->
-<!--   To = c(-6.8939, 5.54497, -4.7515), To_SE = c(0.76853, 0.865261, 0.4715))) -->
-<!-- ``` -->
+devRatePlot(eq = taylor_81, 
+  nlsDR = mPupa, 
+  temp = exTropicalMoth$raw$pupa[,1], 
+  devRate = exTropicalMoth$raw$pupa[,2],
+  pch = 16, ylim = c(0, 0.15))
+```
 
 ## Forecasting phenologies from empirical temperature
 From the "nls" object obtained above, we can build a simple phenology model using 
@@ -306,71 +162,16 @@ We assumed that the average time for female adults to lay eggs was of 1 day. We
 simulated 500 individuals, with a stochasticity in development rate centered on
 the development rate, with a standard deviation of 0.015 (Normal distribution).
 
-    forecastTsolanivora <- devRateIBM(
-      tempTS = rnorm(n = 100, mean = 15, sd = 1),
-      timeStepTS = 1,
-      models = list(mEggs, mLarva, mPupa),
-      numInd = 500,
-      stocha = 0.015,
-      timeLayEggs = 1)
-    
-    print(forecastTsolanivora)
-    R> [[1]]
-    R>        g1s1 g1s2 g1s3 g2s1
-    R>   [1,]   14   43   68   83
-    R>   [2,]   14   41   67   83
-    R>   [3,]   14   44   79   96
-    R>   [4,]   13   43   75   92
-    R>   [5,]   15   43   68   84
-    R>   [6,]   13   37   65   80
-    R>   [7,]   14   42   68   85
-    R>   [8,]   14   40   67   84
-    R>   [9,]   15   44   78   94
-    R>  [10,]   14   45   76   91
-    R>  ...
-    R> [500,]   14   40   70   87
-    R> 
-    R> [[2]]
-    R> [[2]][[1]]
-    R> Nonlinear regression model
-    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
-    R>    data: data.frame(rT = devRate, T = temp)
-    R>      Rm      Tm      To 
-    R>  0.1934 25.3418 -6.8939 
-    R>  residual sum-of-squares: 0.01303
-    R> 
-    R> Number of iterations to convergence: 13 
-    R> Achieved convergence tolerance: 8.264e-06
-    R> 
-    R> [[2]][[2]]
-    R> Nonlinear regression model
-    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
-    R>    data: data.frame(rT = devRate, T = temp)
-    R>       Rm       Tm       To 
-    R>  0.06838 21.40873  5.54499 
-    R>  residual sum-of-squares: 0.001947
-    R> 
-    R> Number of iterations to convergence: 13 
-    R> Achieved convergence tolerance: 6.653e-06
-    R> 
-    R> [[2]][[3]]
-    R> Nonlinear regression model
-    R>   model: rT ~ Rm * exp(-1/2 * ((T - Tm)/To)^2)
-    R>    data: data.frame(rT = devRate, T = temp)
-    R>      Rm      Tm      To 
-    R>  0.0978 22.0114  4.7515 
-    R>  residual sum-of-squares: 0.002394
-    R> 
-    R> Number of iterations to convergence: 14 
-    R> Achieved convergence tolerance: 3.032e-06
-    R> 
-    R> 
-    R> [[3]]
-    R>   [1] 13.73130 16.34298 15.14231 17.88713 13.84732 14.35198 16.15267 ...
-    R>  [21] 14.88865 15.13143 14.41983 15.66492 14.32055 16.48751 16.47430 ...
-    R>  [41] 13.86618 15.10432 15.81162 15.54097 13.39031 16.13360 15.25043 ...
-    R>  [61] 14.62629 15.47062 14.06978 15.24159 14.68912 14.90124 16.97001 ...
-    R>  [81] 15.80832 15.33636 16.05875 16.28860 14.14241 13.81280 16.15399 ...
+```{r}
+forecastTsolanivora <- devRateIBM(
+  tempTS = rnorm(n = 100, mean = 15, sd = 1),
+  timeStepTS = 1,
+  models = list(mEggs, mLarva, mPupa),
+  numInd = 50,
+  stocha = 0.015,
+  timeLayEggs = 1)
+print(forecastTsolanivora)
+```
 
 Results can be plotted using the "devRateIBMPlot" function. From this simple 
 model we can observe that if eggs of the first generation are laid at time t = 0, 
@@ -378,4 +179,6 @@ adults should be seen at t = [65:85], if the temperature time series correspond
 to the temperatures experienced by the organism and in the absence of other 
 limiting factors.
 
-    devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density")
+```{r, fig.width = 6, fig.height = 6}
+devRateIBMPlot(ibm = forecastTsolanivora, typeG = "density")
+```
