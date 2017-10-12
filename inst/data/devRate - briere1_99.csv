@@ -1,0 +1,32 @@
+rT ~ aa * T * (T - Tmin) * (Tmax - T)^(1 / 2),,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,eggs,0.0001453,9.645,37.6185,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.00004022,8.8676,36.3525,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.000051,9.8042,37.2604,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.00002,9.6188,36.5508,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,eggs,0.0003,12.632,36.299,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,larva,0.00005,9.802,40.274,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Golizadeh et al. 2012,Lepidoptera,Gelechiidae,Phthorimaea,operculella,pupa,0.0002,13.358,36.481,FR,10.1111/j.1744-7917.2012.01503.x,Insect Science,2012,16,36,7,200,8:16,65,Iran,38.252986,48.299232,NA
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,eggs,1.7,10.55,34.00,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L1,2,9.00,34.90,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L2,2.3,7.86,34.60,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L3,2.4,8.10,34.00,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L4,2.3,9.00,34.00,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,L5,1.25,7.73,34.00,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Lepidoptera,Tortricidae,Lobesia,botrana,pupa,0.95,11.55,36.41,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Briere and Pracros 1998
+Briere et al. 1999,Orthoptera,Acrididae,Melanoplus,sanguinipes,all,0.19,15.74,48.90,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Hilbert and Logan 1983
+Briere et al. 1999,Hemiptera,Aphididae,Acyrthosiphon,pisum,all,1.12,0.021,32.29,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Lamb 1992
+Briere et al. 1999,Coleoptera,Chrysomelidae,Aphthona,abdominalis,eggs,1.035,12.92,42.14,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Fornasari 1995
+Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,larva+pupa,0.211,11.25,42.05,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Stinner et al. 1974 and Sharpe et al.1981
+Briere et al. 1999,Lepidoptera,Noctuidae,Helicoverpa,zea,eggs,2.25,10.98,39.93,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Stinner et al. 1974 and Sharpe et al.1981
+Briere et al. 1999,Coleoptera,Chrysomeloidea,Entomoscelis,americana,eggs,5.25,4.63,38.81,FR,10.1093/ee/28.1.22,Environmental Entomology,1999,NA,NA,NA,NA,NA,NA,NA,NA,NA,data from Lamb et al. 1984
+Limonta et al. 2010,Lepidoptera,Geometridae,Idaea,inquinata,eggs,0.0096,11.01,38.65,FR,10.4081/jear.2010.153,Journal of Entomological and Acarological Research,2010,13,38,4,100,0:24,35,NA,NA,NA,NA
+Limonta et al. 2010,Lepidoptera,Geometridae,Idaea,inquinata,eggs,0.00008888,8.86,38.10,FR,10.4081/jear.2010.153,Journal of Entomological and Acarological Research,2010,13,38,4,100,0:24,70,NA,NA,NA,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,eggs,1.89e-04,5.27,37.67,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,larva,0.91e-04,7.18,35.00,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,pupa,1.23e-04,4.56,38.78,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Marchioro and Foerster 2011,Lepidoptera,Yponomeutidae,Plutella,xylostella,all,0.51e-04,7.88,35.00,FR,10.1590/S1519-566X2011000500003,Neotropical Entomology,2011,10,35,7,1200,12:12,70,Brazil,-25.293303,-49.225321,NA
+Ozgokce et al. 2016,Lepidoptera,Gelechiidae,Tuta,absoluta,all,0.000027,8.893,37.597,FR,10.16970/ted.64743,Turkish Journal of Entomology,2016,15,34.1,10,NA,16:8,65,Turquia,36.896819,30.71055,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,NA,NA,NA,FR,10.1093/ee/37.1.38,Environmental Entomology,2008,15,35,5,NA,14:10,65,Iran,35.705563,51.398871,NA
+Golizadeh et al. 2008,Hymenoptera,Ichneumonidae,Diadegma,anurum,all,NA,NA,NA,FR,10.1093/ee/37.1.38,Environmental Entomology,2008,15,35,5,NA,14:10,65,Iran,35.705563,51.398871,NA

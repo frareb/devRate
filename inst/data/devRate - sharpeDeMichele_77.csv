@@ -1,0 +1,16 @@
+rT ~ ((T + 273.16) * exp((aa - bb/(T + 273.16))/1.987)) / (1 + exp((cc - dd/(T + 273.16))/1.987) + exp((ff - gg/(T + 273.16))/1.987)),,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,ff,gg,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Sharpe and DeMichele 1977,Diptera,Drosophilidae,Drosophila,melanogaster,prepupal,19.43,10490,-156.9,-44373,226.6,69113,FR,10.1016/0022-5193(77)90265-X,Journal of Theoretical Biology,1977,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Sharpe and DeMichele 1977,Araneae,Salticidae,Pellenes,seriatus,nymphal,55.64,21600,-589,-168143,177.1,54671,FR,10.1016/0022-5193(77)90265-X,Journal of Theoretical Biology,1977,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,NA,NA,NA,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,NA,NA,NA,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
+Lamb et al. 1984,Coleoptera,Chrysomelidae,Entomoscelis,americana,eggs,6.422,4562,-69.58,-55632,179.8,19999,FR,10.1093/ee/13.3.868,Environmental Entomology,1984,5,38.5,13,100,16:8,60,Canada,49.89887,-97.134378,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L1,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L2,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L3,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L4,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L5,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L6,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,L7,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA
+Lysyk 1989,Lepidoptera,Tortricidae,Choristoneura,pinus pinus,pupa,NA,NA,NA,NA,NA,NA,FR,10.4039/Ent121373-4,Canadian Entomologist,1989,11,31,14,NA,16:8,NA,Canada,NA,NA,NA

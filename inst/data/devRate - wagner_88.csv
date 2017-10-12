@@ -1,0 +1,39 @@
+rT ~ 1/( (1 + exp((cc/1.987) * ((1/dd) - (1/(T + 273.16))) )) / (aa*(T + 273.16)/298.15*exp( (bb/1.987)*((1/298.15) - 1/(T + 273.16)) ) ) ),,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,turcicus,eggs,0.674,40014,39341,294.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,12,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,eggs,0.552,37492,34088,294.5,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,15,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Curculionidae,Sitophilus,oryzae,eggs,0.333,30611,52961,301.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,eggs,0.274,40062,44426,297.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,31,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,eggs,0.187,25739,40926,305.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,38,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,pusillus,eggs,0.187,25739,40926,305.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,38,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,eggs,0.187,25739,40926,305.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,38,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Bostrichidae,Rhyzopertha,dominica,eggs,0.182,40271,41848,299.0,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,13,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,pupa,0.141,34661,37073,302.1,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,37,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,pupa,0.141,34661,37073,302.1,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,37,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,pupa,0.127,26192,43003,306.5,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,14,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,pupa,0.124,19134,60708,311.4,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,29,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,pusillus,pupa,0.124,19134,60708,311.4,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,29,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Bostrichidae,Rhyzopertha,dominica,pupa,0.124,19134,60708,311.4,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,29,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Dermestidae,Trogoderma,inclusum,eggs,0.110,16773,79859,311.9,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,larva,0.088,60047,60191,296.8,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,43,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,larva,0.088,60047,60191,296.8,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,43,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,larva,0.088,60047,60191,296.8,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,43,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Bostrichidae,Rhyzopertha,dominica,larva,0.052,59499,58739,297.1,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,all,0.050,41578,42052,298.7,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,8,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,larva,0.049,64895,63734,297.6,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,larva,0.045,16469,78169,309.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,13,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,larva,0.034,36334,53369,302.2,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,pusillus,larva,0.031,12701,55742,314.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,larva,0.031,11996,214954,309.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,7,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Curculionidae,Sitophilus,oryzae,all,0.029,13915,57050,308.6,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,8,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,all,0.028,20324,71719,308.7,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,12,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,all,0.023,14739,77851,311.9,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,27,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,all,0.023,14739,77851,311.9,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,27,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,pusillus,all,0.022,10814,117859,313.5,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Silvanidae,Oryzaephilus,surinamensis,all,0.022,20028,525140,309.0,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,4,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Cerambycidae,Tropidion,castaneum,all,0.020,7339,617007,311.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,15,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Tenebrionoidea,Tribolium,confusum,all,0.020,7339,617007,311.3,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,15,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,larva,0.019,23372,65217,307.7,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,3,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Laemophloeidae,Cryptolestes,ferrugineus,all,0.018,24656,57450,307.0,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,3,NA,NA,NA,NA,NA,NA,NA
+Hagstrum et Milliken 1988,Coleoptera,Bostrichidae,Rhyzopertha,dominica,all,0.017,11172,952361,309.4,FR,10.1093/aesa/81.4.539,Annals of the Entomological Society of America,1988,NA,NA,4,NA,NA,NA,NA,NA,NA,NA

@@ -1,0 +1,7 @@
+rT ~ a0 + a1 * T + a2 * T^2,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,a0,a1,a2,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Johnson et al. 1992,Lepidoptera,Pyralidae,Plodia,interplInctella,all,-0.13003,0.01022,-0.000144,FR,10.1093/jee/85.2.561,Journal of Economic Entomology,1992,25,35,4,100,14:10,60,USA,37.639416,-120.994833,NA
+Johnson et al. 1992,Lepidoptera,Pyralidae,Plodia,interplInctella,all,-0.12294,0.00954,-0.000144,FR,10.1093/jee/85.2.561,Journal of Economic Entomology,1992,25,35,4,100,14:10,60,USA,37.639416,-120.994833,NA
+Johnson et al. 1992,Lepidoptera,Pyralidae,Plodia,interplInctella,all,-0.11842,0.00938,-0.000144,FR,10.1093/jee/85.2.561,Journal of Economic Entomology,1992,25,35,4,100,14:10,60,USA,37.639416,-120.994833,NA
+Johnson et al. 1992,Lepidoptera,Pyralidae,Plodia,interplInctella,all,-0.11879,0.00919,-0.000144,FR,10.1093/jee/85.2.561,Journal of Economic Entomology,1992,25,35,4,100,14:10,60,USA,37.639416,-120.994833,NA
