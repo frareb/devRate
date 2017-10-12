@@ -3,7 +3,7 @@
 \name{devRateIBMdataBase}
 \alias{devRateIBMdataBase}
 \title{Forecast ectotherm phenology as a function of temperature and development rate models
-aivalable in the package database}
+available in the package database}
 \usage{
 devRateIBMdataBase(tempTS, timeStepTS, eq, species, lifeStages, numInd = 10,
   stocha, timeLayEggs = 1)
@@ -22,7 +22,7 @@ devRateIBMdataBase(tempTS, timeStepTS, eq, species, lifeStages, numInd = 10,
 \item{numInd}{The number of individuals for the simulation (an integer).}
 
 \item{stocha}{The standard deviation of a Normal distribution centered on
-develomental rate to create stochasticity among individuals (a numeric).}
+development rate to create stochasticity among individuals (a numeric).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
 females lay eggs in time steps (a numeric).}
@@ -33,7 +33,7 @@ A list with three elements: the table of phenology for each individual,
 }
 \description{
 Forecast ectotherm phenology as a function of temperature and development rate models
-aivalable in the package database
+available in the package database
 }
 \examples{
 forecastLactin2_95 <- devRateIBMdataBase(

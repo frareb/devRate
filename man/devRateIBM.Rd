@@ -17,7 +17,7 @@ devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
 \item{numInd}{The number of individuals for the simulation (an integer).}
 
 \item{stocha}{The standard deviation of a Normal distribution centered on
-develoment rate to create stochasticity among individuals (a numeric).}
+development rate to create stochasticity among individuals (a numeric).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
 females lay eggs in time steps (a numeric).}
