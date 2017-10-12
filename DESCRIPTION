@@ -20,3 +20,5 @@ Suggests: knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr
+URL: https://github.com/frareb/devRate/
+BugReports: https://github.com/frareb/devRate/issues
