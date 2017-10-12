@@ -1,7 +1,0 @@
-rT ~ aa * (bb - T / 10) * (T / 10)^cc,,,,,,,,,
-,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Damos and Savopoulou 2008,Lepidoptera,Gelechiidae,Anarsia,lineatella,eggs,0.0012,3.6926,5.3946,FR,NA,Journal of Economic Entomology,2008,15,35,5,50,16:8,65,Greece,40.641185,22.941049,NA
-Damos and Savopoulou 2008,Lepidoptera,Gelechiidae,Anarsia,lineatella,larva,0.0004,4.0031,4.8012,FR,NA,Journal of Economic Entomology,2008,15,35,5,50,16:8,65,Greece,40.641185,22.941049,NA
-Damos and Savopoulou 2008,Lepidoptera,Gelechiidae,Anarsia,lineatella,pupa,0.0011,3.869,5.087,FR,NA,Journal of Economic Entomology,2008,15,35,5,50,16:8,65,Greece,40.641185,22.941049,NA
-Damos and Savopoulou 2008,Lepidoptera,Gelechiidae,Anarsia,lineatella,all,0.0003,3.8297,4.876,FR,NA,Journal of Economic Entomology,2008,15,35,5,50,16:8,65,Greece,40.641185,22.941049,NA
