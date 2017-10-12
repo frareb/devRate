@@ -1,10 +1,7 @@
 ## devRate 0.1.4
 * fixed typos and misspellings in the documentation 
 * vignette output is generated automatically
-<<<<<<< HEAD
 * devRateFind function returns number of parameters and enforce single value
-=======
->>>>>>> 2215103175bc57c5bf44687005808ea9b35fa543
 
 ## devRate 0.1.3
 * typos and grammatical errors in manual fixed
