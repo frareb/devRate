@@ -20,9 +20,9 @@ modelsBDD <- read.table("./inst/data/models.csv", header = TRUE, sep = ';', dec 
 
 for (i in 1:nrow(modelsBDD)){
   if(!is.na(modelsBDD$eq2[i])){
-    eqV <- c(as.character(modelsBDD$eq[i]), as.character(modelsBDD$eq2[i]))
+    eqV <- c(formula(as.character(modelsBDD$eq[i])), formula(as.character(modelsBDD$eq2[i])))
   } else {
-    eqV <- as.character(modelsBDD$eq[i])
+    eqV <- formula(as.character(modelsBDD$eq[i]))
   }
   if(!is.na(modelsBDD$eq2[i])){
     eqAltV <- c(as.character(modelsBDD$eqAlt[i]), as.character(modelsBDD$eqAlt2[i]))
@@ -36,7 +36,7 @@ for (i in 1:nrow(modelsBDD)){
   idV <-  as.character(modelsBDD$id[i])
   assign(x = as.character(modelsBDD$variable[i]), value =
            list(
-             eq = formula(eqV),
+             eq = eqV,
              eqAlt = eqAltV,
              name = nameV,
              ref = refV,
