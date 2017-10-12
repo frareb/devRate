@@ -16,7 +16,8 @@ devRatePrint(myNLS, temp, devRate, doPlots = FALSE)
 \item{doPlots}{A boolean to get the residual plot (default = FALSE)}
 }
 \value{
-A custom output of the NLS fit
+A list of six objects (summary of the NLS fit; confidence intervals
+  for the model parameters; test of normality; test of independence; AIC, BIC)
 }
 \description{
 Provide a custom output of the NLS fit.

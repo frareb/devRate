@@ -107,7 +107,8 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
 #' @param temp The temperature
 #' @param devRate The development rate \code{(days)^-1}
 #' @param doPlots A boolean to get the residual plot (default = FALSE)
-#' @return A custom output of the NLS fit
+#' @return A list of six objects (summary of the NLS fit; confidence intervals
+#'   for the model parameters; test of normality; test of independence; AIC, BIC)
 #' @examples
 #' myT <- 5:15
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
@@ -158,6 +159,14 @@ devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
   cat("### Using AIC and BIC\n")
   cat(paste0("Akaike Information Criterion (AIC): ", stats::AIC(myNLS), "\n"))
   cat(paste0("Bayesian Information Criterion (BIC): ", stats::BIC(myNLS), "\n"))
+  # returns list of tests
+  objReturn <-list(sumNLS = summary(myNLS),
+                   confint = stats::confint.default(myNLS),
+                   normRD = stats::shapiro.test(stats::residuals(myNLS)),
+                   indTest = summary(indTest),
+                   AIC = stats::AIC(myNLS),
+                   BIC = stats::BIC(myNLS))
+  return(objReturn)
 }
 
 
