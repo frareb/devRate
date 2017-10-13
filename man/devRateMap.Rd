@@ -18,7 +18,7 @@ A matrix with development rates predicted from the model.
 Create a map from a temperature matrix and a development rate curve
 }
 \details{
-The \code{devRateMap} function is designed for a single ecthoterm
+The \code{devRateMap} function is designed for a single ectotherm
   life stage, but the resulted matrix of development rate can be performed
   for each life stage in order to obtain the whole organism development.
   Input temperatures should preferably cover the organism development period

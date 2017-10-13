@@ -9,7 +9,7 @@ devRatePlotInfo(eq, sortBy = "genSp", stage = "all", ...)
 \arguments{
 \item{eq}{The name of the equation.}
 
-\item{sortBy}{The filter to seperate species ("ordersp", "familysp, "genussp", "species", "genSp").}
+\item{sortBy}{The filter to separate species ("ordersp", "familysp, "genussp", "species", "genSp").}
 
 \item{stage}{The life stage of the organism ("all", "eggs", "L1", "L2", "L3", "L4", "L5",
 "larva", "pupa", "prepupa", "female", "male", ...)}

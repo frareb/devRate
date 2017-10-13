@@ -1,9 +1,0 @@
-rT ~ aa * (T - Tmin)^2 * (Tmax - T),,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,Tmin,Tmax,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,egg,0.000037,7.9376,43.385,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,larva,0.000011,7.5159,41.3481,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,pupa,0.000013,8.1076,42.7492,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
-Aghdam et al. 2009,Lepidoptera,Tortricidae,Cydia,pomonella,all,0.0000057,8.1093,41.5254,FR,10.1603/022.038.0343,Environmental Entomology,2009,10,35,8,135,16:8,50,Iran,37.388392,46.240941,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,includens,all,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA
-Kontodimas et al. 2004,Coleoptera,Coccinellidae,Nephus,bisignatus,all,NA,NA,NA,FR,10.1603/0046-225X-33.1.1,Environmental Entomology,2004,10,37.5,8,25,16:8,65,Grece,38.006485,23.765652,NA

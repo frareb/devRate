@@ -19,12 +19,12 @@ devRatePlot(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE,
 \item{rangeT}{The range of temperatures over which the regression is plotted.
 This argument may be overwritten depending on the equation.}
 
-\item{optText}{A logical indcating wether the name of the eqaution should be written
+\item{optText}{A logical indicating whether the name of the equation should be written
 in the topright corner of the plot.}
 
 \item{spe}{A logical indicating if special plotting rules from literature should apply.}
 
-\item{...}{Aditional arguments for the plot.}
+\item{...}{Additional arguments for the plot.}
 }
 \value{
 Nothing.

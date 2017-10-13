@@ -7,6 +7,9 @@
 #' @param temp The temperature.
 #' @param devRate The development rate \code{(days)^-1}
 #' @param startValues Starting values for the regression.
+#' @param df A data.frame with the temperature in the first column and the
+#'   development rate in the second column (alternative to the use of temp and
+#'   devRate).
 #' @param ... Additional arguments for the \code{nls} function.
 #' @return An object of class \code{nls} (except for Stinner et al. 1974 and
 #'   Lamb 1992 where the function returns a list of two objects of class \code{nls}).
@@ -18,6 +21,11 @@
 #'   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
 #'   and for Lamb 1992:
 #'   \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
+#' @details The temperature should be provided as a vector in argument \code{temp} and
+#'   development rate in another vector in argument \code{devRate}. However, it is
+#'   possible to use the function with a data.frame containing the temperature in the
+#'   first column and the development rate in the sceond column, using the argument
+#'   \code{df}
 #' @examples
 #' ## Example with a linear model (no starting estimates)
 #' myT <- 5:15
@@ -28,8 +36,16 @@
 #' myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
 #' myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
 #'   startValues = list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30)))
+#' ## Example with a data.frame instead of two vectors for temperature and
+#' ## development rate
+#' myDF <- data.frame(myT, myDev)
+#' myNLS <- devRateModel(eq = campbell_74, df = myDF)
 #' @export
-devRateModel <- function(eq, temp, devRate, startValues, ...){
+devRateModel <- function(eq, temp, devRate, startValues, df = NULL, ...){
+  if (!is.null(df)){
+    temp <- df[, 1]
+    devRate <- df[, 2]
+  }
   ### handling exception for <stinner_74> and <lamb_92>
   if(eq$id == "eq040" | eq$id == "eq150"){
     tTh <- temp[devRate == max(devRate, na.rm = TRUE)]
@@ -107,7 +123,8 @@ devRateModel <- function(eq, temp, devRate, startValues, ...){
 #' @param temp The temperature
 #' @param devRate The development rate \code{(days)^-1}
 #' @param doPlots A boolean to get the residual plot (default = FALSE)
-#' @return A custom output of the NLS fit
+#' @return A list of six objects (summary of the NLS fit; confidence intervals
+#'   for the model parameters; test of normality; test of independence; AIC, BIC)
 #' @examples
 #' myT <- 5:15
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
@@ -158,6 +175,14 @@ devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
   cat("### Using AIC and BIC\n")
   cat(paste0("Akaike Information Criterion (AIC): ", stats::AIC(myNLS), "\n"))
   cat(paste0("Bayesian Information Criterion (BIC): ", stats::BIC(myNLS), "\n"))
+  # returns list of tests
+  objReturn <-list(sumNLS = summary(myNLS),
+                   confint = stats::confint.default(myNLS),
+                   normRD = stats::shapiro.test(stats::residuals(myNLS)),
+                   indTest = summary(indTest),
+                   AIC = stats::AIC(myNLS),
+                   BIC = stats::BIC(myNLS))
+  return(objReturn)
 }
 
 

@@ -4,7 +4,7 @@
 \alias{devRateModel}
 \title{Compute non-linear regression}
 \usage{
-devRateModel(eq, temp, devRate, startValues, ...)
+devRateModel(eq, temp, devRate, startValues, df = NULL, ...)
 }
 \arguments{
 \item{eq}{The name of the equation.}
@@ -14,6 +14,10 @@ devRateModel(eq, temp, devRate, startValues, ...)
 \item{devRate}{The development rate \code{(days)^-1}}
 
 \item{startValues}{Starting values for the regression.}
+
+\item{df}{A data.frame with the temperature in the first column and the
+development rate in the second column (alternative to the use of temp and
+devRate).}
 
 \item{...}{Additional arguments for the \code{nls} function.}
 }
@@ -28,12 +32,18 @@ Determine the nonlinear least-squares estimates of the parameters of a nonlinear
 \details{
 \code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
   two equations: one for the temperatures below the optimal temperature and another for the
-  tamperatures above the optimal temperature. For these equations, \code{startValues} should
+  temperatures above the optimal temperature. For these equations, \code{startValues} should
   be a list of two lists, where the second element only contain starting estimates not
   specified in the first element, e.g., for Stinner et al.:
   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
   and for Lamb 1992:
   \code{startValues <- list(list(Rm = 0.05, Tmax = 35, To = 15), list(T1 = 4))}
+
+The temperature should be provided as a vector in argument \code{temp} and
+  development rate in another vector in argument \code{devRate}. However, it is
+  possible to use the function with a data.frame containing the temperature in the
+  first column and the development rate in the sceond column, using the argument
+  \code{df}
 }
 \examples{
 ## Example with a linear model (no starting estimates)
@@ -45,4 +55,8 @@ myT <- seq(from = 0, to = 50, by = 10)
 myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
 myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
   startValues = list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30)))
+## Example with a data.frame instead of two vectors for temperature and
+## development rate
+myDF <- data.frame(myT, myDev)
+myNLS <- devRateModel(eq = campbell_74, df = myDF)
 }
