@@ -1,5 +1,5 @@
 ---
-title: "Using devRate package on T. solanivora (Lepidoptera: Gelechiidae) in Ecuador"
+title: "Using devRate package on _T. solanivora_ (Lepidoptera: Gelechiidae) in Ecuador"
 author: "Francois Rebaudo, using data from Crespo-Perez et al. 2011"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -13,47 +13,81 @@ This vignette exemplifies the use of the devRate package to fit a development ra
 model to an empirical dataset (laboratory experiments at air constant temperatures) 
 and to build a simple phenological model.
 
-## T. solanivora dataset
-The dataset for T. solanivora was retrieved from Crespo-Perez et al.
+The preliminary step is to perform an experiment where your arthropod study model is 
+reared at different constant air temperatures, and to monitor the time at which 
+your individuals change of life stage (e.g., eggs to larva). The monitoring of life 
+stages is commonly expressed in development rate, corresponding to the inverse 
+of the time to reach the next life stage. The time is often expressed in days. For 
+example, if an individual takes 10 days from eggs to larva at 15 degrees Celsius, 
+the development rate is 1/10 = 0.1. In this vignette we used a dataset from the 
+literature.
+
+The dataset for _T. solanivora_ was retrieved from Crespo-Perez et al.
 2011^[Crespo-Pérez, V., Rebaudo, F., Silvain, J.-F. and Dangles, O. (2011)
       Modeling invasive species spread in complex landscapes: the case of
       potato moth in Ecuador. Landscape Ecology, 26, 1447–1461.], using Web
 Plot Digitizer^[Rohatgi, A. (2015) WebPlotDigitalizer: HTML5 Based Online Tool
                 to Extract Numerical Data from Plot Images.]. The dataset is 
-also included in the package in the exTropicalMoth object which is a list of the 
-raw data presented below (a list of three elements for eggs, larva, and pupa), and a 
-list of the NLS fit to the Taylor model (taylor_81; a list of three elements  for 
-eggs, larva, and pupa).
+also included in the package in the exTropicalMoth object. This object structure 
+may seem complicated as it is composed of the laboratory data and the results of the 
+modeling. It was designed to reduce the length of examples in the manual. In this 
+vignette we present how to organize your own dataset from scratch. 
+
+## Organizing the dataset
+
+In this example _T. solanivora_ was reared at different temperatures with various 
+repetitions for each temperature and different temperatures for the different life 
+stages:
+- the eggs were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
+- the larva were reared at 10, 13, 15, 15.5, 17, 20, 25, 30, and 35 degrees
+- the pupa were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
+The development rates were monitored at all these temperatures with various 
+repetitions for each temperature.
+
+The resulting dataset may look like the following table (for eggs development), 
+where the first column corresponds to the temperature and the second column to 
+the development rate.
+
+| Temperature | Development Rate |
+|------------:|-----------------:|
+|10.0         |0.031             |
+|10.0         |0.039             |
+|13.0         |0.072             |
+|...          |...               |
+
+One possibility is to read directly from your table (e.g., using _read.table()_). 
+In this example, we copy-pasted the experimental results to create vectors and 
+data frames.
 
 ```{r}
-## Experimental temperatures and development rate for the eggs
-expeTempEggs <- c(10.0, 10.0, 15.0, 15.0, 15.5, 13.0, 16.0, 16.0, 17.0, 20.0, 20.0, 
+### Experimental temperatures and development rate for the eggs
+expeTempEggs <- c(10.0, 10.0, 13.0, 15.0, 15.0, 15.5, 16.0, 16.0, 17.0, 20.0, 20.0, 
               25.0, 25.0, 30.0, 30.0, 35.0)
-expeDevEggs <- c(0.031, 0.039, 0.047, 0.059, 0.066, 0.072, 0.083, 0.1, 0.1, 0.1, 0.143, 
+expeDevEggs <- c(0.031, 0.039, 0.072, 0.047, 0.059, 0.066, 0.083, 0.1, 0.1, 0.1, 0.143, 
              0.171, 0.2, 0.2, 0.18, 0.001)
-rawDevEggs <- matrix(c(expeTempEggs, expeDevEggs), ncol = 2)
+dfDevEggs <- data.frame(expeTempEggs, expeDevEggs)
 
-## Experimental temperatures and development rate for the larva
+### Experimental temperatures and development rate for the larva
 expeTempLarva <- c(10.0, 10.0, 10.0, 13.0, 15.0, 15.5, 15.5, 15.5, 17.0, 20.0, 25.0, 
                    25.0, 30.0, 35.0)
 expeDevLarva <- c(0.01, 0.014, 0.019, 0.034, 0.024, 0.029, 0.034, 0.039, 0.067, 0.05, 
                   0.076, 0.056, 0.0003, 0.0002)
-rawDevLarva <- matrix(c(expeTempLarva, expeDevLarva), ncol = 2)
+dfDevLarva <- data.frame(expeTempLarva, expeDevLarva)
 
-## Experimental temperatures and development rate for the pupa
+### Experimental temperatures and development rate for the pupa
 expeTempPupa <- c(10.0, 10.0, 10.0, 13.0, 15.0, 15.0, 15.5, 15.5, 16.0, 16.0, 17.0, 
                   20.0, 20.0, 25.0, 25.0, 30.0, 35.0)
-expeDevPupa <- c(0.001, 0.008, 0.012, 0.044, 0.017, 0.044, 0.017, 0.044, 0.039, 0.034, 
-                 0.037, 0.051, 0.051, 0.08, 0.092, 0.102, 0.073, 0.005, 0.0002)
-rawDevPupa <- matrix(c(expeTempPupa, expeDevPupa), ncol = 2)
+expeDevPupa <- c(0.001, 0.008, 0.012, 0.044, 0.017, 0.044, 0.039, 0.037, 0.034, 0.051, 0.051, 0.08, 0.092, 0.102, 0.073, 0.005, 0.0002)
+dfDevPupa <- data.frame(expeTempPupa, expeDevPupa)
 
-## Same dataset included in the package
+### Same dataset included in the package in the form of matrices
 library("devRate")
 data(exTropicalMoth)
 str(exTropicalMoth[[1]])
 ```
 
 ## Finding models in the literature
+
 Before attempting to fit any model to the empirical data, the devRate function
 "devRateFind" search the database for previous articles fitting which models to
 the organism, either by Order, Family, or species. The most used models are
@@ -100,12 +134,43 @@ devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
 ```
 
 ## Fitting models to empirical datasets
+
 Now that we have a model candidate and starting parameter estimates from a 
 closely-related species, we can start the fitting process with our empirical 
 data (NLS fit). The empirical data can be fitted to any model in the database 
 with the "devRateModel" function, which returns an object of class "nls".
 
 ```{r}
+### using the vectors from section "Organizing the dataset"
+mEggs01 <- devRateModel(eq = taylor_81, 
+  temp = expeTempEggs, 
+  devRate = expeDevEggs,
+  startValues = list(Rm = 0.05, Tm = 30, To = 5))
+
+mLarva01 <- devRateModel(eq = taylor_81, 
+  temp = expeTempLarva, 
+  devRate = expeDevLarva,
+  startValues = list(Rm = 0.05, Tm = 25, To = 10))
+      
+mPupa01 <- devRateModel(eq = taylor_81, 
+  temp = expeTempPupa, 
+  devRate = expeDevPupa,
+  startValues = list(Rm = 0.1, Tm = 30, To = 10))
+
+### using the data frames from section "Organizing the dataset"
+mEggs02 <- devRateModel(eq = taylor_81, 
+  df = dfDevEggs,
+  startValues = list(Rm = 0.05, Tm = 30, To = 5))
+
+mLarva02 <- devRateModel(eq = taylor_81, 
+  df = dfDevLarva,
+  startValues = list(Rm = 0.05, Tm = 25, To = 10))
+      
+mPupa02 <- devRateModel(eq = taylor_81, 
+  df = dfDevPupa,
+  startValues = list(Rm = 0.1, Tm = 30, To = 10))
+
+### using the dataset included in the package
 mEggs <- devRateModel(eq = taylor_81, 
   temp = exTropicalMoth$raw$eggs[,1], 
   devRate = exTropicalMoth$raw$eggs[,2],
@@ -125,7 +190,7 @@ mPupa <- devRateModel(eq = taylor_81,
 The summary of the "devRateModel" can be obtained with the "devRatePrint" function.
 
 ```{r}
-devRatePrint(myNLS = mLarva, 
+resultNLS <- devRatePrint(myNLS = mLarva, 
   temp = exTropicalMoth$raw$larva[,1], 
   devRate = exTropicalMoth$raw$larva[,2])
 ```
