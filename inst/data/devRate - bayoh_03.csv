@@ -1,0 +1,4 @@
+rT ~ aa + bb * T + cc * exp(T) + dd * exp(-T),,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,aa,bb,cc,dd,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Bayoh and Lindsay 2003,Diptera,Culicidae,Anopheles,gambiae,all,-0.050,0.005,-2.139e-16,-281357.656,FR,10.1079/BER2003259,Bulletin of Entomological Research,2003,16,34,10,NA,12:12,80,Portugal,37.10289,-8.673906,NA

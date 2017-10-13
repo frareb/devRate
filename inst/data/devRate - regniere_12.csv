@@ -1,0 +1,5 @@
+rT ~ phi * (exp(bb * (T - Tb)) - ((Tm - T)/(Tm - Tb)) * exp(-bb * (T - Tb) / deltab) - ((T - Tb)/(Tm - Tb)) * exp(bb * (Tm - Tb) - (Tm - T)/deltam)),,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,phi,bb,Tb,Tm,deltab,deltam,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Regniere et al. 2012,Lepidoptera,Tortricidae,Choristoneura,occidentalis,eggs,0.0469,0.109,7.2,39.9,1.7,8.7,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,4.7,28,7,20,NA,NA,NA,NA,NA,NA
+Regniere et al. 2012,Coleoptera,Curculionidae,Dendroctonus,ponderosae,eggs,0.0237,0.256,7,30.1,0.02,4.4,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,7.6,31.9,7,NA,NA,NA,NA,NA,NA,NA

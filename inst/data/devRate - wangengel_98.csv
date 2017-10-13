@@ -1,0 +1,5 @@
+rT ~ (2 * (T - Tmin)^aa * (Topt - Tmin)^aa - (T - Tmin)^(2 * aa)) / ((Topt - Tmin)^(2 * aa)),,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,Tmin,aa,Topt,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Regniere et al. 2012,Lepidoptera,Tortricidae,Choristoneura,occidentalis,eggs,NA,NA,NA,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,4.7,28,7,20,NA,NA,NA,NA,NA,NA
+Regniere et al. 2012,Coleoptera,Curculionidae,Dendroctonus,ponderosae,eggs,NA,NA,NA,FR,10.1016/j.jinsphys.2012.01.010,Journal of Insect Physiology,2012,7.6,31.9,7,NA,NA,NA,NA,NA,NA,NA

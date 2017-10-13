@@ -1,0 +1,6 @@
+rT ~ (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(dd/1.987 * (1/ee - 1/(T + 273.16)))),,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+REF,ORDER,FAMILY,GENUS,SPECIES,STAGE,p25,aa,dd,ee,contributor,DOI,journal,year,TminExpe,TmaxExpe,numT,numIndEgg,lightDark,rh,country,coorX,coorY,comments
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,eggs,0.1721,22734.0133,304.6372,47922.0620,FR,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,16,35,8,6,16:8,70,Korea,37.279751,127.007997,NA
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,larva,0.0668,18455.2876,304.2837,46233.6512,FR,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,16,35,8,6,16:8,70,Korea,37.279751,127.007997,NA
+Kim et al. 2001,Lepidoptera,Carposinidae,Carposina,sasakii,pupa,0.0855,20026.8046,304.5422,131610.7072,FR,10.1603/0046-225X-30.2.298,Environmental Entomology,2001,16,35,8,6,16:8,70,Korea,37.279751,127.007997,NA
