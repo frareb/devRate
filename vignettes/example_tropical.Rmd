@@ -112,7 +112,7 @@ taylor_81 2 times.
 devRateFind(species = "Tecia solanivora")
 ```
 
-Unfortunately, the species Tecia solanivora is not in the package database, so 
+Unfortunately, the species _Tecia solanivora_ is not in the package database, so 
 that we have to find a closely-related species.
 
 The "devRateInfo" function provides additional information on these models
@@ -122,8 +122,15 @@ and on parameter estimations.
 devRateInfo(eq = taylor_81)
 ```
 
-Here we can see that Symmetrischema tangolias study by Sporleder et al. 2016 has 
+Here we can see that _Symmetrischema tangolias_ study by Sporleder et al. 2016 has 
 used the taylor_81 model. 
+
+To return only the information on the closely-related species, a specific query 
+can be performed on the taylor_81 model.
+
+```{r}
+taylor_81$startVal[taylor_81$startVal["genSp"] == "Symmetrischema tangolias",]
+```
 
 Information from the database can be plotted using the "devRatePlotInfo" function 
 if we want to have a first look on the taylor_81 model.
@@ -132,6 +139,10 @@ if we want to have a first look on the taylor_81 model.
 devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
   ylim = c(0, 0.20), xlim = c(0, 50))
 ```
+
+In the case that no models were selected a priori because of the research goal 
+(e.g., determination of a thermal metric), the taylor_81 model can be used as 
+a candidate model.
 
 ## Fitting models to empirical datasets
 
