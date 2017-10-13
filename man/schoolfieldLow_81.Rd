@@ -36,7 +36,7 @@ Equation:
       rT = (p25 * (T + 273.16)/298 * exp(aa/1.987 * (1/298 - 1/(T + 273.16)))) / (1 + exp(bb/1.987 * (1/cc - 1/(T + 273.16))))}
 
 where rT is the development rate, T the temperature, p25 the development
-rate at 25 degrees Celcius assuming no enzyme inactivation, aa the enthalpy of
+rate at 25 degrees Celsius assuming no enzyme inactivation, aa the enthalpy of
 activation of the reaction that is catalyzed by the enzyme, bb the change in
 enthalpy associated with low temperature inactivation of the enzyme, cc the
 the temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
