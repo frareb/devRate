@@ -105,54 +105,64 @@ for the Lepidoptera Order, and the taylor_81 model 22 times.
 devRateFind(familySP = "Gelechiidae")
 ```
 
-If we focus on the Family (Gelechiidae), campbell_74 has been used 12 times, and
-taylor_81 2 times.
+If we focus on the Family (Gelechiidae), campbell_74 has been used 12 times, 
+lactin2_95 7 times, logna6_76 4 times, lactin1_95 4 times, briere1_99 4 times, 
+damos_08 4 times, analytis_77 3 tiems, taylor_81 2 times, and so on (this may 
+change as the database is growing).
 
 ```{r}
 devRateFind(species = "Tecia solanivora")
 ```
 
-Unfortunately, the species _Tecia solanivora_ is not in the package database, so 
-that we have to find a closely-related species.
+Unfortunately, the species _Tecia solanivora_ is not in the package database at 
+this time, so that we have to find a closely related species.
 
 The "devRateInfo" function provides additional information on these models
 and on parameter estimations.
 
 ```{r}
 devRateInfo(eq = taylor_81)
+devRateInfo(eq = lactin1_95)
 ```
 
-Here we can see that _Symmetrischema tangolias_ study by Sporleder et al. 2016 has 
-used the taylor_81 model. 
+Here we can see for example that _Symmetrischema tangolias_ study by Sporleder 
+et al. 2016 has used the taylor_81 model, and that _Phthorimaea operculella_ 
+study by Golizadeh et al. 2012 has used the lactin1_95 model. 
 
-To return only the information on the closely-related species, a specific query 
-can be performed on the taylor_81 model.
+To return only the information on the closely related species, a specific query 
+can be performed on the model.
 
 ```{r}
 taylor_81$startVal[taylor_81$startVal["genSp"] == "Symmetrischema tangolias",]
+lactin1_95$startVal[lactin1_95$startVal["genSp"] == "Phthorimaea operculella",]
 ```
 
 Information from the database can be plotted using the "devRatePlotInfo" function 
-if we want to have a first look on the taylor_81 model.
+if we want to have a first look on the taylor_81 or briere1_99 models.
 
 ```{r, fig.width = 6, fig.height = 6}
 devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
   ylim = c(0, 0.20), xlim = c(0, 50))
+devRatePlotInfo (eq = lactin1_95, sortBy = "ordersp",
+  ylim = c(0, 1.00), xlim = c(0, 50))
 ```
 
 In the case that no models were selected a priori because of the research goal 
-(e.g., determination of a thermal metric), the taylor_81 model can be used as 
-a candidate model.
+(e.g., determination of a thermal metric), the taylor_81 or lactin1_95 models 
+can be used as candidate models.
 
 ## Fitting models to empirical datasets
 
-Now that we have a model candidate and starting parameter estimates from a 
-closely-related species, we can start the fitting process with our empirical 
+Now that we have model candidates and starting parameter estimates from a 
+closely related species, we can start the fitting process with our empirical 
 data (NLS fit). The empirical data can be fitted to any model in the database 
 with the "devRateModel" function, which returns an object of class "nls".
 
 ```{r}
 ### using the vectors from section "Organizing the dataset"
+############################################################
+
+### for the taylor_81 model
 mEggs01 <- devRateModel(eq = taylor_81, 
   temp = expeTempEggs, 
   devRate = expeDevEggs,
@@ -168,7 +178,35 @@ mPupa01 <- devRateModel(eq = taylor_81,
   devRate = expeDevPupa,
   startValues = list(Rm = 0.1, Tm = 30, To = 10))
 
+### for the lactin1_95 model
+mEggs01b <- devRateModel(eq = lactin1_95, 
+  temp = expeTempEggs, 
+  devRate = expeDevEggs,
+  startValues = list(aa = 0.177, Tmax = 36.586, deltaT = 5.631))
+
+# mLarva01b <- devRateModel(eq = lactin1_95, 
+#   temp = expeTempLarva, 
+#   devRate = expeDevLarva,
+#   startValues = list(aa = 0.169, Tmax = 37.914, deltaT = 5.912))
+### The algorithm has not found a solution after 50 iterations
+### One possibility is to increase the maximum number of iterations
+### using the "control" argument (see ?nls() for more details).
+
+mLarva01b <- devRateModel(eq = lactin1_95, 
+  temp = expeTempLarva, 
+  devRate = expeDevLarva,
+  startValues = list(aa = 0.169, Tmax = 37.914, deltaT = 5.912), 
+  control = list(maxiter = 500))
+      
+mPupa01b <- devRateModel(eq = lactin1_95, 
+  temp = expeTempPupa, 
+  devRate = expeDevPupa,
+  startValues = list(aa = 0.193, Tmax = 36.291, deltaT = 5.18), 
+  control = list(maxiter = 500))
+
 ### using the data frames from section "Organizing the dataset"
+############################################################
+
 mEggs02 <- devRateModel(eq = taylor_81, 
   df = dfDevEggs,
   startValues = list(Rm = 0.05, Tm = 30, To = 5))
@@ -181,7 +219,9 @@ mPupa02 <- devRateModel(eq = taylor_81,
   df = dfDevPupa,
   startValues = list(Rm = 0.1, Tm = 30, To = 10))
 
-### using the dataset included in the package
+### using the dataset included in the package (only for taylor_81 model)
+############################################################
+
 mEggs <- devRateModel(eq = taylor_81, 
   temp = exTropicalMoth$raw$eggs[,1], 
   devRate = exTropicalMoth$raw$eggs[,2],
@@ -204,13 +244,24 @@ The summary of the "devRateModel" can be obtained with the "devRatePrint" functi
 resultNLS <- devRatePrint(myNLS = mLarva, 
   temp = exTropicalMoth$raw$larva[,1], 
   devRate = exTropicalMoth$raw$larva[,2])
+
+resultNLSb <- devRatePrint(myNLS = mLarva01b, 
+  temp = exTropicalMoth$raw$larva[,1], 
+  devRate = exTropicalMoth$raw$larva[,2])
 ```
 
 Empirical data can be plotted against the model using the "devRatePlot" function.
 
-```{r, fig.width = 6, fig.height = 6}
+```{r, fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 2), mar = c(4, 4, 0, 0))
 devRatePlot(eq = taylor_81, 
   nlsDR = mEggs, 
+  temp = exTropicalMoth$raw$eggs[,1], 
+  devRate = exTropicalMoth$raw$eggs[,2],
+  pch = 16, ylim = c(0, 0.2))
+
+devRatePlot(eq = lactin1_95, 
+  nlsDR = mEggs01b, 
   temp = exTropicalMoth$raw$eggs[,1], 
   devRate = exTropicalMoth$raw$eggs[,2],
   pch = 16, ylim = c(0, 0.2))
@@ -220,12 +271,37 @@ devRatePlot(eq = taylor_81,
   temp = exTropicalMoth$raw$larva[,1], 
   devRate = exTropicalMoth$raw$larva[,2],
   pch = 16, ylim = c(0, 0.1))
+
+devRatePlot(eq = lactin1_95, 
+  nlsDR = mLarva01b, 
+  temp = exTropicalMoth$raw$larva[,1], 
+  devRate = exTropicalMoth$raw$larva[,2],
+  pch = 16, ylim = c(0, 0.1))
       
 devRatePlot(eq = taylor_81, 
   nlsDR = mPupa, 
   temp = exTropicalMoth$raw$pupa[,1], 
   devRate = exTropicalMoth$raw$pupa[,2],
   pch = 16, ylim = c(0, 0.15))
+
+devRatePlot(eq = lactin1_95, 
+  nlsDR = mPupa01b, 
+  temp = exTropicalMoth$raw$pupa[,1], 
+  devRate = exTropicalMoth$raw$pupa[,2],
+  pch = 16, ylim = c(0, 0.15))
+```
+
+## Models comparison
+Models can be compared using the AIC or any function compatible with an "nls" 
+object, such as BIC or logLik (see the R manual for the use and interpretation 
+of these functions, outside of the scope of this vignette). 
+
+```{r}
+### Models for the larva life stage
+c(AIC(mLarva), AIC(mLarva01b))
+c(BIC(mLarva), BIC(mLarva01b))
+c(logLik(mLarva), logLik(mLarva01b))
+
 ```
 
 ## Forecasting phenologies from empirical temperature
