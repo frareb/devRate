@@ -38,13 +38,15 @@ vignette we present how to organize your own dataset from scratch.
 In this example _T. solanivora_ was reared at different temperatures with various 
 repetitions for each temperature and different temperatures for the different life 
 stages:
-- the eggs were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
-- the larva were reared at 10, 13, 15, 15.5, 17, 20, 25, 30, and 35 degrees
-- the pupa were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
+
+* the eggs were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
+* the larva were reared at 10, 13, 15, 15.5, 17, 20, 25, 30, and 35 degrees
+* the pupa were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees.
+
 The development rates were monitored at all these temperatures with various 
 repetitions for each temperature.
 
-The resulting dataset may look like the following table (for eggs development), 
+The resulting dataset looks like the following table (for eggs development), 
 where the first column corresponds to the temperature and the second column to 
 the development rate.
 
@@ -55,9 +57,9 @@ the development rate.
 |13.0         |0.072             |
 |...          |...               |
 
-One possibility is to read directly from your table (e.g., using _read.table()_). 
-In this example, we copy-pasted the experimental results to create vectors and 
-data frames.
+If the dataset is stored into a file, it can be read directly from that file 
+(e.g., using _read.table()_). In this example, we copy-pasted the experimental 
+results to create vectors and data frames.
 
 ```{r}
 ### Experimental temperatures and development rate for the eggs
@@ -89,7 +91,7 @@ str(exTropicalMoth[[1]])
 ## Finding models in the literature
 
 Before attempting to fit any model to the empirical data, the devRate function
-"devRateFind" search the database for previous articles fitting which models to
+"devRateFind" search the database for previous articles fitting models to
 the organism, either by Order, Family, or species. The most used models are
 presented at the top of the data.frame.
 
@@ -97,7 +99,7 @@ presented at the top of the data.frame.
 devRateFind(orderSP = "Lepidoptera")
 ```
     
-Here we can see that at the time of thie vignette, campbell_74 model was used 
+Here we can see that at the time of this vignette, campbell_74 model was used 
 108 times to characterize the relationship between development rate and temperature 
 for the Lepidoptera Order, and the taylor_81 model 22 times.
 
@@ -106,8 +108,8 @@ devRateFind(familySP = "Gelechiidae")
 ```
 
 If we focus on the Family (Gelechiidae), campbell_74 has been used 12 times, 
-lactin2_95 7 times, logna6_76 4 times, lactin1_95 4 times, briere1_99 4 times, 
-damos_08 4 times, analytis_77 3 tiems, taylor_81 2 times, and so on (this may 
+lactin2_95 7 times, logan6_76 4 times, lactin1_95 4 times, briere1_99 4 times, 
+damos_08 4 times, analytis_77 3 times, taylor_81 2 times, and so on (this may 
 change as the database is growing).
 
 ```{r}
@@ -138,7 +140,7 @@ lactin1_95$startVal[lactin1_95$startVal["genSp"] == "Phthorimaea operculella",]
 ```
 
 Information from the database can be plotted using the "devRatePlotInfo" function 
-if we want to have a first look on the taylor_81 or briere1_99 models.
+if we want to have a first look on the taylor_81 or lactin1_95 models.
 
 ```{r, fig.width = 6, fig.height = 6}
 devRatePlotInfo (eq = taylor_81, sortBy = "ordersp",
@@ -153,7 +155,7 @@ can be used as candidate models.
 
 ## Fitting models to empirical datasets
 
-Now that we have model candidates and starting parameter estimates from a 
+Now that we have model candidates and starting parameter estimates from 
 closely related species, we can start the fitting process with our empirical 
 data (NLS fit). The empirical data can be fitted to any model in the database 
 with the "devRateModel" function, which returns an object of class "nls".
@@ -311,7 +313,7 @@ In this example the temperature dataset is built from a Normal distribution of m
 15 and a standard deviation of 1, with a time step of one day. The development
 models used are those previously fitted with the Taylor model for the three stages.
 We assumed that the average time for female adults to lay eggs was of 1 day. We
-simulated 500 individuals, with a stochasticity in development rate centered on
+simulated 50 individuals, with a stochasticity in development rate centered on
 the development rate, with a standard deviation of 0.015 (Normal distribution).
 
 ```{r}
