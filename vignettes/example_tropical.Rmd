@@ -114,7 +114,19 @@ devRateFind(species = "Tecia solanivora")
 ```
 
 Unfortunately, the species _Tecia solanivora_ is not in the package database at 
-this time, so that we have to find a closely related species.
+this time, so that we have to find a closely related species. A rapid search 
+in the literature indicates that _T. solanivora_ is often associated with two tuber 
+moths: _Symmetrischema tangolias_ and _Phthorimaea operculella_, both being of the 
+Gelechiidae family. The devRateFind function can be used to browse the database 
+for these two Gelechiidae species.
+
+```{r}
+devRateFind(species = "Symmetrischema tangolias")
+devRateFind(species = "Phthorimaea operculella")
+```
+
+The taylor_81 model was used for _S. tangolias_ and among others, the lactin1_95 
+model was used for _P. operculella_.
 
 The "devRateInfo" function provides additional information on these models
 and on parameter estimations.
@@ -124,8 +136,8 @@ devRateInfo(eq = taylor_81)
 devRateInfo(eq = lactin1_95)
 ```
 
-Here we can see for example that _Symmetrischema tangolias_ study by Sporleder 
-et al. 2016 has used the taylor_81 model, and that _Phthorimaea operculella_ 
+Here we can see for example that _S. tangolias_ study by Sporleder 
+et al. 2016 has used the taylor_81 model, and that _P. operculella_ 
 study by Golizadeh et al. 2012 has used the lactin1_95 model. 
 
 To return only the information on the closely related species, a specific query 
@@ -146,9 +158,9 @@ devRatePlotInfo (eq = lactin1_95, sortBy = "ordersp",
   ylim = c(0, 1.00), xlim = c(0, 50))
 ```
 
-In the case that no models were selected a priori because of the research goal 
-(e.g., determination of a thermal metric), the taylor_81 or lactin1_95 models 
-can be used as candidate models.
+If there is no a priori model selection (e.g., guided by a specific research 
+question), the taylor_81 and/or lactin1_95 models can be used as candidate 
+models. 
 
 ## Fitting models to empirical datasets
 
