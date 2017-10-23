@@ -1,3 +1,6 @@
+## devRate 0.1.5
+* vignette improved
+
 ## devRate 0.1.4
 * fixed typos and misspellings in the documentation 
 * vignette improved and output is generated automatically
