@@ -8,8 +8,20 @@
 \description{
 The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms.
 }
-\details{
-### How to use the package
+\section{Overview}{
+
+
+The devRate package provides three categories of functions:
+
+- to find development rate information about a specific organism (Order, Family, Genus, species): which equations were used and what are the associated parameters (e.g., helpful to estimate starting values for your empirical data sets);
+
+- to relate development rate and temperature; and
+
+- to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
+}
+
+\section{Usage}{
+
 
 You can use the package:
 
@@ -18,20 +30,19 @@ You can use the package:
 - to know which equations exists and which are most used in the literature; and
 
 - to relate development rate with temperature from your empirical data, using the equations from the package database.
+}
 
-### Installation instructions
+\section{Installation instructions}{
 
-install.packages("devRate")
 
-### Overview
+\code{install.packages("devRate")}
+}
 
-The devRate package provides three categories of functions:
+\section{Citation}{
 
-- to find development rate information about a specific organism (Order, Family, Genus, species): which equations were used and which are the associated parameters (e.g., helpful to estimate starting values for your empirical data sets);
 
-- to relate development rate and temperature; and
-
-- to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
+Please use \code{citation("devRate")} to cite the devRate package.
 
 Author's affiliation: UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
 }
+
