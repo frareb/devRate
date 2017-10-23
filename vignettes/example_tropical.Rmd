@@ -13,14 +13,15 @@ This vignette exemplifies the use of the devRate package to fit a development ra
 model to an empirical dataset (laboratory experiments at air constant temperatures) 
 and to build a simple phenological model.
 
-The preliminary step is to perform an experiment where your arthropod study model is 
+The preliminary step is to perform an experiment where the arthropod study model is 
 reared at different constant air temperatures, and to monitor the time at which 
-your individuals change of life stage (e.g., eggs to larva). The monitoring of life 
+individuals change of life stage (e.g., from eggs to larva). The monitoring of life 
 stages is commonly expressed in development rate, corresponding to the inverse 
-of the time to reach the next life stage. The time is often expressed in days. For 
-example, if an individual takes 10 days from eggs to larva at 15 degrees Celsius, 
-the development rate is 1/10 = 0.1. In this vignette we used a dataset from the 
-literature.
+of the development time needed to reach the next life stage. Development time is 
+usually expressed in days. For example, assuming that an individual needs 10 days to 
+develop from eggs to larva at 15 degrees Celsius, its development rate would be 1/10 
+= 0.1. In this vignette we illustrate the different functions using a dataset from 
+the literature.
 
 The dataset for _T. solanivora_ was retrieved from Crespo-Perez et al.
 2011^[Crespo-Pérez, V., Rebaudo, F., Silvain, J.-F. and Dangles, O. (2011)
@@ -28,27 +29,22 @@ The dataset for _T. solanivora_ was retrieved from Crespo-Perez et al.
       potato moth in Ecuador. Landscape Ecology, 26, 1447–1461.], using Web
 Plot Digitizer^[Rohatgi, A. (2015) WebPlotDigitalizer: HTML5 Based Online Tool
                 to Extract Numerical Data from Plot Images.]. The dataset is 
-also included in the package in the exTropicalMoth object. This object structure 
-may seem complicated as it is composed of the laboratory data and the results of the 
-modeling. It was designed to reduce the length of examples in the manual. In this 
-vignette we present how to organize your own dataset from scratch. 
+also included in the package in the exTropicalMoth object. This object is composed 
+of the laboratory data and results of the modeling (see below). In this vignette we 
+present how to organize your own dataset from scratch. 
 
 ## Organizing the dataset
 
-In this example _T. solanivora_ was reared at different temperatures with various 
-repetitions for each temperature and different temperatures for the different life 
-stages:
+In this example various individuals of _T. solanivora_ were reared at different 
+temperatures and the development rates were monitored for three life stages 
+(eggs, larvae, pupae):
 
 * the eggs were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees
 * the larva were reared at 10, 13, 15, 15.5, 17, 20, 25, 30, and 35 degrees
 * the pupa were reared at 10, 13, 15, 15.5, 16, 17, 20, 25, 30, and 35 degrees.
 
-The development rates were monitored at all these temperatures with various 
-repetitions for each temperature.
-
-The resulting dataset looks like the following table (for eggs development), 
-where the first column corresponds to the temperature and the second column to 
-the development rate.
+The dataset resulting from the rearing experiments looks like the following table 
+(for one life stage) and represents the only input needed by the package devRate.
 
 | Temperature | Development Rate |
 |------------:|-----------------:|
@@ -59,7 +55,8 @@ the development rate.
 
 If the dataset is stored into a file, it can be read directly from that file 
 (e.g., using _read.table()_). In this example, we copy-pasted the experimental 
-results to create vectors and data frames.
+results to create vectors and data frames that are the required input types 
+required by the package.
 
 ```{r}
 ### Experimental temperatures and development rate for the eggs
@@ -155,7 +152,7 @@ can be used as candidate models.
 
 ## Fitting models to empirical datasets
 
-Now that we have model candidates and starting parameter estimates from 
+Now that we have candidate models and starting parameter estimates from 
 closely related species, we can start the fitting process with our empirical 
 data (NLS fit). The empirical data can be fitted to any model in the database 
 with the "devRateModel" function, which returns an object of class "nls".
