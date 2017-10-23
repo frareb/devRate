@@ -56,7 +56,7 @@ The dataset resulting from the rearing experiments looks like the following tabl
 If the dataset is stored into a file, it can be read directly from that file 
 (e.g., using _read.table()_). In this example, we copy-pasted the experimental 
 results to create vectors and data frames that are the required input types 
-required by the package.
+for the package.
 
 ```{r}
 ### Experimental temperatures and development rate for the eggs
