@@ -1,0 +1,126 @@
+---
+title: "Reproducing Shi et al. 2016 results using devRate"
+author: "François Rebaudo, using data from Shi et al. 2016"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sec01}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette exemplifies the use of the devRate package i) to fit a development rate 
+models to empirical datasets with 10 species using 6 nonlinear models, and ii) to 
+compare models based on goodness of fit and the trade-off between the model's 
+gooness of fit and its structural complexity.
+
+It reproduces the results of the study by Shi et al. 2016^[Shi, P. J., Reddy, G. 
+V., Chen, L., & Ge, F. (2015). Comparison of thermal performance equations in 
+describing temperature-dependent developmental rates of insects:(I) empirical 
+models. Annals of the Entomological Society of America, 109(2), 211-215.].
+
+## Nonlinear models
+
+| Model name     | Model name in devRate    | 
+|----------------|--------------------------|
+| Briere-1       |briere1_99                | 
+| Briere-2       |briere2_99                |
+| Lactin         |lactin2_95                |
+| Performance-2  |perf2_11                  |
+| Beta           ||
+| Ratkowsky      ||
+
+## Datasets
+
+__Table 1.__ Datasets of temperature-dependent development rates used by Shi et al. 2016 
+and method used to retrieve the source dataset.
+
+| Sample species               | Source                        | Method            |
+|------------------------------|-------------------------------|-------------------|
+|_Helicoverpa armigera_        | Wu et al. (2009)              | article not found |
+|_Kampimodromus aberrans_      | Broufas et al. (2007)         | Table 3           |
+|_Toxorhyynchites brevipalpis_ | Trpis (1972)                  | Table 1           |
+|_Bactrocera dorsalis_         | Messenger and Flitters (1958) | Table 1           |
+|_Aedes aegypti_               | Gilpin and McClelland (1979)  | article not found |
+|_Bemisia tabaci_ (B-biotype)  | Xiang et al. (2007)           | article not found |
+|_Lipaphis erysimi_            | Liu and Meng (2000)           | Table 1           |
+|_Myzus persicae_              | Liu and Meng (1999)           | Table 1           |
+|_Epilachna varivestis_        | Shirai and Yara (2001)        | Table 4           |
+|_Drosophila buzzatii_         | de Jong (2010)                | Web Plot Digitizer|
+
+The Wu et al. (2009), Gilpin and McClelland (1979), and Xiang et al. (2007) has not been 
+found and were excluded from this analysis.
+
+The Broufas et al. (2007) dataset was retrieved from Table 3 where the mean development 
+period is provided in hours and transformed in the inverse of days.
+
+```{r}
+broufasDS <- data.frame(
+  temp = c(15.0, 17.0, 20.0, 22.0, 25.0, 27.0, 30.0, 33.0, 35.0), 
+  devRate = 1/c(595.4, 463.0, 260.5, 222.5, 161.8, 153.1, 136.0, 147.8, 182.1)/24)
+```
+
+The Trpis et al. (2007) dataset was retrieved from Table 1 where the mean egg development 
+time is provided in hours and transformed in the inverse of days.
+
+```{r}
+trpisDS <- data.frame(
+  temp = c(14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 
+           27.0, 28.0, 29.0, 30.0, 31.0, 32.0), 
+  devRate = 1/c(209.0, 174.0, 165.0, 125.0, 102.0, 90.0, 76.0, 62.0, 55.0, 50.0, 48.0, 
+                44.0, 41.0, 39.0, 38.0, 37.5, 37.0, 38.0, 39.0)/24)
+```
+
+The Messenger and Flitters (1958) dataset was retrieved from Table 1 where the temperature 
+is in Fahrenheit and transformed into Celsius and the mean egg development time is provided 
+in hours and transformed in the inverse of days.
+
+```{r}
+messengerDS <- data.frame(
+  temp = (c(55.0, 56.0, 57.0, 58.0, 60.0, 62.5, 65.0, 67.5, 70.0, 75.0, 80.0, 85.0, 87.5, 
+            90.0, 92.5, 95.0, 96.0, 97.0, 97.5) - 32)/1.8, 
+  devRate = 1/c(263.0, 232.0, 170.5, 148.0, 121.3, 95.5, 74.0, 62.5, 51.5, 38.0, 30.5, 
+                27.0, 25.0, 24.0, 23.5, 25.0, 26.5, 29.3, 34.3)/24)
+```
+
+The Liu and Meng (2000) dataset was retrieved from Table 1 (constant temperatures), and for 
+the altae form. 
+
+```{r}
+liu1DS <- data.frame(
+  temp = c(8.3, 11.3, 14.3, 17.3, 20.1, 22.3, 24.7, 26.5, 28.0, 30.0, 33.0, 35.1), 
+  devRate = 1/c(47.5, 26.1, 15.8, 11.2, 8.3, 6.7, 6.2, 5.7, 5.4, 5.1, 5.6, 7.1))
+```
+
+The Liu and Meng (1999) dataset was retrieved from Table 1 for the altae form.
+
+```{r}
+liu2DS <- data.frame(
+  temp = c(6.2, 8.3, 11.3, 14.3, 17.3, 20.1, 22.3, 24.7, 26.5, 28.0, 30.0), 
+  devRate = 1/c(50.4, 33.9, 21.5, 14.3, 11.2, 8.0, 6.8, 6.2, 5.8, 6.1, 6.5))
+```
+
+The Shirai and Yara (2001) dataset was retrieved from Table 4.
+
+```{r}
+shiraiDS <- data.frame(
+  temp = c(12.5, 15.0, 17.5, 20.0, 22.5, 25.0, 27.5, 30.0, 32.5), 
+  devRate = 1/c(87.0, 55.5, 41.9, 32.4, 26.9, 21.7, 20.1, 20.6, 20.8))
+```
+
+The de Jong (2010) dataset was retrieved using Web Plot Digitizer on Figure 1B.
+
+```{r}
+deJongDS <- data.frame(
+  temp = c(15.1, 16.1, 17.1, 18.0, 21.7, 27.9, 30.1, 31.8), 
+  devRate = c(0.0253, 0.0291, 0.0370, 0.0381, 0.0710, 0.1079, 0.1098, 0.0972))
+```
+
+
+
+
+<!--  `knitr::kable()`. -->
+
+<!-- ```{r, echo=FALSE, results='asis'} -->
+<!-- knitr::kable(head(mtcars, 10)) -->
+<!-- ``` -->
