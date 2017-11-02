@@ -8,6 +8,14 @@
 \description{
 The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms.
 }
+\section{Citation}{
+
+
+Please use \code{citation("devRate")} to cite the devRate package.
+
+Author's affiliation: UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
+}
+
 \section{Overview}{
 
 
@@ -36,13 +44,5 @@ You can use the package:
 
 
 \code{install.packages("devRate")}
-}
-
-\section{Citation}{
-
-
-Please use \code{citation("devRate")} to cite the devRate package.
-
-Author's affiliation: UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
 }
 
