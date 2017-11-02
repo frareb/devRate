@@ -1,3 +1,74 @@
+#' @title Ratkowsky equation of development rate as a function of temperature (Shi 2016 modification).
+#'
+#' @description Ratkowsky, D.A., Olley, J., McMeekin, T.A., and Ball, A. (1982) Relationship between
+#' temperature and growth rate of bacterial cultures. Journal of Bacteriology 149(1): 1-5.
+#' @description Ratkowsky, D.A., R.K. Lowry, T.A. McMeekin, A.N. Stokes, and R.E. Chandler. 1983.
+#' Model for bacterial culture growth rate throughout the entire biokinetic temperature range.
+#' Journal of Bacteriology 154: 1222-1226.
+#' @description Shi, P. J., Reddy, G. V., Chen, L., and Ge, F. (2015). Comparison of thermal performance
+#' equations in describing temperature-dependent developmental rates of insects: (I) empirical models.
+#' Annals of the Entomological Society of America, 109(2), 211-215.
+#'
+#' @details Equation:
+#' \deqn{rT = (cc * (T - T1) * (1 - e^{k * (T - T2)}))^2}{%
+#'       rT = (cc * (T - T1) * (1 - exp(k * (T - T2))))^2}
+#'
+#' @details where rT is the development rate, T the temperature, T1 and T2 the minimum
+#' and maximum temperatures at which rate of growth is zero, cc the slope of the
+#' regression as in the rootsq_82 equation, and k a constant. The Ratkowsky model designed
+#' for microorganisms has been modified by Shi et al. 2016 to describe the temperature-dependent
+#' development rates of insects.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
+#'   \item{com}{An optional comment about the equation use.}
+#'   \item{id}{An id to identify the equation.}
+#' }
+#' @source \url{https://doi.org/10.1093/aesa/sav121}
+#' @docType data
+#' @keywords datasets
+"ratkowsky_83"
+
+#' @title Beta2 equation of development rate as a function of temperature.
+#'
+#' @description Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
+#'   development as a function of temperature. Agricultural and Forest Meteorology 77(1): 1-16.
+#' @description Shi, P. J., Chen, L., Hui, C., & Grissino-Mayer, H. D. (2016). Capture the time when
+#' plants reach their maximum body size by using the beta sigmoid growth equation. Ecological Modelling,
+#' 320, 177-181.
+#' @description Shi, P. J., Reddy, G. V., Chen, L., and Ge, F. (2015). Comparison of thermal performance
+#' equations in describing temperature-dependent developmental rates of insects: (I) empirical models.
+#' Annals of the Entomological Society of America, 109(2), 211-215.
+#'
+#' @details Equation:
+#' \deqn{rT = rm * (\frac{T2 - T}/{T2 - Tm}) * (\frac{T - T1}/{Tm - T1})^{\frac{Tm - T1}/{T2 - Tm}}}{%
+#'       rT = rm * (T2 - T)/(T2 - Tm) * ((T - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm))}
+#'
+#' @details where rT is the development rate, T the temperature, T1, T2,
+#' and Tm the model parameters.
+#'
+#' @format A list of eight elements describing the equation.
+#' \describe{
+#'   \item{eq}{The equation (formula object).}
+#'   \item{eqAlt}{The equation (string).}
+#'   \item{name}{The name of the equation.}
+#'   \item{ref}{The equation reference.}
+#'   \item{refShort}{The equation reference shortened.}
+#'   \item{startVal}{The parameters found in the literature with their references.}
+#'   \item{com}{An optional comment about the equation use.}
+#'   \item{id}{An id to identify the equation.}
+#' }
+#' @source \url{http://dx.doi.org/10.1016/j.ecolmodel.2015.09.012}
+#' @docType data
+#' @keywords datasets
+"beta_16"
+
 #' @title Beta equation of development rate as a function of temperature.
 #'
 #' @description Yin, X., Kropff, M.J., McLaren, G., and Visperas, R.M. (1995) A nonlinear model for crop
