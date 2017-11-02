@@ -2,6 +2,12 @@
 #'
 #' The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms.
 #'
+#' @section Citation:
+#'
+#' Please use \code{citation("devRate")} to cite the devRate package.
+#'
+#' Author's affiliation: UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
+#'
 #' @section Overview:
 #'
 #' The devRate package provides three categories of functions:
@@ -25,12 +31,6 @@
 #' @section Installation instructions:
 #'
 #' \code{install.packages("devRate")}
-#'
-#' @section Citation:
-#'
-#' Please use \code{citation("devRate")} to cite the devRate package.
-#'
-#' Author's affiliation: UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
 #'
 #' @docType package
 #' @name devRate

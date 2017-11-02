@@ -1,0 +1,10 @@
+year <- sub("-.*", "", Sys.Date())
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "Manual",
+         title = "devRate: Quantify the Relationship Between Development Rate and Temperature in Ectotherms",
+         author = personList(as.person("Francois Rebaudo"),
+                             as.person("Quentin Struelens")),
+         year = year,
+         note = note,
+         url = "https://CRAN.R-project.org/package=devRate")
