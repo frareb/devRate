@@ -1,5 +1,5 @@
 ---
-title: "Using devRate package on _T. solanivora_ (Lepidoptera: Gelechiidae) in Ecuador"
+title: "Using devRate package to fit development rate models to an empirical dataset"
 author: "Francois Rebaudo, using data from Crespo-Perez et al. 2011"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
