@@ -20,6 +20,8 @@
 #   16, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
 #   25, 0.200, 30, 0.200, 30, 0.180, 50, 0.01), ncol = 2, byrow = TRUE)
 # devRateFindStartNls(temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2], eq = taylor_81)
+# devRateFindStartNls(temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2], eq = beta_16)
+# devRateFindStartNls(temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2], eq = ratkowsky_83)
 devRateFindStartNls <- function(temp, devRate, eq){
   # library(manipulate)
 
@@ -613,6 +615,40 @@ devRateFindStartNls <- function(temp, devRate, eq){
                bb = slider(0, 20, step = 0.0001, initial = mean(eq$startVal[, 8], na.rm = TRUE)),
                Tm = slider(0, 100, step = 0.0001, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
                Tmin = slider(-10, 20, step = 0.0001, initial = mean(eq$startVal[, 10], na.rm = TRUE))
+             )
+           },
+           "eq350" = {
+             manipulate(
+               {
+                 plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                      ylim = c(0, defYlim),
+                      lwd = 2, pch = 3)
+                 xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+                 points(x = xx, y = rm * (T2 - xx)/(T2 - Tm) * ((xx - T1)/(Tm - T1))^((Tm - T1)/(T2 - Tm)),
+                        type = 'l', lwd = 3)
+               },
+               defYlim = slider(0, 10, step = 0.0001, initial = 1),
+               rm = slider(0, 1, step = 0.0001, initial = 0.5),
+               T1 = slider(0, 50, step = 0.0001, initial = 5),
+               T2 = slider(0, 50, step = 0.0001, initial = 35),
+               Tm = slider(0, 50, step = 0.0001, initial = 20)
+             )
+           },
+           "eq360" = {
+             manipulate(
+               {
+                 plot(x = temp, y = devRate, xlab = "Temperature", ylab = "Development rate",
+                      ylim = c(0, defYlim),
+                      lwd = 2, pch = 3)
+                 xx <- seq(from = min(temp, na.rm = TRUE) - 2, to = max(temp, na.rm = TRUE) + 2, by = 0.1)
+                 points(x = xx, y = (cc * (xx - T1) * (1 - exp(k * (xx - T2))))^2,
+                        type = 'l', lwd = 3)
+               },
+               defYlim = slider(0, 10, step = 0.0001, initial = 1),
+               cc = slider(0, 1, step = 0.0001, initial = 0.05),
+               T1 = slider(0, 50, step = 0.0001, initial = 5),
+               T2 = slider(0, 50, step = 0.0001, initial = 35),
+               k = slider(0, 5, step = 0.0001, initial = 0.05)
              )
            },
            {
