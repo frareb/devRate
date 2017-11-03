@@ -7,7 +7,7 @@
 #' @param devLimit The development rate considered as null (default = 0.01).
 #' @param printOut A logical to print the result (default = FALSE).
 #' @return A matrix with one column and one row for each metric. The metrics names
-#'   are the names of each row.
+#'   are the row names.
 #' @examples
 #' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
 #'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
@@ -20,10 +20,6 @@ dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, 
   devT <- seq(from = lowTempLim, to = highTempLimit, by = prec)
   devRT <- stats::predict(nlsDR, newdata = list(T = devT))
   devRT[devRT < devLimit] <- 0 # for asymptotic functions
-
-  ### TO DO ###
-  ## make exception for all equations
-
   topt <- devT[devRT == max(devRT)]
   cTmin <- max(devT[devRT < devLimit & devT < topt])
   cTmax <- min(devT[devRT < devLimit & devT > topt])
@@ -34,14 +30,14 @@ dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, 
   tsm <- cTmax - topt
 
   dfMetrics <- t(data.frame(
-    "Lower thermal limit of performance" = cTmin,
-    "Upper thermal limit of performance" = cTmax,
-    "Temperature at which rT is maximized" = topt,
-    "Temperature range between cTmax and cTmin" = tolRange,
-    "Temperature min at 0.5 rT" = tbMin,
-    "Temperature max at 0.5 rT" = tbMax,
-    "Temperature range at 0.5 rT" = tbr,
-    "Thermal safety margin" = tsm))
+    "CTmin" = cTmin,
+    "CTmax" = cTmax,
+    "TrTmax" = topt,
+    "TrangeCTmaxCTmin" = tolRange,
+    "Tmin0.5rT" = tbMin,
+    "Tmax0.5rT" = tbMax,
+    "Trange0.5rT" = tbr,
+    "TSM" = tsm))
   if(printOut == TRUE){print(dfMetrics)}
   return(dfMetrics)
 }
@@ -56,26 +52,23 @@ dRGetMetrics <- function(nlsDR, prec = 0.1, lowTempLim = 0, highTempLimit = 60, 
 #' @param devThresh The threshold in development rate to compute min and max temperature (default = 0.1).
 #' @param lifeStage The life stage on which the life traits should be computed (default = "all"; specify ""
 #'   to take into account all life stages).
-#' @param colId The organism information for each column (default = ordersp; choices = "ordersp" for Order,
+#' @param colId The organism information for each column (default = genSp; choices = "ordersp" for Order,
 #'   "familysp" for Family, "genussp" for Genus, "species" for species, and "gensp" for Genus and species).
 #' @param printOut A logical to print the result (default = FALSE).
 #' @return A matrix with one column per organism and one row for each metric. The metrics names
 #'   are the names of each row.
 #' @examples
 #' dRGetMetricsInfo(eq = taylor_81)
+#' dRGetMetricsInfo(eq = taylor_81, devThresh = 0.1)
 # #' @export
 dRGetMetricsInfo <- function(eq, prec = 0.1, lowTempLim = 0, highTempLimit = 60, devLimit = 0.01, devThresh = 0.1,
-                             lifeStage = "all", colId = "ordersp", printOut = FALSE){
-
-  ### TO DO ###
-  ## all exceptions for equations
-
+                             lifeStage = "all", colId = "genSp", printOut = FALSE){
   devT <- seq(from = lowTempLim, to = highTempLimit, by = prec)
   parameters <- eq$startVal[ , grepl( "param." , names( eq$startVal ) ) ]
   parameters <- parameters[grep(pattern = lifeStage, x = as.vector(unlist(eq$startVal["stage"]))), ]
   colNamesId <- as.character(eq$startVal[, colId])[grep(pattern = lifeStage, x = as.vector(unlist(eq$startVal["stage"])))]
   parametersNames <- sapply(strsplit(names(parameters), split = "\\."), "[[", 2)
-  dfMetrics <- sapply(1:nrow(parameters), function(j){
+  dfMetrics <- suppressWarnings(sapply(1:nrow(parameters), function(j){
     for(i in 1:ncol(parameters)){assign(x = parametersNames[i], value = parameters[j, i])}
     x <- devT
     devRT <- eval(parse(text = eq$eqAlt))
@@ -92,30 +85,37 @@ dRGetMetricsInfo <- function(eq, prec = 0.1, lowTempLim = 0, highTempLimit = 60,
     tsm <- cTmax - topt
     tsfX <- cTXmax - topt
     return(c(cTmin, cTmax, topt, tolRange, tbMin, tbMax, tbr, tsm, cTXmin, cTXmax, tolXRange, tsfX))
-  })
+  }))
   dfMetrics[dfMetrics == Inf] <- NA
   dfMetrics[dfMetrics == -Inf] <- NA
+
   rownames(dfMetrics) <- c(
-    "LowerThermalLimit",
-    "UpperThermalLimit",
-    "TempDevMax",
-    "TempRangeLowUp",
-    "TempMin0.5Dev",
-    "TempMax0.5Dev",
-    "TempRange0.5Dev",
-    "ThermalSafetyMargin",
-    "LowerThermalLimitXDev",
-    "UpperThermalLimitXDev",
-    "TempRangeXDev",
-    "ThermalSafetyMarginXDev")
+    "CTmin",
+    "CTmax",
+    "TrTmax",
+    "TrangeCTmaxCTmin",
+    "Tmin0.5rT",
+    "Tmax0.5rT",
+    "Trange0.5rT",
+    "TSM",
+    "CTminX",
+    "CTmaxX",
+    "TrangeCTmaxXCTminX",
+    "TSMX")
   colnames(dfMetrics) <- colNamesId
   return(dfMetrics)
 }
 
-
-# xxx <- lapply(devRateEqList, function(k){
-#   lifeTraits <- dRGetMetricsInfo(eq = k)
-#   print(paste0(k$name, ": ", ncol(lifeTraits)))
-#   return(lifeTraits)
+# pdf(file = "testBDD.pdf")
+# lapply(devRateEqList, function(myEq){
+#   aaa <- dRGetMetricsInfo(eq = myEq, devThresh = 0.1, devLimit = 0.001)
+#   if(ncol(aaa) == 2){
+#     df <- aaa[,colSums(is.na(aaa))<nrow(aaa)]
+#   } else {
+#     df <- aaa
+#   }
+#   boxplot(t(aaa), main = paste0(myEq$name, " (n = ", ncol(df), ")\n", myEq$refShort), las = 3, ylim = c(0, 60))
+#   ncol(aaa)
 # })
+# dev.off()
 
