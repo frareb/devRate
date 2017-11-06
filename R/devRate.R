@@ -32,6 +32,14 @@
 #'
 #' \code{install.packages("devRate")}
 #'
+#' @section Documentation:
+#'
+#' The package includes two vignettes (long-form documentation):
+#'
+#' - quickUserGuide: Using devRate package to fit development rate models to an empirical dataset
+#'
+#' - modelEvaluation: Model evaluation using Shi et al. 2016 study
+#'
 #' @docType package
 #' @name devRate
 NULL
