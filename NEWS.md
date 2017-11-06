@@ -1,3 +1,7 @@
+## devRate 0.1.6
+* 
+* 
+
 ## devRate 0.1.5
 * main vignette improved
 * new sec01 vignette for model evaluation
@@ -18,12 +22,12 @@
 * BDD modif: refs with new column entries
 * BDD update: 35 models and 619 entries ; 138 species
 
-# devRate 0.1.2.
+## devRate 0.1.2.
 * equations in latex in PDF manual using \eqn{latex}{ascii}
 * fixed some typos in manual
 * linear models with auto-starting values
 
-# devRate 0.1.1.
+## devRate 0.1.1.
 * vignette improved
 * help page for function devRateMap improved
 * new devRatePrint function (custom output for nls object)
@@ -33,5 +37,5 @@
 * testing units using testthat package
 * BDD update: 35 models ; 543 entries ; 131 species
 
-# devRate 0.1.0.
+## devRate 0.1.0.
 * Initial submission
