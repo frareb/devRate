@@ -35,11 +35,12 @@ devRateInfo <- function(eq){
 #' devRatePlotInfo(eq = campbell_74, sortBy = "familysp", xlim = c(-10, 30), ylim = c(0, 0.05))
 #' devRatePlotInfo(eq = taylor_81, sortBy = "ordersp", xlim = c(-20, 60), ylim = c(0, 0.2))
 #' devRatePlotInfo(eq = wang_82, sortBy = "ordersp", xlim = c(0, 50), ylim = c(0, 0.06))
+#' devRatePlotInfo(eq = stinner_74, sortBy = "ordersp", xlim = c(0, 50), ylim = c(0, 0.06))
 #' @export
 devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
   listPlot <- split(
-    eq$startVal[as.character(eq$startVal[,6]) == stage,],
-    as.character(eq$startVal[sortBy][as.character(eq$startVal[,6]) == stage,])
+    eq$startVal[(as.character(eq$startVal[,6]) == stage & !is.na(eq$startVal[,7])),],
+    as.character(eq$startVal[sortBy][(as.character(eq$startVal[,6]) == stage  & !is.na(eq$startVal[,7])),])
   )
   if(length(listPlot) > 0){
   graphics::plot(0, type = "n", xlab = "Temperature", ylab = "Development rate", ...)
