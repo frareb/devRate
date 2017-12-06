@@ -1,5 +1,5 @@
 ## devRate 0.1.6
-* 
+* fix bug in devRatePlotInfo for eq. with NA parameter values
 * 
 
 ## devRate 0.1.5
