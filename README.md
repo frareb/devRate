@@ -20,3 +20,8 @@ The devRate package provides three categories of functions:
 
 ### Author's affiliation
 UMR EGCE, Univ. ParisSud, CNRS, IRD, Univ. ParisSaclay, Gif-sur-Yvette, France
+
+To cite this package please use citation("devRate") and/or
+Rebaudo F, Struelens Q, Dangles O. Modelling temperature-dependent development 
+rate and phenology in arthropods: The devRate package for r. Methods Ecol Evol. 
+2017;00:1-7. https://doi.org/10.1111/2041-210X.12935

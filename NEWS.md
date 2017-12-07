@@ -1,6 +1,7 @@
 ## devRate 0.1.6
 * fix bug in devRatePlotInfo for eq. with NA parameter values
 * fix bug in devRatePlotInfo for eq. briere2_99
+* README and devRate package info updated
 
 ## devRate 0.1.5
 * main vignette improved
