@@ -217,8 +217,8 @@ devRatePlotInfo <- function(eq, sortBy = "genSp", stage = "all", ...){
                },
                "eq190" = {
                  aa <- listPlot[[i]][j, colparam]
-                 Tmax <- listPlot[[i]][j, colparam + 1]
-                 Tmin <- listPlot[[i]][j, colparam + 2]
+                 Tmin <- listPlot[[i]][j, colparam + 1]
+                 Tmax <- listPlot[[i]][j, colparam + 2]
                  bb <- listPlot[[i]][j, colparam + 3]
                  fx <- as.function(alist(x =, eval(parse(text = eq$eqAlt))))
                  graphics::curve(fx, add = TRUE, col = i)
