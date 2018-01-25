@@ -1,7 +1,7 @@
-## devRate version 0.1.6
-* fix bug in devRatePlotInfo for eq. with NA parameter values
-* fix bug in devRatePlotInfo for eq. briere2_99
-* README and devRate package info updated
+## devRate version 0.1.7
+* 
+* 
+* 
 
 ## Test environments
 * Windows 10, R 3.4.3
