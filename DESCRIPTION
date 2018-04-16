@@ -3,15 +3,20 @@ Type: Package
 Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.1.7
-Authors@R: c(person("Francois", "Rebaudo", role = c("aut", "cre"),
-    email = "francois.rebaudo@ird.fr"),
-    person("Quentin", "Struelens", role = "aut"))
-Author: Francois Rebaudo [aut, cre],
-    Quentin Struelens [aut]
+Authors@R: c(
+    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "(2016-2018)",  
+      email = "francois.rebaudo@ird.fr"),
+    person("Tanusson", "Selvarajah", role = "ctb", comment = "(L2 student; 2018)"),
+    person("Nicolas", "Bonnal", role = "ctb", comment = "(M1 student; 2018)"),
+    person("Badre", "Rabhi", role = "ctb", comment = "(L2 student; 2017)"), 
+    person("Quentin", "Struelens", role = "ctb", comment = "(VIA; 2016)")
+    )
+Author: Francois Rebaudo [aut, cre]
 Maintainer: Francois Rebaudo <francois.rebaudo@ird.fr>
 Description: A set of functions to quantify the relationship between development
-    rate and temperature. The package comprises a set of models and estimated parameters
-    borrowed from a literature review in ectotherms (mostly arthropods).
+    rate and temperature and to built phenological models. The package comprises 
+    a set of models and estimated parameters borrowed from a literature review 
+    in ectotherms (mostly arthropods).
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1
