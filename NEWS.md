@@ -1,6 +1,7 @@
 ## devRate 0.1.7
 * vignette in Spanish
 * small adjustments in graphic displays
+* BDD update : 37 models ; 2257 entries ; 799 species
 
 ## devRate 0.1.6
 * fix bug in devRatePlotInfo for eq. with NA parameter values
