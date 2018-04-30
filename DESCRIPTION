@@ -4,14 +4,18 @@ Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.1.7
 Authors@R: c(
-    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "(2016-2018)",  
+    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2018",  
       email = "francois.rebaudo@ird.fr"),
-    person("Tanusson", "Selvarajah", role = "ctb", comment = "(L2 student; 2018)"),
-    person("Nicolas", "Bonnal", role = "ctb", comment = "(M1 student; 2018)"),
-    person("Badre", "Rabhi", role = "ctb", comment = "(L2 student; 2017)"), 
-    person("Quentin", "Struelens", role = "ctb", comment = "(VIA; 2016)")
+    person("Tanusson", "Selvarajah", role = "ctb", comment = "L2 student; 2018"),
+    person("Nicolas", "Bonnal", role = "ctb", comment = "M1 student; 2018"),
+    person("Badre", "Rabhi", role = "ctb", comment = "L2 student; 2017"), 
+    person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
-Author: Francois Rebaudo [aut, cre]
+Author: Francois Rebaudo [aut, cre] (2016-2018), 
+    Tanusson Selvarajah [ctb] (L2 student; 2018), 
+    Nicolas Bonnal [ctb] (M1 student; 2018), 
+    Badre Rabhi [ctb] (L2 student; 2017), 
+    Quentin Struelens [ctb] (VIA; 2016)
 Maintainer: Francois Rebaudo <francois.rebaudo@ird.fr>
 Description: A set of functions to quantify the relationship between development
     rate and temperature and to built phenological models. The package comprises 
