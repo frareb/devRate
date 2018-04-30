@@ -1,5 +1,5 @@
 ## devRate version 0.1.7
-* 
+* new vignette in Spanish
 * 
 * 
 
