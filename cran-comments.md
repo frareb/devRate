@@ -1,7 +1,6 @@
 ## devRate version 0.1.7
 * new vignette in Spanish
-* 
-* 
+* small adjustments in graphic displays
 
 ## Test environments
 * Windows 10, R 3.4.3
