@@ -174,7 +174,7 @@ devRateFindStartNls <- function(temp, devRate, eq){
                bb = slider(-50000, 0, step = 1, initial = mean(eq$startVal[, 9], na.rm = TRUE)),
                cc = slider(0, 1000, step = 0.1, initial = mean(eq$startVal[, 10], na.rm = TRUE)),
                dd = slider(0, 100000, step = 10, initial = mean(eq$startVal[, 11], na.rm = TRUE)),
-               ee = slider(0, 10000, step = 1, initial = mean(eq$startVal[, 12], na.rm = TRUE))
+               ee = slider(0, 1000, step = 1, initial = mean(eq$startVal[, 12], na.rm = TRUE))
              )
            },
            "eq091" = {
