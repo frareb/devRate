@@ -1,5 +1,5 @@
 ## devRate 0.1.7
-* 
+* vignette in Spanish
 * 
 
 ## devRate 0.1.6
