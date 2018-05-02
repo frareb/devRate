@@ -2,25 +2,28 @@ Package: devRate
 Type: Package
 Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
-Version: 0.1.7
+Version: 0.1.8
 Authors@R: c(
     person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2018",  
       email = "francois.rebaudo@ird.fr"),
+    person("Camila", "Benavides", role = "ctb", comment = "M2 student; 2018"),
     person("Tanusson", "Selvarajah", role = "ctb", comment = "L2 student; 2018"),
     person("Nicolas", "Bonnal", role = "ctb", comment = "M1 student; 2018"),
     person("Badre", "Rabhi", role = "ctb", comment = "L2 student; 2017"), 
     person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
 Author: Francois Rebaudo [aut, cre] (2016-2018), 
+    Camila Benavides [ctb] (M2 student; 2018), 
     Tanusson Selvarajah [ctb] (L2 student; 2018), 
     Nicolas Bonnal [ctb] (M1 student; 2018), 
     Badre Rabhi [ctb] (L2 student; 2017), 
     Quentin Struelens [ctb] (VIA; 2016)
 Maintainer: Francois Rebaudo <francois.rebaudo@ird.fr>
 Description: A set of functions to quantify the relationship between development
-    rate and temperature and to built phenological models. The package comprises 
+    rate and temperature and to build phenological models. The package comprises 
     a set of models and estimated parameters borrowed from a literature review 
-    in ectotherms (mostly arthropods).
+    in ectotherms (Rebaudo et al. (2018) <doi:10.1111/2041-210X.12935>; Rebaudo 
+    and Rabhi (2018) <doi:XXX>).
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1
