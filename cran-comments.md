@@ -1,12 +1,10 @@
-## devRate version 0.1.7
-* new vignette in Spanish
-* small adjustments in graphic displays
-* BDD update : 37 models ; 2257 entries ; 799 species
+## devRate version 0.1.8
+* typos in the vignette main_Spanish
 
 ## Test environments
-* Windows 10, R 3.4.3
-* Linux Ubuntu 18.04, R 3.4.3
-* win-builder (R Under development 2018-04-28 r74669).
+* Windows 10, R 3.X
+* Linux Ubuntu 18.04, R 3.X
+* win-builder (R Under development XXX).
 
 ## R CMD check results
 There were no ERRORs, or WARNINGs. 

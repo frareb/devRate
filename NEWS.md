@@ -1,3 +1,6 @@
+## devRate 0.1.8
+* fixed typos in main_spanish vignette 
+
 ## devRate 0.1.7
 * vignette in Spanish
 * small adjustments in graphic displays
