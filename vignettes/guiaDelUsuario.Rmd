@@ -1,10 +1,10 @@
 ---
 title: "Guía metodológica para el uso del paquete R devRate"
-author: "Francois Rebaudo (IRD, laboratorio EGCE)"
+author: "Francois Rebaudo y Camila Benavides"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{main}
+  %\VignetteIndexEntry{main_spanish}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,39 +16,39 @@ body {text-align: justify}
 ## Recordatorios sobre biología de insectos
 
 Antes de comenzar, es necesario hacer algunos recordatorios sobre la biología 
-de los insectos. Los insectos son organismos __ectotérmicos__, lo que significa 
+de los insectos. Los insectos son organismos __ectotérmos__, lo que significa 
 que la temperatura de su cuerpo es poco o no está controlada por un proceso 
 biológico activo: en otras palabras, producen poco o ningún calor y son 
-totalmente dependientes de la temperatura de su entorno de vida. Se oponen a 
-los organismos __endotérmicos__, como los mamíferos, que producen 
-principalmente su propia fuente de calor para regular su temperatura.
+totalmente dependientes de la temperatura de su entorno. Se oponen a 
+los organismos __endotérmos__, como los mamíferos, que producen 
+en general su propia fuente de calor para regular su temperatura.
 
-En la mayoría de los ambientes, la temperatura varía con el tiempo -por 
+En la mayoría de los ambientes, la temperatura varía en el tiempo -por 
 ejemplo, es más fría por la noche que durante el día- y en el espacio, por 
-ejemplo, es más fría a la sombra que al sol. La temperatura de los ectotermicos 
-evoluciona en ambientes donde los cambios de temperatura varían, a veces 
-considerablemente. Hablamos entonces de organismos __poikilotérmicos__, entre 
-los que encontramos la mayoría de los insectos, que contrastamos con los 
-organismos __homotérmicos__ que mantienen una temperatura relativamente 
+ejemplo, es más fría a la sombra que al sol. Los organismos ectotermos 
+evolucionan en ambientes donde los cambios de temperatura varían, a veces 
+considerablemente. Hablamos entonces de organismos __poikilotérmos__, entre 
+los que encontramos la mayoría de los insectos, que contrastan con los 
+organismos __homotérmos__ que mantienen una temperatura relativamente 
 constante independientemente de las condiciones externas.
 
 La importancia de la temperatura ambiente en los procesos biológicos de los 
-insectos es clave, aunque la temperatura no es el único factor involucrado. 
-Por ejemplo, se puede mencionar la humedad relativa, o el fotoperiodo (la 
+insectos es clave, aunque no es el único factor involucrado. 
+Por ejemplo, otros factores pueden ser la humedad relativa, o el fotoperiodo (la 
 duración del día y la noche). Aqui nos vamos a enfocar unicamente en la 
 temperatura.
 
-Los insectos tienen un preferencio térmico, es decir un valor o conjunto de 
-valores de temperatura, para los cuales los insectos pueden alcanzar su 
-desarrollo óptimo. Este preferendo es variable dependiendo de la especie, 
-con especies que se desarrollarán en un amplio rango de temperaturas, se 
-denomina especies generalistas y, a diferencia de las especies que pueden 
-desarrollarse solo en un rango muy estrecho de temperaturas, estas son las 
-llamadas especies especializadas. Los insectos se encuentran a lo largo de 
-este gradiente entre especialistas y generalistas, con variaciones que también 
-se pueden observar dentro de una especie, especialmente entre las diferentes 
+Los insectos tienen una preferencia térmica, es decir un valor o conjunto de 
+valores de temperatura, dentro de los cuales pueden alcanzar un 
+desarrollo óptimo. Esta preferencia es variable dependiendo de la especie, 
+con especies que se desarrollarán en un amplio rango de temperaturas. A estas se 
+denomina especies generalistas, a diferencia de las especies que pueden 
+desarrollarse solo en un rango muy estrecho de temperaturas, que son las 
+llamadas especialistas (los insectos se encuentran a lo largo de 
+este gradiente entre especialistas y generalistas). Las variaciones de preferencia 
+también se pueden observar dentro de una especie, especialmente entre las diferentes 
 etapas de desarrollo. Para entender estas diferentes estrategias y 
-caracterizarlas, se hace necesario estudiar la relación entre la temperatura y 
+caracterizarlas, es necesario estudiar la relación entre la temperatura y 
 el desarrollo de los insectos. 
 
 Aqui nos interesarán los insectos poikilotérmicos, que, les recuerdo, 
