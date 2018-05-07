@@ -1,5 +1,6 @@
 ## devRate 0.1.8
 * fixed typos in main_spanish vignette 
+* update in Description file with papers and DOI
 
 ## devRate 0.1.7
 * vignette in Spanish

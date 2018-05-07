@@ -1,5 +1,6 @@
 ## devRate version 0.1.8
 * typos in the vignette main_Spanish
+* update in Description file with papers and DOI
 
 ## Test environments
 * Windows 10, R 3.X
