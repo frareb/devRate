@@ -471,30 +471,30 @@ cat(paste0("Topt: ", Topt, "\nCTmin: ", CTmin, "\nTmax: ", CTmax))
 
 Mediante el uso de la tasa de desarrollo, es posible modelar el área de 
 distribución teórica de una especie, es decir, el área en la que el desarrollo 
-sería posible teniendo en cuenta solo la temperatura, así como que las 
+sería posible considerando la temperatura, así como las 
 diferentes etapas y el número de generaciones potenciales por año de una 
-especie, el voltinismo.
-El primer paso es tener datos de temperatura. Luego, el segundo paso 
+especie; el voltinismo.
+El primer paso es tener datos de temperatura. El segundo paso 
 consiste en utilizar la relación entre la temperatura y la tasa de desarrollo 
 cuantificada previamente.
 
-De hecho, para cada dato datos de temperatura, se puede calcular una tasa de 
-desarrollo que, al acumularse, conducirá al desarrollo completo de una 
+De hecho, para cada dato de temperatura, se puede calcular una tasa de 
+desarrollo que, al acumularse, conducirá al ciclo completo de desarrollo de una 
 especie determinada.
-Así obtenemos una distribución potencial basada en un modelo de fenológica, 
+Así obtenemos una distribución potencial basada en un modelo de fenológia, 
 que puede modificarse mediante la introducción de escenarios de cambio 
 climático como un aumento general de las temperaturas o la introducción de 
 eventos extremos más frecuentes.
 
-Para esto vamos a imaginar un entorno teórico. El entorno teorico tendra 
+Para esto vamos a imaginar un entorno teórico. Este entorno tendra 
 una temperatura sacada de una ley Normal de parámetro  mu igual a 15 grados 
-para el promedio e de parametro sigma  igual a 1 para la deviacion estandar, 
+para el promedio, de parametro sigma igual a 1 para la desviación estandar, 
 durante un período de 100 días. 
 
-Nuestro modelo de _Bactrocera dorsalis_ solo es valido para los huevos, cuando 
-nesesitamos un modelo para todos los estadios fenologicos. Vamos a usar otros 
-datos sacados de la literatura. Vamos a usar los datos de _T. solanivora_, 
-una polilla de la papa (Lepidoptera:Gelechiidae) desde el articulo cientifico 
+Nuestro modelo de _Bactrocera dorsalis_ solo es valido para los huevos, mientras que 
+necesitamos un modelo para todos los estadios fenologicos. Vamos a usar entonces otros 
+datos sacados de la literatura. Los datos seran de _T. solanivora_, 
+una polilla de la papa (Lepidoptera:Gelechiidae) del el articulo cientifico 
 de Crespo-Perez et al. 2011^[Crespo-Pérez, V., Rebaudo, F., Silvain, J.-F. 
 Dangles, O. (2011) Modeling invasive species spread in complex landscapes: the 
 case of potato moth in Ecuador. Landscape Ecology, 26, 1447–1461.], usando Web
@@ -536,7 +536,7 @@ modTs01_pupa <- devRateModel(
 
 A partir de los modelos ajustados a _T. solanivora_ y una población de 50 
 individuos simulados, podemos representar la distribución de las  
-generaciones con el tiempo. Para agregar realismo a la simulación, agregamos 
+generaciones con el tiempo. Para agregar realismo a la simulación, añadimos 
 variabilidad en la respuesta de los insectos a la temperatura que seguirá 
 una distribución Normal de parametro mu igual al valor de la tasa de 
 desarrollo y de parametro sigma = 0.025. 
@@ -554,8 +554,8 @@ par(mar = c(4, 4, 0, 0))
 devRateIBMPlot(ibm = simul01)
 ```
 
-En los resultados tenemos la fenología de cada uno de los 50 individuos, el 
-modelo utilizado, luego la serie temporal de temperatura. En la visualización 
+En los resultados obtenemos la fenología de cada uno de los 50 individuos, el 
+modelo utilizado, y la serie temporal de temperatura. En la visualización 
 de los resultados, cada color representa una generación diferente y cada tipo 
 de línea una etapa fenológica diferente. 
 
@@ -594,30 +594,34 @@ devRateIBMPlot(ibm = simul02)
 
 Variando los parámetros incluso ligeramente, podemos ver que las consecuencias 
 pueden ser importantes para la fenología de los insectos, a pesar de la 
-simplicidad del modelo representado aquí. Podemos modificar el modelo para 
+simplicidad del modelo aquí representado. Podemos modificar el modelo para 
 cambiar el tamaño de las poblaciones, aumentar el número de días de la simulación 
 o modificar la variabilidad intrapoblacional en la respuesta a la temperatura para 
 profundizar estos elementos y observar la complejidad de la respuesta de los 
 insectos a los cambios globales.
 
-También podemos usar un modelo diferente al presentado aquí y resaltar la 
-importancia de la elección del modelo, y concluir que las incertidumbres son 
+También podemos usar un modelo diferente al utilisado y resaltar la 
+importancia de la elección del mismo, y concluir que las incertidumbres son 
 múltiples:
 
-Están las incertidumbres relacionadas con el cambio climático: ¿cuáles serán 
+* Incertidumbres relacionadas al cambio climático: ¿cuáles serán 
 las temperaturas que vendrán y cuánto variarán estas temperaturas?
-Hay incertidumbres sobre los insectos: ¿cuál es la variabilidad intrapoblacional 
+* Incertidumbres sobre los insectos: ¿cuál es la variabilidad intrapoblacional 
 de la respuesta de los insectos a la temperatura? ¿Cuál es el efecto de las 
 temperaturas fluctuantes? ¿Cómo transferir estudios de laboratorio a condiciones 
 externas?
-Y también las incertidumbres relacionadas con la caracterización de la respuesta 
+* Incertidumbres relacionadas con la caracterización de la respuesta 
 de los insectos a la temperatura y en particular las incertidumbres relacionadas 
 con la elección del modelo matemático.
+
 Aquí el modelo presentado es bastante simple, podría enriquecerse teniendo en 
-cuenta la variabilidad espacial en las temperaturas. 
+cuenta la variabilidad espacial en las temperaturas. En el ejemplo que sigue 
+vamos a crear un entorno teórico para representar un mapa donde a cada punto 
+corresponde un dato de temperatura que vamos a usar para calcular el numero 
+de generaciones potenciales simulando 100 días a esta temperatura. 
 
 ```{r, fig.width = 5, fig.height = 4}
-tempEspacio <- matrix(rnorm(100, mean = 15, sd = 1), ncol = 10) # mapa teorica
+tempEspacio <- matrix(rnorm(100, mean = 15, sd = 1), ncol = 10) # mapa teorico
 myDevRate <- 1/devRateMap(nlsDR = modTs01_egg, tempMap = tempEspacio) +
   1/devRateMap(nlsDR = modTs01_larva, tempMap = tempEspacio) +
   1/devRateMap(nlsDR = modTs01_pupa, tempMap = tempEspacio)
@@ -628,23 +632,23 @@ filled.contour(100 / myDevRate, # numero de generaciones en 100 dias
 
 Tambien se podria incorporar la respuesta de los insectos a otros factores 
 como la humedad relativa, o la disponibilidad y calidad del recurso disponible 
-para los insectos.
+para estos. 
 
-## Limites
+## Límites
 
 Aunque las predicciones de estos modelos son generalmente correctas a escala 
-regional o continental, las predicciones a escalas más locales chocan con las 
-limitaciones de estos modelos:
+regional o continental, las predicciones a escalas más locales se enfrenten con 
+las limitaciones de estos modelos:
 
 1) solo se tiene en cuenta la temperatura, mientras que 
 otros factores son importantes para el desarrollo de insectos, como la humedad 
 relativa, el fotoperiodo o la fuente y la disponibilidad de comida
 2) las curvas de desarrollo dependientes de la temperatura generalmente se 
-establecen a temperaturas constantes en el laboratorio, pero las condiciones 
-externas son las de las temperaturas fluctuantes, lo que tiene un efecto en 
+establecen a temperaturas constantes de laboratorio, pero en condiciones 
+externas las temperaturas son fluctuantes, lo que tiene un efecto en 
 el desarrollo, incluso cuando las temperaturas no exceden los valores umbral 
 de desarrollo. Este punto es aún más importante cuando sabemos que el cambio 
-climático no solo influirá en la temperatura promedio en aumento, sino que 
+climático no solo influirá en el aumento de la temperatura promedia, sino que 
 también exacerbará los extremos, con temperaturas que fluctuarán aún más
 3) las tasas de desarrollo calculadas a temperaturas cercanas a Ctmin y 
 Ctmax pueden variar significativamente de un modelo a otro, con la 
@@ -657,16 +661,16 @@ temperatura y la tasa de desarrollo. Los modelos mecanísticos de la
 fenología de insectos tenderán a sobreestimar o subestimar el desarrollo 
 de una parte de la población.
 
-Estos son los desafíos a los que se enfrentan los estudios hoy en día y que 
-hay que conocer antes de interpretar los resultados de los modelos 
-presentados en esta guia. 
+Estos son los desafíos a los que se enfrentan los estudios de este tipo hoy 
+en día y que hay que conocer antes de interpretar los resultados de los modelos 
+presentados en esta guía. 
 
 ## Conclusión
 
-Esos modelos relacionando temperatura y tasa de desarrollo son la base de 
+Los modelos que relacionan temperatura y tasa de desarrollo son la base de 
 casi todos los modelos fenologicos predictivos que se pueden encontrar en 
-la literaura. He escrito la presente guía con el proposito de ayudarles a 
-analisar sus datos, interpretar los resultados, y construir sus modelos 
+la literatura hoy en día. Se ha escrito la presente guía con el proposito de ayudar a 
+analizar sus datos, interpretar los resultados, y construir sus modelos 
 fenologicos conociendo las fortalezas y debilidades de este enfoque. 
-Cualquier comentario o pregunta son bienvenidas, no duden en ponerse en 
+Cualquier comentario o pregunta son bienvenida(o)s, no dude en ponerse en 
 contacto conmigo.
