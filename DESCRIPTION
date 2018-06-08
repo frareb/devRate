@@ -23,7 +23,7 @@ Description: A set of functions to quantify the relationship between development
     rate and temperature and to build phenological models. The package comprises 
     a set of models and estimated parameters borrowed from a literature review 
     in ectotherms (Rebaudo et al. (2018) <doi:10.1111/2041-210X.12935>; Rebaudo 
-    and Rabhi (2018) <doi:XXX>).
+    and Rabhi (2018) <doi:10.1111/eea.12693>).
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1
