@@ -24,7 +24,8 @@ Description: A set of functions to quantify the relationship between development
     a set of models and estimated parameters borrowed from a literature review 
     in ectotherms. The methods and literature review are described in Rebaudo 
     et al. (2018) <doi:10.1111/2041-210X.12935> and Rebaudo and Rabhi (2018) 
-    <doi:10.1111/eea.12693>).
+    <doi:10.1111/eea.12693>. An example can be found in Rebaudo et al. (2017) 
+    <doi:10.1007/s13355-017-0480-5>.
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1
