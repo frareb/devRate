@@ -4,8 +4,8 @@
 
 ## Test environments
 * Windows 10, R 3.5.0
-* Linux Ubuntu 18.04, R 3.X
-* win-builder (R Under development 2018-06-10 r74877).
+* Linux Ubuntu 18.04, R 3.5.0
+* win-builder (R Under development 2018-07-01 r74950).
 
 ## R CMD check results
 There were no ERRORs, or WARNINGs. 
@@ -17,6 +17,3 @@ Note : Possibly mis-spelled words in DESCRIPTION:
   et (26:5)
 
 => no mis-spelled words in DESCRIPTION
-
-## Downstream dependencies
-There are currently no downstream dependencies for this package.
