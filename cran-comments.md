@@ -1,11 +1,10 @@
-## devRate version 0.1.8
-* typos in the vignette main_Spanish
-* update in Description file with papers and DOI
+## devRate version 0.1.9
+* 
 
 ## Test environments
-* Windows 10, R 3.5.0
-* Linux Ubuntu 18.04, R 3.5.0
-* win-builder (R Under development 2018-07-01 r74950).
+* Windows 10, R 3.5.X
+* Linux Ubuntu 18.04, R 3.5.X
+* win-builder (R Under development XXX).
 
 ## R CMD check results
 There were no ERRORs, or WARNINGs. 
