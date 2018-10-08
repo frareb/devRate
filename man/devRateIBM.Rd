@@ -17,7 +17,10 @@ devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
 \item{numInd}{The number of individuals for the simulation (an integer).}
 
 \item{stocha}{The standard deviation of a Normal distribution centered on
-development rate to create stochasticity among individuals (a numeric).}
+development rate to create stochasticity among individuals (a numeric). Either
+a single number (same stochasticity for all stages) or a vector of length
+corresponding to the number of models used (different stochasticity for the
+phenological stages).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
 females lay eggs in time steps (a numeric).}
@@ -32,10 +35,10 @@ Forecast ectotherm phenology as a function of temperature and development rate m
 \examples{
 data(exTropicalMoth)
 forecastTsolanivora <- devRateIBM(
-   tempTS = rnorm(n = 10, mean = 15, sd = 1),
+   tempTS = rnorm(n = 100, mean = 15, sd = 1),
    timeStepTS = 1,
    models = exTropicalMoth[[2]],
    numInd = 100,
-   stocha = 0.015,
+   stocha = c(0.015, 0.005, 0.01),
    timeLayEggs = 1)
 }

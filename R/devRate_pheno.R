@@ -5,7 +5,10 @@
 #' @param models The models for development rate (a list with objects of class nls).
 #' @param numInd The number of individuals for the simulation (an integer).
 #' @param stocha The standard deviation of a Normal distribution centered on
-#'    development rate to create stochasticity among individuals (a numeric).
+#'    development rate to create stochasticity among individuals (a numeric). Either
+#'    a single number (same stochasticity for all stages) or a vector of length
+#'    corresponding to the number of models used (different stochasticity for the
+#'    phenological stages).
 #' @param timeLayEggs The delay between emergence of adults and the time where
 #'    females lay eggs in time steps (a numeric).
 #' @return A list with three elements: the table of phenology for each individual,
@@ -13,14 +16,15 @@
 #' @examples
 #' data(exTropicalMoth)
 #' forecastTsolanivora <- devRateIBM(
-#'    tempTS = rnorm(n = 10, mean = 15, sd = 1),
+#'    tempTS = rnorm(n = 100, mean = 15, sd = 1),
 #'    timeStepTS = 1,
 #'    models = exTropicalMoth[[2]],
 #'    numInd = 100,
-#'    stocha = 0.015,
+#'    stocha = c(0.015, 0.005, 0.01),
 #'    timeLayEggs = 1)
 #' @export
 devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLayEggs = 1){
+  if(length(stocha == 1)){stocha <- rep(stocha, times = length(models))}
   for(ind in 1:numInd){
     g <- 0
     tx <- 0
@@ -31,7 +35,7 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
       for(i in seq_along(models)){
         if(ratioSupDev > 0){
           add2Dev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
-              newdata = list(T = tempTS[tx])), sd = stocha) * ratioSupDev * timeStepTS
+              newdata = list(T = tempTS[tx])), sd = stocha[i]) * ratioSupDev * timeStepTS
           if(add2Dev < 0){add2Dev <- 0}
           currentDev <- add2Dev
         } else {
@@ -41,7 +45,7 @@ devRateIBM <- function(tempTS, timeStepTS, models, numInd = 100, stocha, timeLay
           tx <- tx + 1
           if(tx > length(tempTS)){break}
           addDev <- stats::rnorm(n = 1, mean = stats::predict(models[[i]],
-            newdata = list(T = tempTS[tx])), sd = stocha) * timeStepTS
+            newdata = list(T = tempTS[tx])), sd = stocha[i]) * timeStepTS
           if(addDev < 0){addDev <- 0}
           currentDev <- currentDev + addDev
         }
