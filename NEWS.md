@@ -1,3 +1,6 @@
+## devRate 0.1.10
+* 
+
 ## devRate 0.1.9
 * stage-specific stochasticity in individual-based models (devRateIBM function)
 
