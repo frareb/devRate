@@ -1,5 +1,5 @@
 ## devRate 0.1.9
-* xxx
+* stage-specific stochasticity in individual-based models (devRateIBM function)
 
 ## devRate 0.1.8
 * fixed typos in main_spanish vignette 

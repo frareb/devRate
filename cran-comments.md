@@ -1,5 +1,5 @@
 ## devRate version 0.1.9
-* 
+* stage-specific stochasticity in individual-based models (devRateIBM function)
 
 ## Test environments
 * Windows 10, R 3.5.X
