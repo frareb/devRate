@@ -7,7 +7,7 @@
 * win-builder (R Under development 2019-05-25 r76601)
 
 ## R CMD check results
-There were no ERRORs, or WARNINGs, and one NOTE :
+There were no ERROR, or WARNING, and one NOTE :
 
 (possibly) invalid URLs:
 http://dx.doi.org/10.2307/1326 (valid)
