@@ -28,7 +28,7 @@ Description: A set of functions to quantify the relationship between development
     <doi:10.1007/s13355-017-0480-5>.
 License: GPL-2
 LazyData: TRUE
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Suggests: knitr,
     rmarkdown,
     testthat

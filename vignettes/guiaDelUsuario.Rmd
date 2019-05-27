@@ -1,6 +1,6 @@
 ---
 title: "Guía metodológica para el uso del paquete R devRate"
-author: "Francois Rebaudo y Camila Benavides"
+author: "Francois Rebaudo y Camila Benavides "
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
