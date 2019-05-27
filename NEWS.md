@@ -1,5 +1,5 @@
 ## devRate 0.1.10
-* 
+* vignette problem fixed with knitr version 1.23
 
 ## devRate 0.1.9
 * stage-specific stochasticity in individual-based models (devRateIBM function)
