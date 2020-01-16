@@ -1,5 +1,9 @@
 ## devRate package
 
+https://travis-ci.org/frareb/devRate.svg?branch=master
+https://www.r-pkg.org/badges/version/devRate
+https://cranlogs.r-pkg.org/badges/grand-total/devRate
+
 ### Purpose of the package
 The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms. 
 
