@@ -4,8 +4,7 @@
 \alias{devRateIBM}
 \title{Forecast ectotherm phenology as a function of temperature and development rate models}
 \usage{
-devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha,
-  timeLayEggs = 1)
+devRateIBM(tempTS, timeStepTS, models, numInd = 100, stocha, timeLayEggs = 1)
 }
 \arguments{
 \item{tempTS}{The temperature time series (a vector).}

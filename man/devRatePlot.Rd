@@ -4,8 +4,16 @@
 \alias{devRatePlot}
 \title{Plot the empirical points and the regression}
 \usage{
-devRatePlot(eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE,
-  spe = TRUE, ...)
+devRatePlot(
+  eq,
+  nlsDR,
+  temp,
+  devRate,
+  rangeT = 10,
+  optText = TRUE,
+  spe = TRUE,
+  ...
+)
 }
 \arguments{
 \item{eq}{The name of the equation.}

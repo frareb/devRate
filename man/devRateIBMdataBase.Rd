@@ -5,8 +5,16 @@
 \title{Forecast ectotherm phenology as a function of temperature and development rate models
 available in the package database}
 \usage{
-devRateIBMdataBase(tempTS, timeStepTS, eq, species, lifeStages,
-  numInd = 10, stocha, timeLayEggs = 1)
+devRateIBMdataBase(
+  tempTS,
+  timeStepTS,
+  eq,
+  species,
+  lifeStages,
+  numInd = 10,
+  stocha,
+  timeLayEggs = 1
+)
 }
 \arguments{
 \item{tempTS}{The temperature time series (a vector).}
