@@ -1,12 +1,13 @@
 #' Find models for species
 #'
-#' @details The function looks for the species in the database and returns the number
-#'   of occurrences for each model.
+#' @details The function looks for the species in the database and returns
+#'   the number of occurrences for each model.
 #' @param orderSP Find models by Order.
 #' @param familySP Find models by Family.
 #' @param species Find models by species (Genus species).
-#' @return A data.frame with the name of the equations, the number of occurrences in the database,
-#'   and the number of parameters for each equation.
+#' @return A data.frame with the name of the equations, the number of
+#'   occurrences in the database, and the number of parameters for each
+#'   equation.
 #' @examples
 #' devRateFind(orderSP = "Lepidoptera")
 #' devRateFind(familySP = "Gelechiidae")
