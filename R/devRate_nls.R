@@ -51,7 +51,8 @@ devRateModel <- function(eq, temp, devRate, startValues, df = NULL, ...){
     tTh <- temp[devRate == max(devRate, na.rm = TRUE)]
     tTh <- unique(tTh[!is.na(tTh)])
     if(length(tTh) > 1){
-      meanDevRates <- sapply(seq_along(tTh), function(ti){mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
+      meanDevRates <- sapply(seq_along(tTh), function(ti){
+        mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
       tTh <- tTh[meanDevRates == max(meanDevRates)]
       if(length(tTh) > 1){tTh <- tTh[1]}
     }
@@ -95,18 +96,33 @@ devRateModel <- function(eq, temp, devRate, startValues, df = NULL, ...){
   } else {
 
     if(eq$id == "eq030"){
-      nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(aa = 1, bb = 1), ...)
+      nls_devRate <- stats::nls(
+        formula = eq[[1]],
+        data = data.frame(rT = devRate, T = temp),
+        start = list(aa = 1, bb = 1), ...)
     } else {
       if(eq$id == "eq110"){
-        nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1), ...)
+        nls_devRate <- stats::nls(
+          formula = eq[[1]],
+          data = data.frame(rT = devRate, T = temp),
+          start = list(a0 = 1, a1 = 1, a2 = 1), ...)
       } else {
         if(eq$id == "eq120"){
-          nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
+          nls_devRate <- stats::nls(
+            formula = eq[[1]],
+            data = data.frame(rT = devRate, T = temp),
+            start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
         } else {
           if(eq$id == "eq130"){
-            nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
+            nls_devRate <- stats::nls(
+              formula = eq[[1]],
+              data = data.frame(rT = devRate, T = temp),
+              start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
           } else {
-            nls_devRate <- stats::nls(formula = eq[[1]], data = data.frame(rT = devRate, T = temp), start = startValues, ...)
+            nls_devRate <- stats::nls(
+              formula = eq[[1]],
+              data = data.frame(rT = devRate, T = temp),
+              start = startValues, ...)
           }
         }
       }
@@ -152,7 +168,10 @@ devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
     opar <- graphics::par(mfrow = c(1,2))
     graphics::plot(temp,
          devRate,
-         main = paste0("Obs. versus fitted (cor: ", round(stats::cor(devRate, stats::predict(myNLS)), digits = 4),")")
+         main = paste0(
+           "Obs. versus fitted (cor: ",
+           round(stats::cor(devRate, stats::predict(myNLS)), digits = 4),
+           ")")
     ) # cor gives some estimation of the goodness of fit
     cat("### See plots for observed versus fitted values, and Normal Q-Q Plot\n\n")
     graphics::points(temp,
