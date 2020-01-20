@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/frareb/devRate.svg?branch=master)](https://travis-ci.org/frareb/devRate)
 [![CRAN version](https://www.r-pkg.org/badges/version/devRate)](https://CRAN.R-project.org/package=devRate)
 [![CRAN downloads](https://cranlogs.r-pkg.org/badges/grand-total/devRate)](https://CRAN.R-project.org/package=devRate)
+[![Coverage Status](https://img.shields.io/codecov/c/gh/frareb/devRate/master.svg)](https://codecov.io/gh/frareb/devRate?branch=master)
 
 ### Purpose of the package
 The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms. 
