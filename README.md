@@ -44,17 +44,41 @@ devtools::install_github("frareb/devRate")
 
 ## Overview
 
-The devRate package provides three categories of functions: - to find
-development rate information about a specific organism (Order, Family,
-Genus, species) - to relate development rate and temperature; and - to
-plot your empirical datasets and the associated fitted model, and/or to
-plot development curves from the literature.
+The devRate package provides three categories of functions:
+
+1.  functions to find development rate information about a specific
+    organism (Order, Family, Genus, species)
+
+2.  functions to relate development rate and temperature; and
+
+3.  functions to plot your empirical datasets and the associated fitted
+    model, and/or to plot development curves from the literature.
 
 ## Author’s affiliation
 
 UMR EGCE (IRD, CNRS, Univ. Paris-Saclay), Gif-sur-Yvette, France
 
-To cite this package please use citation(“devRate”) and/or Rebaudo F,
-Struelens Q, Dangles O. Modelling temperature-dependent development rate
-and phenology in arthropods: The devRate package for r. Methods Ecol
-Evol. 2017;00:1-7. <https://doi.org/10.1111/2041-210X.12935>
+To cite this package please use:
+
+``` r
+citation("devRate") 
+#> 
+#> Rebaudo F (2020). _devRate: Quantify the Relationship Between
+#> Development Rate and Temperature in Ectotherms_. R package version
+#> 0.1.10, <URL: https://CRAN.R-project.org/package=devRate>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {devRate: Quantify the Relationship Between Development Rate and Temperature in Ectotherms},
+#>     author = {Francois Rebaudo},
+#>     year = {2020},
+#>     note = {R package version 0.1.10},
+#>     url = {https://CRAN.R-project.org/package=devRate},
+#>   }
+```
+
+and/or: Rebaudo F., Struelens Q., Dangles O. Modelling
+temperature-dependent development rate and phenology in arthropods: The
+devRate package for R. *Methods Ecol Evol.* 2017;00:1-7.
+<https://doi.org/10.1111/2041-210X.12935>

@@ -46,15 +46,24 @@ devtools::install_github("frareb/devRate")
 ## Overview
 
 The devRate package provides three categories of functions:
-- to find development rate information about a specific organism (Order, Family, Genus, species)
-- to relate development rate and temperature; and
-- to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
+
+1.  functions to find development rate information about a specific organism (Order, Family, Genus, species)
+
+1.  functions to relate development rate and temperature; and
+
+1.  functions to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
 
 ## Author's affiliation
 
 UMR EGCE (IRD, CNRS, Univ. Paris-Saclay), Gif-sur-Yvette, France
 
-To cite this package please use citation("devRate") and/or
-Rebaudo F, Struelens Q, Dangles O. Modelling temperature-dependent development 
-rate and phenology in arthropods: The devRate package for r. Methods Ecol Evol. 
+To cite this package please use: 
+
+```{r auth01, eval=TRUE}
+citation("devRate") 
+```
+
+and/or:
+Rebaudo F., Struelens Q., Dangles O. Modelling temperature-dependent development 
+rate and phenology in arthropods: The devRate package for R. *Methods Ecol Evol.* 
 2017;00:1-7. https://doi.org/10.1111/2041-210X.12935
