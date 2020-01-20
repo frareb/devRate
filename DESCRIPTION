@@ -4,7 +4,7 @@ Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.1.10
 Authors@R: c(
-    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2018",  
+    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2020",  
       email = "francois.rebaudo@ird.fr"),
     person("Camila", "Benavides", role = "ctb", comment = "M2 student; 2018"),
     person("Tanusson", "Selvarajah", role = "ctb", comment = "L2 student; 2018"),
@@ -12,7 +12,7 @@ Authors@R: c(
     person("Badre", "Rabhi", role = "ctb", comment = "L2 student; 2017"), 
     person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
-Author: Francois Rebaudo [aut, cre] (2016-2018), 
+Author: Francois Rebaudo [aut, cre] (2016-2020), 
     Camila Benavides [ctb] (M2 student; 2018), 
     Tanusson Selvarajah [ctb] (L2 student; 2018), 
     Nicolas Bonnal [ctb] (M1 student; 2018), 
