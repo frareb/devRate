@@ -14,15 +14,16 @@ devRateFind(orderSP = "", familySP = "", species = "")
 \item{species}{Find models by species (Genus species).}
 }
 \value{
-A data.frame with the name of the equations, the number of occurrences in the database,
-  and the number of parameters for each equation.
+A data.frame with the name of the equations, the number of
+  occurrences in the database, and the number of parameters for each
+  equation.
 }
 \description{
 Find models for species
 }
 \details{
-The function looks for the species in the database and returns the number
-  of occurrences for each model.
+The function looks for the species in the database and returns
+  the number of occurrences for each model.
 }
 \examples{
 devRateFind(orderSP = "Lepidoptera")

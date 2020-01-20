@@ -57,6 +57,6 @@ devRateFind <- function(orderSP = "", familySP = "", species = ""){
     rownames(dfFind) <- NULL
     return(dfFind)
   } else {
-    print("Error in arguments provided: only one argument of type character is allowed")
+    return("Error in arguments provided: only one argument of type character is allowed")
   }
 }
