@@ -1,3 +1,6 @@
+## devRate 0.1.11
+* coverage with testthat
+
 ## devRate 0.1.10
 * vignette problem fixed with knitr version 1.23
 
