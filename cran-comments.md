@@ -1,19 +1,18 @@
-## devRate version 0.1.10
-* vignette problem fixed with knitr version 1.23
+## devRate version 0.1.11.9999
+* in progress
 
 ## Test environments
-* Windows 10, R 3.6.0
-* Linux Ubuntu 19.04, R 3.6.0
-* win-builder (R Under development 2019-05-25 r76601)
+* Windows 10, R 3.5.X
+* Linux Ubuntu 18.04, R 3.5.X
+* win-builder (R Under development XXX).
 
 ## R CMD check results
-There were no ERROR, or WARNING, and one NOTE :
+There were no ERRORs, or WARNINGs. 
 
-(possibly) invalid URLs:
-http://dx.doi.org/10.2307/1326 (valid)
-http://dx.doi.org/10.2307/2402197 (valid)
-http://www.jstor.org/stable/2460694 (valid)
+Note : Possibly mis-spelled words in DESCRIPTION:
+  Rabhi (26:65)
+  Rebaudo (25:71, 26:53)
+  al (26:8)
+  et (26:5)
 
-(possibly) invalid DOIs:
-10.1111/2041-210X.12935 (valid)
-10.1111/eea.12693 (valid)
+=> no mis-spelled words in DESCRIPTION
