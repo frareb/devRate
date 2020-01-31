@@ -25,7 +25,7 @@ devRateInfo <- function(eq){
 #' Plot thermal performance curves from the literature
 #'
 #' @param eq The name of the equation.
-#' @param sortBy The filter to separate species ("ordersp", "familysp, "genussp", "species", "genSp").
+#' @param sortBy The filter to separate species ("ordersp", "familysp", "genussp", "species", "genSp").
 #' @param stage The life stage of the organism ("all", "eggs", "L1", "L2", "L3", "L4", "L5",
 #'   "larva", "pupa", "prepupa", "female", "male", ...)
 #' @param ... Aditional arguments for the plot.
