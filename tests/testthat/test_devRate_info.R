@@ -15,8 +15,6 @@ test_that("devRateInfo returns NULL",{
 
 test_that("devRatePlotInfo returns NULL",{
   eqOpt <- devRateEqList
-
-
   trash <- lapply(eqOpt, function(j){
     sortOpt <- c("ordersp", "familysp", "genussp", "species", "genSp")
     res <- lapply(sortOpt, function(i){
@@ -34,18 +32,4 @@ test_that("devRatePlotInfo returns NULL",{
       )
     })
   })
-
 })
-
-
-# devtools::test()
-# covr::package_coverage()
-# covr::report()
-# devtools::document()
-
-
-
-
-
-
-
