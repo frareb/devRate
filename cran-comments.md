@@ -1,5 +1,6 @@
 ## devRate version 0.1.11.9999
-* in progress
+* coverage with testthat
+* typos and minor changes
 
 ## Test environments
 * Windows 10, R 3.5.X
