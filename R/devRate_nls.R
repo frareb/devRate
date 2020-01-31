@@ -53,8 +53,8 @@ devRateModel <- function(eq, temp, devRate, startValues, df = NULL, ...){
     if(length(tTh) > 1){
       meanDevRates <- sapply(seq_along(tTh), function(ti){
         mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
-      tTh <- tTh[meanDevRates == max(meanDevRates)]
-      if(length(tTh) > 1){tTh <- tTh[1]}
+      tTh <- tTh[meanDevRates == max(meanDevRates)][1]
+      # if(length(tTh) > 1){tTh <- tTh[1]}
     }
     part1_temp <- temp[temp <= tTh]
     part2_temp <- temp[temp >= tTh]
