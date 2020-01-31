@@ -24,21 +24,34 @@ test_that("NLS stopCode 0 (convergence)",{
 
 # stinner ----------------------------------------------------------------------
 
-# rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
-#   13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
-#   25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
-#
-# test_that("",{
-#   res <- devRateModel(
-#     eq = stinner_74,
-#     temp = rawDevEggs[,1],
-#     devRate = rawDevEggs[,2],
-#     startValues = list(
-#       list(C = 0.1, k1 = 4, k2 = -0.2),
-#       list(Topt = 30)
-#     )
-#   )
-# })
+rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
+  13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
+  25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
+
+test_that("",{
+  res <- devRateModel(
+    eq = stinner_74,
+    temp = rawDevEggs[,1],
+    devRate = rawDevEggs[,2],
+    startValues = list(
+      list(C = 0.1, k1 = 4, k2 = -0.2),
+      list(Topt = 30)
+    )
+  )
+  expect_equal(
+    object = class(res[[1]]),
+    expected = "nls")
+  expect_equal(
+    object = class(res[[2]]),
+    expected = "nls")
+  expect_equal(
+    object = res[[1]]$convInfo$stopCode,
+    expected = 0)
+  expect_equal(
+    object = res[[2]]$convInfo$stopCode,
+    expected = 0)
+
+})
 
 
 
