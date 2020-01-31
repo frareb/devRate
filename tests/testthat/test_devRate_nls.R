@@ -88,14 +88,3 @@ test_that("plot devRateModel",{
     expected = 6
   )
 })
-# devtools::test()
-# covr::package_coverage()
-# covr::report()
-# devtools::document()
-
-
-
-
-
-
-
