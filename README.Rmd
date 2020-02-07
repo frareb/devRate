@@ -49,7 +49,7 @@ The devRate package provides three categories of functions:
 
 1.  functions to find development rate information about a specific organism (Order, Family, Genus, species)
 
-1.  functions to relate development rate and temperature; and
+1.  functions to relate development rate and temperature, and
 
 1.  functions to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
 
