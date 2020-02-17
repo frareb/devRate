@@ -28,10 +28,13 @@ Description: A set of functions to quantify the relationship between development
     <doi:10.1007/s13355-017-0480-5>.
 License: GPL-2
 LazyData: TRUE
+Depends:
+  R (>= 3.5.0)
 RoxygenNote: 7.0.2
 Suggests: knitr,
     rmarkdown,
-    testthat
+    testthat,
+    minpack.lm (>= 1.2-1)
 VignetteBuilder: knitr
 URL: https://github.com/frareb/devRate/
 BugReports: https://github.com/frareb/devRate/issues
