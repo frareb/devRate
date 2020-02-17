@@ -1,22 +1,29 @@
 #' Compute non-linear regression
 #'
-#' Determine the nonlinear least-squares estimates of the parameters of a nonlinear model, on
-#'   the basis of the \code{nls} function from package \code{stats}.
+#' Determine the nonlinear least-squares estimates of the parameters of a
+#'   nonlinear model, on the basis of the \code{nls} function from package
+#'   \code{stats}.
 #'
-#' @param eq The name of the equation.
-#' @param temp The temperature.
-#' @param devRate The development rate \code{(days)^-1}
-#' @param startValues Starting values for the regression.
+#' @param eq The name of the equation. See \code{devRateEqList} for the list
+#'   of equations
+#' @param temp The temperature (vector).
+#' @param devRate The development rate \code{(days)^-1} (vector).
+#' @param startValues Starting values for the regression (list).
 #' @param df A data.frame with the temperature in the first column and the
 #'   development rate in the second column (alternative to the use of temp and
 #'   devRate).
+#' @param algo The abbreviated name of the algorithm used for model fitting (
+#'   "GN" for Gauss-Newton algorithm, "LM" for Levenberg-Marquardt algorithm;
+#'   "GN" is the default value).
 #' @param ... Additional arguments for the \code{nls} function.
 #' @return An object of class \code{nls} (except for Stinner et al. 1974 and
-#'   Lamb 1992 where the function returns a list of two objects of class \code{nls}).
-#' @details \code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
-#'   two equations: one for the temperatures below the optimal temperature and another for the
-#'   temperatures above the optimal temperature. For these equations, \code{startValues} should
-#'   be a list of two lists, where the second element only contain starting estimates not
+#'   Lamb 1992 where the function returns a list of two objects of class
+#'   \code{nls}).
+#' @details \code{startValues} for equations by Stinner et al. 1974 and Lamb
+#'   1992 are composed of two equations: one for the temperatures below the
+#'   optimal temperature and another for the temperatures above the optimal
+#'   temperature. For these equations, \code{startValues} should be a list
+#'   of two lists, where the second element only contain starting estimates not
 #'   specified in the first element, e.g., for Stinner et al.:
 #'   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
 #'   and for Lamb 1992:
@@ -26,6 +33,7 @@
 #'   possible to use the function with a data.frame containing the temperature in the
 #'   first column and the development rate in the sceond column, using the argument
 #'   \code{df}
+#' @details NULL is returned when an unknown algorithm is entered.
 #' @examples
 #' ## Example with a linear model (no starting estimates)
 #' myT <- 5:15
@@ -41,91 +49,184 @@
 #' myDF <- data.frame(myT, myDev)
 #' myNLS <- devRateModel(eq = campbell_74, df = myDF)
 #' @export
-devRateModel <- function(eq, temp, devRate, startValues, df = NULL, ...){
+devRateModel <- function(
+  eq, temp, devRate, startValues, df = NULL, algo = "GN", ...){
   if (!is.null(df)){
     temp <- df[, 1]
     devRate <- df[, 2]
   }
-  ### handling exception for <stinner_74> and <lamb_92>
-  if(eq$id == "eq040" | eq$id == "eq150"){
-    tTh <- temp[devRate == max(devRate, na.rm = TRUE)]
-    tTh <- unique(tTh[!is.na(tTh)])
-    if(length(tTh) > 1){
-      meanDevRates <- sapply(seq_along(tTh), function(ti){
-        mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
-      tTh <- tTh[meanDevRates == max(meanDevRates)][1]
-      # if(length(tTh) > 1){tTh <- tTh[1]}
-    }
-    part1_temp <- temp[temp <= tTh]
-    part2_temp <- temp[temp >= tTh]
-    part1_devRate <- devRate[temp <= tTh]
-    part2_devRate <- devRate[temp >= tTh]
-    if(eq$id == "eq040") {
-      nls_devRate1 <- stats::nls(
-        formula = eq[[1]][[1]],
-        data = data.frame(rT = part1_devRate, T = part1_temp),
-        start = startValues[[1]],
-        ...)
-      newEq <- gsub("C", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
-      newEq <- gsub("k1", stats::coef(nls_devRate1)[2], newEq)
-      newEq <- gsub("k2", stats::coef(nls_devRate1)[3], newEq)
-      newEq <- paste0("rT ~ ", newEq)
-      nls_devRate2 <- stats::nls(
-        formula = newEq,
-        data = data.frame(rT = part2_devRate, x = part2_temp),
-        start = startValues[[2]])
-      nls_devRate <- list(nls_devRate1, nls_devRate2)
-    }
-    if(eq$id == "eq150") {
-      nls_devRate1 <- stats::nls(
-        formula = eq[[1]][[1]],
-        data = data.frame(rT = part1_devRate, T = part1_temp),
-        start = startValues[[1]],
-        ...)
-      newEq <- gsub("Rm", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
-      newEq <- gsub("Tmax", stats::coef(nls_devRate1)[2], newEq)
-      newEq <- gsub("To", stats::coef(nls_devRate1)[3], newEq)
-      newEq <- paste0("rT ~ ", newEq)
-      nls_devRate2 <- stats::nls(
-        formula = newEq,
-        data = data.frame(rT = part2_devRate, x = part2_temp),
-        start = startValues[[2]],
-        ...)
-      nls_devRate <- list(nls_devRate1, nls_devRate2)
-    }
-  } else {
+  if(algo == "GN"){
+    ### handling exception for <stinner_74> and <lamb_92>
+    if(eq$id == "eq040" | eq$id == "eq150"){
+      tTh <- temp[devRate == max(devRate, na.rm = TRUE)]
+      tTh <- unique(tTh[!is.na(tTh)])
+      if(length(tTh) > 1){
+        meanDevRates <- sapply(seq_along(tTh), function(ti){
+          mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
+        tTh <- tTh[meanDevRates == max(meanDevRates)][1]
+        # if(length(tTh) > 1){tTh <- tTh[1]}
+      }
+      part1_temp <- temp[temp <= tTh]
+      part2_temp <- temp[temp >= tTh]
+      part1_devRate <- devRate[temp <= tTh]
+      part2_devRate <- devRate[temp >= tTh]
 
-    if(eq$id == "eq030"){
-      nls_devRate <- stats::nls(
-        formula = eq[[1]],
-        data = data.frame(rT = devRate, T = temp),
-        start = list(aa = 1, bb = 1), ...)
+      if(eq$id == "eq040") {
+        nls_devRate1 <- stats::nls(
+          formula = eq[[1]][[1]],
+          data = data.frame(rT = part1_devRate, T = part1_temp),
+          start = startValues[[1]],
+          ...)
+        newEq <- gsub("C", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
+        newEq <- gsub("k1", stats::coef(nls_devRate1)[2], newEq)
+        newEq <- gsub("k2", stats::coef(nls_devRate1)[3], newEq)
+        newEq <- paste0("rT ~ ", newEq)
+        nls_devRate2 <- stats::nls(
+          formula = newEq,
+          data = data.frame(rT = part2_devRate, x = part2_temp),
+          start = startValues[[2]])
+        nls_devRate <- list(nls_devRate1, nls_devRate2)
+      }
+      if(eq$id == "eq150") {
+        nls_devRate1 <- stats::nls(
+          formula = eq[[1]][[1]],
+          data = data.frame(rT = part1_devRate, T = part1_temp),
+          start = startValues[[1]],
+          ...)
+        newEq <- gsub("Rm", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
+        newEq <- gsub("Tmax", stats::coef(nls_devRate1)[2], newEq)
+        newEq <- gsub("To", stats::coef(nls_devRate1)[3], newEq)
+        newEq <- paste0("rT ~ ", newEq)
+        nls_devRate2 <- stats::nls(
+          formula = newEq,
+          data = data.frame(rT = part2_devRate, x = part2_temp),
+          start = startValues[[2]],
+          ...)
+        nls_devRate <- list(nls_devRate1, nls_devRate2)
+      }
     } else {
-      if(eq$id == "eq110"){
+
+      if(eq$id == "eq030"){
         nls_devRate <- stats::nls(
           formula = eq[[1]],
           data = data.frame(rT = devRate, T = temp),
-          start = list(a0 = 1, a1 = 1, a2 = 1), ...)
+          start = list(aa = 1, bb = 1), ...)
       } else {
-        if(eq$id == "eq120"){
+        if(eq$id == "eq110"){
           nls_devRate <- stats::nls(
             formula = eq[[1]],
             data = data.frame(rT = devRate, T = temp),
-            start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
+            start = list(a0 = 1, a1 = 1, a2 = 1), ...)
         } else {
-          if(eq$id == "eq130"){
+          if(eq$id == "eq120"){
             nls_devRate <- stats::nls(
               formula = eq[[1]],
               data = data.frame(rT = devRate, T = temp),
-              start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
+              start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
           } else {
-            nls_devRate <- stats::nls(
-              formula = eq[[1]],
-              data = data.frame(rT = devRate, T = temp),
-              start = startValues, ...)
+            if(eq$id == "eq130"){
+              nls_devRate <- stats::nls(
+                formula = eq[[1]],
+                data = data.frame(rT = devRate, T = temp),
+                start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
+            } else {
+              nls_devRate <- stats::nls(
+                formula = eq[[1]],
+                data = data.frame(rT = devRate, T = temp),
+                start = startValues, ...)
+            }
           }
         }
       }
+    }
+  }else{
+    if(algo == "LM"){
+      ### handling exception for <stinner_74> and <lamb_92>
+      if(eq$id == "eq040" | eq$id == "eq150"){
+        tTh <- temp[devRate == max(devRate, na.rm = TRUE)]
+        tTh <- unique(tTh[!is.na(tTh)])
+        if(length(tTh) > 1){
+          meanDevRates <- sapply(seq_along(tTh), function(ti){
+            mean(devRate[temp == tTh[ti]], na.rm = TRUE)})
+          tTh <- tTh[meanDevRates == max(meanDevRates)][1]
+          # if(length(tTh) > 1){tTh <- tTh[1]}
+        }
+        part1_temp <- temp[temp <= tTh]
+        part2_temp <- temp[temp >= tTh]
+        part1_devRate <- devRate[temp <= tTh]
+        part2_devRate <- devRate[temp >= tTh]
+
+        if(eq$id == "eq040") {
+          nls_devRate1 <- minpack.lm::nlsLM(
+            formula = eq[[1]][[1]],
+            data = data.frame(rT = part1_devRate, T = part1_temp),
+            start = startValues[[1]],
+            ...)
+          newEq <- gsub("C", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
+          newEq <- gsub("k1", stats::coef(nls_devRate1)[2], newEq)
+          newEq <- gsub("k2", stats::coef(nls_devRate1)[3], newEq)
+          newEq <- paste0("rT ~ ", newEq)
+          nls_devRate2 <- minpack.lm::nlsLM(
+            formula = newEq,
+            data = data.frame(rT = part2_devRate, x = part2_temp),
+            start = startValues[[2]])
+          nls_devRate <- list(nls_devRate1, nls_devRate2)
+        }
+        if(eq$id == "eq150") {
+          nls_devRate1 <- minpack.lm::nlsLM(
+            formula = eq[[1]][[1]],
+            data = data.frame(rT = part1_devRate, T = part1_temp),
+            start = startValues[[1]],
+            ...)
+          newEq <- gsub("Rm", stats::coef(nls_devRate1)[1], eq$eqAlt[2])
+          newEq <- gsub("Tmax", stats::coef(nls_devRate1)[2], newEq)
+          newEq <- gsub("To", stats::coef(nls_devRate1)[3], newEq)
+          newEq <- paste0("rT ~ ", newEq)
+          nls_devRate2 <- minpack.lm::nlsLM(
+            formula = newEq,
+            data = data.frame(rT = part2_devRate, x = part2_temp),
+            start = startValues[[2]],
+            ...)
+          nls_devRate <- list(nls_devRate1, nls_devRate2)
+        }
+      } else {
+
+        if(eq$id == "eq030"){
+          nls_devRate <- minpack.lm::nlsLM(
+            formula = eq[[1]],
+            data = data.frame(rT = devRate, T = temp),
+            start = list(aa = 1, bb = 1), ...)
+        } else {
+          if(eq$id == "eq110"){
+            nls_devRate <- minpack.lm::nlsLM(
+              formula = eq[[1]],
+              data = data.frame(rT = devRate, T = temp),
+              start = list(a0 = 1, a1 = 1, a2 = 1), ...)
+          } else {
+            if(eq$id == "eq120"){
+              nls_devRate <- minpack.lm::nlsLM(
+                formula = eq[[1]],
+                data = data.frame(rT = devRate, T = temp),
+                start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1), ...)
+            } else {
+              if(eq$id == "eq130"){
+                nls_devRate <- minpack.lm::nlsLM(
+                  formula = eq[[1]],
+                  data = data.frame(rT = devRate, T = temp),
+                  start = list(a0 = 1, a1 = 1, a2 = 1, a3 = 1, a4 = 1), ...)
+              } else {
+                nls_devRate <- minpack.lm::nlsLM(
+                  formula = eq[[1]],
+                  data = data.frame(rT = devRate, T = temp),
+                  start = startValues, ...)
+              }
+            }
+          }
+        }
+      }
+    }else{
+      warning(paste0("error: algorithm ", algo," unknown"))
+      return(NULL)
     }
   }
   return(nls_devRate)

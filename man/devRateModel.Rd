@@ -4,36 +4,44 @@
 \alias{devRateModel}
 \title{Compute non-linear regression}
 \usage{
-devRateModel(eq, temp, devRate, startValues, df = NULL, ...)
+devRateModel(eq, temp, devRate, startValues, df = NULL, algo = "GN", ...)
 }
 \arguments{
-\item{eq}{The name of the equation.}
+\item{eq}{The name of the equation. See \code{devRateEqList} for the list
+of equations}
 
-\item{temp}{The temperature.}
+\item{temp}{The temperature (vector).}
 
-\item{devRate}{The development rate \code{(days)^-1}}
+\item{devRate}{The development rate \code{(days)^-1} (vector).}
 
-\item{startValues}{Starting values for the regression.}
+\item{startValues}{Starting values for the regression (list).}
 
 \item{df}{A data.frame with the temperature in the first column and the
 development rate in the second column (alternative to the use of temp and
 devRate).}
 
+\item{algo}{The abbreviated name of the algorithm used for model fitting (
+"GN" for Gauss-Newton algorithm, "LM" for Levenberg-Marquardt algorithm;
+"GN" is the default value).}
+
 \item{...}{Additional arguments for the \code{nls} function.}
 }
 \value{
 An object of class \code{nls} (except for Stinner et al. 1974 and
-  Lamb 1992 where the function returns a list of two objects of class \code{nls}).
+  Lamb 1992 where the function returns a list of two objects of class
+  \code{nls}).
 }
 \description{
-Determine the nonlinear least-squares estimates of the parameters of a nonlinear model, on
-  the basis of the \code{nls} function from package \code{stats}.
+Determine the nonlinear least-squares estimates of the parameters of a
+  nonlinear model, on the basis of the \code{nls} function from package
+  \code{stats}.
 }
 \details{
-\code{startValues} for equations by Stinner et al. 1974 and Lamb 1992 are composed of
-  two equations: one for the temperatures below the optimal temperature and another for the
-  temperatures above the optimal temperature. For these equations, \code{startValues} should
-  be a list of two lists, where the second element only contain starting estimates not
+\code{startValues} for equations by Stinner et al. 1974 and Lamb
+  1992 are composed of two equations: one for the temperatures below the
+  optimal temperature and another for the temperatures above the optimal
+  temperature. For these equations, \code{startValues} should be a list
+  of two lists, where the second element only contain starting estimates not
   specified in the first element, e.g., for Stinner et al.:
   \code{startValues <- list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30))},
   and for Lamb 1992:
@@ -44,6 +52,8 @@ The temperature should be provided as a vector in argument \code{temp} and
   possible to use the function with a data.frame containing the temperature in the
   first column and the development rate in the sceond column, using the argument
   \code{df}
+
+NULL is returned when an unknown algorithm is entered.
 }
 \examples{
 ## Example with a linear model (no starting estimates)
