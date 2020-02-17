@@ -17,6 +17,17 @@ test_that("Returns NLS object",{
     expected = "nls")
 })
 
+test_that("Returns NLS object with LM algo",{
+  res <- devRateModel(eq = campbell_74, df = myDf, algo = "LM")
+  expect_equal(
+    object = class(res),
+    expected = "nls")
+  res2 <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev, algo = "LM")
+  expect_equal(
+    object = class(res2),
+    expected = "nls")
+})
+
 test_that("NLS stopCode 0 (convergence)",{
   res <- devRateModel(eq = campbell_74, df = myDf)
   expect_equal(
