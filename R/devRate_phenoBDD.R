@@ -219,10 +219,10 @@ devRateIBMparam <- function(
       tx <- tx + as.integer(timeLayEggs)
     }
     currentInd <-  vectorGS
-    if(exists(x = "communityInd")){
-      communityInd <- rbind(
-        communityInd,
-        c(currentInd, rep(NA, ncol(communityInd) - length(currentInd))))
+    if(exists(x = "communityInd") & length(currentInd) < ncol(communityInd)){
+        communityInd <- rbind(
+          communityInd,
+          c(currentInd, rep(NA, ncol(communityInd) - length(currentInd))))
     }else{
       communityInd <- matrix(
         c(currentInd, rep(NA, 10)), ncol = length(currentInd) + 10
