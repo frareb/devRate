@@ -170,7 +170,6 @@ devRateIBMparam <- function(
       Tmin <- Tmin
       if(x <= Tmin){
         i <- 0
-        print("aaa")
       }
     }
     return(i)
