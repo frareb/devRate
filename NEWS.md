@@ -1,7 +1,7 @@
 ## devRate 0.1.11
 * coverage with testthat
 * typos and minor changes
-* new function devRateIBMparam
+* new function devRateIBMparam under development
 
 ## devRate 0.1.10
 * vignette problem fixed with knitr version 1.23
