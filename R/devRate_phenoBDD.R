@@ -113,6 +113,8 @@ devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numI
 #'    females lay eggs in time steps (a numeric).
 #' @return A list with three elements: the table of phenology for each individual,
 #'    the models used (nls objects), and the time series for temperature.
+#' @details Please note that this function is experimental and only works for
+#'   the briere2_99 equation.
 #' @examples
 #' # with only one life stage
 #' forecastX <- devRateIBMparam(
@@ -161,6 +163,18 @@ devRateIBMparam <- function(
   stocha,
   timeLayEggs = 1){
 
+  # !!! exceptions for equations with positive values for low temp !!!
+  exceptDevRate <- function(temp){
+    i <- devRT
+    if(eq$name == "Briere-2"){
+      Tmin <- Tmin
+      if(x <= Tmin){
+        i <- 0
+        print("aaa")
+      }
+    }
+    return(i)
+  }
 
   models <- lapply(seq_along(myParam), function(z){
     as.data.frame(myParam[[z]])
@@ -183,6 +197,8 @@ devRateIBMparam <- function(
           }
           x <- tempTS[tx]
           devRT <- unlist(eval(parse(text = eq$eqAlt)))
+          # !!! exceptions for equations with positive values for low temp !!!
+          devRT <- exceptDevRate(x)
           add2Dev <- stats::rnorm(n = 1, mean = devRT, sd = stocha) *
             ratioSupDev * timeStepTS
 
@@ -200,6 +216,8 @@ devRateIBMparam <- function(
           }
           x <- tempTS[tx]
           devRT <- unlist(eval(parse(text = eq$eqAlt)))
+          # !!! exceptions for equations with positive values for low temp !!!
+          devRT <- exceptDevRate(x)
           addDev <- stats::rnorm(n = 1, mean = devRT, sd = stocha) * timeStepTS
 
           if(addDev < 0){addDev <- 0}

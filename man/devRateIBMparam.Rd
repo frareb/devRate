@@ -42,6 +42,10 @@ A list with three elements: the table of phenology for each individual,
 Forecast ectotherm phenology as a function of temperature and development
 rate models using known parameters
 }
+\details{
+Please note that this function is experimental and only works for
+  the briere2_99 equation.
+}
 \examples{
 # with only one life stage
 forecastX <- devRateIBMparam(
