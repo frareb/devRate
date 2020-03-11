@@ -3,7 +3,6 @@
 R/devRate_equations\.R
 R/devRate_tpc\.R
 R/devRate_forRstudioUsers\.R
-tests/testthat/test_devRate_forRstudioUsers\.R
 ^data/.*\.csv$
 ^inst/data/.*\.csv$
 cran-comments\.md
