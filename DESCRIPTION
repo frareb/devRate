@@ -32,7 +32,7 @@ License: GPL-2
 LazyData: TRUE
 Depends:
   R (>= 3.5.0)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Suggests: knitr,
     rmarkdown,
     testthat,
