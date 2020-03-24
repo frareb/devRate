@@ -32,7 +32,7 @@ devRateQlStat <- function(eq, nlsDR, df){
     stats <- lapply(seq_along(nlsDR), function(i){
       # stinner_74 and lamb_92 exception
       if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
-        # warning("stinner_74 and lamb_92 not implemented yet")
+      # warning("stinner_74 and lamb_92 not implemented yet")
         dfStats <- data.frame(RSS = NA, RMSE = NA, NRMSE = NA, R.sq = NA,
                               R.sqAdj = NA, corOP = NA, shapiroStat = NA,
                               shapiroPvalue = NA)
@@ -42,9 +42,9 @@ devRateQlStat <- function(eq, nlsDR, df){
           N <- length(temp[[i]])
           fitted <- stats::predict(nlsDR[[i]])
           res <- stats::residuals(nlsDR[[i]])
-          p <- 1 + length(stats::coef(nlsDR[[i]]))
+          p <- length(stats::coef(nlsDR[[i]]))
           RSS <- sum((devRate[[i]] - fitted)^2)
-          RMSE <- sqrt(RSS / N)
+          RMSE <- sqrt(RSS / (N - (p - 1)))
           NRMSE <- RMSE/mean(devRate[[i]])
           R.sq <- 1 - sum((devRate[[i]] - fitted)^2) / sum((devRate[[i]]
                                                             - mean(devRate[[i]]))^2)
@@ -74,7 +74,7 @@ devRateQlStat <- function(eq, nlsDR, df){
     row.names(stats) <- lapply(seq_along(nlsDR), function(i){paste0("nls#", i)})
     return(stats)
   }else{
-    # warning("nlsDR or df is not a list")
+  # warning("nlsDR or df is not a list")
     return(NULL)
   }
 }
