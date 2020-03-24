@@ -4,7 +4,8 @@
 \name{exTropicalMoth}
 \alias{exTropicalMoth}
 \title{Tropical moth development rate at constant temperatures.}
-\format{A list of two elements with a list of three elements.
+\format{
+A list of two elements with a list of three elements.
 \describe{
   \item{raw}{The raw data extracted from Crespo-Perez et al. 2011.
     \describe{
@@ -20,7 +21,8 @@
       \item{pupa}{nls object}
     }
   }
-}}
+}
+}
 \usage{
 exTropicalMoth
 }

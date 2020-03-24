@@ -4,7 +4,8 @@
 \name{ratkowsky_82}
 \alias{ratkowsky_82}
 \title{Ratkowsky equation of development rate as a function of temperature (Shi modification).}
-\format{A list of eight elements describing the equation.
+\format{
+A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation (formula object).}
   \item{eqAlt}{The equation (string).}
@@ -14,7 +15,8 @@
   \item{startVal}{The parameters found in the literature with their references.}
   \item{com}{An optional comment about the equation use.}
   \item{id}{An id to identify the equation.}
-}}
+}
+}
 \source{
 \url{http://jb.asm.org/content/149/1/1}
 

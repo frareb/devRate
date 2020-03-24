@@ -5,7 +5,8 @@
 \alias{wagner_88}
 \title{Hagstrum et Milliken equation of development rate as a function of temperature retrieved
 from Wagner 1984.}
-\format{A list of eight elements describing the equation.
+\format{
+A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation (formula object).}
   \item{eqAlt}{The equation (string).}
@@ -15,7 +16,8 @@ from Wagner 1984.}
   \item{startVal}{The parameters found in the literature with their references.}
   \item{com}{An optional comment about the equation use.}
   \item{id}{An id to identify the equation.}
-}}
+}
+}
 \source{
 \url{https://doi.org/10.1093/aesa/77.2.208}
 

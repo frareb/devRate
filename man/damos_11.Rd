@@ -4,7 +4,8 @@
 \name{damos_11}
 \alias{damos_11}
 \title{Inverse second-order polynomial equation of development rate as a function of temperature.}
-\format{A list of eight elements describing the equation.
+\format{
+A list of eight elements describing the equation.
 \describe{
   \item{eq}{The equation (formula object).}
   \item{eqAlt}{The equation (string).}
@@ -14,7 +15,8 @@
   \item{startVal}{The parameters found in the literature with their references.}
   \item{com}{An optional comment about the equation use.}
   \item{id}{An id to identify the equation.}
-}}
+}
+}
 \source{
 \url{http://dx.doi.org/10.1155/2012/123405}
 }
