@@ -83,12 +83,11 @@ test_that("devRateQlBio", {
   fitList <- lapply(seq_along(dfList), function(i){
     devRateModel(eq = janisch_32, temp = dfList[[i]][, 1], devRate = dfList[[i]][, 2],
                  startValues = list(Dmin = 5, Topt = 30, aa = 0.2, bb = 0.1))})
-  qlBio <- devRateQlBio(nlsDR = fitList, propThresh = 0.1)
+  qlBio <- devRateQlBio(nlsDR = fitList, propThresh = 0.1, eq = rep(list(janisch_32), 3))
   expect_is(qlBio, "data.frame")
 })
 
 test_that("devRateQlBio nls NULL", {
-  fitList <- list(NULL)
-  qlBio <- devRateQlBio(nlsDR = fitList, propThresh = 0.1)
+  qlBio <- devRateQlBio(nlsDR = list(NULL), propThresh = 0.1, eq = list(NULL))
   expect_is(qlBio, "data.frame")
 })
