@@ -4,7 +4,7 @@
 \alias{devRateQlBio}
 \title{Biological likelihood of nls fits}
 \usage{
-devRateQlBio(nlsDR, propThresh = 0.01)
+devRateQlBio(nlsDR, propThresh = 0.01, eq)
 }
 \arguments{
 \item{nlsDR}{A list of nls objects.}
@@ -12,6 +12,8 @@ devRateQlBio(nlsDR, propThresh = 0.01)
 \item{propThresh}{The proportion of maximal development rate used as a
 threshold for estimating CTmin and CTmax when asymptotic equations are used
 (default value is 0.01)}
+
+\item{eq}{A list of equations used for nls fitting.}
 }
 \value{
 An object of class \code{data.frame} with development metrics (CTmin,
@@ -32,5 +34,5 @@ myNLS <- list(devRateModel(eq = damos_08, df = myDf,
                            startValues = list(aa = 1, Tmin = 7, Tmax = 40), algo = "LM"),
               devRateModel(eq = poly2, df = myDf,
                            startValues = list(a0 = 1, a1 = 1, a2 = 1), algo = "LM"))
-devRateQlBio(nlsDR = myNLS)
+devRateQlBio(nlsDR = myNLS, propThresh = 0.1, eq = list(damos_08, kontodimas_04, poly2))
 }

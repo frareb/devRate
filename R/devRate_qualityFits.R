@@ -32,7 +32,7 @@ devRateQlStat <- function(eq, nlsDR, df){
     stats <- lapply(seq_along(nlsDR), function(i){
       # stinner_74 and lamb_92 exception
       if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
-      # warning("stinner_74 and lamb_92 not implemented yet")
+        # warning("stinner_74 and lamb_92 not implemented yet")
         dfStats <- data.frame(RSS = NA, RMSE = NA, NRMSE = NA, R.sq = NA,
                               R.sqAdj = NA, corOP = NA, shapiroStat = NA,
                               shapiroPvalue = NA)
@@ -74,7 +74,7 @@ devRateQlStat <- function(eq, nlsDR, df){
     row.names(stats) <- lapply(seq_along(nlsDR), function(i){paste0("nls#", i)})
     return(stats)
   }else{
-  # warning("nlsDR or df is not a list")
+    # warning("nlsDR or df is not a list")
     return(NULL)
   }
 }
@@ -87,6 +87,7 @@ devRateQlStat <- function(eq, nlsDR, df){
 #' @param propThresh The proportion of maximal development rate used as a
 #'   threshold for estimating CTmin and CTmax when asymptotic equations are used
 #'   (default value is 0.01)
+#' @param eq A list of equations used for nls fitting.
 #' @return An object of class \code{data.frame} with development metrics (CTmin,
 #'   Ctmax, Topt) in columns and nls objects in rows.
 #' @details NULL is returned when nlsDR or df are not a list.
@@ -99,20 +100,54 @@ devRateQlStat <- function(eq, nlsDR, df){
 #'                            startValues = list(aa = 1, Tmin = 7, Tmax = 40), algo = "LM"),
 #'               devRateModel(eq = poly2, df = myDf,
 #'                            startValues = list(a0 = 1, a1 = 1, a2 = 1), algo = "LM"))
-#' devRateQlBio(nlsDR = myNLS)
+#' devRateQlBio(nlsDR = myNLS, propThresh = 0.1, eq = list(damos_08, kontodimas_04, poly2))
 #' @export
-devRateQlBio <- function(nlsDR, propThresh = 0.01){
+devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
   stats <- lapply(seq_along(nlsDR), function(i){
     if(!is.null(nlsDR[[i]])){
+      if(eq[[i]]$id=="eq030"){
+        a <- unname(stats::coef(nlsDR[[i]])[1])
+        b <- unname(stats::coef(nlsDR[[i]])[2])
+        CTmin <- -(a/b)
+        return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+      }
+      if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
+        T <- seq(from = -100, to = 100, by = 0.1)
+        rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
+        rT[is.na(rT)] <- 0
+        rT[rT < 0] <- 0
+        rT[rT < propThresh*max(rT)] <- 0
+        CTmin <- max(T[rT == min(rT)])
+        return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+      }
+      Topt <- stats::optimize(f = function(T){stats::predict(nlsDR[[i]], newdata = data.frame(T))},
+                              interval = c(0, 50),
+                              maximum = TRUE)$maximum
       T <- seq(from = -100, to = 100, by = 0.1)
       rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
       rT[is.na(rT)] <- 0
       rT[rT < 0] <- 0
-      rT[rT < propThresh*max(rT)] <- 0
-      Topt <- T[rT == max(rT)]
+      rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
       CTmax <- min(T[rT == min(rT) & T > Topt])
       CTmin <- max(T[rT == min(rT) & T < Topt])
+      if(is.infinite(CTmin)){
+        CTmin <- stats::optimize(f = function(T){
+          rT <- stats::predict(nlsDR[[i]], newdata = data.frame(T))
+          rT[rT < 0] <- 1000
+          rT[is.na(rT)] <- 1000
+          return(rT)
+        }, interval = c(0, Topt), maximum = FALSE, tol = .Machine$double.eps)$minimum
+      }
+      if(is.infinite(CTmax)){
+        CTmax <- stats::optimize(f = function(j){
+          rT <- stats::predict(nlsDR[[i]], newdata = list(T = j))
+          rT[rT < 0] <- 1000
+          rT[is.na(rT)] <- 1000
+          return(rT)
+        }, interval = c(Topt, upper = 100), maximum = FALSE, tol = .Machine$double.eps)$minimum
+      }
       return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
+
     }else{
       return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
     }
