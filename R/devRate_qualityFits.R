@@ -94,18 +94,26 @@ devRateQlStat <- function(eq, nlsDR, df){
 #' @examples
 #' myDf <- data.frame(T = seq(from = 0, to = 50, by = 10),
 #'                    rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
-#' myNLS <- list(devRateModel(eq = damos_08, df = myDf,
-#'                            startValues = list(aa = 1, bb = 1, cc = 1), algo = "LM"),
-#'               devRateModel(eq = kontodimas_04, df = myDf,
-#'                            startValues = list(aa = 1, Tmin = 7, Tmax = 40), algo = "LM"),
-#'               devRateModel(eq = poly2, df = myDf,
-#'                            startValues = list(a0 = 1, a1 = 1, a2 = 1), algo = "LM"))
-#' devRateQlBio(nlsDR = myNLS, propThresh = 0.1, eq = list(damos_08, kontodimas_04, poly2))
+#' myNLS <- list(devRateModel(eq = janisch_32,
+#'                            df = myDf,
+#'                            startValues = list(aa = 0.2, bb = 0.1, Dmin = 10, Topt = 30),
+#'                            algo = "LM"),
+#'               devRateModel(eq = kontodimas_04,
+#'                            df = myDf,
+#'                            startValues = list(aa = 1, Tmin = 7, Tmax = 40),
+#'                            algo = "LM"),
+#'               devRateModel(eq = poly2,
+#'                            df = myDf,
+#'                            startValues = list(a0 = 1, a1 = 1, a2 = 1),
+#'                            algo = "LM"))
+#' devRateQlBio(nlsDR = myNLS,
+#'              eq = list(damos_08, kontodimas_04, poly2),
+#'              propThresh = 0.1)
 #' @export
 devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
   stats <- lapply(seq_along(nlsDR), function(i){
     if(!is.null(nlsDR[[i]])){
-      if(eq[[i]]$id=="eq030"){
+      if(eq[[i]]$id == "eq030"){
         a <- unname(stats::coef(nlsDR[[i]])[1])
         b <- unname(stats::coef(nlsDR[[i]])[2])
         CTmin <- -(a/b)
@@ -116,13 +124,16 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
-        rT[rT < propThresh*max(rT)] <- 0
+        if(eq[[i]]$id == "eq020"){
+          rT[rT < propThresh*max(rT)] <- 0
+        }
         CTmin <- max(T[rT == min(rT)])
         return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
       }
-      Topt <- stats::optimize(f = function(T){stats::predict(nlsDR[[i]], newdata = data.frame(T))},
-                              interval = c(0, 50),
-                              maximum = TRUE)$maximum
+      Topt <- stats::optimize(
+        f = function(T){stats::predict(nlsDR[[i]], newdata = data.frame(T))},
+        interval = c(0, 50),
+        maximum = TRUE)$maximum
       T <- seq(from = -100, to = 100, by = 0.1)
       rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
       rT[is.na(rT)] <- 0
@@ -130,24 +141,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
       rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
       CTmax <- min(T[rT == min(rT) & T > Topt])
       CTmin <- max(T[rT == min(rT) & T < Topt])
-      if(is.infinite(CTmin)){
-        CTmin <- stats::optimize(f = function(T){
-          rT <- stats::predict(nlsDR[[i]], newdata = data.frame(T))
-          rT[rT < 0] <- 1000
-          rT[is.na(rT)] <- 1000
-          return(rT)
-        }, interval = c(0, Topt), maximum = FALSE, tol = .Machine$double.eps)$minimum
-      }
-      if(is.infinite(CTmax)){
-        CTmax <- stats::optimize(f = function(j){
-          rT <- stats::predict(nlsDR[[i]], newdata = list(T = j))
-          rT[rT < 0] <- 1000
-          rT[is.na(rT)] <- 1000
-          return(rT)
-        }, interval = c(Topt, upper = 100), maximum = FALSE, tol = .Machine$double.eps)$minimum
-      }
       return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
-
     }else{
       return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
     }
