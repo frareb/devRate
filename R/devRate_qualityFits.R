@@ -112,38 +112,45 @@ devRateQlStat <- function(eq, nlsDR, df){
 #' @export
 devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
   stats <- lapply(seq_along(nlsDR), function(i){
-    if(!is.null(nlsDR[[i]])){
-      if(eq[[i]]$id == "eq030"){
-        a <- unname(stats::coef(nlsDR[[i]])[1])
-        b <- unname(stats::coef(nlsDR[[i]])[2])
-        CTmin <- -(a/b)
-        return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
-      }
-      if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
+    # stinner_74 and lamb_92 exception
+    if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
+      # warning("stinner_74 and lamb_92 not implemented yet")
+      dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA)
+      return(dfStats)
+    }else{
+      if(!is.null(nlsDR[[i]])){
+        if(eq[[i]]$id == "eq030"){
+          a <- unname(stats::coef(nlsDR[[i]])[1])
+          b <- unname(stats::coef(nlsDR[[i]])[2])
+          CTmin <- -(a/b)
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+        }
+        if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
+          T <- seq(from = -100, to = 100, by = 0.1)
+          rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
+          rT[is.na(rT)] <- 0
+          rT[rT < 0] <- 0
+          if(eq[[i]]$id == "eq020"){
+            rT[rT < propThresh*max(rT)] <- 0
+          }
+          CTmin <- max(T[rT == min(rT)])
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+        }
+        Topt <- stats::optimize(
+          f = function(T){stats::predict(nlsDR[[i]], newdata = data.frame(T))},
+          interval = c(0, 50),
+          maximum = TRUE)$maximum
         T <- seq(from = -100, to = 100, by = 0.1)
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
-        if(eq[[i]]$id == "eq020"){
-          rT[rT < propThresh*max(rT)] <- 0
-        }
-        CTmin <- max(T[rT == min(rT)])
-        return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+        rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
+        CTmax <- min(T[rT == min(rT) & T > Topt])
+        CTmin <- max(T[rT == min(rT) & T < Topt])
+        return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
+      }else{
+        return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
       }
-      Topt <- stats::optimize(
-        f = function(T){stats::predict(nlsDR[[i]], newdata = data.frame(T))},
-        interval = c(0, 50),
-        maximum = TRUE)$maximum
-      T <- seq(from = -100, to = 100, by = 0.1)
-      rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
-      rT[is.na(rT)] <- 0
-      rT[rT < 0] <- 0
-      rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
-      CTmax <- min(T[rT == min(rT) & T > Topt])
-      CTmin <- max(T[rT == min(rT) & T < Topt])
-      return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
-    }else{
-      return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
     }
   })
   stats <- do.call(rbind, stats)
