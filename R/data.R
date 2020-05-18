@@ -1174,3 +1174,6 @@
 
 #' The list of all available equations of development rate as a function of temperature.
 "devRateEqList"
+
+#' The list of start values necessary for the fitting of every equations.
+"devRateEqStartVal"
