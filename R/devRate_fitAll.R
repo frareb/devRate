@@ -13,63 +13,47 @@
 #' @examples
 #' @export
 
-devRateModelAll <- function(df, ...){
-  modL <- lapply(seq_along(devRateEqList), function(i){
-    modX <- try(devRateModel(
-      df = df,
-      eq = devRateEqList[[i]],
-      startValues = devRateEqStartVal[[i]]), silent = TRUE)
+devRateModelAll <- function(df,
+                            eqList = devRateEqList,
+                            eqStartVal = devRateEqStartVal,
+                            ...){
+  modL <- lapply(seq_along(eqList), function(i){
+    modX <- try(devRateModel(df = df,
+                             eq = eqList[[i]],
+                             startValues = eqStartVal[[i]],
+                             ...),
+                silent = TRUE)
     if(class(modX) == "try-error"){
       return(NULL)
     }else{
       return(modX)
     }
   })
-
-  AIC <- lapply(seq_along(modL), function(i){
-    if(i == 4 | i == 23){
-      return(NA)
+  IC <- lapply(seq_along(modL), function(i){
+    if(eqList[[i]]$id == "eq040" | eqList[[i]]$id == "eq150"){
+      return(c(NA, NA))
     }else{
       if(!is.null(modL[[i]])){
-        return(AIC(modL[[i]]))
+        return(c(AIC(modL[[i]]), BIC(modL[[i]])))
       }else{
-        return(NA)
+        return(c(NA, NA))
       }
     }
   })
-  AIC <- do.call(c, AIC)
-  rankAIC <- rank(AIC)
+  IC <- do.call(rbind, IC)
+  rankAIC <- rank(IC[, 1])
+  rankBIC <- rank(IC[, 2])
   deltaAIC <- vector()
-  for(i in 1:37){
-    deltaAIC[i] <- AIC[i] - min(AIC, na.rm = TRUE)
-  }
-  AICdf <- data.frame(AIC, rankAIC, deltaAIC)
-
-  BIC <- lapply(seq_along(modL), function(i){
-    if(i == 4 | i == 23){
-      return(NA)
-    }else{
-      if(!is.null(modL[[i]])){
-        return(BIC(modL[[i]]))
-      }else{
-        return(NA)
-      }
-    }
-  })
-  BIC <- do.call(c, BIC)
-  rankBIC <- rank(BIC)
   deltaBIC <- vector()
-  for(i in 1:37){
-    deltaBIC[i] <- BIC[i] - min(BIC, na.rm = TRUE)
+  for(i in 1:length(modL)){
+    deltaAIC[i] <- IC[, 1][i] - min(IC[, 1], na.rm = TRUE)
+    deltaBIC[i] <- IC[, 2][i] - min(IC[, 2], na.rm = TRUE)
   }
-  BICdf <- data.frame(BIC, rankBIC, deltaBIC)
-
+  ICdf <- data.frame(AIC = IC[, 1], rankAIC, deltaAIC,
+                     BIC = IC[, 2], rankBIC, deltaBIC)
   qlStat <- devRateQlStat(eq = devRateEqList, nlsDR = modL, df = list(df))
-
-  qlBio <- devRateQlBio(nlsDR = modL, propThresh = 0.01, eq = devRateEqList)
-
-  ql <- data.frame(eqName = names(devRateEqList), AICdf, BICdf, qlStat, qlBio)
+  qlBio <- devRateQlBio(nlsDR = modL, eq = devRateEqList, ...)
+  ql <- data.frame(eqName = names(devRateEqList), ICdf, qlStat, qlBio)
   rownames(ql) <- NULL
-
   return(list(modL, ql))
 }
