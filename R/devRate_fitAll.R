@@ -30,8 +30,8 @@
 #' @export
 
 devRateModelAll <- function(df,
-                            eqList = devRateEqList,
-                            eqStartVal = devRateEqStartVal,
+                            eqList = devRate::devRateEqList,
+                            eqStartVal = devRate::devRateEqStartVal,
                             ...){
   modL <- lapply(seq_along(eqList), function(i){
     modX <- try(devRateModel(df = df,
@@ -50,7 +50,7 @@ devRateModelAll <- function(df,
       return(c(NA, NA))
     }else{
       if(!is.null(modL[[i]])){
-        return(c(AIC(modL[[i]]), BIC(modL[[i]])))
+        return(c(stats::AIC(modL[[i]]), stats::BIC(modL[[i]])))
       }else{
         return(c(NA, NA))
       }
@@ -67,9 +67,9 @@ devRateModelAll <- function(df,
   }
   ICdf <- data.frame(AIC = IC[, 1], rankAIC, deltaAIC,
                      BIC = IC[, 2], rankBIC, deltaBIC)
-  qlStat <- devRateQlStat(eq = devRateEqList, nlsDR = modL, df = list(df))
-  qlBio <- devRateQlBio(nlsDR = modL, eq = devRateEqList, ...)
-  ql <- data.frame(eqName = names(devRateEqList), ICdf, qlStat, qlBio)
+  qlStat <- devRateQlStat(eq = eqList, nlsDR = modL, df = list(df))
+  qlBio <- devRateQlBio(nlsDR = modL, eq = eqList, propThresh = 0.01)
+  ql <- data.frame(eqName = names(eqList), ICdf, qlStat, qlBio)
   rownames(ql) <- NULL
   return(list(modL, ql))
 }
