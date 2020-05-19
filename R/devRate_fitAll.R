@@ -9,8 +9,7 @@
 #' The default value is the object devRateEqList.
 #' @param eqStartVal A list of sarting values for each model. The default value is
 #' the object devRateEqStartVal.
-#' @param ... Additional arguments for the \code{devRateModel} function and
-#' the \code{devRateQlBio} function.
+#' @param ... Additional arguments for the \code{devRateModel} function.
 #' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
 #' of the models. The second element is a \code{data.frame}.
