@@ -88,6 +88,6 @@ test_that("devRateQlBio", {
 })
 
 test_that("devRateQlBio nls NULL", {
-  qlBio <- devRateQlBio(nlsDR = list(NULL), propThresh = 0.1, eq = list(NULL))
+  qlBio <- devRateQlBio(nlsDR = list(NULL), propThresh = 0.1, eq = list(janisch_32))
   expect_is(qlBio, "data.frame")
 })
