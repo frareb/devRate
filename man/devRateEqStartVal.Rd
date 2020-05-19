@@ -3,7 +3,7 @@
 \docType{data}
 \name{devRateEqStartVal}
 \alias{devRateEqStartVal}
-\title{The list of start values necessary for the fitting of every equations.}
+\title{Default starting values for each equation listed in the devRateEqList object.}
 \format{
 An object of class \code{list} of length 37.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 37.
 devRateEqStartVal
 }
 \description{
-The list of start values necessary for the fitting of every equations.
+Default starting values for each equation listed in the devRateEqList object.
 }
 \keyword{datasets}
