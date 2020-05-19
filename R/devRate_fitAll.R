@@ -1,7 +1,7 @@
 #' Fitting all models listed in devRateEqList to a development rate dataset
 #'
 #' This function fits all models listed in devRateEqList to a development
-#' rate dataset and then calculates a series of indices of quality of fits for
+#' rate dataset and then calculates a series of indices of goodness of fit for
 #' each fitted model.
 #' @param df A data.frame with the temperature in the first column and the
 #'   development rate in the second column.
