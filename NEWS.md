@@ -1,3 +1,8 @@
+## devRate 0.1.12
+* function to fit all equations
+* function to assess goodness-of-fit
+* function for model comparison
+
 ## devRate 0.1.11
 * coverage with testthat
 * typos and minor changes

@@ -2,11 +2,11 @@ Package: devRate
 Type: Package
 Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
-Version: 0.1.11.9000
+Version: 0.1.12
 Authors@R: c(
     person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2020",  
       email = "francois.rebaudo@ird.fr"),
-    person("Baptiste", "Régnier", role = "aut", comment = "PhD; 2019-2020"),
+    person("Baptiste", "Regnier", role = "aut", comment = "PhD; 2019-2020"),
     person("Camila", "Benavides", role = "ctb", comment = "M2 student; 2018"),
     person("Tanusson", "Selvarajah", role = "ctb", comment = "L2 student; 2018"),
     person("Nicolas", "Bonnal", role = "ctb", comment = "M1 student; 2018"),
@@ -14,7 +14,7 @@ Authors@R: c(
     person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
 Author: Francois Rebaudo [aut, cre] (2016-2020), 
-    Baptiste Régnier [aut] (PhD; 2019-2020),
+    Baptiste Regnier [aut] (PhD; 2019-2020),
     Camila Benavides [ctb] (M2 student; 2018), 
     Tanusson Selvarajah [ctb] (L2 student; 2018), 
     Nicolas Bonnal [ctb] (M1 student; 2018), 
