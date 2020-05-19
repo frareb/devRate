@@ -9,7 +9,7 @@
 #' @param temp The temperature (vector).
 #' @param devRate The development rate \code{(days)^-1} (vector).
 #' @param startValues Starting values for the regression (list).
-#' @param df A data.frame with the temperature in the first column and the
+#' @param dfData A data.frame with the temperature in the first column and the
 #'   development rate in the second column (alternative to the use of temp and
 #'   devRate).
 #' @param algo The abbreviated name of the algorithm used for model fitting (
@@ -32,28 +32,38 @@
 #'   development rate in another vector in argument \code{devRate}. However, it is
 #'   possible to use the function with a data.frame containing the temperature in the
 #'   first column and the development rate in the sceond column, using the argument
-#'   \code{df}
+#'   \code{dfData}
 #' @details NULL is returned when an unknown algorithm is entered.
 #' @examples
 #' ## Example with a linear model (no starting estimates)
 #' myT <- 5:15
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
-#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev)
+#' myNLS <- devRateModel(
+#'   eq = campbell_74,
+#'   temp = myT,
+#'   devRate = myDev)
 #' ## Example with a non-linear model (starting estimates)
 #' myT <- seq(from = 0, to = 50, by = 10)
 #' myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
-#' myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
-#'   startValues = list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30)))
+#' myNLS <- devRateModel(
+#'   eq = stinner_74,
+#'   temp = myT,
+#'   devRate = myDev,
+#'   startValues = list(
+#'     list(C = 0.05, k1 = 5, k2 = -0.3),
+#'     list(Topt = 30)))
 #' ## Example with a data.frame instead of two vectors for temperature and
 #' ## development rate
 #' myDF <- data.frame(myT, myDev)
-#' myNLS <- devRateModel(eq = campbell_74, df = myDF)
+#' myNLS <- devRateModel(
+#'   eq = campbell_74,
+#'   dfData = myDF)
 #' @export
 devRateModel <- function(
-  eq, temp, devRate, startValues, df = NULL, algo = "GN", ...){
-  if (!is.null(df)){
-    temp <- df[, 1]
-    devRate <- df[, 2]
+  eq, temp, devRate, startValues, dfData = NULL, algo = "GN", ...){
+  if (!is.null(dfData)){
+    temp <- dfData[, 1]
+    devRate <- dfData[, 2]
   }
   if(algo == "GN"){
     ### handling exception for <stinner_74> and <lamb_92>
@@ -245,16 +255,25 @@ devRateModel <- function(
 #' @examples
 #' myT <- 5:15
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
-#' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
+#' myNLS <- devRateModel(
+#'   eq = campbell_74,
+#'   temp = myT,
+#'   devRate = myDev,
 #'   startValues = list(aa = 0, bb = 0))
 #' devRatePrint(myNLS, temp = myT, devRate = myDev)
 #'
 #' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
 #'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
 #'    25, 0.200, 30, 0.200, 30, 0.180, 35, 0.001), ncol = 2, byrow = TRUE)
-#' mEggs <- devRateModel(eq = taylor_81, temp = rawDevEggs[,1], devRate = rawDevEggs[,2],
-#'    startValues = list(Rm = 0.05, Tm = 30, To = 5))
-#' devRatePrint(myNLS = mEggs, temp = rawDevEggs[, 1], devRate = rawDevEggs[, 2])
+#' mEggs <- devRateModel(
+#'   eq = taylor_81,
+#'   temp = rawDevEggs[,1],
+#'   devRate = rawDevEggs[,2],
+#'   startValues = list(Rm = 0.05, Tm = 30, To = 5))
+#' devRatePrint(
+#'   myNLS = mEggs,
+#'   temp = rawDevEggs[, 1],
+#'   devRate = rawDevEggs[, 2])
 #' @export
 devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
   cat("##################################################\n### Parameter estimates and overall model fit\n##################################################\n")

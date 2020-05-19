@@ -219,15 +219,15 @@ mPupa01b <- devRateModel(eq = lactin1_95,
 ############################################################
 
 mEggs02 <- devRateModel(eq = taylor_81, 
-  df = dfDevEggs,
+  dfData = dfDevEggs,
   startValues = list(Rm = 0.05, Tm = 30, To = 5))
 
 mLarva02 <- devRateModel(eq = taylor_81, 
-  df = dfDevLarva,
+  dfData = dfDevLarva,
   startValues = list(Rm = 0.05, Tm = 25, To = 10))
       
 mPupa02 <- devRateModel(eq = taylor_81, 
-  df = dfDevPupa,
+  dfData = dfDevPupa,
   startValues = list(Rm = 0.1, Tm = 30, To = 10))
 
 ### using the dataset included in the package (only for taylor_81 model)
