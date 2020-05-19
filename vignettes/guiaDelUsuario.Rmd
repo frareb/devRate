@@ -284,7 +284,7 @@ Aun que se podria ajustar directamente el modelo lineal con la función `lm`,
 vamos a usar la función generica del paquete devRate.
 
 ```{r}
-modLin <- devRateModel(eq = campbell_74, df = datosLab14)
+modLin <- devRateModel(eq = campbell_74, dfData = datosLab14)
 plot(x = datosLab$temp, y = datosLab$devRate, 
      xlab = "Temperatura", ylab = "Tasa de desarrollo", 
      xlim = c(0, 40), ylim = c(0, 1.2)) # datos del laboratorio
@@ -395,18 +395,18 @@ de Briere-1).
 devRateFind(species = "Bactrocera dorsalis")
 modNoLin_01 <- devRateModel(
   eq = briere1_99, # nombre del modelo
-  df = datosLab, # nombre de los datos de laboratorio
+  dfData = datosLab, # nombre de los datos de laboratorio
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40)) # valores iniciales
 print(modNoLin_01)
 modNoLin_02 <- devRateModel(
   eq = briere2_99, # nombre del modelo
-  df = datosLab, # nombre de los datos de laboratorio
+  dfData = datosLab, # nombre de los datos de laboratorio
   startValues = list(
     aa = 0.01, Tmin = 10, Tmax = 40, bb = 2)) # valores iniciales
 print(modNoLin_02)
 modNoLin_03 <- devRateModel(
   eq = lactin2_95, # nombre del modelo
-  df = datosLab, # nombre de los datos de laboratorio
+  dfData = datosLab, # nombre de los datos de laboratorio
   startValues = list(
     aa = 0.03, Tmax = 30, deltaT = 5.0, bb = -1.5)) # valores iniciales
 print(modNoLin_03)
@@ -522,15 +522,15 @@ datosLabTS_pupa <- data.frame(
 ## ver vignette quickUserGuide para mayor informacion
 modTs01_egg <- devRateModel(
   eq = lactin1_95, 
-  df = datosLabTS_egg, 
+  dfData = datosLabTS_egg, 
   startValues = list(aa = 0.177, Tmax = 36.586, deltaT = 5.631))
 modTs01_larva <- devRateModel(
   eq = lactin1_95, 
-  df = datosLabTS_larva, 
+  dfData = datosLabTS_larva, 
   startValues = list(aa = 0.177, Tmax = 36.586, deltaT = 5.631))
 modTs01_pupa <- devRateModel(
   eq = lactin1_95, 
-  df = datosLabTS_pupa, 
+  dfData = datosLabTS_pupa, 
   startValues = list(aa = 0.177, Tmax = 36.586, deltaT = 5.631))
 ```
 

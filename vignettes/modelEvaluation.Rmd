@@ -147,35 +147,35 @@ containing all the datasets can be built to ease the process. In the first case:
 
 ```{r}
 wuDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = wuDS,
+  dfData = wuDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 broufasDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = broufasDS,
+  dfData = broufasDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 trpisDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = trpisDS,
+  dfData = trpisDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 messengerDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = messengerDS,
+  dfData = messengerDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 liu1DS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = liu1DS,
+  dfData = liu1DS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 liu2DS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = liu2DS,
+  dfData = liu2DS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 shiraiDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = shiraiDS,
+  dfData = shiraiDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 
 deJongDS_briere1_99 <- devRateModel(eq = briere1_99, 
-  df = deJongDS,
+  dfData = deJongDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40))
 ```
 
@@ -193,7 +193,7 @@ Or alternatively:
 listDS <- list(wuDS, broufasDS, trpisDS, messengerDS, liu1DS, liu2DS, shiraiDS, deJongDS)
 briere1NLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = briere1_99, 
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(aa = 0.01, Tmin = 10, Tmax = 40)
   )
 })
@@ -206,7 +206,7 @@ using the lapply function.
 
 ```{r}
 broufasDS_briere2_99 <- devRateModel(eq = briere2_99, 
-  df = broufasDS,
+  dfData = broufasDS,
   startValues = list(aa = 0.01, Tmin = 10, Tmax = 40, bb = 2))
 ### and so on ...
 ```
@@ -214,7 +214,7 @@ broufasDS_briere2_99 <- devRateModel(eq = briere2_99,
 ```{r}
 briere2NLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = briere2_99, 
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(aa = 0.01, Tmin = 10, Tmax = 40, bb = 2)
   )
 })
@@ -224,7 +224,7 @@ briere2NLS <- lapply(listDS, function(myDataSet){
 
 ```{r}
 broufasDS_lactin2_95 <- devRateModel(eq = lactin2_95, 
-  df = broufasDS,
+  dfData = broufasDS,
   startValues = list(aa = 0.03, Tmax = 30, deltaT = 5.0, bb = -1.5))
 ### and so on ...
 ```
@@ -232,7 +232,7 @@ broufasDS_lactin2_95 <- devRateModel(eq = lactin2_95,
 ```{r}
 lactin2NLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = lactin2_95,
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(aa = 0.03, Tmax = 30, deltaT = 5.0, bb = -1.5)
   )
 })
@@ -243,7 +243,7 @@ lactin2NLS <- lapply(listDS, function(myDataSet){
 ```{r}
 perf2NLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = perf2_11, 
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(cc = 0.02, T1 = 10, k = 0.5, T2 = 35)
   )
 })
@@ -254,7 +254,7 @@ perf2NLS <- lapply(listDS, function(myDataSet){
 ```{r}
 betaNLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = beta_16, 
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(rm = 0.2, T1 = 5, T2 = 40, Tm = 30)
   )
 })
@@ -265,7 +265,7 @@ betaNLS <- lapply(listDS, function(myDataSet){
 ```{r}
 ratkowskyNLS <- lapply(listDS, function(myDataSet){
   devRateModel(eq = ratkowsky_83, 
-    df = myDataSet,
+    dfData = myDataSet,
     startValues = list(cc = 0.02, T1 = 5, T2 = 40, k = 0.2)
   )
 })

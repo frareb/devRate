@@ -1,3 +1,6 @@
+## devRate 0.2.0
+* fix argument name: from df to dfData in devRateModel
+
 ## devRate 0.1.12
 * function to fit all equations
 * function to assess goodness-of-fit

@@ -3,7 +3,7 @@
 #' This function fits all models listed in devRateEqList to a development
 #' rate dataset and then calculates a series of indices of goodness of fit for
 #' each fitted model.
-#' @param df A data.frame with the temperature in the first column and the
+#' @param dfData A data.frame with the temperature in the first column and the
 #'   development rate in the second column.
 #' @param eqList A list of models that can be retrieved from the object devRateEqList.
 #' The default value is the object devRateEqList.
@@ -25,15 +25,15 @@
 #' of fit are not provided as these equations return a list of two nls objects.
 #' @examples
 #' myDf <- exTropicalMoth$raw$egg
-#' devRateModelAll(df = myDf)
+#' devRateModelAll(dfData = myDf)
 #' @export
 
-devRateModelAll <- function(df,
+devRateModelAll <- function(dfData,
                             eqList = devRate::devRateEqList,
                             eqStartVal = devRate::devRateEqStartVal,
                             ...){
   modL <- lapply(seq_along(eqList), function(i){
-    modX <- try(devRateModel(df = df,
+    modX <- try(devRateModel(dfData = dfData,
                              eq = eqList[[i]],
                              startValues = eqStartVal[[i]],
                              ...),
@@ -66,7 +66,7 @@ devRateModelAll <- function(df,
   }
   ICdf <- data.frame(AIC = IC[, 1], rankAIC, deltaAIC,
                      BIC = IC[, 2], rankBIC, deltaBIC)
-  qlStat <- devRateQlStat(eq = eqList, nlsDR = modL, df = list(df))
+  qlStat <- devRateQlStat(eq = eqList, nlsDR = modL, dfDataList = list(dfData))
   qlBio <- devRateQlBio(nlsDR = modL, eq = eqList, propThresh = 0.01)
   ql <- data.frame(eqName = names(eqList), ICdf, qlStat, qlBio)
   rownames(ql) <- NULL

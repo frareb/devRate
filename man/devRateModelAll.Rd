@@ -5,14 +5,14 @@
 \title{Fitting all models listed in devRateEqList to a development rate dataset}
 \usage{
 devRateModelAll(
-  df,
+  dfData,
   eqList = devRate::devRateEqList,
   eqStartVal = devRate::devRateEqStartVal,
   ...
 )
 }
 \arguments{
-\item{df}{A data.frame with the temperature in the first column and the
+\item{dfData}{A data.frame with the temperature in the first column and the
 development rate in the second column.}
 
 \item{eqList}{A list of models that can be retrieved from the object devRateEqList.
@@ -46,5 +46,5 @@ of fit are not provided as these equations return a list of two nls objects.
 }
 \examples{
 myDf <- exTropicalMoth$raw$egg
-devRateModelAll(df = myDf)
+devRateModelAll(dfData = myDf)
 }

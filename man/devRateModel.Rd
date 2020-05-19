@@ -4,7 +4,7 @@
 \alias{devRateModel}
 \title{Compute non-linear regression}
 \usage{
-devRateModel(eq, temp, devRate, startValues, df = NULL, algo = "GN", ...)
+devRateModel(eq, temp, devRate, startValues, dfData = NULL, algo = "GN", ...)
 }
 \arguments{
 \item{eq}{The name of the equation. See \code{devRateEqList} for the list
@@ -16,7 +16,7 @@ of equations}
 
 \item{startValues}{Starting values for the regression (list).}
 
-\item{df}{A data.frame with the temperature in the first column and the
+\item{dfData}{A data.frame with the temperature in the first column and the
 development rate in the second column (alternative to the use of temp and
 devRate).}
 
@@ -51,7 +51,7 @@ The temperature should be provided as a vector in argument \code{temp} and
   development rate in another vector in argument \code{devRate}. However, it is
   possible to use the function with a data.frame containing the temperature in the
   first column and the development rate in the sceond column, using the argument
-  \code{df}
+  \code{dfData}
 
 NULL is returned when an unknown algorithm is entered.
 }
@@ -59,14 +59,24 @@ NULL is returned when an unknown algorithm is entered.
 ## Example with a linear model (no starting estimates)
 myT <- 5:15
 myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
-myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev)
+myNLS <- devRateModel(
+  eq = campbell_74,
+  temp = myT,
+  devRate = myDev)
 ## Example with a non-linear model (starting estimates)
 myT <- seq(from = 0, to = 50, by = 10)
 myDev <- c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)
-myNLS <- devRateModel(eq = stinner_74, temp = myT, devRate = myDev,
-  startValues = list(list(C = 0.05, k1 = 5, k2 = -0.3), list(Topt = 30)))
+myNLS <- devRateModel(
+  eq = stinner_74,
+  temp = myT,
+  devRate = myDev,
+  startValues = list(
+    list(C = 0.05, k1 = 5, k2 = -0.3),
+    list(Topt = 30)))
 ## Example with a data.frame instead of two vectors for temperature and
 ## development rate
 myDF <- data.frame(myT, myDev)
-myNLS <- devRateModel(eq = campbell_74, df = myDF)
+myNLS <- devRateModel(
+  eq = campbell_74,
+  dfData = myDF)
 }
