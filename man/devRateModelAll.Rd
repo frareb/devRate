@@ -21,8 +21,7 @@ The default value is the object devRateEqList.}
 \item{eqStartVal}{A list of sarting values for each model. The default value is
 the object devRateEqStartVal.}
 
-\item{...}{Additional arguments for the \code{devRateModel} function and
-the \code{devRateQlBio} function.}
+\item{...}{Additional arguments for the \code{devRateModel} function.}
 }
 \value{
 An object of class \code{list} with two elements. The first
