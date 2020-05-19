@@ -1,7 +1,8 @@
 #' Fitting all models listed in devRateEqList to a development rate dataset
 #'
 #' This function fits all models listed in devRateEqList to a development
-#' rate dataset and then performs ...
+#' rate dataset and then calculates a series of indices of quality of fits for
+#' each fitted model.
 #' @param df A data.frame with the temperature in the first column and the
 #'   development rate in the second column.
 #' @param eqList A list of models that can be retrieved from the object devRateEqList.
@@ -10,7 +11,7 @@
 #' the object devRateEqStartVal.
 #' @param ... Additional arguments for the \code{devRateModel} function and
 #' the \code{devRateQlBio} function.
-#' @return  An object of class \code{list} with two elements. The first
+#' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
 #' of the models. The second element is a \code{data.frame} with xxx columns.
 #' The first column corresponds to models' names. The second column shows the AIC
