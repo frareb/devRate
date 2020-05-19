@@ -13,7 +13,7 @@
 #' the \code{devRateQlBio} function.
 #' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
-#' of the models. The second element is a \code{data.frame} with xxx columns.
+#' of the models. The second element is a \code{data.frame}.
 #' The first column corresponds to models' names. The second column shows the AIC
 #' of each model, the third shows the rank of each model according to its
 #' AIC, the fourth shows the deltaAIC (the difference between the AIC of the
@@ -22,8 +22,8 @@
 #' results of the function \code{devRateQlStat} and \code{devRateQlBio}.
 #' @details
 #' Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
-#' are showed in the first element of the returned list, however indices of quality
-#' of fits are not yet provided as these equations result in two nls objects.
+#' are showed in the first element of the returned list, however indices of goodness
+#' of fit are not provided as these equations return a list of two nls objects.
 #' @examples
 #' myDf <- exTropicalMoth$raw$egg
 #' devRateModelAll(df = myDf)
