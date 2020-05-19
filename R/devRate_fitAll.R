@@ -1,16 +1,31 @@
-#' Fitting of every models and indices of quality of fits
+#' Fitting all models listed in devRateEqList to a development rate dataset
 #'
-#' Return a list composed of two elements: first a list of every fitted models,
-#' second a data.frame showing every models used and their associated indices
-#' of goodness-of-fit.
-#'
+#' This function fits all models listed in devRateEqList to a development
+#' rate dataset and then performs ...
 #' @param df A data.frame with the temperature in the first column and the
 #'   development rate in the second column.
-#' @return  An object of class \code{list} with first the list of the nls objects
-#' and second a data.frame with indices of fits qualityin columns and model used
-#' in rows
+#' @param eqList A list of models that can be retrieved from the object devRateEqList.
+#' The default value is the object devRateEqList.
+#' @param eqStartVal A list of sarting values for each model. The default value is
+#' the object devRateEqStartVal.
+#' @param ... Additional arguments for the \code{devRateModel} function and
+#' the \code{devRateQlBio} function.
+#' @return  An object of class \code{list} with two elements. The first
+#' element is a \code{list} with all the nls objects resulting from the fitting
+#' of the models. The second element is a \code{data.frame} with xxx columns.
+#' The first column corresponds to models' names. The second column shows the AIC
+#' of each model, the third shows the rank of each model according to its
+#' AIC, the fourth shows the deltaAIC (the difference between the AIC of the
+#' ith model and the minimal AIC). The columns 5 to 7 corresponds to the same
+#' but with BIC instead of AIC. The rest of the columns corresponds to the
+#' results of the function \code{devRateQlStat} and \code{devRateQlBio}.
 #' @details
+#' Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
+#' are showed in the first element of the returned list, however indices of quality
+#' of fits are not yet provided as these equations result in two nls objects.
 #' @examples
+#' myDf <- exTropicalMoth$raw$egg
+#' devRateModelAll(df = myDf)
 #' @export
 
 devRateModelAll <- function(df,
