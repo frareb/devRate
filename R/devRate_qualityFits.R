@@ -126,7 +126,7 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
 #'                            startValues = list(a0 = 1, a1 = 1, a2 = 1),
 #'                            algo = "LM"))
 #' devRateQlBio(nlsDR = myNLS,
-#'              eq = list(damos_08, kontodimas_04, poly2),
+#'              eq = list(janisch_32, kontodimas_04, poly2),
 #'              propThresh = 0.1)
 #' @export
 devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
@@ -145,34 +145,34 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
           return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
         }
         if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
-          T <- seq(from = -100, to = 100, by = 0.1)
-          rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
+          temp <- seq(from = -100, to = 100, by = 0.1)
+          rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
           rT[is.na(rT)] <- 0
           rT[rT < 0] <- 0
           if(eq[[i]]$id == "eq020"){
             rT[rT < propThresh*max(rT)] <- 0
           }
-          CTmin <- max(T[rT == min(rT)])
+          CTmin <- max(temp[rT == min(rT)])
           return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
         }
         Topt <- stats::optimize(
-          f = function(T){
-            stats::predict(nlsDR[[i]], newdata = data.frame(T))
+          f = function(temp){
+            stats::predict(nlsDR[[i]], newdata = list(T = temp))
           },
           interval = c(0, 50),
           maximum = TRUE)$maximum
-        T <- seq(from = -100, to = 100, by = 0.1)
-        rT <- stats::predict(nlsDR[[i]], newdata = list(T = T))
+        temp <- seq(from = -100, to = 100, by = 0.1)
+        rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
-        rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
-        CTmaxs <- T[rT == min(rT) & T > Topt]
+        rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
+        CTmaxs <- temp[rT == min(rT) & temp > Topt]
         if(length(CTmaxs) > 0){
           CTmax <- min(CTmaxs)
         }else{
           CTmax <- NA
         }
-        CTmins <- T[rT == min(rT) & T < Topt]
+        CTmins <- temp[rT == min(rT) & temp < Topt]
         if(length(CTmins) > 0){
           CTmin <- max(CTmins)
         }else{
