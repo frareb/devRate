@@ -133,7 +133,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
   stats <- lapply(seq_along(nlsDR), function(i){
     # stinner_74 and lamb_92 exception
     if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
-      # warning("stinner_74 and lamb_92 not implemented yet")
+      # warning("stinner_74 and lamb_92 not implemented")
       dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA)
       return(dfStats)
     }else{
@@ -166,8 +166,18 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
         rT[rT < propThresh*rT[round(x = T, digits = 1) == round(x = Topt, digits = 1)]] <- 0
-        CTmax <- min(T[rT == min(rT) & T > Topt])
-        CTmin <- max(T[rT == min(rT) & T < Topt])
+        CTmaxs <- T[rT == min(rT) & T > Topt]
+        if(length(CTmaxs) > 0){
+          CTmax <- min(CTmaxs)
+        }else{
+          CTmax <- NA
+        }
+        CTmins <- T[rT == min(rT) & T < Topt]
+        if(length(CTmins) > 0){
+          CTmin <- max(CTmins)
+        }else{
+          CTmin <- NA
+        }
         return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
       }else{
         return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
