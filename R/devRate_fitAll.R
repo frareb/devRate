@@ -33,11 +33,20 @@ devRateModelAll <- function(dfData,
                             eqStartVal = devRate::devRateEqStartVal,
                             ...){
   modL <- lapply(seq_along(eqList), function(i){
-    modX <- try(devRateModel(dfData = dfData,
-                             eq = eqList[[i]],
-                             startValues = eqStartVal[[i]],
-                             ...),
-                silent = TRUE)
+    if(eqList[[i]]$id == "eq270"){
+      modX <- try(devRateModel(dfData = dfData,
+                               eq = eqList[[i]],
+                               startValues = eqStartVal[[i]],
+                               lower = c(0, -Inf, -Inf, -Inf, -Inf),
+                               ...),
+                  silent = TRUE)
+    }else{
+      modX <- try(devRateModel(dfData = dfData,
+                               eq = eqList[[i]],
+                               startValues = eqStartVal[[i]],
+                               ...),
+                  silent = TRUE)
+    }
     if(class(modX) == "try-error"){
       return(NULL)
     }else{

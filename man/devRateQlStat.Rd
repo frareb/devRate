@@ -26,7 +26,7 @@ NULL is returned when nlsDR or dfDataList are not of type list.
 }
 \examples{
 myDf <- data.frame(
-  T = seq(from = 0, to = 50, by = 10),
+  temp = seq(from = 0, to = 50, by = 10),
   rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
 myNLS <- list(
   devRateModel(

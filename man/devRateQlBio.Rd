@@ -26,21 +26,26 @@ Return a table of three metrics of development (CTmin, CTmax, Topt)
 NULL is returned when nlsDR or df are not a list.
 }
 \examples{
-myDf <- data.frame(T = seq(from = 0, to = 50, by = 10),
-                   rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
-myNLS <- list(devRateModel(eq = janisch_32,
-                           df = myDf,
-                           startValues = list(aa = 0.2, bb = 0.1, Dmin = 10, Topt = 30),
-                           algo = "LM"),
-              devRateModel(eq = kontodimas_04,
-                           df = myDf,
-                           startValues = list(aa = 1, Tmin = 7, Tmax = 40),
-                           algo = "LM"),
-              devRateModel(eq = poly2,
-                           df = myDf,
-                           startValues = list(a0 = 1, a1 = 1, a2 = 1),
-                           algo = "LM"))
-devRateQlBio(nlsDR = myNLS,
-             eq = list(damos_08, kontodimas_04, poly2),
-             propThresh = 0.1)
+myDf <- data.frame(temp = seq(from = 0, to = 50, by = 10),
+ rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
+myNLS <- list(
+ devRateModel(
+   eq = janisch_32,
+   df = myDf,
+   startValues = list(aa = 0.2, bb = 0.1, Dmin = 10, Topt = 30),
+   algo = "LM"),
+ devRateModel(
+   eq = kontodimas_04,
+   df = myDf,
+   startValues = list(aa = 1, Tmin = 7, Tmax = 40),
+   algo = "LM"),
+ devRateModel(
+   eq = poly2,
+   df = myDf,
+   startValues = list(a0 = 1, a1 = 1, a2 = 1),
+   algo = "LM"))
+devRateQlBio(
+  nlsDR = myNLS,
+  eq = list(janisch_32, kontodimas_04, poly2),
+  propThresh = 0.1)
 }
