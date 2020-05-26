@@ -148,7 +148,9 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
         }
         Topt <- stats::optimize(
           f = function(temp){
-            stats::predict(nlsDR[[i]], newdata = list(T = temp))
+            x <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
+            x[is.na(x)] <- 0
+            return(x)
           },
           interval = c(0, 50),
           maximum = TRUE)$maximum
