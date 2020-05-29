@@ -93,6 +93,8 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
 #'   threshold for estimating CTmin and CTmax when asymptotic equations are used
 #'   (default value is 0.01)
 #' @param eq A list of equations used for nls fitting.
+#' @param interval A vector containing the lower and upper boundaries of the
+#' interval of temperatures in which metrics are searched.
 #' @return An object of class \code{data.frame} with development metrics (CTmin,
 #'   Ctmax, Topt) in columns and nls objects in rows.
 #' @details NULL is returned when nlsDR or df are not a list.
@@ -120,7 +122,7 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
 #'   eq = list(janisch_32, kontodimas_04, poly2),
 #'   propThresh = 0.1)
 #' @export
-devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
+devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
   stats <- lapply(seq_along(nlsDR), function(i){
     # stinner_74 and lamb_92 exception
     if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
@@ -136,7 +138,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
           return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
         }
         if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
-          temp <- seq(from = -100, to = 100, by = 0.1)
+          temp <- seq(from = interval[1], to = interval[2], by = 0.1)
           rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
           rT[is.na(rT)] <- 0
           rT[rT < 0] <- 0
@@ -152,9 +154,8 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq){
             x[is.na(x)] <- 0
             return(x)
           },
-          interval = c(0, 50),
-          maximum = TRUE)$maximum
-        temp <- seq(from = -100, to = 100, by = 0.1)
+          maximum = TRUE, interval = interval)$maximum
+        temp <- seq(from = interval[1], to = interval[2], by = 0.1)
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
