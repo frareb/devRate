@@ -1,5 +1,8 @@
 ## devRate 0.2.0
 * fix argument name: from df to dfData in devRateModel
+* simplify functions: 
+    - devRatePrint: delete T and rT arguments
+    - devRatePlot: delete T and rT arguments
 
 ## devRate 0.1.12
 * function to fit all equations
