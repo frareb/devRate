@@ -9,6 +9,11 @@
 #' The default value is the object devRateEqList.
 #' @param eqStartVal A list of sarting values for each model. The default value is
 #' the object devRateEqStartVal.
+#' @param propThresh The proportion of maximal development rate used as a
+#'   threshold for estimating CTmin and CTmax when asymptotic equations are used
+#'   (default value is 0.01)
+#' @param interval A vector containing the lower and upper boundaries of the
+#'   interval of temperatures in which metrics are searched.
 #' @param ... Additional arguments for the \code{devRateModel} function.
 #' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
@@ -28,24 +33,31 @@
 #' devRateModelAll(dfData = myDf)
 #' @export
 
-devRateModelAll <- function(dfData,
-                            eqList = devRate::devRateEqList,
-                            eqStartVal = devRate::devRateEqStartVal,
-                            ...){
+devRateModelAll <- function(
+  dfData,
+  eqList = devRate::devRateEqList,
+  eqStartVal = devRate::devRateEqStartVal,
+  propThresh = 0.01,
+  interval = c(0, 50),
+  ...){
   modL <- lapply(seq_along(eqList), function(i){
     if(eqList[[i]]$id == "eq270"){
-      modX <- try(devRateModel(dfData = dfData,
-                               eq = eqList[[i]],
-                               startValues = eqStartVal[[i]],
-                               lower = c(0, -Inf, -Inf, -Inf, -Inf),
-                               ...),
-                  silent = TRUE)
+      modX <- try(
+        devRateModel(
+          dfData = dfData,
+          eq = eqList[[i]],
+          startValues = eqStartVal[[i]],
+          lower = c(0, -Inf, -Inf, -Inf, -Inf),
+          ...),
+        silent = TRUE)
     }else{
-      modX <- try(devRateModel(dfData = dfData,
-                               eq = eqList[[i]],
-                               startValues = eqStartVal[[i]],
-                               ...),
-                  silent = TRUE)
+      modX <- try(
+        devRateModel(
+          dfData = dfData,
+          eq = eqList[[i]],
+          startValues = eqStartVal[[i]],
+          ...),
+      silent = TRUE)
     }
     if(class(modX) == "try-error"){
       return(NULL)
@@ -73,11 +85,32 @@ devRateModelAll <- function(dfData,
     deltaAIC[i] <- IC[, 1][i] - min(IC[, 1], na.rm = TRUE)
     deltaBIC[i] <- IC[, 2][i] - min(IC[, 2], na.rm = TRUE)
   }
-  ICdf <- data.frame(AIC = IC[, 1], rankAIC, deltaAIC,
-                     BIC = IC[, 2], rankBIC, deltaBIC)
-  qlStat <- devRateQlStat(eq = eqList, nlsDR = modL, dfDataList = list(dfData))
-  qlBio <- devRateQlBio(nlsDR = modL, eq = eqList, propThresh = 0.01)
-  ql <- data.frame(eqName = names(eqList), ICdf, qlStat, qlBio)
+
+  ICdf <- data.frame(
+    AIC = IC[, 1],
+    rankAIC,
+    deltaAIC,
+    BIC = IC[, 2],
+    rankBIC,
+    deltaBIC)
+
+  qlStat <- devRateQlStat(
+    eq = eqList,
+    nlsDR = modL,
+    dfDataList = list(dfData))
+
+  qlBio <- devRateQlBio(
+    nlsDR = modL,
+    eq = eqList,
+    propThresh = propThresh,
+    interval = interval)
+
+  ql <- data.frame(
+    eqName = names(eqList),
+    ICdf,
+    qlStat,
+    qlBio)
+
   rownames(ql) <- NULL
   return(list(modL, ql))
 }

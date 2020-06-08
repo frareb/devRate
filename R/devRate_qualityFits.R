@@ -148,13 +148,28 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
           CTmin <- max(temp[rT == min(rT)])
           return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
         }
-        Topt <- stats::optimize(
-          f = function(temp){
-            x <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
-            x[is.na(x)] <- 0
-            return(x)
-          },
-          maximum = TRUE, interval = interval)$maximum
+        # Topt <- stats::optimize(
+        #   f = function(temp){
+        #     x <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
+        #     x[is.na(x)] <- 0
+        #     return(x)
+        #   },
+        #   maximum = TRUE, interval = interval)$maximum
+        getTopt <- function(interval){
+          Topt <- stats::optimize(
+            f = function(temp){
+              x <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
+              x[is.na(x)] <- 0
+              return(x)
+            },
+            maximum = TRUE,
+            interval = interval,
+            lower = min(get("T", nlsDR[[i]]$m$getEnv())),
+            upper = max(get("T", nlsDR[[i]]$m$getEnv())))$maximum
+          return(Topt)
+        }
+        Topt <- getTopt(interval=interval)
+
         temp <- seq(from = interval[1], to = interval[2], by = 0.1)
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
         rT[is.na(rT)] <- 0

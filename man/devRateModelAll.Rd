@@ -8,6 +8,8 @@ devRateModelAll(
   dfData,
   eqList = devRate::devRateEqList,
   eqStartVal = devRate::devRateEqStartVal,
+  propThresh = 0.01,
+  interval = c(0, 50),
   ...
 )
 }
@@ -20,6 +22,13 @@ The default value is the object devRateEqList.}
 
 \item{eqStartVal}{A list of sarting values for each model. The default value is
 the object devRateEqStartVal.}
+
+\item{propThresh}{The proportion of maximal development rate used as a
+threshold for estimating CTmin and CTmax when asymptotic equations are used
+(default value is 0.01)}
+
+\item{interval}{A vector containing the lower and upper boundaries of the
+interval of temperatures in which metrics are searched.}
 
 \item{...}{Additional arguments for the \code{devRateModel} function.}
 }
