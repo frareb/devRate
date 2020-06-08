@@ -4,7 +4,7 @@
 \alias{devRateQlBio}
 \title{Biological likelihood of nls fits}
 \usage{
-devRateQlBio(nlsDR, propThresh = 0.01, eq)
+devRateQlBio(nlsDR, propThresh = 0.01, eq, interval = c(0, 50))
 }
 \arguments{
 \item{nlsDR}{A list of nls objects.}
@@ -14,6 +14,9 @@ threshold for estimating CTmin and CTmax when asymptotic equations are used
 (default value is 0.01)}
 
 \item{eq}{A list of equations used for nls fitting.}
+
+\item{interval}{A vector containing the lower and upper boundaries of the
+interval of temperatures in which metrics are searched.}
 }
 \value{
 An object of class \code{data.frame} with development metrics (CTmin,
