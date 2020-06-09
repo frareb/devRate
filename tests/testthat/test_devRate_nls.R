@@ -76,11 +76,7 @@ myDf <- data.frame(myT, myDev)
 
 test_that("print devRateModel",{
   modL <- devRateModel(eq = campbell_74, df = myDf)
-  res <- devRatePrint(
-    myNLS = modL,
-    temp = myT,
-    devRate = myDev,
-    doPlots = FALSE)
+  res <- devRatePrint(myNLS = modL)
   expect_equal(
     object = length(res),
     expected = 6
@@ -91,8 +87,6 @@ test_that("plot devRateModel",{
   modL <- devRateModel(eq = campbell_74, df = myDf)
   res <- devRatePrint(
     myNLS = modL,
-    temp = myT,
-    devRate = myDev,
     doPlots = TRUE)
   expect_equal(
     object = length(res),

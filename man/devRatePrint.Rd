@@ -4,14 +4,10 @@
 \alias{devRatePrint}
 \title{Report model output from the NLS fit}
 \usage{
-devRatePrint(myNLS, temp, devRate, doPlots = FALSE)
+devRatePrint(myNLS, doPlots = FALSE)
 }
 \arguments{
 \item{myNLS}{An object of class NLS}
-
-\item{temp}{The temperature}
-
-\item{devRate}{The development rate \code{(days)^-1}}
 
 \item{doPlots}{A boolean to get the residual plot (default = FALSE)}
 }
@@ -30,7 +26,7 @@ myNLS <- devRateModel(
   temp = myT,
   devRate = myDev,
   startValues = list(aa = 0, bb = 0))
-devRatePrint(myNLS, temp = myT, devRate = myDev)
+devRatePrint(myNLS)
 
 rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
@@ -40,8 +36,5 @@ mEggs <- devRateModel(
   temp = rawDevEggs[,1],
   devRate = rawDevEggs[,2],
   startValues = list(Rm = 0.05, Tm = 30, To = 5))
-devRatePrint(
-  myNLS = mEggs,
-  temp = rawDevEggs[, 1],
-  devRate = rawDevEggs[, 2])
+devRatePrint(myNLS = mEggs)
 }

@@ -2,8 +2,6 @@
 #'
 #' @param eq The name of the equation.
 #' @param nlsDR The result returned by the \code{devRateModel} function.
-#' @param temp The temperature.
-#' @param devRate The development rate \code{(days)^-1}
 #' @param rangeT The range of temperatures over which the regression is plotted.
 #'   This argument may be overwritten depending on the equation.
 #' @param optText A logical indicating whether the name of the equation should be written
@@ -20,8 +18,15 @@
 #'   spe = TRUE, pch = 16, lwd = 2, ylim = c(0, 0.10))
 #' @export
 devRatePlot <- function(
-  eq, nlsDR, temp, devRate, rangeT = 10, optText = TRUE, spe = TRUE, ...){
+  eq, nlsDR, rangeT = 10, optText = TRUE, spe = TRUE, ...){
 
+  if (class(nlsDR) == "nls"){
+    temp <- get("T", nlsDR$m$getEnv())
+    devRate <- get("rT", nlsDR$m$getEnv())
+  } else {
+    temp <- get("T", nlsDR[[1]]$m$getEnv())
+    devRate <- get("rT", nlsDR[[1]]$m$getEnv())
+  }
   minX <- -100
   maxX <- 100
   if(spe == TRUE){

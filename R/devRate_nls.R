@@ -247,8 +247,6 @@ devRateModel <- function(
 #' Provide a custom output of the NLS fit.
 #'
 #' @param myNLS An object of class NLS
-#' @param temp The temperature
-#' @param devRate The development rate \code{(days)^-1}
 #' @param doPlots A boolean to get the residual plot (default = FALSE)
 #' @return A list of six objects (summary of the NLS fit; confidence intervals
 #'   for the model parameters; test of normality; test of independence; AIC, BIC)
@@ -260,7 +258,7 @@ devRateModel <- function(
 #'   temp = myT,
 #'   devRate = myDev,
 #'   startValues = list(aa = 0, bb = 0))
-#' devRatePrint(myNLS, temp = myT, devRate = myDev)
+#' devRatePrint(myNLS)
 #'
 #' rawDevEggs <- matrix(c(10, 0.031, 10, 0.039, 15, 0.047, 15, 0.059, 15.5, 0.066,
 #'    13, 0.072, 16, 0.083, 16, 0.100, 17, 0.100, 20, 0.100, 20, 0.143, 25, 0.171,
@@ -270,12 +268,11 @@ devRateModel <- function(
 #'   temp = rawDevEggs[,1],
 #'   devRate = rawDevEggs[,2],
 #'   startValues = list(Rm = 0.05, Tm = 30, To = 5))
-#' devRatePrint(
-#'   myNLS = mEggs,
-#'   temp = rawDevEggs[, 1],
-#'   devRate = rawDevEggs[, 2])
+#' devRatePrint(myNLS = mEggs)
 #' @export
-devRatePrint <- function(myNLS, temp, devRate, doPlots = FALSE){
+devRatePrint <- function(myNLS, doPlots = FALSE){
+  temp <- get("T", myNLS$m$getEnv())
+  devRate <- get("rT", myNLS$m$getEnv())
   cat("##################################################\n### Parameter estimates and overall model fit\n##################################################\n")
   print(summary(myNLS))
   cat("##################################################\n### Confidence intervals for parameters\n##################################################\n")

@@ -17,8 +17,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = lamb_92,
     nlsDR = testNLS,
-    temp = xx,
-    devRate = yy,
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -44,8 +42,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = taylor_81,
     nlsDR = testNLS,
-    temp = xx,
-    devRate = yy,
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -62,8 +58,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = stinner_74,
     nlsDR = testNLS,
-    temp = rawDevEggs[,1],
-    devRate = rawDevEggs[,2],
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -81,8 +75,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = campbell_74,
     nlsDR = testNLS,
-    temp = rawDevEggs[,1],
-    devRate = rawDevEggs[,2],
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -99,8 +91,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = davidson_44,
     nlsDR = testNLS,
-    temp = rawDevEggs[,1],
-    devRate = rawDevEggs[,2],
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -117,8 +107,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = janisch_32,
     nlsDR = testNLS,
-    temp = rawDevEggs[,1],
-    devRate = rawDevEggs[,2],
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -140,8 +128,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = logan6_76,
     nlsDR = testNLS,
-    temp = xx,
-    devRate = yy,
     rangeT = 10,
     optText = TRUE,
     spe = TRUE)
@@ -163,8 +149,6 @@ test_that("devRatePlot returns NULL",{
   res <- devRatePlot(
     eq = logan6_76,
     nlsDR = testNLS,
-    temp = xx,
-    devRate = yy,
     rangeT = 10,
     optText = TRUE,
     spe = FALSE)

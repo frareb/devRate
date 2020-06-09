@@ -418,18 +418,12 @@ Los resultados se pueden visualizar graficamente con la función `devRatePlot`.
 par(mfrow = c(1, 3)) # para hacer tres graficos en la misma pagina
 devRatePlot(eq = briere1_99, 
   nlsDR = modNoLin_01, 
-  temp = datosLab$temp, 
-  devRate = datosLab$devRate, 
   xlim = c(10, 40), ylim = c(0, 1.2))
 devRatePlot(eq = briere2_99, 
   nlsDR = modNoLin_02, 
-  temp = datosLab$temp, 
-  devRate = datosLab$devRate, 
   xlim = c(10, 40), ylim = c(0, 1.2))
 devRatePlot(eq = lactin2_95, 
   nlsDR = modNoLin_03, 
-  temp = datosLab$temp, 
-  devRate = datosLab$devRate, 
   xlim = c(10, 40), ylim = c(0, 1.2))
 ```
 
