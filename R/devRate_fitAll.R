@@ -28,6 +28,7 @@
 #' Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
 #' are showed in the first element of the returned list, however indices of goodness
 #' of fit are not provided as these equations return a list of two nls objects.
+#' Equation campbell_74 is not fitted as it is a linear model.
 #' @examples
 #' myDf <- exTropicalMoth$raw$egg
 #' devRateModelAll(dfData = myDf)
@@ -51,13 +52,17 @@ devRateModelAll <- function(
           ...),
         silent = TRUE)
     }else{
-      modX <- try(
-        devRateModel(
-          dfData = dfData,
-          eq = eqList[[i]],
-          startValues = eqStartVal[[i]],
-          ...),
-      silent = TRUE)
+      if(eqList[[i]]$id == "eq030"){
+        return(NULL)
+      }else{
+        modX <- try(
+          devRateModel(
+            dfData = dfData,
+            eq = eqList[[i]],
+            startValues = eqStartVal[[i]],
+            ...),
+          silent = TRUE)
+      }
     }
     if(class(modX) == "try-error"){
       return(NULL)
