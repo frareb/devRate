@@ -70,6 +70,8 @@ devRateModelAll <- function(
       return(modX)
     }
   })
+  names(modL) <- names(eqList)
+
   IC <- lapply(seq_along(modL), function(i){
     if(eqList[[i]]$id == "eq040" | eqList[[i]]$id == "eq150"){
       return(c(NA, NA))
@@ -117,5 +119,5 @@ devRateModelAll <- function(
     qlBio)
 
   rownames(ql) <- NULL
-  return(list(modL, ql))
+  return(list(nlsList = modL, gofTable = ql))
 }
