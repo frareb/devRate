@@ -36,12 +36,13 @@ interval of temperatures in which metrics are searched.}
 An object of class \code{list} with two elements. The first
 element is a \code{list} with all the nls objects resulting from the fitting
 of the models. The second element is a \code{data.frame}.
-The first column corresponds to models' names. The second column shows the AIC
-of each model, the third shows the rank of each model according to its
-AIC, the fourth shows the deltaAIC (the difference between the AIC of the
-ith model and the minimal AIC). The columns 5 to 7 corresponds to the same
-but with BIC instead of AIC. The rest of the columns corresponds to the
-results of the function \code{devRateQlStat} and \code{devRateQlBio}.
+The first column corresponds to models' names. The columns 2 to 4 corresponds
+to the results of the function \code{devRateQlStat}. The columns 5 to 7
+corresponds to the results of the function \code{devRateQlBio}. The column 8
+shows the AIC of each model, the column 9 shows the rank of each model
+according to its AIC, the column 10 shows the deltaAIC (the difference
+between the AIC of the ith model and the minimal AIC). The rest of the columns
+corresponds to the same but with BIC instead of AIC.
 }
 \description{
 This function fits all models listed in devRateEqList to a development
