@@ -18,11 +18,12 @@
 #' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
 #' of the models. The second element is a \code{data.frame}.
-#' The first column corresponds to models' names. The columns 2 to 4 corresponds
-#' to the results of the function \code{devRateQlStat}. The columns 5 to 7
-#' corresponds to the results of the function \code{devRateQlBio}. The column 8
-#' shows the AIC of each model, the column 9 shows the rank of each model
-#' according to its AIC, the column 10 shows the deltaAIC (the difference
+#' The first column corresponds to models' names and the second columns corresponds
+#' to the number of parameters of the model. The columns 3 to 5 corresponds
+#' to the results of the function \code{devRateQlStat}. The columns 6 to 8
+#' corresponds to the results of the function \code{devRateQlBio}. The column 9
+#' shows the AIC of each model, the column 10 shows the rank of each model
+#' according to its AIC, the column 11 shows the deltaAIC (the difference
 #' between the AIC of the ith model and the minimal AIC). The rest of the columns
 #' corresponds to the same but with BIC instead of AIC.
 #' @details
@@ -113,8 +114,19 @@ devRateModelAll <- function(
     propThresh = propThresh,
     interval = interval)
 
+  nParam <- lapply(seq_along(modL), function(i){
+    if(length(stats::coef(modL[[i]])) == 0){
+      return(NA)
+    }else{
+      return(length(stats::coef(modL[[i]])))
+    }
+  })
+
+  nParam <- unlist(nParam)
+
   ql <- data.frame(
     eqName = names(eqList),
+    nParam = nParam,
     qlStat,
     qlBio,
     ICdf)
