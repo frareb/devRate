@@ -51,8 +51,7 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
       # stinner_74 and lamb_92 exception
       if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
         # warning("stinner_74 and lamb_92 not implemented")
-        dfStats <- data.frame(RSS = NA, RMSE = NA, R.sq = NA, R.sqAdj = NA,
-                              corOP = NA)
+        dfStats <- data.frame(RSS = NA, RMSE = NA, corOP = NA)
         return(dfStats)
       }else{
         if(!is.null(nlsDR[[i]])){
@@ -62,15 +61,11 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
           p <- length(stats::coef(nlsDR[[i]]))
           RSS <- sum((devRate[[i]] - fitted)^2)
           RMSE <- sqrt(RSS / N)
-          R.sq <- 1 - RSS / sum((devRate[[i]] - mean(devRate[[i]]))^2)
-          R.sqAdj <- 1 - (N - 1) / (N - p) * (1 - R.sq)
           corOP <- stats::cor(fitted, devRate[[i]])
-          dfStats <- data.frame(RSS = RSS, RMSE = RMSE, R.sq = R.sq,
-                                R.sqAdj = R.sqAdj, corOP = corOP)
+          dfStats <- data.frame(RSS = RSS, RMSE = RMSE, corOP = corOP)
           return(dfStats)
         }else{
-          dfStats <- data.frame(RSS = NA, RMSE = NA, R.sq = NA, R.sqAdj = NA,
-                                corOP = NA)
+          dfStats <- data.frame(RSS = NA, RMSE = NA, corOP = NA)
           return(dfStats)
         }
       }
