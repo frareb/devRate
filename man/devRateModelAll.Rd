@@ -36,8 +36,8 @@ interval of temperatures in which metrics are searched.}
 An object of class \code{list} with two elements. The first
 element is a \code{list} with all the nls objects resulting from the fitting
 of the models. The second element is a \code{data.frame}.
-The first column corresponds to models' names and the second columns corresponds
-to the number of parameters of the model. The columns 3 to 5 corresponds
+The first column corresponds to models' names and the second column corresponds
+to the number of parameters of the models. The columns 3 to 5 corresponds
 to the results of the function \code{devRateQlStat}. The columns 6 to 8
 corresponds to the results of the function \code{devRateQlBio}. The column 9
 shows the AIC of each model, the column 10 shows the rank of each model
@@ -54,7 +54,7 @@ each fitted model.
 Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
 are showed in the first element of the returned list, however indices of goodness
 of fit are not provided as these equations return a list of two nls objects.
-Equation campbell_74 is not fitted as it is a linear model.
+Equation campbell_74 is not fitted.
 }
 \examples{
 myDf <- exTropicalMoth$raw$egg
