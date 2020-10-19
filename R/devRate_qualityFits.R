@@ -78,18 +78,18 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
 
 #' Biological likelihood of nls fits
 #'
-#' Return a table of three metrics of development (CTmin, CTmax, Topt)
+#' Return a table of 5 metrics of development (CTmin, CTmax, Topt, XTmin, XTmax)
 #'
 #' @param nlsDR A list of nls objects.
 #' @param propThresh The proportion of maximal development rate used as a
-#'   threshold for estimating CTmin and CTmax when asymptotic equations are used
+#'   threshold for estimating XTmin and XTmax for asymptotic equations
 #'   (default value is 0.01)
 #' @param eq A list of equations used for nls fitting.
 #' @param interval A vector containing the lower and upper boundaries of the
 #' interval of temperatures in which metrics are searched.
 #' @return An object of class \code{data.frame} with development metrics (CTmin,
-#'   Ctmax, Topt) in columns and nls objects in rows.
-#' @details NULL is returned when nlsDR or df are not a list.
+#'   Ctmax, Topt, XTmin, XTmax) in columns and nls objects in rows.
+#' @details NULL is returned when nlsDR or eq are not a list.
 #' @examples
 #' myDf <- data.frame(temp = seq(from = 0, to = 50, by = 10),
 #'  rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
