@@ -119,7 +119,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
     # stinner_74 and lamb_92 exception
     if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
       # warning("stinner_74 and lamb_92 not implemented")
-      dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA)
+      dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA)
       return(dfStats)
     }else{
       if(!is.null(nlsDR[[i]])){
@@ -127,18 +127,17 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
           a <- unname(stats::coef(nlsDR[[i]])[1])
           b <- unname(stats::coef(nlsDR[[i]])[2])
           CTmin <- -(a/b)
-          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA))
         }
         if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
           temp <- seq(from = interval[1], to = interval[2], by = 0.1)
           rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
           rT[is.na(rT)] <- 0
           rT[rT < 0] <- 0
-          if(eq[[i]]$id == "eq020"){
-            rT[rT < propThresh*max(rT)] <- 0
-          }
           CTmin <- max(temp[rT == min(rT)])
-          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+          rT[rT < propThresh*max(rT)] <- 0
+          XTmin <- max(temp[rT == min(rT)])
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA, XTmin = XTmin, XTmax = NA))
         }
         # Topt <- stats::optimize(
         #   f = function(temp){
@@ -166,7 +165,6 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
-        rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
         CTmaxs <- temp[rT == min(rT) & temp > Topt]
         if(length(CTmaxs) > 0){
           CTmax <- min(CTmaxs)
@@ -179,9 +177,22 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
         }else{
           CTmin <- NA
         }
-        return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
+        rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
+        XTmaxs <- temp[rT == min(rT) & temp > Topt]
+        if(length(CTmaxs) > 0){
+          XTmax <- min(XTmaxs)
+        }else{
+          XTmax <- NA
+        }
+        XTmins <- temp[rT == min(rT) & temp < Topt]
+        if(length(XTmins) > 0){
+          XTmin <- max(XTmins)
+        }else{
+          XTmin <- NA
+        }
+        return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt, XTmin = XTmin, XTmax = XTmax))
       }else{
-        return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
+        return(data.frame(CTmin = NA, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA))
       }
     }
   })
