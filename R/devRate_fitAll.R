@@ -10,7 +10,7 @@
 #' @param eqStartVal A list of sarting values for each model. The default value is
 #' the object devRateEqStartVal.
 #' @param propThresh The proportion of maximal development rate used as a
-#'   threshold for estimating CTmin and CTmax when asymptotic equations are used
+#'   threshold for estimating XTmin and XTmax for asymptotic equations
 #'   (default value is 0.01)
 #' @param interval A vector containing the lower and upper boundaries of the
 #'   interval of temperatures in which metrics are searched.
@@ -19,13 +19,10 @@
 #' element is a \code{list} with all the nls objects resulting from the fitting
 #' of the models. The second element is a \code{data.frame}.
 #' The first column corresponds to models' names and the second column corresponds
-#' to the number of parameters of the models. The columns 3 to 5 corresponds
-#' to the results of the function \code{devRateQlStat}. The columns 6 to 8
-#' corresponds to the results of the function \code{devRateQlBio}. The column 9
-#' shows the AIC of each model, the column 10 shows the rank of each model
-#' according to its AIC, the column 11 shows the deltaAIC (the difference
-#' between the AIC of the ith model and the minimal AIC). The rest of the columns
-#' corresponds to the same but with BIC instead of AIC.
+#' to the number of parameters of the models. The columns 3 and 4 correspond
+#' to the results of the function \code{devRateQlStat}. The columns 5 to 9
+#' correspond to the results of the function \code{devRateQlBio}. The column 10
+#' shows the AIC of each model, the column 11 shows BIC of each model.
 #' @details
 #' Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
 #' are showed in the first element of the returned list, however indices of goodness
