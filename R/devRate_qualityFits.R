@@ -179,7 +179,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
         }
         rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
         XTmaxs <- temp[rT == min(rT) & temp > Topt]
-        if(length(CTmaxs) > 0){
+        if(length(XTmaxs) > 0){
           XTmax <- min(XTmaxs)
         }else{
           XTmax <- NA
