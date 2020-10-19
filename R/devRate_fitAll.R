@@ -79,29 +79,18 @@ devRateModelAll <- function(
       return(c(NA, NA))
     }else{
       if(!is.null(modL[[i]])){
-        return(c(stats::AIC(modL[[i]]), stats::BIC(modL[[i]])))
+        return(c(stats::AIC(modL[[i]]),
+                 stats::BIC(modL[[i]])))
       }else{
         return(c(NA, NA))
       }
     }
   })
   IC <- do.call(rbind, IC)
-  rankAIC <- rank(IC[, 1])
-  rankBIC <- rank(IC[, 2])
-  deltaAIC <- vector()
-  deltaBIC <- vector()
-  for(i in 1:length(modL)){
-    deltaAIC[i] <- IC[, 1][i] - min(IC[, 1], na.rm = TRUE)
-    deltaBIC[i] <- IC[, 2][i] - min(IC[, 2], na.rm = TRUE)
-  }
 
   ICdf <- data.frame(
     AIC = IC[, 1],
-    rankAIC,
-    deltaAIC,
-    BIC = IC[, 2],
-    rankBIC,
-    deltaBIC)
+    BIC = IC[, 2])
 
   qlStat <- devRateQlStat(
     eq = eqList,
