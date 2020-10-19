@@ -91,3 +91,17 @@ test_that("devRateQlBio nls NULL", {
   qlBio <- devRateQlBio(nlsDR = list(NULL), propThresh = 0.1, eq = list(janisch_32))
   expect_is(qlBio, "data.frame")
 })
+
+test_that("devRateQlBio campbell_74", {
+  dfList <- list(data.frame(T = seq(from = 0, to = 50, by = 10),
+                            rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004)),
+                 data.frame(T = seq(from = 0, to = 50, by = 10),
+                            rT = c(0.01, 0.08, 0.2, 0.3, 0.18, 0.04)),
+                 data.frame(T = seq(from = 0, to = 50, by = 10),
+                            rT = c(0.0012, 0.0082, 0.025, 0.032, 0.0182, 0.0045)))
+  fitList <- lapply(seq_along(dfList), function(i){
+    devRateModel(eq = campbell_74, temp = dfList[[i]][, 1], devRate = dfList[[i]][, 2],
+                 startValues = list(aa = 1, bb = 1))})
+  qlBio <- devRateQlBio(nlsDR = fitList, propThresh = 0.1, eq = rep(list(campbell_74), 3))
+  expect_is(qlBio, "data.frame")
+})
