@@ -51,26 +51,18 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
       # stinner_74 and lamb_92 exception
       if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
         # warning("stinner_74 and lamb_92 not implemented")
-        dfStats <- data.frame(RSS = NA, RMSE = NA, R.sq = NA, R.sqAdj = NA,
-                              corOP = NA)
+        dfStats <- data.frame(RSS = NA, RMSE = NA)
         return(dfStats)
       }else{
         if(!is.null(nlsDR[[i]])){
           N <- length(temp[[i]])
-          fitted <- stats::predict(nlsDR[[i]])
           res <- stats::residuals(nlsDR[[i]])
-          p <- length(stats::coef(nlsDR[[i]]))
-          RSS <- sum((devRate[[i]] - fitted)^2)
+          RSS <- sum(res^2)
           RMSE <- sqrt(RSS / N)
-          R.sq <- 1 - RSS / sum((devRate[[i]] - mean(devRate[[i]]))^2)
-          R.sqAdj <- 1 - (N - 1) / (N - p) * (1 - R.sq)
-          corOP <- stats::cor(fitted, devRate[[i]])
-          dfStats <- data.frame(RSS = RSS, RMSE = RMSE, R.sq = R.sq,
-                                R.sqAdj = R.sqAdj, corOP = corOP)
+          dfStats <- data.frame(RSS = RSS, RMSE = RMSE)
           return(dfStats)
         }else{
-          dfStats <- data.frame(RSS = NA, RMSE = NA, R.sq = NA, R.sqAdj = NA,
-                                corOP = NA)
+          dfStats <- data.frame(RSS = NA, RMSE = NA)
           return(dfStats)
         }
       }
@@ -86,18 +78,18 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
 
 #' Biological likelihood of nls fits
 #'
-#' Return a table of three metrics of development (CTmin, CTmax, Topt)
+#' Return a table of 5 metrics of development (CTmin, CTmax, Topt, XTmin, XTmax)
 #'
 #' @param nlsDR A list of nls objects.
 #' @param propThresh The proportion of maximal development rate used as a
-#'   threshold for estimating CTmin and CTmax when asymptotic equations are used
+#'   threshold for estimating XTmin and XTmax for asymptotic equations
 #'   (default value is 0.01)
 #' @param eq A list of equations used for nls fitting.
 #' @param interval A vector containing the lower and upper boundaries of the
 #' interval of temperatures in which metrics are searched.
 #' @return An object of class \code{data.frame} with development metrics (CTmin,
-#'   Ctmax, Topt) in columns and nls objects in rows.
-#' @details NULL is returned when nlsDR or df are not a list.
+#'   Ctmax, Topt, XTmin, XTmax) in columns and nls objects in rows.
+#' @details NULL is returned when nlsDR or eq are not a list.
 #' @examples
 #' myDf <- data.frame(temp = seq(from = 0, to = 50, by = 10),
 #'  rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
@@ -127,7 +119,7 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
     # stinner_74 and lamb_92 exception
     if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
       # warning("stinner_74 and lamb_92 not implemented")
-      dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA)
+      dfStats <- data.frame(CTmin = NA, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA)
       return(dfStats)
     }else{
       if(!is.null(nlsDR[[i]])){
@@ -135,18 +127,17 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
           a <- unname(stats::coef(nlsDR[[i]])[1])
           b <- unname(stats::coef(nlsDR[[i]])[2])
           CTmin <- -(a/b)
-          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA))
         }
         if(eq[[i]]$id == "eq020" | eq[[i]]$id == "eq290"){
           temp <- seq(from = interval[1], to = interval[2], by = 0.1)
           rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
           rT[is.na(rT)] <- 0
           rT[rT < 0] <- 0
-          if(eq[[i]]$id == "eq020"){
-            rT[rT < propThresh*max(rT)] <- 0
-          }
           CTmin <- max(temp[rT == min(rT)])
-          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA))
+          rT[rT < propThresh*max(rT)] <- 0
+          XTmin <- max(temp[rT == min(rT)])
+          return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA, XTmin = XTmin, XTmax = NA))
         }
         # Topt <- stats::optimize(
         #   f = function(temp){
@@ -174,7 +165,6 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
         rT <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
         rT[is.na(rT)] <- 0
         rT[rT < 0] <- 0
-        rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
         CTmaxs <- temp[rT == min(rT) & temp > Topt]
         if(length(CTmaxs) > 0){
           CTmax <- min(CTmaxs)
@@ -187,9 +177,22 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
         }else{
           CTmin <- NA
         }
-        return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt))
+        rT[rT < propThresh*rT[round(x = temp, digits = 1) == round(x = Topt, digits = 1)]] <- 0
+        XTmaxs <- temp[rT == min(rT) & temp > Topt]
+        if(length(XTmaxs) > 0){
+          XTmax <- min(XTmaxs)
+        }else{
+          XTmax <- NA
+        }
+        XTmins <- temp[rT == min(rT) & temp < Topt]
+        if(length(XTmins) > 0){
+          XTmin <- max(XTmins)
+        }else{
+          XTmin <- NA
+        }
+        return(data.frame(CTmin = CTmin, CTmax = CTmax, Topt = Topt, XTmin = XTmin, XTmax = XTmax))
       }else{
-        return(data.frame(CTmin = NA, CTmax = NA, Topt = NA))
+        return(data.frame(CTmin = NA, CTmax = NA, Topt = NA, XTmin = NA, XTmax = NA))
       }
     }
   })

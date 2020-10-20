@@ -10,7 +10,7 @@ devRateQlBio(nlsDR, propThresh = 0.01, eq, interval = c(0, 50))
 \item{nlsDR}{A list of nls objects.}
 
 \item{propThresh}{The proportion of maximal development rate used as a
-threshold for estimating CTmin and CTmax when asymptotic equations are used
+threshold for estimating XTmin and XTmax for asymptotic equations
 (default value is 0.01)}
 
 \item{eq}{A list of equations used for nls fitting.}
@@ -20,13 +20,13 @@ interval of temperatures in which metrics are searched.}
 }
 \value{
 An object of class \code{data.frame} with development metrics (CTmin,
-  Ctmax, Topt) in columns and nls objects in rows.
+  Ctmax, Topt, XTmin, XTmax) in columns and nls objects in rows.
 }
 \description{
-Return a table of three metrics of development (CTmin, CTmax, Topt)
+Return a table of 5 metrics of development (CTmin, CTmax, Topt, XTmin, XTmax)
 }
 \details{
-NULL is returned when nlsDR or df are not a list.
+NULL is returned when nlsDR or eq are not a list.
 }
 \examples{
 myDf <- data.frame(temp = seq(from = 0, to = 50, by = 10),

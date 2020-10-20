@@ -10,7 +10,7 @@
 #' @param eqStartVal A list of sarting values for each model. The default value is
 #' the object devRateEqStartVal.
 #' @param propThresh The proportion of maximal development rate used as a
-#'   threshold for estimating CTmin and CTmax when asymptotic equations are used
+#'   threshold for estimating XTmin and XTmax for asymptotic equations
 #'   (default value is 0.01)
 #' @param interval A vector containing the lower and upper boundaries of the
 #'   interval of temperatures in which metrics are searched.
@@ -18,16 +18,16 @@
 #' @return An object of class \code{list} with two elements. The first
 #' element is a \code{list} with all the nls objects resulting from the fitting
 #' of the models. The second element is a \code{data.frame}.
-#' The first column corresponds to models' names. The second column shows the AIC
-#' of each model, the third shows the rank of each model according to its
-#' AIC, the fourth shows the deltaAIC (the difference between the AIC of the
-#' ith model and the minimal AIC). The columns 5 to 7 corresponds to the same
-#' but with BIC instead of AIC. The rest of the columns corresponds to the
-#' results of the function \code{devRateQlStat} and \code{devRateQlBio}.
+#' The first column corresponds to models' names and the second column corresponds
+#' to the number of parameters of the models. The columns 3 and 4 correspond
+#' to the results of the function \code{devRateQlStat}. The columns 5 to 9
+#' correspond to the results of the function \code{devRateQlBio}. The column 10
+#' shows the AIC of each model, the column 11 shows BIC of each model.
 #' @details
 #' Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
 #' are showed in the first element of the returned list, however indices of goodness
 #' of fit are not provided as these equations return a list of two nls objects.
+#' Equation campbell_74 is not fitted.
 #' @examples
 #' myDf <- exTropicalMoth$raw$egg
 #' devRateModelAll(dfData = myDf)
@@ -51,13 +51,17 @@ devRateModelAll <- function(
           ...),
         silent = TRUE)
     }else{
-      modX <- try(
-        devRateModel(
-          dfData = dfData,
-          eq = eqList[[i]],
-          startValues = eqStartVal[[i]],
-          ...),
-      silent = TRUE)
+      if(eqList[[i]]$id == "eq030"){
+        return(NULL)
+      }else{
+        modX <- try(
+          devRateModel(
+            dfData = dfData,
+            eq = eqList[[i]],
+            startValues = eqStartVal[[i]],
+            ...),
+          silent = TRUE)
+      }
     }
     if(class(modX) == "try-error"){
       return(NULL)
@@ -65,34 +69,25 @@ devRateModelAll <- function(
       return(modX)
     }
   })
+  names(modL) <- names(eqList)
+
   IC <- lapply(seq_along(modL), function(i){
     if(eqList[[i]]$id == "eq040" | eqList[[i]]$id == "eq150"){
       return(c(NA, NA))
     }else{
       if(!is.null(modL[[i]])){
-        return(c(stats::AIC(modL[[i]]), stats::BIC(modL[[i]])))
+        return(c(stats::AIC(modL[[i]]),
+                 stats::BIC(modL[[i]])))
       }else{
         return(c(NA, NA))
       }
     }
   })
   IC <- do.call(rbind, IC)
-  rankAIC <- rank(IC[, 1])
-  rankBIC <- rank(IC[, 2])
-  deltaAIC <- vector()
-  deltaBIC <- vector()
-  for(i in 1:length(modL)){
-    deltaAIC[i] <- IC[, 1][i] - min(IC[, 1], na.rm = TRUE)
-    deltaBIC[i] <- IC[, 2][i] - min(IC[, 2], na.rm = TRUE)
-  }
 
   ICdf <- data.frame(
     AIC = IC[, 1],
-    rankAIC,
-    deltaAIC,
-    BIC = IC[, 2],
-    rankBIC,
-    deltaBIC)
+    BIC = IC[, 2])
 
   qlStat <- devRateQlStat(
     eq = eqList,
@@ -105,12 +100,23 @@ devRateModelAll <- function(
     propThresh = propThresh,
     interval = interval)
 
+  nParam <- lapply(seq_along(modL), function(i){
+    if(length(stats::coef(modL[[i]])) == 0){
+      return(NA)
+    }else{
+      return(length(stats::coef(modL[[i]])))
+    }
+  })
+
+  nParam <- unlist(nParam)
+
   ql <- data.frame(
     eqName = names(eqList),
-    ICdf,
+    nParam = nParam,
     qlStat,
-    qlBio)
+    qlBio,
+    ICdf)
 
   rownames(ql) <- NULL
-  return(list(modL, ql))
+  return(list(nlsList = modL, gofTable = ql))
 }
