@@ -8,3 +8,5 @@ R/devRate_forRstudioUsers\.R
 cran-comments\.md
 .travis.yml
 README.Rmd
+^doc$
+^Meta$
