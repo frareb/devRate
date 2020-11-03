@@ -155,7 +155,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://jb.asm.org/content/149/1/1}
+#' @source \url{https://jb.asm.org/content/149/1/1}
 #' @docType data
 #' @keywords datasets
 "rootsq_82"
