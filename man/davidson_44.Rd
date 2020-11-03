@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.2307/1326}
+\url{https://www.jstor.org/stable/1326?origin=crossref&seq=1}
 }
 \usage{
 davidson_44

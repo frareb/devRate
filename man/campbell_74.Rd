@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.2307/2402197}
+\url{https://www.jstor.org/stable/2402197?origin=crossref&seq=1}
 }
 \usage{
 campbell_74

@@ -219,8 +219,8 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://jb.asm.org/content/149/1/1}
-#' @source \url{http://jb.asm.org/content/154/3/1222}
+#' @source \url{https://jb.asm.org/content/149/1/1}
+#' @source \url{https://jb.asm.org/content/154/3/1222}
 #' @docType data
 #' @keywords datasets
 "ratkowsky_82"
@@ -375,7 +375,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://dx.doi.org/10.2307/1326}
+#' @source \url{https://www.jstor.org/stable/1326?origin=crossref&seq=1}
 #' @docType data
 #' @keywords datasets
 "davidson_44"
@@ -403,7 +403,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://dx.doi.org/10.2307/2402197}
+#' @source \url{https://www.jstor.org/stable/2402197?origin=crossref&seq=1}
 #' @docType data
 #' @keywords datasets
 "campbell_74"
