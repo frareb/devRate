@@ -375,7 +375,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{https://www.jstor.org/stable/1326?origin=crossref&seq=1}
+#' @source \url{https://www.jstor.org/stable/1326?seq=1/}
 #' @docType data
 #' @keywords datasets
 "davidson_44"
@@ -403,7 +403,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{https://www.jstor.org/stable/2402197?origin=crossref&seq=1}
+#' @source \url{https://www.jstor.org/stable/2402197?seq=1/}
 #' @docType data
 #' @keywords datasets
 "campbell_74"
@@ -695,7 +695,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://www.jstor.org/stable/2460694}
+#' @source \url{https://www.jstor.org/stable/2460694?seq=1/}
 #' @docType data
 #' @keywords datasets
 "taylor_81"

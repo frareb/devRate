@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://www.jstor.org/stable/2460694}
+\url{https://www.jstor.org/stable/2460694?seq=1/}
 }
 \usage{
 taylor_81
