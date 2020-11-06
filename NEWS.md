@@ -1,3 +1,6 @@
+## devRate 0.2.1
+* fix URLs
+
 ## devRate 0.2.0
 * fix argument name: from df to dfData in devRateModel
 * simplify functions: 
