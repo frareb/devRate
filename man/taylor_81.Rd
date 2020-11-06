@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{https://www.jstor.org/stable/2460694?seq=1/}
-}
 \usage{
 taylor_81
 }

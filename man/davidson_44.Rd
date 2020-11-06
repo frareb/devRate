@@ -17,15 +17,12 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{https://www.jstor.org/stable/1326?seq=1/}
-}
 \usage{
 davidson_44
 }
 \description{
 Davidson, J. (1944). On the relationship between temperature and rate of development of insects
-at constant temperatures. The Journal of Animal Ecology:26-38.
+at constant temperatures. The Journal of Animal Ecology:26-38. <doi:10.2307/1326>
 }
 \details{
 Equation:

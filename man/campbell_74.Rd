@@ -17,15 +17,12 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{https://www.jstor.org/stable/2402197?seq=1/}
-}
 \usage{
 campbell_74
 }
 \description{
 Campbell, A., Frazer, B. D., Gilbert, N. G. A. P., Gutierrez, A. P., & Mackauer, M. (1974).
-Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438.
+Temperature requirements of some aphids and their parasites. Journal of applied ecology, 431-438. <doi:10.2307/2402197>
 }
 \details{
 Equation:
