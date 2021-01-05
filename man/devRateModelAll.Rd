@@ -37,10 +37,9 @@ An object of class \code{list} with two elements. The first
 element is a \code{list} with all the nls objects resulting from the fitting
 of the models. The second element is a \code{data.frame}.
 The first column corresponds to models' names and the second column corresponds
-to the number of parameters of the models. The columns 3 and 4 correspond
+to the number of parameters of the models. The columns 3 to 6 correspond
 to the results of the function \code{devRateQlStat}. The columns 5 to 9
-correspond to the results of the function \code{devRateQlBio}. The column 10
-shows the AIC of each model, the column 11 shows BIC of each model.
+correspond to the results of the function \code{devRateQlBio}.
 }
 \description{
 This function fits all models listed in devRateEqList to a development
