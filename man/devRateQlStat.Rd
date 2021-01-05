@@ -23,6 +23,8 @@ Return a table of multiple statistical indexes of goodness of fit
 }
 \details{
 NULL is returned when nlsDR or dfDataList are not of type list.
+  AIC and BIC are calculated using the RSS and not the log-likelihood as in
+  the functions of the R package stats.
 }
 \examples{
 myDf <- data.frame(

@@ -9,6 +9,8 @@
 #' @return An object of class \code{data.frame} with statistical indexes
 #'   in columns and nls objects in rows.
 #' @details NULL is returned when nlsDR or dfDataList are not of type list.
+#'   AIC and BIC are calculated using the RSS and not the log-likelihood as in
+#'   the functions of the R package stats.
 #' @examples
 #' myDf <- data.frame(
 #'   temp = seq(from = 0, to = 50, by = 10),
@@ -51,18 +53,21 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
       # stinner_74 and lamb_92 exception
       if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
         # warning("stinner_74 and lamb_92 not implemented")
-        dfStats <- data.frame(RSS = NA, RMSE = NA)
+        dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
         return(dfStats)
       }else{
         if(!is.null(nlsDR[[i]])){
           N <- length(temp[[i]])
+          K <- length(grep("param", eq[[i]]$startVal))
           res <- stats::residuals(nlsDR[[i]])
           RSS <- sum(res^2)
           RMSE <- sqrt(RSS / N)
-          dfStats <- data.frame(RSS = RSS, RMSE = RMSE)
+          AIC <- N * log(RSS / N) + 2 * (K + 1)
+          BIC <- N * log(RSS / N) + log(N) * (K + 1)
+          dfStats <- data.frame(RSS = RSS, RMSE = RMSE, AIC = AIC, BIC = BIC)
           return(dfStats)
         }else{
-          dfStats <- data.frame(RSS = NA, RMSE = NA)
+          dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
           return(dfStats)
         }
       }
