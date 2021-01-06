@@ -1,3 +1,6 @@
+## devRate 0.2.2
+* devRateQlStat function optimized
+
 ## devRate 0.2.1
 * fix URLs
 
