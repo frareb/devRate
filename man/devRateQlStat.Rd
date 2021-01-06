@@ -4,50 +4,42 @@
 \alias{devRateQlStat}
 \title{Statistical characterization of the nls goodness-of-fit}
 \usage{
-devRateQlStat(eq, nlsDR, dfDataList)
+devRateQlStat(nlsDR)
 }
 \arguments{
-\item{eq}{A list of equations used for nls fitting.}
-
-\item{nlsDR}{A list of nls objects.}
-
-\item{dfDataList}{A list of data.frame with the temperature in the first column and
-the development rate in the second column.}
+\item{nlsDR}{A list of \code{nls} objects.}
 }
 \value{
-An object of class \code{data.frame} with statistical indexes
-  in columns and nls objects in rows.
+A \code{data.frame} with statistical indices
+  in columns (RSS, RMSE, AIC, BIC) and nls objects in rows.
 }
 \description{
-Return a table of multiple statistical indexes of goodness of fit
+Return a table of multiple statistical indices of goodness-of-fit
 }
 \details{
-NULL is returned when nlsDR or dfDataList are not of type list.
-  AIC and BIC are calculated using the RSS and not the log-likelihood as in
-  the functions of the R package stats.
+NULL is returned when nlsDR is not of type list.
+  AIC and BIC are calculated using the RSS (Burnham and Anderson, 2002).
 }
 \examples{
 myDf <- data.frame(
   temp = seq(from = 0, to = 50, by = 10),
   rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
-myNLS <- list(
-  devRateModel(
-    eq = damos_08,
-    dfData = myDf,
-    startValues = list(aa = 1, bb = 1, cc = 1),
-    algo = "LM"),
-  devRateModel(
-    eq = kontodimas_04,
-    dfData = myDf,
-    startValues = list(aa = 1, Tmin = 7, Tmax = 40),
-    algo = "LM"),
-  devRateModel(
-    eq = poly2,
-    dfData = myDf,
-    startValues = list(a0 = 1, a1 = 1, a2 = 1),
-    algo = "LM"))
+damos_08Fit <- devRateModel(
+  eq = damos_08,
+  dfData = myDf,
+  startValues = list(aa = 1, bb = 1, cc = 1),
+  algo = "LM")
+kontodimas_04Fit <- devRateModel(
+  eq = kontodimas_04,
+  dfData = myDf,
+  startValues = list(aa = 1, Tmin = 7, Tmax = 40),
+  algo = "LM")
+poly2Fit <- devRateModel(
+  eq = poly2,
+  dfData = myDf,
+  startValues = list(a0 = 1, a1 = 1, a2 = 1),
+  algo = "LM")
 devRateQlStat(
-  eq = list(damos_08, kontodimas_04, poly2),
-  nlsDR = myNLS,
-  dfDataList = list(myDf))
+  nlsDR = list(damos_08Fit, kontodimas_04Fit, poly2Fit)
+)
 }

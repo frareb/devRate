@@ -70,10 +70,7 @@ devRateModelAll <- function(
   })
   names(modL) <- names(eqList)
 
-  qlStat <- devRateQlStat(
-    eq = eqList,
-    nlsDR = modL,
-    dfDataList = list(dfData))
+  qlStat <- devRateQlStat(nlsDR = modL)
 
   qlBio <- devRateQlBio(
     nlsDR = modL,
