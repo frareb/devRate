@@ -34,24 +34,25 @@ interval of temperatures in which metrics are searched.}
 }
 \value{
 An object of class \code{list} with two elements. The first
-element is a \code{list} with all the nls objects resulting from the fitting
-of the models. The second element is a \code{data.frame}.
-The first column corresponds to models' names and the second column corresponds
-to the number of parameters of the models. The columns 3 and 4 correspond
-to the results of the function \code{devRateQlStat}. The columns 5 to 9
-correspond to the results of the function \code{devRateQlBio}. The column 10
-shows the AIC of each model, the column 11 shows BIC of each model.
+  element is a \code{list} with all the nls objects. The second element
+  is a \code{data.frame}.
+  In the \code{data.frame}, the first column corresponds to model
+  names and the second column to the number of parameters. The columns 3
+  to 6 correspond to the results of the function \code{devRateQlStat}, i.e.
+  RSS, RMSE, AIC, and BIC. The columns 7 to 11 correspond to the results
+  of the function \code{devRateQlBio}, i.e. CTmin, CTmax, Topt, XTmin, and
+  XTmax.
 }
 \description{
 This function fits all models listed in devRateEqList to a development
-rate dataset and then calculates a series of indices of goodness of fit for
+rate dataset and then calculates a series of indices of goodness-of-fit for
 each fitted model.
 }
 \details{
 Equations stinner_74 and lamb_92 are fitted and the resulting nls objects
-are showed in the first element of the returned list, however indices of goodness
-of fit are not provided as these equations return a list of two nls objects.
-Equation campbell_74 is not fitted.
+  are showed in the first element of the returned list, however indices of
+  goodness-of-fit are not provided. Equation campbell_74 is not fitted (
+  simple linear model).
 }
 \examples{
 myDf <- exTropicalMoth$raw$egg

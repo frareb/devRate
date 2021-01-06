@@ -1,68 +1,88 @@
 #' Statistical characterization of the nls goodness-of-fit
 #'
-#' Return a table of multiple statistical indexes of goodness of fit
+#' Return a table of multiple statistical indices of goodness-of-fit
 #'
-#' @param nlsDR A list of nls objects.
-#' @param eq A list of equations used for nls fitting.
-#' @param dfDataList A list of data.frame with the temperature in the first column and
-#'   the development rate in the second column.
-#' @return An object of class \code{data.frame} with statistical indexes
-#'   in columns and nls objects in rows.
-#' @details NULL is returned when nlsDR or dfDataList are not of type list.
+#' @param nlsDR A list of \code{nls} objects.
+#' @return A \code{data.frame} with statistical indices
+#'   in columns (RSS, RMSE, AIC, BIC) and nls objects in rows.
+#' @details NULL is returned when nlsDR is not of type list.
+#'   AIC and BIC are calculated using the RSS (Burnham and Anderson, 2002).
 #' @examples
 #' myDf <- data.frame(
 #'   temp = seq(from = 0, to = 50, by = 10),
 #'   rT = c(0.001, 0.008, 0.02, 0.03, 0.018, 0.004))
-#' myNLS <- list(
-#'   devRateModel(
-#'     eq = damos_08,
-#'     dfData = myDf,
-#'     startValues = list(aa = 1, bb = 1, cc = 1),
-#'     algo = "LM"),
-#'   devRateModel(
-#'     eq = kontodimas_04,
-#'     dfData = myDf,
-#'     startValues = list(aa = 1, Tmin = 7, Tmax = 40),
-#'     algo = "LM"),
-#'   devRateModel(
-#'     eq = poly2,
-#'     dfData = myDf,
-#'     startValues = list(a0 = 1, a1 = 1, a2 = 1),
-#'     algo = "LM"))
+#' damos_08Fit <- devRateModel(
+#'   eq = damos_08,
+#'   dfData = myDf,
+#'   startValues = list(aa = 1, bb = 1, cc = 1),
+#'   algo = "LM")
+#' kontodimas_04Fit <- devRateModel(
+#'   eq = kontodimas_04,
+#'   dfData = myDf,
+#'   startValues = list(aa = 1, Tmin = 7, Tmax = 40),
+#'   algo = "LM")
+#' poly2Fit <- devRateModel(
+#'   eq = poly2,
+#'   dfData = myDf,
+#'   startValues = list(a0 = 1, a1 = 1, a2 = 1),
+#'   algo = "LM")
 #' devRateQlStat(
-#'   eq = list(damos_08, kontodimas_04, poly2),
-#'   nlsDR = myNLS,
-#'   dfDataList = list(myDf))
+#'   nlsDR = list(damos_08Fit, kontodimas_04Fit, poly2Fit)
+#' )
 #' @export
-devRateQlStat <- function(eq, nlsDR, dfDataList){
-  if(class(nlsDR) == "list" &
-     class(dfDataList) == "list" &
-     length(eq) == length(nlsDR)){
-    if(length(dfDataList) < length(nlsDR)){
-      dfDataList <- rep(dfDataList, length(nlsDR))
-    }
-    temp <- lapply(seq_along(dfDataList), function(i){
-      return(dfDataList[[i]][, 1])
+devRateQlStat <- function(nlsDR){
+  if(
+    class(nlsDR) == "list" # && sum(sapply(nlsDR, function(i) class(i) == "nls")) == length(nlsDR)
+    # & class(dfDataList) == "list" & length(eq) == length(nlsDR)
+  ){
+
+    temp <- lapply(seq_along(nlsDR), function(i){
+      resTemp <- NA
+      try(
+        resTemp <- get("T", nlsDR[[i]]$m$getEnv()),
+        silent = TRUE
+      )
+      return(resTemp)
     })
-    devRate <- lapply(seq_along(dfDataList), function(i){
-      return(dfDataList[[i]][, 2])
+    devRate <- lapply(seq_along(nlsDR), function(i){
+      resRt <- NA
+      try(
+        get("rT", nlsDR[[i]]$m$getEnv()),
+        silent = TRUE
+      )
+      return(resRt)
     })
+
+    # if(length(dfDataList) < length(nlsDR)){
+    #   dfDataList <- rep(dfDataList, length(nlsDR))
+    # }
+    # temp <- lapply(seq_along(dfDataList), function(i){
+    #   return(dfDataList[[i]][, 1])
+    # })
+    # devRate <- lapply(seq_along(dfDataList), function(i){
+    #   return(dfDataList[[i]][, 2])
+    # })
     stats <- lapply(seq_along(nlsDR), function(i){
       # stinner_74 and lamb_92 exception
-      if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
+      # if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
+      if(length(nlsDR[[i]]) == 2 | class(nlsDR[[i]]) != "nls"){
+        # warning("two-equations mathematical models not implemented")
         # warning("stinner_74 and lamb_92 not implemented")
-        dfStats <- data.frame(RSS = NA, RMSE = NA)
+        dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
         return(dfStats)
       }else{
         if(!is.null(nlsDR[[i]])){
           N <- length(temp[[i]])
+          K <- length(nlsDR[[i]]$m$getAllPars()) # length(grep("param", eq[[i]]$startVal))
           res <- stats::residuals(nlsDR[[i]])
           RSS <- sum(res^2)
           RMSE <- sqrt(RSS / N)
-          dfStats <- data.frame(RSS = RSS, RMSE = RMSE)
+          AIC <- N * log(RSS / N) + 2 * (K + 1)
+          BIC <- N * log(RSS / N) + log(N) * (K + 1)
+          dfStats <- data.frame(RSS = RSS, RMSE = RMSE, AIC = AIC, BIC = BIC)
           return(dfStats)
         }else{
-          dfStats <- data.frame(RSS = NA, RMSE = NA)
+          dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
           return(dfStats)
         }
       }
@@ -71,7 +91,7 @@ devRateQlStat <- function(eq, nlsDR, dfDataList){
     row.names(stats) <- lapply(seq_along(nlsDR), function(i){paste0("nls#", i)})
     return(stats)
   }else{
-    # warning("nlsDR or dfDataList is not a list")
+    # warning("nlsDR is not a list")
     return(NULL)
   }
 }

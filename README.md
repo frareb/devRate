@@ -8,7 +8,7 @@ Status](https://travis-ci.org/frareb/devRate.svg?branch=master)](https://travis-
 [![CRAN
 version](https://www.r-pkg.org/badges/version/devRate)](https://CRAN.R-project.org/package=devRate)
 [![CRAN
-downloads](https://cranlogs.r-pkg.org/badges/grand-total/devRate)](https://CRAN.R-project.org/package=devRate)
+downloads](https://cranlogs.r-pkg.org/badges/devRate)](https://CRAN.R-project.org/package=devRate)
 [![Coverage
 Status](https://img.shields.io/codecov/c/gh/frareb/devRate/master.svg)](https://codecov.io/gh/frareb/devRate?branch=master)
 
@@ -63,17 +63,17 @@ To cite this package please use:
 ``` r
 citation("devRate") 
 #> 
-#> Rebaudo F, Regnier B (2020). _devRate: Quantify the Relationship
+#> Rebaudo F, Regnier B (2021). _devRate: Quantify the Relationship
 #> Between Development Rate and Temperature in Ectotherms_. R package
-#> version 0.2.0, <URL: https://CRAN.R-project.org/package=devRate>.
+#> version 0.2.1, <URL: https://CRAN.R-project.org/package=devRate>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {devRate: Quantify the Relationship Between Development Rate and Temperature in Ectotherms},
 #>     author = {Francois Rebaudo and Baptiste Regnier},
-#>     year = {2020},
-#>     note = {R package version 0.2.0},
+#>     year = {2021},
+#>     note = {R package version 0.2.1},
 #>     url = {https://CRAN.R-project.org/package=devRate},
 #>   }
 ```
