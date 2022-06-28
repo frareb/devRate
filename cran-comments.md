@@ -1,12 +1,13 @@
 ## devRate version 0.2.2
 * devRateQlStat function optimized
+* dRGetMetrics function to compute Life traits from Thermal Performance Curve
 
 ## Test environments
-* Windows 10, R 4.0.3
-* Linux Ubuntu 20.10, R 4.0.3
-* win-builder (R Under development 2020-11-01 r79391).
+* Linux Ubuntu 22.04, R 4.2.0
+* win-builder (R Under development 2022-06-27 r82528 ucrt).
 * Ubuntu 16.04.6 LTS with Travis-ci.com : oldrel, release, devel
 
 ## R CMD check results
-There were no ERRORs, NOTEs, or WARNINGs. 
+There were no ERRORs, or WARNINGs. 
+There was one NOTE regarding invalid URLs : I checked and all are valid URLs.
 

@@ -63,17 +63,19 @@ To cite this package please use:
 ``` r
 citation("devRate") 
 #> 
-#> Rebaudo F, Regnier B (2021). _devRate: Quantify the Relationship
-#> Between Development Rate and Temperature in Ectotherms_. R package
-#> version 0.2.1, <URL: https://CRAN.R-project.org/package=devRate>.
+#> To cite package 'devRate' in publications use:
+#> 
+#>   Rebaudo F, Regnier B (2022). _devRate: Quantify the Relationship
+#>   Between Development Rate and Temperature in Ectotherms_. R package
+#>   version 0.2.2, <https://CRAN.R-project.org/package=devRate>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {devRate: Quantify the Relationship Between Development Rate and Temperature in Ectotherms},
 #>     author = {Francois Rebaudo and Baptiste Regnier},
-#>     year = {2021},
-#>     note = {R package version 0.2.1},
+#>     year = {2022},
+#>     note = {R package version 0.2.2},
 #>     url = {https://CRAN.R-project.org/package=devRate},
 #>   }
 ```
