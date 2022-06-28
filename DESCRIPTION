@@ -4,7 +4,7 @@ Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
 Version: 0.2.2
 Authors@R: c(
-    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2020",  
+    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2022",  
       email = "francois.rebaudo@ird.fr"),
     person("Baptiste", "Regnier", role = "aut", comment = "PhD; 2019-2020"),
     person("Camila", "Benavides", role = "ctb", comment = "M2 student; 2018"),
@@ -13,7 +13,7 @@ Authors@R: c(
     person("Badre", "Rabhi", role = "ctb", comment = "L2 student; 2017"), 
     person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
-Author: Francois Rebaudo [aut, cre] (2016-2020), 
+Author: Francois Rebaudo [aut, cre] (2016-2022), 
     Baptiste Regnier [aut] (PhD; 2019-2020),
     Camila Benavides [ctb] (M2 student; 2018), 
     Tanusson Selvarajah [ctb] (L2 student; 2018), 
@@ -29,10 +29,11 @@ Description: A set of functions to quantify the relationship between development
     <doi:10.1111/eea.12693>. An example can be found in Rebaudo et al. (2017) 
     <doi:10.1007/s13355-017-0480-5>.
 License: GPL-2
+Encoding: UTF-8
 LazyData: TRUE
 Depends:
   R (>= 3.5.0)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
 Suggests: knitr,
     rmarkdown,
     testthat,
