@@ -2,7 +2,7 @@
 % Please edit documentation in R/devRate_qualityFits.R
 \name{devRateQlStat}
 \alias{devRateQlStat}
-\title{Statistical characterization of the nls goodness-of-fit}
+\title{Statistical indices of the nls goodness-of-fit}
 \usage{
 devRateQlStat(nlsDR)
 }
