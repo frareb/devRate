@@ -1,4 +1,4 @@
-#' Statistical characterization of the nls goodness-of-fit
+#' Statistical indices of the nls goodness-of-fit
 #'
 #' Return a table of multiple statistical indices of goodness-of-fit
 #'
@@ -32,8 +32,8 @@
 #' @export
 devRateQlStat <- function(nlsDR){
   if(
-    class(nlsDR) == "list" # && sum(sapply(nlsDR, function(i) class(i) == "nls")) == length(nlsDR)
-    # & class(dfDataList) == "list" & length(eq) == length(nlsDR)
+    inherits(nlsDR, "list")
+    # class(nlsDR) == "list"
   ){
 
     temp <- lapply(seq_along(nlsDR), function(i){
@@ -52,20 +52,10 @@ devRateQlStat <- function(nlsDR){
       )
       return(resRt)
     })
-
-    # if(length(dfDataList) < length(nlsDR)){
-    #   dfDataList <- rep(dfDataList, length(nlsDR))
-    # }
-    # temp <- lapply(seq_along(dfDataList), function(i){
-    #   return(dfDataList[[i]][, 1])
-    # })
-    # devRate <- lapply(seq_along(dfDataList), function(i){
-    #   return(dfDataList[[i]][, 2])
-    # })
     stats <- lapply(seq_along(nlsDR), function(i){
       # stinner_74 and lamb_92 exception
       # if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
-      if(length(nlsDR[[i]]) == 2 | class(nlsDR[[i]]) != "nls"){
+      if(length(nlsDR[[i]]) == 2 | inherits(nlsDR[[i]], "nls")){
         # warning("two-equations mathematical models not implemented")
         # warning("stinner_74 and lamb_92 not implemented")
         dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
@@ -159,13 +149,6 @@ devRateQlBio <- function(nlsDR, propThresh = 0.01, eq, interval = c(0, 50)){
           XTmin <- max(temp[rT == min(rT)])
           return(data.frame(CTmin = CTmin, CTmax = NA, Topt = NA, XTmin = XTmin, XTmax = NA))
         }
-        # Topt <- stats::optimize(
-        #   f = function(temp){
-        #     x <- stats::predict(nlsDR[[i]], newdata = list(T = temp))
-        #     x[is.na(x)] <- 0
-        #     return(x)
-        #   },
-        #   maximum = TRUE, interval = interval)$maximum
         getTopt <- function(interval){
           Topt <- stats::optimize(
             f = function(temp){

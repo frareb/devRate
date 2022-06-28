@@ -14,13 +14,13 @@
 #' myDev <- -0.05 + rnorm(n = length(myT), mean = myT, sd = 1) * 0.01
 #' myNLS <- devRateModel(eq = campbell_74, temp = myT, devRate = myDev,
 #'   startValues = list(aa = 0, bb = 0))
-#' devRatePlot(eq = campbell_74, nlsDR = myNLS, temp = myT, devRate = myDev,
+#' devRatePlot(eq = campbell_74, nlsDR = myNLS,
 #'   spe = TRUE, pch = 16, lwd = 2, ylim = c(0, 0.10))
 #' @export
 devRatePlot <- function(
   eq, nlsDR, rangeT = 10, optText = TRUE, spe = TRUE, ...){
 
-  if (class(nlsDR) == "nls"){
+  if (inherits(nlsDR, "nls")){
     temp <- get("T", nlsDR$m$getEnv())
     devRate <- get("rT", nlsDR$m$getEnv())
   } else {

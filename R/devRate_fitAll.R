@@ -63,7 +63,7 @@ devRateModelAll <- function(
           silent = TRUE)
       }
     }
-    if(class(modX) == "try-error"){
+    if(inherits(modX, "try-error")){
       return(NULL)
     }else{
       return(modX)
