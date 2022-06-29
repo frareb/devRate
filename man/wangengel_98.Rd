@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1016/S0308-521X(98)00028-6}
+\url{<doi:10.1016/S0308-521X(98)00028-6>}
 }
 \usage{
 wangengel_98

@@ -19,9 +19,9 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{https://doi.org/10.1093/aesa/77.2.208}
+\url{<doi:10.1093/aesa/77.2.208>}
 
-\url{http://dx.doi.org/10.1093/aesa/81.4.539}
+\url{<doi:10.1093/aesa/81.4.539>}
 }
 \usage{
 wagner_88

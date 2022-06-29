@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://ee.oxfordjournals.org/content/33/1/1}
+\url{https://academic.oup.com/ee/article/33/1/1/477793/}
 }
 \usage{
 kontodimas_04

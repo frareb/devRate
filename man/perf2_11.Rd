@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1016/j.aspen.2010.11.008}
+\url{<doi:10.1016/j.aspen.2010.11.008>}
 }
 \usage{
 perf2_11

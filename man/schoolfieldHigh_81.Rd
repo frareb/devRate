@@ -19,7 +19,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1016/0022-5193(81)90246-0}
+\url{<doi:10.1016/0022-5193(81)90246-0>}
 }
 \usage{
 schoolfieldHigh_81

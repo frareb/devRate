@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.4039/Ent106519-5}
+\url{<doi:10.4039/Ent106519-5>}
 }
 \usage{
 stinner_74

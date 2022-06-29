@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1093/ee/5.6.1133}
+\url{<doi:10.1093/ee/5.6.1133>}
 }
 \usage{
 logan10_76

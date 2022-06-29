@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1079/BER2003259}
+\url{<doi:10.1079/BER2003259>}
 }
 \usage{
 bayoh_03

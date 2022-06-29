@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1093/ee/24.1.68}
+\url{<doi:10.1093/ee/24.1.68>}
 }
 \usage{
 lactin2_95

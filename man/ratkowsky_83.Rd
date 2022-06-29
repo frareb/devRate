@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{https://doi.org/10.1093/aesa/sav121}
+\url{<doi:10.1093/aesa/sav121>}
 }
 \usage{
 ratkowsky_83

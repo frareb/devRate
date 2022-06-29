@@ -18,7 +18,7 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{http://dx.doi.org/10.1016/0022-5193(77)90265-X}
+\url{<doi:10.1016/0022-5193(77)90265-X>}
 }
 \usage{
 sharpeDeMichele_77

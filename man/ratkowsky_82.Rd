@@ -18,9 +18,9 @@ A list of eight elements describing the equation.
 }
 }
 \source{
-\url{https://jb.asm.org/content/149/1/1}
+\url{<doi:10.1128/jb.149.1.1-5.1982>}
 
-\url{https://jb.asm.org/content/154/3/1222}
+\url{<doi:10.1128/jb.154.3.1222-1226.1983>}
 }
 \usage{
 ratkowsky_82
