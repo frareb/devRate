@@ -33,6 +33,6 @@ where rT is the development rate, T the temperature, bb the slope of the
 regression line, and Tb a conceptual temperature of no metabolic significance.
 }
 \references{
-\url{https://jb.asm.org/content/149/1/1}
+\doi{10.1128/jb.149.1.1-5.1982}
 }
 \keyword{datasets}

@@ -25,9 +25,10 @@ Description: A set of functions to quantify the relationship between development
     rate and temperature and to build phenological models. The package comprises 
     a set of models and estimated parameters borrowed from a literature review 
     in ectotherms. The methods and literature review are described in Rebaudo 
-    et al. (2018) <doi:10.1111/2041-210X.12935> and Rebaudo and Rabhi (2018) 
-    <doi:10.1111/eea.12693>. An example can be found in Rebaudo et al. (2017) 
-    <doi:10.1007/s13355-017-0480-5>.
+    et al. (2018) <doi:10.1111/2041-210X.12935>, Rebaudo and Rabhi (2018) 
+    <doi:10.1111/eea.12693>, and Regnier et al. (2021) <doi:10.1093/ee/nvab115>. 
+    An example can be found in Rebaudo et al. (2017) 
+    <doi:10.1007/s13355-017-0480-5>. 
 License: GPL-2
 Encoding: UTF-8
 LazyData: TRUE
