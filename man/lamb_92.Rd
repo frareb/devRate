@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/ee/21.1.10>}
-}
 \usage{
 lamb_92
 }
@@ -43,5 +40,8 @@ and
 where rT is the development rate, T the temperature, Rm the maximum
 development rate, Tmax the optimum temperature, and To and T1 the shape parameter giving
 the spread of the curve.
+}
+\references{
+\doi{10.1093/ee/21.1.10}
 }
 \keyword{datasets}

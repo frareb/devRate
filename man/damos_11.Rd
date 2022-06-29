@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1155/2012/123405>}
-}
 \usage{
 damos_11
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, and aa, bb, and
 cc empirical constant parameters.
+}
+\references{
+\doi{10.1155/2012/123405}
 }
 \keyword{datasets}

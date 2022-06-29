@@ -18,11 +18,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/aesa/77.2.208>}
-
-\url{<doi:10.1093/aesa/81.4.539>}
-}
 \usage{
 wagner_88
 }
@@ -42,5 +37,10 @@ Equation:
 
 where rT is the development rate, T the temperature, and aa, bb, cc,
 and dd are thermodynamic parameters.
+}
+\references{
+\doi{10.1093/aesa/77.2.208}
+
+\doi{10.1093/aesa/81.4.539}
 }
 \keyword{datasets}

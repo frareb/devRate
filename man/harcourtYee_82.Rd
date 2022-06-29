@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/ee/11.3.581>}
-}
 \usage{
 harcourtYee_82
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, and a0, a1, a2, and a3 are
 constants.
+}
+\references{
+\doi{10.1093/ee/11.3.581}
 }
 \keyword{datasets}

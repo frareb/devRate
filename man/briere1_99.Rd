@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/ee/28.1.22>}
-}
 \usage{
 briere1_99
 }
@@ -35,5 +32,8 @@ Equation:
 where rT is the development rate, T the temperature, Tmin the low
 temperature developmental threshold, Tmax the lethal temperature, and aa
 an empirical constant.
+}
+\references{
+\doi{10.1093/ee/28.1.22}
 }
 \keyword{datasets}

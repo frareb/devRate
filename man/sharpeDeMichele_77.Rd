@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/0022-5193(77)90265-X>}
-}
 \usage{
 sharpeDeMichele_77
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, and aa, bb, cc,
 dd, ff, and gg thermodynamic parameters.
+}
+\references{
+\doi{10.1016/0022-5193(77)90265-X}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.4039/Ent106519-5>}
-}
 \usage{
 stinner_74
 }
@@ -38,5 +35,8 @@ and
 where rT is the development rate, T the temperature, Topt the optimum temperature,
 k1 and k2 constants. "[...] the relationship [is] inverted when the temperature is above an
 optimum [...] T = 2 * Topt - T for T >= Topt." Stinner et al. 1974.
+}
+\references{
+\doi{10.4039/Ent106519-5}
 }
 \keyword{datasets}

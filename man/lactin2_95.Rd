@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/ee/24.1.68>}
-}
 \usage{
 lactin2_95
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, and aa, bb, Tmax,
 and deltaT fitted parameters.
+}
+\references{
+\doi{10.1093/ee/24.1.68}
 }
 \keyword{datasets}

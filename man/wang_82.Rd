@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{http://en.cnki.com.cn}
-}
 \usage{
 wang_82
 }
@@ -33,5 +30,8 @@ Equation:
       rT = (K / (1 + exp(-r*(T - T0)))) * (1 - exp(-(T - TL)/aa)) * (1 - exp(-(TH - T)/aa))}
 
 where rT is the development rate, T the temperature, and K, r, T0, TH, and TL constants.
+}
+\references{
+\url{http://en.cnki.com.cn}
 }
 \keyword{datasets}

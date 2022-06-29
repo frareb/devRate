@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/j.ecolmodel.2015.09.012>}
-}
 \usage{
 beta_16
 }
@@ -42,5 +39,8 @@ Equation:
 
 where rT is the development rate, T the temperature, T1, T2,
 and Tm the model parameters.
+}
+\references{
+\doi{10.1016/j.ecolmodel.2015.09.012}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1079/BER2003259>}
-}
 \usage{
 bayoh_03
 }
@@ -35,5 +32,8 @@ Equation:
 
 where rT is the development rate, T the temperature, and aa, bb,
 cc, and dd empirical constant parameters.
+}
+\references{
+\doi{10.1079/BER2003259}
 }
 \keyword{datasets}

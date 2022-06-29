@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/j.jinsphys.2012.01.010>}
-}
 \usage{
 regniere_12
 }
@@ -36,5 +33,8 @@ Equation:
 where rT is the development rate, T the temperature, Tb the minimum
 temperature, Tm the maximum temperature and phi, bb, deltab,
 and deltam constants (see source for more details).
+}
+\references{
+\doi{10.1016/j.jinsphys.2012.01.010}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/S0308-521X(98)00028-6>}
-}
 \usage{
 wangengel_98
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmin the minimum temperature,
 Topt the optimum temperature, and aa a constant.
+}
+\references{
+\doi{10.1016/S0308-521X(98)00028-6}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{https://jb.asm.org/content/149/1/1}
-}
 \usage{
 rootsq_82
 }
@@ -34,5 +31,8 @@ Equation:
 
 where rT is the development rate, T the temperature, bb the slope of the
 regression line, and Tb a conceptual temperature of no metabolic significance.
+}
+\references{
+\url{https://jb.asm.org/content/149/1/1}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/ee/5.6.1133>}
-}
 \usage{
 logan10_76
 }
@@ -35,5 +32,8 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmax the maximum temperature,
 deltaT the width of the high temperature boundary layer, and alpha and bb constants.
+}
+\references{
+\doi{10.1093/ee/5.6.1133}
 }
 \keyword{datasets}

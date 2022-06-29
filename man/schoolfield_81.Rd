@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/0022-5193(81)90246-0>}
-}
 \usage{
 schoolfield_81
 }
@@ -41,5 +38,8 @@ temperature at which the enzyme is 1/2 active and 1/2 low temperature inactive,
 dd the change in enthalpy associated with high temperature inactivation of the enzyme,
 and ee the temperature at which the enzyme is 1/2 active and 1/2 high temperature
 inactive.
+}
+\references{
+\doi{10.1016/0022-5193(81)90246-0}
 }
 \keyword{datasets}

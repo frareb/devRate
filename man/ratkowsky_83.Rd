@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1093/aesa/sav121>}
-}
 \usage{
 ratkowsky_83
 }
@@ -45,5 +42,8 @@ and maximum temperatures at which rate of growth is zero, cc the slope of the
 regression as in the rootsq_82 equation, and k a constant. The Ratkowsky model designed
 for microorganisms has been modified by Shi et al. 2016 to describe the temperature-dependent
 development rates of insects.
+}
+\references{
+\doi{10.1093/aesa/sav121}
 }
 \keyword{datasets}

@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{http://www.e-periodica.ch}
-}
 \usage{
 bieri1_83
 }
@@ -40,5 +37,8 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmin the minimum
 temperature, and aa, bb, and Tm fitted coefficients.
+}
+\references{
+\url{http://www.e-periodica.ch}
 }
 \keyword{datasets}

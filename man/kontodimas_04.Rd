@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{https://academic.oup.com/ee/article/33/1/1/477793/}
-}
 \usage{
 kontodimas_04
 }
@@ -37,5 +34,8 @@ Equation:
 
 where rT is the development rate, T the temperature, Tmin the minimum
 temperature, Tmax the maximum temperature, and aa a constant.
+}
+\references{
+\url{https://academic.oup.com/ee/article/33/1/1/477793/}
 }
 \keyword{datasets}

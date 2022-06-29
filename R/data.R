@@ -30,7 +30,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/aesa/sav121>}
+#' @references \doi{10.1093/aesa/sav121}
 #' @docType data
 #' @keywords datasets
 "ratkowsky_83"
@@ -64,7 +64,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/j.ecolmodel.2015.09.012>}
+#' @references \doi{10.1016/j.ecolmodel.2015.09.012}
 #' @docType data
 #' @keywords datasets
 "beta_16"
@@ -93,7 +93,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/0168-1923(95)02236-Q>}
+#' @references \doi{10.1016/0168-1923(95)02236-Q}
 #' @docType data
 #' @keywords datasets
 "beta_95"
@@ -127,7 +127,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/j.aspen.2010.11.008>}
+#' @references \doi{10.1016/j.aspen.2010.11.008}
 #' @docType data
 #' @keywords datasets
 "perf2_11"
@@ -155,7 +155,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{https://jb.asm.org/content/149/1/1}
+#' @references \url{https://jb.asm.org/content/149/1/1}
 #' @docType data
 #' @keywords datasets
 "rootsq_82"
@@ -183,7 +183,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/S0308-521X(98)00028-6>}
+#' @references \doi{10.1016/S0308-521X(98)00028-6}
 #' @docType data
 #' @keywords datasets
 "wangengel_98"
@@ -219,8 +219,8 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1128/jb.149.1.1-5.1982>}
-#' @source \url{<doi:10.1128/jb.154.3.1222-1226.1983>}
+#' @references \doi{10.1128/jb.149.1.1-5.1982}
+#' @references \doi{10.1128/jb.154.3.1222-1226.1983}
 #' @docType data
 #' @keywords datasets
 "ratkowsky_82"
@@ -250,7 +250,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/j.jinsphys.2012.01.010>}
+#' @references \doi{10.1016/j.jinsphys.2012.01.010}
 #' @docType data
 #' @keywords datasets
 "regniere_12"
@@ -279,7 +279,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/j.aspen.2010.11.008>}
+#' @references \doi{10.1016/j.aspen.2010.11.008}
 #' @docType data
 #' @keywords datasets
 "shi_11"
@@ -309,7 +309,7 @@
 # #'   \item{com}{An optional comment about the equation use.}
 # #'   \item{id}{An id to identify the equation.}
 # #' }
-# #' @source \url{<doi:10.1016/j.jinsphys.2011.06.011>}
+# #' @references \doi{10.1016/j.jinsphys.2011.06.011}
 # "hansen_11"
 
 #' @title Janisch equation of development rate as a function of temperature (Analytis modification).
@@ -345,7 +345,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1111/j.1365-2311.1932.tb03305.x>}
+#' @references \doi{10.1111/j.1365-2311.1932.tb03305.x}
 #' @docType data
 #' @keywords datasets
 "janisch_32"
@@ -433,7 +433,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.4039/Ent106519-5>}
+#' @references \doi{10.4039/Ent106519-5}
 #' @docType data
 #' @keywords datasets
 "stinner_74"
@@ -463,7 +463,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/5.6.1133>}
+#' @references \doi{10.1093/ee/5.6.1133}
 #' @docType data
 #' @keywords datasets
 "logan6_76"
@@ -492,7 +492,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/5.6.1133>}
+#' @references \doi{10.1093/ee/5.6.1133}
 #' @docType data
 #' @keywords datasets
 "logan10_76"
@@ -520,7 +520,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/0022-5193(77)90265-X>}
+#' @references \doi{10.1016/0022-5193(77)90265-X}
 #' @docType data
 #' @keywords datasets
 "sharpeDeMichele_77"
@@ -548,7 +548,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1111/j.1439-0434.1977.tb02886.x>}
+#' @references \doi{10.1111/j.1439-0434.1977.tb02886.x}
 #' @docType data
 #' @keywords datasets
 "analytis_77"
@@ -583,7 +583,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/0022-5193(81)90246-0>}
+#' @references \doi{10.1016/0022-5193(81)90246-0}
 #' @docType data
 #' @keywords datasets
 "schoolfield_81"
@@ -622,7 +622,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/0022-5193(81)90246-0>}
+#' @references \doi{10.1016/0022-5193(81)90246-0}
 #' @docType data
 #' @keywords datasets
 "schoolfieldHigh_81"
@@ -661,7 +661,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1016/0022-5193(81)90246-0>}
+#' @references \doi{10.1016/0022-5193(81)90246-0}
 #' @docType data
 #' @keywords datasets
 "schoolfieldLow_81"
@@ -746,7 +746,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/11.3.581>}
+#' @references \doi{10.1093/ee/11.3.581}
 #' @docType data
 #' @keywords datasets
 "harcourtYee_82"
@@ -802,7 +802,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/12.1.1>}
+#' @references \doi{10.1093/ee/12.1.1}
 #' @docType data
 #' @keywords datasets
 "hilbertLogan_83"
@@ -838,7 +838,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/21.1.10>}
+#' @references \doi{10.1093/ee/21.1.10}
 #' @docType data
 #' @keywords datasets
 "lamb_92"
@@ -866,7 +866,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/24.1.68>}
+#' @references \doi{10.1093/ee/24.1.68}
 #' @docType data
 #' @keywords datasets
 "lactin1_95"
@@ -894,7 +894,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/24.1.68>}
+#' @references \doi{10.1093/ee/24.1.68}
 #' @docType data
 #' @keywords datasets
 "lactin2_95"
@@ -923,7 +923,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/28.1.22>}
+#' @references \doi{10.1093/ee/28.1.22}
 #' @docType data
 #' @keywords datasets
 "briere1_99"
@@ -952,7 +952,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/ee/28.1.22>}
+#' @references \doi{10.1093/ee/28.1.22}
 #' @docType data
 #' @keywords datasets
 "briere2_99"
@@ -983,7 +983,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{https://academic.oup.com/ee/article/33/1/1/477793/}
+#' @references \url{https://academic.oup.com/ee/article/33/1/1/477793/}
 #' @docType data
 #' @keywords datasets
 "kontodimas_04"
@@ -1012,7 +1012,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1093/jee/101.5.1557>}
+#' @references \doi{10.1093/jee/101.5.1557}
 #' @docType data
 #' @keywords datasets
 "damos_08"
@@ -1040,7 +1040,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1155/2012/123405>}
+#' @references \doi{10.1155/2012/123405}
 #' @docType data
 #' @keywords datasets
 "damos_11"
@@ -1067,7 +1067,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://en.cnki.com.cn}
+#' @references \url{http://en.cnki.com.cn}
 #' @docType data
 #' @keywords datasets
 "wang_82"
@@ -1096,7 +1096,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{<doi:10.1079/BER2003259>}
+#' @references \doi{10.1079/BER2003259}
 #' @docType data
 #' @keywords datasets
 "bayoh_03"
@@ -1130,8 +1130,8 @@
 #'   \item{id}{An id to identify the equation.}
 #' }
 #'
-#' @source \url{<doi:10.1093/aesa/77.2.208>}
-#' @source \url{<doi:10.1093/aesa/81.4.539>}
+#' @references \doi{10.1093/aesa/77.2.208}
+#' @references \doi{10.1093/aesa/81.4.539}
 #' @docType data
 #' @keywords datasets
 "wagner_88"
@@ -1164,7 +1164,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @source \url{http://www.e-periodica.ch}
+#' @references \url{http://www.e-periodica.ch}
 #' @docType data
 #' @keywords datasets
 "bieri1_83"

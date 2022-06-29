@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/0168-1923(95)02236-Q>}
-}
 \usage{
 beta_95
 }
@@ -35,5 +32,8 @@ Equation:
 where rT is the development rate, T the temperature, mu, aa,
 and bb the model parameters, Tb the base temperature, and Tc the ceiling
 temperature.
+}
+\references{
+\doi{10.1016/0168-1923(95)02236-Q}
 }
 \keyword{datasets}

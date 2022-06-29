@@ -17,9 +17,6 @@ A list of eight elements describing the equation.
   \item{id}{An id to identify the equation.}
 }
 }
-\source{
-\url{<doi:10.1016/j.aspen.2010.11.008>}
-}
 \usage{
 perf2_11
 }
@@ -42,5 +39,8 @@ Equation:
 where rT is the development rate, T the temperature, T1 and T2 the conceptual
 lower and upper developmental thresholds at which development rates equal zero,
 and cc and k constants.
+}
+\references{
+\doi{10.1016/j.aspen.2010.11.008}
 }
 \keyword{datasets}
