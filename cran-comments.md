@@ -10,5 +10,6 @@
 
 ## R CMD check results
 There were no ERRORs, or WARNINGs. 
-There was one NOTE regarding invalid URLs : I checked and all are valid URLs.
-
+There was one NOTE regarding (possibly) invalid DOIs : no invalid DOIs.
+  10.1111/2041-210X.12935 (correct)
+  10.1111/eea.12693 (correct)
