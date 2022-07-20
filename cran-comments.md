@@ -1,7 +1,5 @@
-## devRate version 0.2.2
-* devRateQlStat function optimized
-* dRGetMetrics function to compute Life traits from Thermal Performance Curve
-* URLs fixed with \doi{}
+## devRate version 0.2.3
+* fix bug in devRateQlStat()
 
 ## Test environments
 * Linux Ubuntu 22.04, R 4.2.1
