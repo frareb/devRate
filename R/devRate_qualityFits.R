@@ -47,7 +47,7 @@ devRateQlStat <- function(nlsDR){
     devRate <- lapply(seq_along(nlsDR), function(i){
       resRt <- NA
       try(
-        get("rT", nlsDR[[i]]$m$getEnv()),
+        resRt <- get("rT", nlsDR[[i]]$m$getEnv()),
         silent = TRUE
       )
       return(resRt)
@@ -55,7 +55,7 @@ devRateQlStat <- function(nlsDR){
     stats <- lapply(seq_along(nlsDR), function(i){
       # stinner_74 and lamb_92 exception
       # if(eq[[i]]$id == "eq040" | eq[[i]]$id == "eq150"){
-      if(length(nlsDR[[i]]) == 2 | inherits(nlsDR[[i]], "nls")){
+      if(length(nlsDR[[i]]) == 2 | !inherits(nlsDR[[i]], "nls")){
         # warning("two-equations mathematical models not implemented")
         # warning("stinner_74 and lamb_92 not implemented")
         dfStats <- data.frame(RSS = NA, RMSE = NA, AIC = NA, BIC = NA)
