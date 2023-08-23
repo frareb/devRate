@@ -3,7 +3,7 @@
 
 ## Test environments
 * Linux Ubuntu 22.04, R 4.2.1
-* win-builder (R Under development 2022-06-27 r82528 ucrt).
+* win-builder (R Under development 2022-07-19 r82607 ucrt).
 * Ubuntu 16.04.6 LTS with Travis-ci.com : oldrel, release, devel
 
 ## R CMD check results
