@@ -13,5 +13,10 @@ r:
 
 warnings_are_errors: true
 
+addons:
+  apt:
+    packages:
+      - libharfbuzz-dev
+      - libfribidi-dev
 after_success:
   - Rscript -e 'library(covr); codecov()'
