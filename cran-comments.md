@@ -1,9 +1,9 @@
-## devRate version 0.2.3
-* fix minor bug in devRateQlStat function
+## devRate version 0.2.4
+* fix package documentation PKGNAME-package \alias
 
 ## Test environments
-* Linux Ubuntu 22.04, R 4.2.1
-* win-builder (R Under development 2022-09-06 r82818 ucrt).
+* Linux Ubuntu 23.04, R 4.2.2
+* win-builder (R Under development 2023-08-23 r85001 ucrt).
 
 * Ubuntu 16.04.6 LTS with Travis-ci.com : oldrel, release, devel
 

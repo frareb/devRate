@@ -44,5 +44,6 @@
 #' - modelEvaluation: Model evaluation using Shi et al. 2016 study
 #'
 #' @docType package
+#' @aliases devRate-package
 #' @name devRate
 NULL

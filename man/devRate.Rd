@@ -3,6 +3,7 @@
 \docType{package}
 \name{devRate}
 \alias{devRate}
+\alias{devRate-package}
 \title{devRate: A package to quantify the relationship between development rate and temperature in ectotherms.}
 \description{
 The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms.
