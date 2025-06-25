@@ -36,6 +36,6 @@ where rT is the development rate, T the temperature, Tmin the minimum
 temperature, Tmax the maximum temperature, and aa a constant.
 }
 \references{
-\url{https://academic.oup.com/ee/article/33/1/1/477793/}
+\doi{10.1603/0046-225X-33.1.1}
 }
 \keyword{datasets}

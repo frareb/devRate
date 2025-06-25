@@ -983,7 +983,7 @@
 #'   \item{com}{An optional comment about the equation use.}
 #'   \item{id}{An id to identify the equation.}
 #' }
-#' @references \url{https://academic.oup.com/ee/article/33/1/1/477793/}
+#' @references \doi{10.1603/0046-225X-33.1.1}
 #' @docType data
 #' @keywords datasets
 "kontodimas_04"
