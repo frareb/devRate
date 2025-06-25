@@ -2,9 +2,9 @@ Package: devRate
 Type: Package
 Title: Quantify the Relationship Between Development Rate and Temperature in
     Ectotherms
-Version: 0.2.4
+Version: 0.2.5
 Authors@R: c(
-    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2022",  
+    person("Francois", "Rebaudo", role = c("aut", "cre"), comment = "2016-2025",  
       email = "francois.rebaudo@ird.fr"),
     person("Baptiste", "Regnier", role = "aut", comment = "PhD; 2019-2020"),
     person("Camila", "Benavides", role = "ctb", comment = "M2 student; 2018"),
@@ -13,7 +13,7 @@ Authors@R: c(
     person("Badre", "Rabhi", role = "ctb", comment = "L2 student; 2017"), 
     person("Quentin", "Struelens", role = "ctb", comment = "VIA; 2016")
     )
-Author: Francois Rebaudo [aut, cre] (2016-2022), 
+Author: Francois Rebaudo [aut, cre] (2016-2025), 
     Baptiste Regnier [aut] (PhD; 2019-2020),
     Camila Benavides [ctb] (M2 student; 2018), 
     Tanusson Selvarajah [ctb] (L2 student; 2018), 
@@ -33,8 +33,8 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: TRUE
 Depends:
-  R (>= 3.5.0)
-RoxygenNote: 7.2.3
+  R (>= 4.3.0)
+RoxygenNote: 7.3.2
 Suggests: knitr,
     rmarkdown,
     testthat,

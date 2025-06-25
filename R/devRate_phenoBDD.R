@@ -200,7 +200,7 @@ devRateIBMparam <- function(
           devRT <- exceptDevRate(x)
           devRT[is.na(devRT)] <- 0
 
-          add2Dev <- stats::rnorm(n = 1, mean = devRT, sd = stocha) *
+          add2Dev <- stats::rnorm(n = 1, mean = devRT, sd = devRT*stocha) *
             ratioSupDev * timeStepTS
 
           if(add2Dev < 0){add2Dev <- 0}
@@ -221,7 +221,8 @@ devRateIBMparam <- function(
           devRT <- exceptDevRate(x)
           devRT[is.na(devRT)] <- 0
 
-          addDev <- stats::rnorm(n = 1, mean = devRT, sd = stocha) * timeStepTS
+          addDev <- stats::rnorm(n = 1, mean = devRT, sd = devRT*stocha) *
+            timeStepTS
 
           if(addDev < 0){addDev <- 0}
           currentDev <- currentDev + addDev

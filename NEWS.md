@@ -1,3 +1,10 @@
+## devRate 0.2.5
+* new functions for Helicoverpa armigera phenology modelling
+* fix devRateIBMparam function for negative values when stocha parameter is too high
+
+## devRate 0.2.3 and 0.2.4
+* fix package documentation PKGNAME-package \alias
+
 ## devRate 0.2.2
 * devRateQlStat function optimized
 

@@ -59,3 +59,29 @@ The package includes two vignettes (long-form documentation):
 - modelEvaluation: Model evaluation using Shi et al. 2016 study
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/frareb/devRate/}
+  \item Report bugs at \url{https://github.com/frareb/devRate/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Francois Rebaudo \email{francois.rebaudo@ird.fr} (2016-2025)
+
+Authors:
+\itemize{
+  \item Baptiste Regnier (PhD; 2019-2020)
+}
+
+Other contributors:
+\itemize{
+  \item Camila Benavides (M2 student; 2018) [contributor]
+  \item Tanusson Selvarajah (L2 student; 2018) [contributor]
+  \item Nicolas Bonnal (M1 student; 2018) [contributor]
+  \item Badre Rabhi (L2 student; 2017) [contributor]
+  \item Quentin Struelens (VIA; 2016) [contributor]
+}
+
+}
