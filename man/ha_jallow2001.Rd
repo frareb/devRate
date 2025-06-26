@@ -3,7 +3,7 @@
 \name{ha_jallow2001}
 \alias{ha_jallow2001}
 \title{Jallow and Matsumura linear thermal performance curve for the
-  development performance curve of Helicoverpa armigera}
+  development of Helicoverpa armigera}
 \usage{
 ha_jallow2001(plotfig = TRUE)
 }
@@ -12,9 +12,8 @@ ha_jallow2001(plotfig = TRUE)
 equation fitted in the article.}
 }
 \value{
-A list with the equation used, and a list of fitted models for the
-  different life stages considered in the article. Each element of the
-  list of models is an object of class nls.
+A list with the equation used, and a list of model parameters for
+  the different life stages considered in the article.
 }
 \description{
 Linear development performance curve for eggs, larvae and

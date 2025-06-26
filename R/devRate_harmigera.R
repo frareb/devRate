@@ -1,5 +1,5 @@
 #' Bartekova and Praslicka linear thermal performance curve for the
-#'   development performance curve of Helicoverpa armigera
+#'   developmentof Helicoverpa armigera
 #'
 #' @description Linear development performance curve for eggs, larvae and
 #'   pupae from three experimental temperatures (20, 25, and 30 degrees
@@ -16,9 +16,8 @@
 #'   held responsible for the content of this package.
 #' @param plotfig A Boolean used to return the experimental points and the
 #'   equation fitted in the article.
-#' @return A list with the equation used, and a list of fitted models for the
-#'   different life stages considered in the article. Each element of the
-#'   list of models is an object of class nls.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
 #' @examples
 #'   mymodel <- ha_bartekova2006(plotfig = FALSE)
 #' @export
@@ -36,7 +35,7 @@ ha_bartekova2006 <- function(plotfig = TRUE){
     graphics::plot(
       x = temp, y = DR_egg, ylim = c(0, 0.25), type = "o", pch = 15,
       main = "Figure 1 ; DOI: 10.17221/2768-PPS ; Bartekova et al. 2006",
-      xlab = "Ambient temperature (degrees Celsius)",
+      xlab = "Ambient temperature (Celsius)",
       ylab = "Development rate (1/DT)",
       xlim = c(0, 40)
     )
@@ -58,7 +57,7 @@ ha_bartekova2006 <- function(plotfig = TRUE){
 }
 
 #' Jallow and Matsumura linear thermal performance curve for the
-#'   development performance curve of Helicoverpa armigera
+#'   development of Helicoverpa armigera
 #'
 #' @description Linear development performance curve for eggs, larvae and
 #'   pupae from nine experimental temperatures (10, 13.3, 16.4, 20, 22.5, 25,
@@ -75,9 +74,8 @@ ha_bartekova2006 <- function(plotfig = TRUE){
 #'   held responsible for the content of this package.
 #' @param plotfig A Boolean used to return the experimental points and the
 #'   equation fitted in the article.
-#' @return A list with the equation used, and a list of fitted models for the
-#'   different life stages considered in the article. Each element of the
-#'   list of models is an object of class nls.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
 #' @examples
 #'   mymodel <- ha_jallow2001(plotfig = FALSE)
 #' @export
@@ -91,7 +89,7 @@ ha_jallow2001 <- function(plotfig = TRUE){
     graphics::plot(
       x = temp, y = DR_egg, ylim = c(0, 0.4), type = "o", pch = 15,
       main = "Figure 1 ; DOI: 10.1303/aez.2001.427 ; Jallow et al. 2001",
-      xlab = "Ambient temperature (degrees Celsius)",
+      xlab = "Ambient temperature (Celsius)",
       ylab = "Development rate (1/DT)",
       xlim = c(0, 40)
     )
@@ -113,7 +111,7 @@ ha_jallow2001 <- function(plotfig = TRUE){
 }
 
 #' Mironidis and Savopoulou-Soultani linear thermal performance curve for the
-#'   development performance curve of Helicoverpa armigera
+#'   development of Helicoverpa armigera
 #'
 #' @description Linear development performance curve for eggs, larvae and
 #'   pupae from twelve experimental temperatures (10, 12.5, 15, 17.5, 20,
@@ -130,9 +128,8 @@ ha_jallow2001 <- function(plotfig = TRUE){
 #'   held responsible for the content of this package.
 #' @param plotfig A Boolean used to return the experimental points and the
 #'   equation fitted in the article.
-#' @return A list with the equation used, and a list of fitted models for the
-#'   different life stages considered in the article. Each element of the
-#'   list of models is an object of class nls.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
 #' @examples
 #'   mymodel <- ha_mironidis2008_ls(plotfig = FALSE)
 #' @export
@@ -146,7 +143,7 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
     graphics::plot(
       x = temp, y = DR_egg, ylim = c(0, 0.4), type = "o", pch = 15,
       main = "Figure X ; DOI: 10.1093/ee/37.1.16 ; Mironidis et al. 2008",
-      xlab = "Ambient temperature (degrees Celsius)",
+      xlab = "Ambient temperature (Celsius)",
       ylab = "Development rate (1/DT)",
       xlim = c(0, 40)
     )
@@ -167,8 +164,8 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
   ))
 }
 
-#' Mironidis and Savopoulou-Soultani non-linear thermal performance curve for
-#'   the development performance curve of Helicoverpa armigera
+#' Mironidis and Savopoulou-Soultani non-linear Lactin-2 thermal performance
+#'   curve for the development of Helicoverpa armigera
 #'
 #' @description Non-linear development performance curve for eggs, larvae and
 #'   pupae from twelve experimental temperatures (10, 12.5, 15, 17.5, 20,
@@ -186,9 +183,8 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
 #'   held responsible for the content of this package.
 #' @param plotfig A Boolean used to return the experimental points and the
 #'   equation fitted in the article.
-#' @return A list with the equation used, and a list of fitted models for the
-#'   different life stages considered in the article. Each element of the
-#'   list of models is an object of class nls.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
 #' @examples
 #'   mymodel <- ha_mironidis2008_nls(plotfig = FALSE)
 #' @export
@@ -210,7 +206,7 @@ ha_mironidis2008_nls <- function(plotfig = TRUE){
     graphics::plot(
       x = temp2, y = DR_egg2, ylim = c(0, 0.6), type = "l", pch = 15,
       main = "Figure 2 ; DOI: 10.1093/ee/37.1.16 ; Mironidis et al. 2008",
-      xlab = "Temperature (degrees Celsius)",
+      xlab = "Temperature (Celsius)",
       ylab = "Development rate (Day^(-1))",
       xlim = c(0, 40)
     )
@@ -233,6 +229,260 @@ ha_mironidis2008_nls <- function(plotfig = TRUE){
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
+
+#' Foley linear thermal performance curve for the post-diapausing and
+#'   non-diapausing pupae development of Helicoverpa armigera
+#'
+#' @description Linear development performance curve for post-diapausing and
+#'   non-diapausing pupae from 3 to 4 experimental temperatures (20, 24,
+#'   28, and 32 degrees Celsius).
+#' @seealso Foley, D. H. (1981). Pupal development rate of Heliothis armiger
+#'   (Hubner)(Lepidoptera: Noctuidae) under constant and alternating
+#'   temperatures. Australian Journal of Entomology, 20(1), 13-20.
+#'   https://doi.org/10.1111/j.1440-6055.1981.tb00993.x
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_foley1981(plotfig = FALSE)
+#' @export
+ha_foley1981 <- function(plotfig = TRUE){
+  campbell_74 <- campbell_74
+  # Non-diapausing pupae ; %dev per day = -9.382 + 0.634X
+  # Post-diapause pupae ; %dev per day = -14.022 + 0.857X
+  if(plotfig){
+    temp <- c(10, 20, 24, 28, 32)
+    DR_pupa_nondiapause <- -0.09382+0.00634*temp
+    DR_pupa_diapause <- -0.14022+0.00857*temp
+    graphics::plot(
+      x = temp, y = DR_pupa_diapause, ylim = c(0, 0.3), type = "o", pch = 15,
+      main = "Figure 1&2 ; DOI: 0.1111/j.1440-6055.1981.tb00993.x ; Foley et al. 1981",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)",
+      xlim = c(0, 40)
+    )
+    graphics::points(x = temp, y = DR_pupa_nondiapause, type = "o", pch = 16)
+    graphics::legend(
+      "topleft", pch = c(15:16),
+      legend = c("diapausing pupae", "non-diapausing pupae"),
+      bty = "n"
+    )
+  }
+  eq <- campbell_74
+  dr_pupa_diapause <- list(aa = -0.14022, bb = 0.00857)
+  dr_pupa_nondiapause <- list(aa = -0.09382, bb = 0.00634)
+  return(list(
+    equation = eq,
+    model = list(diapausingpupae = dr_pupa_diapause, nondiapausingpupae = dr_pupa_nondiapause)
+  ))
+}
+
+#' Kay linear thermal performance curve for the egg development of
+#'   Helicoverpa armigera
+#'
+#' @description Linear development performance curve for eggs from ten
+#'   experimental temperatures (8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4,
+#'   35, 39.4 degrees Celsius).
+#' @seealso Kay, I. R. (1981). The effect of constant temperatures on the
+#'   development time of eggs of Heliothis armiger (Hubner) (Lepidoptera:
+#'   Noctuidae). Australian Journal of Entomology, 20(2), 155-156.
+#'   https://doi.org/10.1111/j.1440-6055.1981.tb01020.x
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_kay1981_ls(plotfig = FALSE)
+#' @export
+ha_kay1981_ls	<- function(plotfig = TRUE){
+  campbell_74 <- campbell_74
+  if(plotfig){
+    temp <- c(8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4)
+    dev <- 1/(c(NA, NA, 443.5, 205.7, 121.3, 81.9, 59.9, 49.2, 48.8, NA)/24)
+    graphics::plot(
+      x = temp, y = dev, type = "p", pch = 19,
+      main = "DOI: 10.1111/j.1440-6055.1981.tb01020.x ; Kay et al. 1981",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)", ylim = c(0, 0.7),
+      xlim = c(0, 40)
+    )
+    graphics::points(
+      x = temp, y = 0.09621/100*24*temp - 1.128/100*24, type = "l"
+    )
+  }
+  eq <- campbell_74
+  dr_eggs <- list(aa = -1.128/100*24, bb = 0.09621/100*24)
+  return(list(
+    equation = eq,
+    model = list(dr_eggs)
+  ))
+}
+
+#' Kay non-linear Davidson thermal performance curve for the egg development of
+#'   Helicoverpa armigera
+#'
+#' @description Non-linear development performance curve for eggs from ten
+#'   experimental temperatures (8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4,
+#'   35, 39.4 degrees Celsius), using Davidson equation.
+#' @seealso Kay, I. R. (1981). The effect of constant temperatures on the
+#'   development time of eggs of Heliothis armiger (Hubner) (Lepidoptera:
+#'   Noctuidae). Australian Journal of Entomology, 20(2), 155-156.
+#'   https://doi.org/10.1111/j.1440-6055.1981.tb01020.x
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_kay1981_nls(plotfig = FALSE)
+#' @export
+ha_kay1981_nls <- function(plotfig = TRUE){
+  davidson_44 <- davidson_44
+  if(plotfig){
+    temp <- c(8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4)
+    dev <- 1/(c(NA, NA, 443.5, 205.7, 121.3, 81.9, 59.9, 49.2, 48.8, NA)/24)
+    graphics::plot(
+      x = temp, y = dev, type = "p", pch = 19,
+      main = "DOI: 10.1111/j.1440-6055.1981.tb01020.x ; Kay et al. 1981",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)", ylim = c(0, 0.7),
+      xlim = c(0, 40)
+    )
+    graphics::points(
+      x = temp, y = (2.259/100*24) / (1 + exp(5.468-0.2350*temp)), type = "l"
+    )
+  }
+  eq <- campbell_74
+  dr_eggs <- list(aa = 5.468, bb = -0.2350, K = 2.259/100*24)
+  return(list(
+    equation = eq,
+    model = list(dr_eggs)
+  ))
+}
+
+#' Noor-ul-Ane et al. linear thermal performance curve for the development of
+#'   Helicoverpa armigera
+#'
+#' @description Linear development performance curve from ten
+#'   experimental temperatures (10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5
+#'   and 40 degrees Celsius).
+#' @seealso Noor-ul-Ane M., Mirhosseini M. A., Crickmore N., Saeed S.,
+#'   Noor I., Zalucki M. P. (2018). Temperature-dependent development of
+#'   Helicoverpa armigera (Hubner) (Lepidoptera: Noctuidae) and its larval
+#'   parasitoid, Habrobracon hebetor (Say) (Hymenoptera: Braconidae):
+#'   implications for species interactions. Bulletin of Entomological Research
+#'   108, 295–304. https://doi.org/10.1017/S0007485317000724
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_NoorulAne2018_ls(plotfig = FALSE)
+#' @export
+ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
+  campbell_74 <- campbell_74
+  if(plotfig){
+    temp <-     c(10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40)
+    graphics::plot(
+      x = temp, y = dev, type = "n", pch = 19,
+      main = "DOI: 10.1017/S0007485317000724 ; Noor-ul-Ane et al. 2018",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)", ylim = c(0, 0.5),
+      xlim = c(0, 40)
+    )
+    graphics::points(x = temp, y = -10.6*(1/57.8)+(1/57.8)*temp, type = "l", lty = 1)
+    graphics::points(x = temp, y = -11.1*(1/247.7)+(1/247.7)*temp, type = "l", lty = 2)
+    graphics::points(x = temp, y = -9.9*(1/213)+(1/213)*temp, type = "l", lty = 3)
+    graphics::legend(
+      "topleft", pch = c(15:17), legend = c("egg", "larva", "pupa"),
+      bty = "n", lty = 1:3
+    )
+  }
+  eq <- campbell_74
+  dr_egg <- list(aa = -10.6*(1/57.8), bb = (1/57.8))
+  dr_larva <- list(aa = -11.1*(1/247.7), bb = (1/247.7))
+  dr_pupa <- list(aa = -9.9*(1/213), bb = (1/213))
+  return(list(
+    equation = eq,
+    model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
+  ))
+}
+
+#' Noor-ul-Ane et al. non-linear thermal performance curve for the development
+#'   of Helicoverpa armigera
+#'
+#' @description Non-linear Briere2 development performance curve from ten
+#'   experimental temperatures (10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5
+#'   and 40 degrees Celsius).
+#' @seealso Noor-ul-Ane M., Mirhosseini M. A., Crickmore N., Saeed S.,
+#'   Noor I., Zalucki M. P. (2018). Temperature-dependent development of
+#'   Helicoverpa armigera (Hubner) (Lepidoptera: Noctuidae) and its larval
+#'   parasitoid, Habrobracon hebetor (Say) (Hymenoptera: Braconidae):
+#'   implications for species interactions. Bulletin of Entomological Research
+#'   108, 295–304. https://doi.org/10.1017/S0007485317000724
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_NoorulAne2018_nls(plotfig = FALSE)
+#' @export
+ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
+  briere2_99 <- briere2_99
+  if(plotfig){
+    aa = 0.00003442
+    Tmin = 8.205
+    Tmax = 38.657
+    bb = 3.910
+    xx = 10:40
+    plot(
+      x = xx, y = aa * xx * (xx - Tmin) * (Tmax - xx)^(1 / bb), type = "l",
+      main = "DOI: 10.1017/S0007485317000724 ; Noor-ul-Ane et al. 2018",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)"
+    )
+  }
+  eq <- briere2_99
+  dr_all <- list(aa = 0.00003442,
+                 Tmin = 8.205,
+                 Tmax = 38.657,
+                 bb = 3.910)
+  return(list(
+    equation = eq,
+    model = list(all = dr_all)
+  ))
+}
+
 
 # devtools::document()
 # devtools::check()

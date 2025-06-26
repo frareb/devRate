@@ -3,7 +3,7 @@
 \name{ha_bartekova2006}
 \alias{ha_bartekova2006}
 \title{Bartekova and Praslicka linear thermal performance curve for the
-  development performance curve of Helicoverpa armigera}
+  developmentof Helicoverpa armigera}
 \usage{
 ha_bartekova2006(plotfig = TRUE)
 }
@@ -12,9 +12,8 @@ ha_bartekova2006(plotfig = TRUE)
 equation fitted in the article.}
 }
 \value{
-A list with the equation used, and a list of fitted models for the
-  different life stages considered in the article. Each element of the
-  list of models is an object of class nls.
+A list with the equation used, and a list of model parameters for
+  the different life stages considered in the article.
 }
 \description{
 Linear development performance curve for eggs, larvae and
