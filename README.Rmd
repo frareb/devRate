@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 ## Purpose of the package
 
-The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms. 
+The devRate package allows quantifying the relationship between development rate and temperature in ectotherm organisms, and model species phenology using an individual-based approach. 
 
 ## How to use the package
 
@@ -31,6 +31,8 @@ You can use the package:
 1.  to know which equations exists and which are most used in the literature; and
 
 1.  to relate development rate with temperature from your empirical data, using the equations from the package database.
+
+1.  to make phenology simulations using temperature time series and thermal performance curves.
 
 ## Installation instructions
 
@@ -45,13 +47,15 @@ devtools::install_github("frareb/devRate")
 
 ## Overview
 
-The devRate package provides three categories of functions:
+The devRate package provides four categories of functions:
 
 1.  functions to find development rate information about a specific organism (Order, Family, Genus, species)
 
 1.  functions to relate development rate and temperature, and
 
 1.  functions to plot your empirical datasets and the associated fitted model, and/or to plot development curves from the literature.
+
+1.  functions to perform simulations from models and temperature time series.
 
 ## Author's affiliation
 

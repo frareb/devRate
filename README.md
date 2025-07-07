@@ -15,7 +15,8 @@ Status](https://img.shields.io/codecov/c/gh/frareb/devRate/master.svg)](https://
 ## Purpose of the package
 
 The devRate package allows quantifying the relationship between
-development rate and temperature in ectotherm organisms.
+development rate and temperature in ectotherm organisms, and model
+species phenology using an individual-based approach.
 
 ## How to use the package
 
@@ -31,6 +32,9 @@ You can use the package:
 3.  to relate development rate with temperature from your empirical
     data, using the equations from the package database.
 
+4.  to make phenology simulations using temperature time series and
+    thermal performance curves.
+
 ## Installation instructions
 
 ``` r
@@ -44,7 +48,7 @@ devtools::install_github("frareb/devRate")
 
 ## Overview
 
-The devRate package provides three categories of functions:
+The devRate package provides four categories of functions:
 
 1.  functions to find development rate information about a specific
     organism (Order, Family, Genus, species)
@@ -54,6 +58,9 @@ The devRate package provides three categories of functions:
 3.  functions to plot your empirical datasets and the associated fitted
     model, and/or to plot development curves from the literature.
 
+4.  functions to perform simulations from models and temperature time
+    series.
+
 ## Author’s affiliation
 
 UMR EGCE (IRD, CNRS, Univ. Paris-Saclay), Gif-sur-Yvette, France
@@ -62,20 +69,19 @@ To cite this package please use:
 
 ``` r
 citation("devRate") 
-#> 
 #> To cite package 'devRate' in publications use:
 #> 
-#>   Rebaudo F, Regnier B (2023). _devRate: Quantify the Relationship
+#>   Rebaudo F, Regnier B (2025). _devRate: Quantify the Relationship
 #>   Between Development Rate and Temperature in Ectotherms_. R package
-#>   version 0.2.4, <https://CRAN.R-project.org/package=devRate>.
+#>   version 0.2.5, <https://CRAN.R-project.org/package=devRate>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {devRate: Quantify the Relationship Between Development Rate and Temperature in Ectotherms},
 #>     author = {Francois Rebaudo and Baptiste Regnier},
-#>     year = {2023},
-#>     note = {R package version 0.2.4},
+#>     year = {2025},
+#>     note = {R package version 0.2.5},
 #>     url = {https://CRAN.R-project.org/package=devRate},
 #>   }
 ```
