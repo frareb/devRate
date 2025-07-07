@@ -18,7 +18,8 @@ A list with the equation used, and a list of model parameters for
 \description{
 Non-linear Briere2 development performance curve from ten
   experimental temperatures (10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5
-  and 40 degrees Celsius).
+  and 40 degrees Celsius). Experimental development data were retrieve from
+  Figure 1 using plotdigitizer.com.
 }
 \details{
 This work is part of the ACOMPLI project. The ACOMPLI project
