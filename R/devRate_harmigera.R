@@ -22,7 +22,6 @@
 #'   mymodel <- ha_bartekova2006(plotfig = FALSE)
 #' @export
 ha_bartekova2006 <- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   LDT <- c(14.8, 11.3, 8.2, 11.5)
   SET <- c(64.1, 344.8, 222.2, 625.0)
   bb <- 1/SET
@@ -46,12 +45,11 @@ ha_bartekova2006 <- function(plotfig = TRUE){
       bty = "n"
     )
   }
-  eq <- campbell_74
   dr_egg <- list(aa = aa[1], bb = bb[1])
   dr_larva <- list(aa = aa[2], bb = bb[2])
   dr_pupa <- list(aa = aa[3], bb = bb[3])
   return(list(
-    equation = eq,
+    equation = list(egg = "campbell_74", larva = "campbell_74", pupa = "campbell_74"),
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
@@ -80,7 +78,6 @@ ha_bartekova2006 <- function(plotfig = TRUE){
 #'   mymodel <- ha_jallow2001(plotfig = FALSE)
 #' @export
 ha_jallow2001 <- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   if(plotfig){
     temp <- c(10, 13.3, 16.4, 20, 22.5, 25, 27.9, 30.5, 32.5)
     DR_egg <- -0.21+0.02*temp
@@ -105,7 +102,7 @@ ha_jallow2001 <- function(plotfig = TRUE){
   dr_larva <- list(aa = -0.045, bb = 0.004)
   dr_pupa <- list(aa = -0.083, bb = 0.006)
   return(list(
-    equation = eq,
+    equation = list(egg = "campbell_74", larva = "campbell_74", pupa = "campbell_74"),
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
@@ -134,7 +131,6 @@ ha_jallow2001 <- function(plotfig = TRUE){
 #'   mymodel <- ha_mironidis2008_ls(plotfig = FALSE)
 #' @export
 ha_mironidis2008_ls <- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   if(plotfig){
     temp <- c(10, 12.5, 15, 17.5, 20, 25, 27.5, 30, 32.5, 35, 37.5, 40)
     DR_egg <- -0.3013+0.0252*temp
@@ -159,7 +155,7 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
   dr_larva <- list(aa = -0.0442, bb = 0.0042)
   dr_pupa <- list(aa = -0.0529, bb = 0.0052)
   return(list(
-    equation = eq,
+    equation = list(egg = "campbell_74", larva = "campbell_74", pupa = "campbell_74"),
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
@@ -189,7 +185,6 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
 #'   mymodel <- ha_mironidis2008_nls(plotfig = FALSE)
 #' @export
 ha_mironidis2008_nls <- function(plotfig = TRUE){
-  lactin2_95 <- lactin2_95
   if(plotfig){
     temp <- c(10, 12.5, 15, 17.5, 20, 25, 27.5, 30, 32.5, 35, 37.5, 40)
     temp2 <- 5:40
@@ -225,7 +220,7 @@ ha_mironidis2008_nls <- function(plotfig = TRUE){
   dr_larva <- list(aa = 0.0042, Tmax = 43.1521, deltaT = 1.8197, bb = -1.0480)
   dr_pupa <- list(aa = 0.0053, Tmax = 43.3886, deltaT = 1.6854, bb = -1.0674)
   return(list(
-    equation = eq,
+    equation = list(egg = "lactin2_95", larva = "lactin2_95", pupa = "lactin2_95"),
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
@@ -254,7 +249,6 @@ ha_mironidis2008_nls <- function(plotfig = TRUE){
 #'   mymodel <- ha_foley1981(plotfig = FALSE)
 #' @export
 ha_foley1981 <- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   # Non-diapausing pupae ; %dev per day = -9.382 + 0.634X
   # Post-diapause pupae ; %dev per day = -14.022 + 0.857X
   if(plotfig){
@@ -279,7 +273,7 @@ ha_foley1981 <- function(plotfig = TRUE){
   dr_pupa_diapause <- list(aa = -0.14022, bb = 0.00857)
   dr_pupa_nondiapause <- list(aa = -0.09382, bb = 0.00634)
   return(list(
-    equation = eq,
+    equation = list(diapausingpupae = "campbell_74", nondiapausingpupae = "campbell_74"),
     model = list(diapausingpupae = dr_pupa_diapause, nondiapausingpupae = dr_pupa_nondiapause)
   ))
 }
@@ -308,7 +302,6 @@ ha_foley1981 <- function(plotfig = TRUE){
 #'   mymodel <- ha_kay1981_ls(plotfig = FALSE)
 #' @export
 ha_kay1981_ls	<- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   if(plotfig){
     temp <- c(8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4)
     dev <- 1/(c(NA, NA, 443.5, 205.7, 121.3, 81.9, 59.9, 49.2, 48.8, NA)/24)
@@ -326,8 +319,8 @@ ha_kay1981_ls	<- function(plotfig = TRUE){
   eq <- campbell_74
   dr_eggs <- list(aa = -1.128/100*24, bb = 0.09621/100*24)
   return(list(
-    equation = eq,
-    model = list(dr_eggs)
+    equation = list(egg = "campbell_74"),
+    model = list(egg = dr_eggs)
   ))
 }
 
@@ -355,7 +348,6 @@ ha_kay1981_ls	<- function(plotfig = TRUE){
 #'   mymodel <- ha_kay1981_nls(plotfig = FALSE)
 #' @export
 ha_kay1981_nls <- function(plotfig = TRUE){
-  davidson_44 <- davidson_44
   if(plotfig){
     temp <- c(8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4)
     dev <- 1/(c(NA, NA, 443.5, 205.7, 121.3, 81.9, 59.9, 49.2, 48.8, NA)/24)
@@ -370,10 +362,10 @@ ha_kay1981_nls <- function(plotfig = TRUE){
       x = temp, y = (2.259/100*24) / (1 + exp(5.468-0.2350*temp)), type = "l"
     )
   }
-  eq <- campbell_74
+  eq <- davidson_44
   dr_eggs <- list(aa = 5.468, bb = -0.2350, K = 2.259/100*24)
   return(list(
-    equation = eq,
+    equation = list(egg = "davidson_44"),
     model = list(dr_eggs)
   ))
 }
@@ -383,7 +375,8 @@ ha_kay1981_nls <- function(plotfig = TRUE){
 #'
 #' @description Linear development performance curve from ten
 #'   experimental temperatures (10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5
-#'   and 40 degrees Celsius).
+#'   and 40 degrees Celsius). Experimental development data were retrieve from
+#'   Figure 1 using plotdigitizer.com.
 #' @seealso Noor-ul-Ane M., Mirhosseini M. A., Crickmore N., Saeed S.,
 #'   Noor I., Zalucki M. P. (2018). Temperature-dependent development of
 #'   Helicoverpa armigera (Hubner) (Lepidoptera: Noctuidae) and its larval
@@ -404,11 +397,13 @@ ha_kay1981_nls <- function(plotfig = TRUE){
 #'   mymodel <- ha_NoorulAne2018_ls(plotfig = FALSE)
 #' @export
 ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
-  campbell_74 <- campbell_74
   if(plotfig){
-    temp <-     c(10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40)
+    temp <-      c(10,     15, 17.5,   20,   25, 27.5,   30,   35, 37.5, 40)
+    dev_egg <- 1/c(23.6, 15.6, 10.7,  8.4,  4.2,  3.6,  2.9,  2.3,  2.7, NA)
+    dev_lar <- 1/c(NA,   70.2, 49.7, 25.3, 15.9, 15.1, 13.2, 10.8, 11.2, NA)
+    dev_pup <- 1/c(NA,     NA, 31.8, 22.2, 12.5, 11.4, 10.7,  8.5, 11.6, NA)
     graphics::plot(
-      x = temp, y = dev, type = "n", pch = 19,
+      x = temp, y = dev_egg, type = "n", pch = 19,
       main = "DOI: 10.1017/S0007485317000724 ; Noor-ul-Ane et al. 2018",
       xlab = "Temperature (Celsius)",
       ylab = "Development rate (day^-1)", ylim = c(0, 0.5),
@@ -417,6 +412,9 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
     graphics::points(x = temp, y = -10.6*(1/57.8)+(1/57.8)*temp, type = "l", lty = 1)
     graphics::points(x = temp, y = -11.1*(1/247.7)+(1/247.7)*temp, type = "l", lty = 2)
     graphics::points(x = temp, y = -9.9*(1/213)+(1/213)*temp, type = "l", lty = 3)
+    graphics::points(x = temp, y = dev_egg, pch = 15)
+    graphics::points(x = temp, y = dev_lar, pch = 16)
+    graphics::points(x = temp, y = dev_pup, pch = 17)
     graphics::legend(
       "topleft", pch = c(15:17), legend = c("egg", "larva", "pupa"),
       bty = "n", lty = 1:3
@@ -427,7 +425,7 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
   dr_larva <- list(aa = -11.1*(1/247.7), bb = (1/247.7))
   dr_pupa <- list(aa = -9.9*(1/213), bb = (1/213))
   return(list(
-    equation = eq,
+    equation = list(egg = "campbell_74", larva = "campbell_74", pupa = "campbell_74"),
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
@@ -437,7 +435,8 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
 #'
 #' @description Non-linear Briere2 development performance curve from ten
 #'   experimental temperatures (10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5
-#'   and 40 degrees Celsius).
+#'   and 40 degrees Celsius). Experimental development data were retrieve from
+#'   Figure 1 using plotdigitizer.com.
 #' @seealso Noor-ul-Ane M., Mirhosseini M. A., Crickmore N., Saeed S.,
 #'   Noor I., Zalucki M. P. (2018). Temperature-dependent development of
 #'   Helicoverpa armigera (Hubner) (Lepidoptera: Noctuidae) and its larval
@@ -458,19 +457,24 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
 #'   mymodel <- ha_NoorulAne2018_nls(plotfig = FALSE)
 #' @export
 ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
-  briere2_99 <- briere2_99
   if(plotfig){
     aa = 0.00003442
     Tmin = 8.205
     Tmax = 38.657
     bb = 3.910
-    xx = 10:40
-    plot(
+    xx = seq(from = 5, to = 40, by = 0.1)
+    graphics::plot(
       x = xx, y = aa * xx * (xx - Tmin) * (Tmax - xx)^(1 / bb), type = "l",
       main = "DOI: 10.1017/S0007485317000724 ; Noor-ul-Ane et al. 2018",
       xlab = "Temperature (Celsius)",
       ylab = "Development rate (day^-1)"
     )
+    t_egg <- c(23.6, 15.6, 10.7,  8.4,  4.2,  3.6,  2.9,  2.3,  2.7, NA)
+    t_lar <- c(NA,   70.2, 49.7, 25.3, 15.9, 15.1, 13.2, 10.8, 11.2, NA)
+    t_pup <- c(NA,     NA, 31.8, 22.2, 12.5, 11.4, 10.7,  8.5, 11.6, NA)
+    temp <-      c(10,     15, 17.5,   20,   25, 27.5,   30,   35, 37.5, 40)
+    dev = 1/(t_egg+t_lar+t_pup)
+    graphics::points(x = temp, y = dev, pch = 15)
   }
   eq <- briere2_99
   dr_all <- list(aa = 0.00003442,
@@ -478,7 +482,7 @@ ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
                  Tmax = 38.657,
                  bb = 3.910)
   return(list(
-    equation = eq,
+    equation = list(all = "briere2_99"),
     model = list(all = dr_all)
   ))
 }
