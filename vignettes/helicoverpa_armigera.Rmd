@@ -1,5 +1,5 @@
 ---
-title: "helicoverpa_armigera"
+title: "Using the devRate package to simulate the phenology of *Helicoverpa armigera*"
 author: "François Rebaudo ; IRD UMR EGCE"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -17,35 +17,55 @@ in the literature.
 require("devRate")
 ```
 
-## Models published in the literature
+## 1. Models published in the literature
 
 Numerous models have been developed to simulate the phenology of Helicoverpar armigera. Most are based on the characterization of development as a function of temperature. Insects are reared at various constant temperatures under laboratory conditions, then a model is fitted to the data to obtain a thermal performance curve. The various publications for which models were retrievable are listed in Table 1.
 
 __Table 1.__ Models for *Helicoverpa armigera*
 
-| Ref                            | DOI                | Function name in devRate|
-|--------------------------------|--------------------|-------------------------|
-| Bartekova and Praslicka, 2006  |10.17221/2768-PPS   |ha_bartekova2006         |
-| Jallow and Matsumura, 2001     |10.1303/aez.2001.427|ha_jallow2001            |
+| Ref                                    | DOI                              | Function name in devRate|
+|----------------------------------------|----------------------------------|-------------------------|
+| Bartekova and Praslicka, 2006          |10.17221/2768-PPS                 |ha_bartekova2006         |
+| Jallow and Matsumura, 2001             |10.1303/aez.2001.427              |ha_jallow2001            |
+| Mironidis and Savopoulou-Soultani, 2008|10.1093/ee/37.1.16                |ha_mironidis2008_ls      |
+| Mironidis and Savopoulou-Soultani, 2008|10.1093/ee/37.1.16                |ha_mironidis2008_nls     |
+| Foley, 1981                            |10.1111/j.1440-6055.1981.tb00993.x|ha_foley1981             |
+| Kay, 1981                              |10.1111/j.1440-6055.1981.tb01020.x|ha_kay1981_ls            |
+| Kay, 1981                              |10.1111/j.1440-6055.1981.tb01020.x|ha_kay1981_nls           |
+| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_NoorulAne2018_ls      |
+| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_NoorulAne2018_nls     |
 
 Each model is a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
 
 __Table 2.__ Model specifications for *Helicoverpa armigera*
 
-| Name             | Type              |Temperature (Celsius)                             | Life stages            |
-|------------------|-------------------|--------------------------------------------------|------------------------|
-| ha_bartekova2006 |simple linear model|20, 25, 30 (3)                                    | eggs, larvae, pupae (3)|
-| ha_jallow2001    |simple linear model|10, 13.3, 16.4, 20, 22.5, 25, 27.9, 30.5, 32.5 (9)| eggs, larvae, pupae (3)|
+| Name                | Type      |Temperature (Celsius)                                        | Life stages            |
+|---------------------|-----------|-------------------------------------------------------------|------------------------|
+| ha_bartekova2006    |Campbell   |20, 25, 30 (3)                                               | eggs, larvae, pupae (3)|
+| ha_jallow2001       |Campbell   |10, 13.3, 16.4, 20, 22.5, 25, 27.9, 30.5, 32.5 (9)           | eggs, larvae, pupae (3)|
+| ha_mironidis2008_ls |Campbell   |10, 12.5, 15, 17.5, 20, 25, 27.5, 30, 32.5, 35, 37.5, 40 (12)| eggs, larvae, pupae (3)|
+| ha_mironidis2008_nls|Lactin-2   |10, 12.5, 15, 17.5, 20, 25, 27.5, 30, 32.5, 35, 37.5, 40 (12)| eggs, larvae, pupae (3)|
+| ha_foley1981        |Campbell   |20, 24, 28, 32 (4)                      | post-diapausing and non-diapausing pupae (2)|
+| ha_kay1981_ls       |Campbell   |8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4 (10)     | eggs (1)               |
+| ha_kay1981_nls      |Davidson   |8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4 (10)     | eggs (1)               |
+| ha_NoorulAne2018_ls |Campbell   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | eggs, larvae, pupae (3)|
+| ha_NoorulAne2018_nls|Briere-2   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | overall (1)            |
+
+## 2. Simulating phenology
+
+### 2.1. Temperature time series
+
+### 2.2. Model selection and computation
+
+### 2.3. Model results and comparison
 
 
 
 
 
 
+## Legal information
 
-
-
-
-
+This work is part of the ACOMPLI project. The ACOMPLI project is part of the Strategic Action Plan for the anticipation of the potential European withdrawal of active substances and the development of alternative crop protection techniques (PARSADA). It is financed by ecological planning funds. The French Ministry of Agriculture cannot be held responsible for the content of this package.
 
 
