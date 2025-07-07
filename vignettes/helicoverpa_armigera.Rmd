@@ -1,0 +1,51 @@
+---
+title: "helicoverpa_armigera"
+author: "François Rebaudo ; IRD UMR EGCE"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sec02}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette exemplifies the use of the devRate package to simulate 
+*Helicoverpa armigera* development using thermal performance curves available 
+in the literature.
+
+```{r}
+require("devRate")
+```
+
+## Models published in the literature
+
+Numerous models have been developed to simulate the phenology of Helicoverpar armigera. Most are based on the characterization of development as a function of temperature. Insects are reared at various constant temperatures under laboratory conditions, then a model is fitted to the data to obtain a thermal performance curve. The various publications for which models were retrievable are listed in Table 1.
+
+__Table 1.__ Models for *Helicoverpa armigera*
+
+| Ref                            | DOI                | Function name in devRate|
+|--------------------------------|--------------------|-------------------------|
+| Bartekova and Praslicka, 2006  |10.17221/2768-PPS   |ha_bartekova2006         |
+| Jallow and Matsumura, 2001     |10.1303/aez.2001.427|ha_jallow2001            |
+
+Each model is a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
+
+__Table 2.__ Model specifications for *Helicoverpa armigera*
+
+| Name             | Type              |Temperature (Celsius)                             | Life stages            |
+|------------------|-------------------|--------------------------------------------------|------------------------|
+| ha_bartekova2006 |simple linear model|20, 25, 30 (3)                                    | eggs, larvae, pupae (3)|
+| ha_jallow2001    |simple linear model|10, 13.3, 16.4, 20, 22.5, 25, 27.9, 30.5, 32.5 (9)| eggs, larvae, pupae (3)|
+
+
+
+
+
+
+
+
+
+
+
+
+
