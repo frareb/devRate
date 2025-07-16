@@ -32,8 +32,9 @@ __Table 1.__ Models for *Helicoverpa armigera*
 | Foley, 1981                            |10.1111/j.1440-6055.1981.tb00993.x|ha_foley1981             |
 | Kay, 1981                              |10.1111/j.1440-6055.1981.tb01020.x|ha_kay1981_ls            |
 | Kay, 1981                              |10.1111/j.1440-6055.1981.tb01020.x|ha_kay1981_nls           |
-| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_NoorulAne2018_ls      |
-| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_NoorulAne2018_nls     |
+| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_ls      |
+| Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_nls     |
+| Qureshi et al., 1999                   |10.1303/aez.34.327                |ha_qureshi1999_ls        |
 
 Each model is a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
 
@@ -48,8 +49,9 @@ __Table 2.__ Model specifications for *Helicoverpa armigera*
 | ha_foley1981        |Campbell   |20, 24, 28, 32 (4)                      | post-diapausing and non-diapausing pupae (2)|
 | ha_kay1981_ls       |Campbell   |8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4 (10)     | eggs (1)               |
 | ha_kay1981_nls      |Davidson   |8, 10, 13.3, 17.8, 20.8, 24.4, 27.2, 31.4, 35, 39.4 (10)     | eggs (1)               |
-| ha_NoorulAne2018_ls |Campbell   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | eggs, larvae, pupae (3)|
-| ha_NoorulAne2018_nls|Briere-2   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | overall (1)            |
+| ha_noorulane2018_ls |Campbell   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | eggs, larvae, pupae (3)|
+| ha_noorulane2018_nls|Briere-2   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | overall (1)            |
+| ha_qureshi1999_ls   |Campbell   |15, 20, 25, 30 (4)                                           | eggs, larvae, pupae (3)|
 
 ## 2. Simulating phenology
 

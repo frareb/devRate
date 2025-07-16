@@ -97,7 +97,6 @@ ha_jallow2001 <- function(plotfig = TRUE){
       bty = "n"
     )
   }
-  eq <- campbell_74
   dr_egg <- list(aa = -0.21, bb = 0.02)
   dr_larva <- list(aa = -0.045, bb = 0.004)
   dr_pupa <- list(aa = -0.083, bb = 0.006)
@@ -150,7 +149,6 @@ ha_mironidis2008_ls <- function(plotfig = TRUE){
       bty = "n"
     )
   }
-  eq <- campbell_74
   dr_egg <- list(aa = -0.3013, bb = 0.0252)
   dr_larva <- list(aa = -0.0442, bb = 0.0042)
   dr_pupa <- list(aa = -0.0529, bb = 0.0052)
@@ -215,7 +213,6 @@ ha_mironidis2008_nls <- function(plotfig = TRUE){
       bty = "n"
     )
   }
-  eq <- lactin2_95
   dr_egg <- list(aa = 0.0165, Tmax = 42.0240, deltaT = 2.0503, bb = -1.1906)
   dr_larva <- list(aa = 0.0042, Tmax = 43.1521, deltaT = 1.8197, bb = -1.0480)
   dr_pupa <- list(aa = 0.0053, Tmax = 43.3886, deltaT = 1.6854, bb = -1.0674)
@@ -269,7 +266,6 @@ ha_foley1981 <- function(plotfig = TRUE){
       bty = "n"
     )
   }
-  eq <- campbell_74
   dr_pupa_diapause <- list(aa = -0.14022, bb = 0.00857)
   dr_pupa_nondiapause <- list(aa = -0.09382, bb = 0.00634)
   return(list(
@@ -316,7 +312,6 @@ ha_kay1981_ls	<- function(plotfig = TRUE){
       x = temp, y = 0.09621/100*24*temp - 1.128/100*24, type = "l"
     )
   }
-  eq <- campbell_74
   dr_eggs <- list(aa = -1.128/100*24, bb = 0.09621/100*24)
   return(list(
     equation = list(egg = "campbell_74"),
@@ -362,7 +357,6 @@ ha_kay1981_nls <- function(plotfig = TRUE){
       x = temp, y = (2.259/100*24) / (1 + exp(5.468-0.2350*temp)), type = "l"
     )
   }
-  eq <- davidson_44
   dr_eggs <- list(aa = 5.468, bb = -0.2350, K = 2.259/100*24)
   return(list(
     equation = list(egg = "davidson_44"),
@@ -394,9 +388,9 @@ ha_kay1981_nls <- function(plotfig = TRUE){
 #' @return A list with the equation used, and a list of model parameters for
 #'   the different life stages considered in the article.
 #' @examples
-#'   mymodel <- ha_NoorulAne2018_ls(plotfig = FALSE)
+#'   mymodel <- ha_noorulane2018_ls(plotfig = FALSE)
 #' @export
-ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
+ha_noorulane2018_ls	<- function(plotfig = TRUE){
   if(plotfig){
     temp <-      c(10,     15, 17.5,   20,   25, 27.5,   30,   35, 37.5, 40)
     dev_egg <- 1/c(23.6, 15.6, 10.7,  8.4,  4.2,  3.6,  2.9,  2.3,  2.7, NA)
@@ -420,7 +414,6 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
       bty = "n", lty = 1:3
     )
   }
-  eq <- campbell_74
   dr_egg <- list(aa = -10.6*(1/57.8), bb = (1/57.8))
   dr_larva <- list(aa = -11.1*(1/247.7), bb = (1/247.7))
   dr_pupa <- list(aa = -9.9*(1/213), bb = (1/213))
@@ -454,9 +447,9 @@ ha_NoorulAne2018_ls	<- function(plotfig = TRUE){
 #' @return A list with the equation used, and a list of model parameters for
 #'   the different life stages considered in the article.
 #' @examples
-#'   mymodel <- ha_NoorulAne2018_nls(plotfig = FALSE)
+#'   mymodel <- ha_noorulane2018_nls(plotfig = FALSE)
 #' @export
-ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
+ha_noorulane2018_nls	<- function(plotfig = TRUE){
   if(plotfig){
     aa = 0.00003442
     Tmin = 8.205
@@ -476,7 +469,6 @@ ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
     dev = 1/(t_egg+t_lar+t_pup)
     graphics::points(x = temp, y = dev, pch = 15)
   }
-  eq <- briere2_99
   dr_all <- list(aa = 0.00003442,
                  Tmin = 8.205,
                  Tmax = 38.657,
@@ -486,6 +478,61 @@ ha_NoorulAne2018_nls	<- function(plotfig = TRUE){
     model = list(all = dr_all)
   ))
 }
+
+#' Qureshi et al. linear thermal performance curve for the development of
+#'   Helicoverpa armigera
+#'
+#' @description Linear development performance curve from four
+#'   experimental temperatures (15, 20, 25,
+#'   and 30 degrees Celsius).
+#' @seealso Qureshi, M. H., T. Murai, H. Yoshida, T. Shiraga and H. Tsumuki
+#'   (1999) Effects of photoperiod and temperature on development and diapause
+#'   induction in the Okayama population of Helicoverpa armigera (Hb)
+#'   (Lepidoptera: Noctuidae). Appl. Entomol. Zool. 34: 327–331.
+#'   https://doi.org/10.1303/aez.34.327
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_qureshi1999_ls(plotfig = FALSE)
+#' @export
+ha_qureshi1999_ls	<- function(plotfig = TRUE){
+  if(plotfig){
+    temp <-      c(15, 20, 25, 30)
+    dev_egg <- -0.239 + 0.022*temp
+    dev_lar <- -0.068 + 0.005*temp
+    dev_pup <- -0.102 + 0.007*temp
+    graphics::plot(
+      x = temp, y = dev_egg, type = "n", pch = 19,
+      main = "DOI: 10.1303/aez.34.327 ; Qureshi et al. 1999",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)", ylim = c(0, 0.5),
+      xlim = c(0, 40)
+    )
+    graphics::points(x = temp, y = dev_egg, type = "l", lty = 1)
+    graphics::points(x = temp, y = dev_lar, type = "l", lty = 2)
+    graphics::points(x = temp, y = dev_pup, type = "l", lty = 3)
+    graphics::legend(
+      "topleft", pch = c(15:17), legend = c("egg", "larva", "pupa"),
+      bty = "n", lty = 1:3
+    )
+  }
+  dr_egg <- list(aa = -0.239, bb = 0.022)
+  dr_larva <- list(aa = -0.068, bb = 0.005)
+  dr_pupa <- list(aa = -0.102, bb = 0.007)
+  return(list(
+    equation = list(egg = "campbell_74", larva = "campbell_74", pupa = "campbell_74"),
+    model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
+  ))
+}
+
 
 
 # devtools::document()
