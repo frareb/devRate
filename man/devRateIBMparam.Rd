@@ -22,7 +22,11 @@ devRateIBMparam(
 \item{timeStepTS}{The time step of the temperature time series (a numeric
 with 1 = one day).}
 
-\item{eq}{The name of the equation (e.g., lactin2_95).}
+\item{eq}{The name of the equation provided in the package (e.g., lactin2_95).
+For backward compatibility, the name of equation can be used, however, it
+is preferable to use a list object containing the names of the various
+equations in character format (e.g., list("campbell_74", "lactin2_95").
+See examples below.}
 
 \item{myParam}{The known parameters for the equation (a list of list for
 each life stage).}
@@ -114,5 +118,32 @@ forecastXXX <- devRateIBMparam(
   ),
   numInd = 5, stocha = 0.015,
   timeLayEggs = 15, adultLifeStage = 2
+)
+# with three life stages, and a different model equation for each life stage.
+forecastXXXX <- devRateIBMparam(
+  tempTS = rnorm(n = 60, mean = 20, sd = 1),
+  timeStepTS = 1,
+  eq = list("briere2_99", "lactin2_95", "campbell_74"),
+  myParam = list(
+    list(
+      aa = 0.0002,
+      Tmin = 10,
+      Tmax = 36.1,
+      bb = 2.84
+    ),
+    list(
+      aa = 0.009,
+      Tmax = 35.299,
+      deltaT = 0.201,
+      bb = -1.049
+    ),
+    list(
+      aa = -0.0459,
+      bb = 0.0044
+    )
+  ),
+  numInd = 10,
+  stocha = 0.015,
+  timeLayEggs = 1
 )
 }

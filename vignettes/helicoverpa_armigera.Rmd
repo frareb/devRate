@@ -13,7 +13,7 @@ This vignette exemplifies the use of the devRate package to simulate
 *Helicoverpa armigera* phenology using thermal performance curves available 
 in the literature.
 
-```{r}
+```{r, "r001"}
 require("devRate")
 ```
 
@@ -61,13 +61,43 @@ Based on the relationship between development and temperature, and on a temperat
 
 Any temperature time series can be used to simulate pest phenology. In the following simulations, the time step is expressed in days. If the temperature time series has a time step of, say, 1h, a time step of 1/24 should be specified. In this example, we'll simulate a theoretical temperature time series using a random generation for the normal distribution with mean equal to 16 and standard deviation equal to 2 (60 days with one temperature data every 6 hours ; 60*4 temperature values).
 
-```{r}
+```{r, "r002", fig.width=7, fig.height=4}
 temp <- stats::rnorm(n = 60*4, mean = 16, sd = 2)
+par(mar = c(4, 4, 0, 0))
+plot(
+  x = temp, type = "o", 
+  xlab = "Time (6 hours time step)", ylab = "Temperature",
+  ylim = c(5, 25)
+)
 ```
 
-
-
 ### 2.2. Model selection and computation
+
+Now we can run a simulation, selecting our temperature time series and the models of our choice.
+
+```{r, "r003", fig.width=7, fig.height=4}
+# Using Bartekova and Praslicka, 2006 model
+my_model <- ha_bartekova2006()
+
+# This model was designed for eggs, larvae and pupae, using simple linear
+# regression models (following Campbell 1974).
+forecastX <- devRateIBMparam(
+  tempTS = temp, # the temperature time series described above
+  timeStepTS = 1/4, # we  have 4 temperature values per day (every 6 hours)
+  eq = list("campbell_74", "campbell_74", "campbell_74"), # the model eq for
+    # the three life stages
+  myParam = list(
+    my_model[["model"]]$pupa, # starting with pupae
+    my_model[["model"]]$egg,  # then adults and eggs
+    my_model[["model"]]$larva # then larvae and the cycle goes on
+  ),
+  adultLifeStage = 1, # adult life stage after the first model step (pupae 
+    #to adults)
+  timeLayEggs = 10, # adults longevity fixed to 10 days
+  numInd = 10, # 10 individuals for the simulation
+  stocha = 0.015 # a bit of intra-population variability
+)
+```
 
 ### 2.3. Model results and comparison
 
@@ -81,3 +111,17 @@ temp <- stats::rnorm(n = 60*4, mean = 16, sd = 2)
 This work is part of the ACOMPLI project. The ACOMPLI project is part of the Strategic Action Plan for the anticipation of the potential European withdrawal of active substances and the development of alternative crop protection techniques (PARSADA). It is financed by ecological planning funds. The French Ministry of Agriculture cannot be held responsible for the content of this package.
 
 
+
+
+
+
+<!-- # devtools::document() -->
+<!-- # devtools::check() -->
+<!-- # devtools::check_win_devel() -->
+<!-- # devtools::build() -->
+
+### TO DO
+#### P1- add new models adjusted for H. armigera from the literature // OK
+#### P2- modify devRateIBMparam to choose when to insert the timeLayEggs value // OK
+#### P3- modify devRateIBMparam to use different models for each life stage // OK with backward compatibility
+#### P4- add a vignette to explain the different H. armigera models ans how to use them

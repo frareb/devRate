@@ -102,8 +102,12 @@ devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numI
 #'
 #' @param tempTS The temperature time series (a vector).
 #' @param timeStepTS The time step of the temperature time series (a numeric
-#'  with 1 = one day).
-#' @param eq The name of the equation (e.g., lactin2_95).
+#'   with 1 = one day).
+#' @param eq The name of the equation provided in the package (e.g., lactin2_95).
+#'   For backward compatibility, the name of equation can be used, however, it
+#'   is preferable to use a list object containing the names of the various
+#'   equations in character format (e.g., list("campbell_74", "lactin2_95").
+#'   See examples below.
 #' @param myParam The known parameters for the equation (a list of list for
 #'   each life stage).
 #' @param numInd The number of individuals for the simulation (an integer).
@@ -182,6 +186,33 @@ devRateIBMdataBase <- function(tempTS, timeStepTS, eq, species, lifeStages, numI
 #'   numInd = 5, stocha = 0.015,
 #'   timeLayEggs = 15, adultLifeStage = 2
 #' )
+#' # with three life stages, and a different model equation for each life stage.
+#' forecastXXXX <- devRateIBMparam(
+#'   tempTS = rnorm(n = 60, mean = 20, sd = 1),
+#'   timeStepTS = 1,
+#'   eq = list("briere2_99", "lactin2_95", "campbell_74"),
+#'   myParam = list(
+#'     list(
+#'       aa = 0.0002,
+#'       Tmin = 10,
+#'       Tmax = 36.1,
+#'       bb = 2.84
+#'     ),
+#'     list(
+#'       aa = 0.009,
+#'       Tmax = 35.299,
+#'       deltaT = 0.201,
+#'       bb = -1.049
+#'     ),
+#'     list(
+#'       aa = -0.0459,
+#'       bb = 0.0044
+#'     )
+#'   ),
+#'   numInd = 10,
+#'   stocha = 0.015,
+#'   timeLayEggs = 1
+#' )
 #' @export
 devRateIBMparam <- function(
   tempTS,
@@ -193,11 +224,28 @@ devRateIBMparam <- function(
   timeLayEggs = 1,
   adultLifeStage = 0
   ){
-
+  # accepting different input in eq for backward compatibility
+  if(typeof(eq)!="list"){
+    if(typeof(eq)=="character"){
+      eq <- rep(list(get(eq)), length(myParam))
+    } else{
+      eq <- rep(list(eq), length(myParam))
+    }
+  } else {
+    if(is.null(names(eq)[[1]])){
+      eq <- lapply(seq_along(eq), function(k){
+        get(eq[[k]])
+      })
+    } else {
+      if(names(eq)[[1]] == "eq"){
+        eq <- rep(list(eq), length(myParam))
+      }
+    }
+  }
   # !!! exceptions for equations with positive values for low temp !!!
-  exceptDevRate <- function(temp){
+  exceptDevRate <- function(temp, curr_eq = 1){
     i <- devRT
-    if(eq$name == "Briere-2"){
+    if(eq[[curr_eq]]$name == "Briere-2"){
       Tmin <- Tmin
       if(x <= Tmin){
         i <- 0
@@ -208,7 +256,7 @@ devRateIBMparam <- function(
   models <- lapply(seq_along(myParam), function(z){
     as.data.frame(myParam[[z]])
   })
-  modelVar <- sapply(models, function(i){
+  modelVar <- lapply(models, function(i){
     names(i)
   })
   for(ind in 1:numInd){
@@ -220,13 +268,16 @@ devRateIBMparam <- function(
       g <- g + 1
       for(i in seq_along(models)){
         if(ratioSupDev > 0){
-          for(k in 1:nrow(modelVar)){
-            assign(x = modelVar[k, i], value = models[[i]][k])
+          # for(k in 1:nrow(modelVar)){
+          for(k in 1:length(modelVar[[i]])){
+            # assign(x = modelVar[k, i], value = models[[i]][k])
+            assign(x = modelVar[[i]][k], value = models[[i]][k])
           }
           x <- tempTS[tx]
-          devRT <- unlist(eval(parse(text = eq$eqAlt)))
-          devRT <- exceptDevRate(x)
+          devRT <- unlist(eval(parse(text = eq[[i]]$eqAlt)))
+          devRT <- exceptDevRate(x, curr_eq = i)
           devRT[is.na(devRT)] <- 0
+          devRT[devRT<0] <- 0
           add2Dev <- stats::rnorm(n = 1, mean = devRT, sd = devRT*stocha) *
             ratioSupDev * timeStepTS
           if(add2Dev < 0){add2Dev <- 0}
@@ -235,13 +286,16 @@ devRateIBMparam <- function(
         while(currentDev < 1){
           tx <- tx + 1
           if(tx > length(tempTS)){break}
-          for(k in 1:nrow(modelVar)){
-            assign(x = modelVar[k, i], value = models[[i]][k])
+          # for(k in 1:nrow(modelVar)){
+          for(k in 1:length(modelVar[[i]])){
+            # assign(x = modelVar[k, i], value = models[[i]][k])
+            assign(x = modelVar[[i]][k], value = models[[i]][k])
           }
           x <- tempTS[tx]
-          devRT <- unlist(eval(parse(text = eq$eqAlt)))
-          devRT <- exceptDevRate(x)
+          devRT <- unlist(eval(parse(text = eq[[i]]$eqAlt)))
+          devRT <- exceptDevRate(x, curr_eq = i)
           devRT[is.na(devRT)] <- 0
+          devRT[devRT<0] <- 0
           addDev <- stats::rnorm(n = 1, mean = devRT, sd = devRT*stocha) *
             timeStepTS
           if(addDev < 0){addDev <- 0}
