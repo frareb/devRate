@@ -10,7 +10,7 @@ vignette: >
 ---
 
 This vignette exemplifies the use of the devRate package to simulate 
-*Helicoverpa armigera* development using thermal performance curves available 
+*Helicoverpa armigera* phenology using thermal performance curves available 
 in the literature.
 
 ```{r}
@@ -19,7 +19,7 @@ require("devRate")
 
 ## 1. Models published in the literature
 
-Numerous models have been developed to simulate the phenology of Helicoverpar armigera. Most are based on the characterization of development as a function of temperature. Insects are reared at various constant temperatures under laboratory conditions, then a model is fitted to the data to obtain a thermal performance curve. The various publications for which models were retrievable are listed in Table 1.
+Numerous models have been developed to simulate the phenology of *Helicoverpar armigera*. Most are based on the characterization of development as a function of temperature. Insects are reared at various constant temperatures under laboratory conditions, then a model is fitted to the data to obtain a thermal performance curve. The various publications for which models were retrievable are listed in Table 1.
 
 __Table 1.__ Models for *Helicoverpa armigera*
 
@@ -36,7 +36,7 @@ __Table 1.__ Models for *Helicoverpa armigera*
 | Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_nls     |
 | Qureshi et al., 1999                   |10.1303/aez.34.327                |ha_qureshi1999_ls        |
 
-Each model is a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
+Each model is implemented in this package as a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
 
 __Table 2.__ Model specifications for *Helicoverpa armigera*
 
@@ -55,7 +55,17 @@ __Table 2.__ Model specifications for *Helicoverpa armigera*
 
 ## 2. Simulating phenology
 
+Based on the relationship between development and temperature, and on a temperature time series, it is then possible to run simulations of the pest's phenology.
+
 ### 2.1. Temperature time series
+
+Any temperature time series can be used to simulate pest phenology. In the following simulations, the time step is expressed in days. If the temperature time series has a time step of, say, 1h, a time step of 1/24 should be specified. In this example, we'll simulate a theoretical temperature time series using a random generation for the normal distribution with mean equal to 16 and standard deviation equal to 2 (60 days with one temperature data every 6 hours ; 60*4 temperature values).
+
+```{r}
+temp <- stats::rnorm(n = 60*4, mean = 16, sd = 2)
+```
+
+
 
 ### 2.2. Model selection and computation
 

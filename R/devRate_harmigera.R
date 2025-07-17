@@ -541,8 +541,8 @@ ha_qureshi1999_ls	<- function(plotfig = TRUE){
 # devtools::build()
 
 # TO DO
-## P1- add new models adjusted for H. armigera from the literature
-## P2- modify devRateIBMparam to choose when to insert the timeLayEggs value
+## P1- add new models adjusted for H. armigera from the literature // OK
+## P2- modify devRateIBMparam to choose when to insert the timeLayEggs value // OK
 ## P3- modify devRateIBMparam to use different models for each life stage
 ##     this would be a version change to 0.3.
 ## P4- add a vignette to explain the different H. armigera models ans how to use them

@@ -12,7 +12,8 @@ devRateIBMparam(
   myParam,
   numInd = 10,
   stocha,
-  timeLayEggs = 1
+  timeLayEggs = 1,
+  adultLifeStage = 0
 )
 }
 \arguments{
@@ -33,6 +34,10 @@ development rate to create stochasticity among individuals (a numeric).}
 
 \item{timeLayEggs}{The delay between emergence of adults and the time where
 females lay eggs in time steps (a numeric).}
+
+\item{adultLifeStage}{An integer to specify when the adult life stage is
+tacking place so that timeLayEggs is applied. Default to 0 for
+backwards compatibility with previous versions of the package.}
 }
 \value{
 A list with three elements: the table of phenology for each individual,
@@ -83,5 +88,31 @@ forecastXX <- devRateIBMparam(
   numInd = 10,
   stocha = 0.015,
   timeLayEggs = 1
+)
+# with three life stages, adult stage tacking place after the pupal stage,
+# so that adultLifeStage = 2. Adult longevity was exacerbated at 15 days
+# to highlight the impact on function output.
+forecastXXX <- devRateIBMparam(
+  tempTS = rnorm(n = 120, mean = 20, sd = 1),
+  timeStepTS = 1, eq = briere2_99,
+  myParam = list(
+   lifeStage_larva = list(
+     aa = 0.0002,
+     Tmin = 10,
+     Tmax = 36.1,
+     bb = 2.84),
+   lifeStage_pupa = list(
+     aa = 0.0004,
+     Tmin = 8,
+     Tmax = 35,
+     bb = 2.8),
+   lifeStage_egg = list(
+     aa = 0.0002,
+     Tmin = 8,
+     Tmax = 35,
+     bb = 2.8)
+  ),
+  numInd = 5, stocha = 0.015,
+  timeLayEggs = 15, adultLifeStage = 2
 )
 }
