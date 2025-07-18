@@ -19,7 +19,12 @@ require("devRate")
 
 ## 1. Models published in the literature
 
-Numerous models have been developed to simulate the phenology of *Helicoverpar armigera*. Most are based on the characterization of development as a function of temperature. Insects are reared at various constant temperatures under laboratory conditions, then a model is fitted to the data to obtain a thermal performance curve. The various publications for which models were retrievable are listed in Table 1.
+Numerous models have been developed to simulate the phenology of 
+*Helicoverpar armigera*. Most are based on the characterization of development 
+as a function of temperature. Insects are reared at various constant 
+temperatures under laboratory conditions, then a model is fitted to the data 
+to obtain a thermal performance curve. The various publications for which 
+models were retrievable are listed in Table 1.
 
 __Table 1.__ Models for *Helicoverpa armigera*
 
@@ -36,7 +41,12 @@ __Table 1.__ Models for *Helicoverpa armigera*
 | Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_nls     |
 | Qureshi et al., 1999                   |10.1303/aez.34.327                |ha_qureshi1999_ls        |
 
-Each model is implemented in this package as a function that returns a list object. Each list is composed of two elements: the first contains the mathematical equation used and the second a list of the parameters of the mathematical equation for each life stage of the insect. The life stages available, the models, and the number of temperatures used for fitting are shown in Table 2.
+Each model is implemented in this package as a function that returns a list 
+object. Each list is composed of two elements: the first contains the 
+mathematical equation used and the second a list of the parameters of the 
+mathematical equation for each life stage of the insect. The life stages 
+available, the models, and the number of temperatures used for fitting are 
+shown in Table 2.
 
 __Table 2.__ Model specifications for *Helicoverpa armigera*
 
@@ -59,15 +69,15 @@ Based on the relationship between development and temperature, and on a temperat
 
 ### 2.1. Temperature time series
 
-Any temperature time series can be used to simulate pest phenology. In the following simulations, the time step is expressed in days. If the temperature time series has a time step of, say, 1h, a time step of 1/24 should be specified. In this example, we'll simulate a theoretical temperature time series using a random generation for the normal distribution with mean equal to 16 and standard deviation equal to 2 (60 days with one temperature data every 6 hours ; 60*4 temperature values).
+Any temperature time series can be used to simulate pest phenology. In the following simulations, the time step is expressed in days. If the temperature time series has a time step of, say, 1h, a time step of 1/24 should be specified. In this example, we'll simulate a theoretical temperature time series using a random generation for the normal distribution with mean equal to 25 and standard deviation equal to 2 (90 days with one temperature data every 6 hours ; 90x4 temperature values).
 
 ```{r, "r002", fig.width=7, fig.height=4}
-temp <- stats::rnorm(n = 60*4, mean = 16, sd = 2)
+temp <- stats::rnorm(n = 90*4, mean = 25, sd = 2)
 par(mar = c(4, 4, 0, 0))
 plot(
   x = temp, type = "o", 
   xlab = "Time (6 hours time step)", ylab = "Temperature",
-  ylim = c(5, 25)
+  ylim = c(15, 35)
 )
 ```
 
@@ -92,11 +102,22 @@ forecastX <- devRateIBMparam(
     my_model[["model"]]$larva # then larvae and the cycle goes on
   ),
   adultLifeStage = 1, # adult life stage after the first model step (pupae 
-    #to adults)
+    # to adults)
   timeLayEggs = 10, # adults longevity fixed to 10 days
   numInd = 10, # 10 individuals for the simulation
   stocha = 0.015 # a bit of intra-population variability
 )
+```
+
+The result of the simulation is a list object, with the first element being 
+the predictions of the various stages for all individuals (phenology). The 
+data correspond to the number of time steps expressed in the time series 
+value (6h time step here). The second element corresponds to the model 
+parameters used, and the third element to the temperature series used. We can
+plot the simualtion result using the first element.
+
+```{r, "r004", fig.width=7, fig.height=4}
+
 ```
 
 ### 2.3. Model results and comparison
@@ -121,7 +142,7 @@ This work is part of the ACOMPLI project. The ACOMPLI project is part of the Str
 <!-- # devtools::build() -->
 
 ### TO DO
-#### P1- add new models adjusted for H. armigera from the literature // OK
-#### P2- modify devRateIBMparam to choose when to insert the timeLayEggs value // OK
-#### P3- modify devRateIBMparam to use different models for each life stage // OK with backward compatibility
-#### P4- add a vignette to explain the different H. armigera models ans how to use them
+#### <input type="checkbox" checked> P1</input> add new models adjusted for H. armigera from the literature // OK
+#### <input type="checkbox" checked> P2</input> modify devRateIBMparam to choose when to insert the timeLayEggs value // OK
+#### <input type="checkbox" checked> P3</input> modify devRateIBMparam to use different models for each life stage // OK with backward compatibility
+#### <input type="checkbox" unchecked> P4</input> add a vignette to explain the different H. armigera models ans how to use them
