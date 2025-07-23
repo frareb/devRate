@@ -65,11 +65,19 @@ __Table 2.__ Model specifications for *Helicoverpa armigera*
 
 ## 2. Simulating phenology
 
-Based on the relationship between development and temperature, and on a temperature time series, it is then possible to run simulations of the pest's phenology.
+Based on the relationship between development and temperature, and on a 
+temperature time series, it is then possible to run simulations of the pest's 
+phenology.
 
 ### 2.1. Temperature time series
 
-Any temperature time series can be used to simulate pest phenology. In the following simulations, the time step is expressed in days. If the temperature time series has a time step of, say, 1h, a time step of 1/24 should be specified. In this example, we'll simulate a theoretical temperature time series using a random generation for the normal distribution with mean equal to 25 and standard deviation equal to 2 (90 days with one temperature data every 6 hours ; 90x4 temperature values).
+Any temperature time series can be used to simulate pest phenology. In the 
+following simulations, the time step is expressed in days. If the temperature 
+time series has a time step of 1h, a time step of 1/24 should be 
+specified. In this example, we'll simulate a theoretical temperature time 
+series using a random generation for the normal distribution with mean equal 
+to 25 and standard deviation equal to 2 (90 days with one temperature data 
+every 6 hours ; 90x4 temperature values).
 
 ```{r, "r002", fig.width=7, fig.height=4}
 temp <- stats::rnorm(n = 90*4, mean = 25, sd = 2)
@@ -83,9 +91,14 @@ plot(
 
 ### 2.2. Model selection and computation
 
-Now we can run a simulation, selecting our temperature time series and the models of our choice.
+Now we can run simulations, selecting our temperature time series and the 
+models of our choice.
+
+#### 2.2.1. Simulation using a single model
 
 ```{r, "r003", fig.width=7, fig.height=4}
+set.seed(1234)
+
 # Using Bartekova and Praslicka, 2006 model
 my_model <- ha_bartekova2006()
 
@@ -105,7 +118,7 @@ forecastX <- devRateIBMparam(
     # to adults)
   timeLayEggs = 10, # adults longevity fixed to 10 days
   numInd = 10, # 10 individuals for the simulation
-  stocha = 0.015 # a bit of intra-population variability
+  stocha = 0.05 # a bit of intra-population variability
 )
 ```
 
@@ -117,8 +130,96 @@ parameters used, and the third element to the temperature series used. We can
 plot the simualtion result using the first element.
 
 ```{r, "r004", fig.width=7, fig.height=4}
-
+sim01 <- forecastX[[1]]
+hist(
+  -999, # empty histogram
+  xlim = c(0, max(sim01)), ylim = c(0, nrow(sim01)), 
+  xlab = "Time", ylab = "Number of individuals", axes = FALSE, main = ""
+)
+axis(1)
+axis(2, las = 1)
+cycleLabels <- rep(c("adults", "larvae", "pupae"), 10)
+trash <- lapply(1:ncol(sim01), function(i){
+  hist(sim01[,i], add = TRUE)
+  text(
+    x = mean(sim01[,i]), 
+    y = max(table(sim01[,i])), 
+    labels = colnames(sim01)[i],
+    pos = 2
+  )
+  text(
+    x = mean(sim01[,i]), 
+    y = max(table(sim01[,i]))+1, 
+    labels = cycleLabels[i],
+    pos = 2
+  )
+  
+})
 ```
+
+#### 2.2.2. Simulation using different models
+
+```{r, "r005", fig.width=7, fig.height=4}
+set.seed(1234)
+
+my_model01 <- ha_bartekova2006(plotfig = FALSE)
+my_model02 <- ha_mironidis2008_nls(plotfig = FALSE)
+my_model03 <- ha_foley1981(plotfig = FALSE)
+
+forecastX <- devRateIBMparam(
+  tempTS = temp, # the temperature time series described above
+  timeStepTS = 1/4, # we  have 4 temperature values per day (every 6 hours)
+  eq = rep(list(
+    "campbell_74", "campbell_74", "lactin2_95"
+  ), 3), # the model eq for
+    # the three life stages
+  myParam = list(
+    my_model03[["model"]]$diapausingpupae, # starting with diapausing pupae (Foley 1981)
+    my_model01[["model"]]$egg,  # then adults and eggs (Bartekova 2006)
+    my_model02[["model"]]$larva, # then larvae (Mironidis 2008)
+    my_model03[["model"]]$nondiapausingpupae, # pupae G2 (Foley 1981)
+    my_model01[["model"]]$egg,
+    my_model02[["model"]]$larva,
+    my_model03[["model"]]$nondiapausingpupae,
+    my_model01[["model"]]$egg,
+    my_model02[["model"]]$larva
+  ),
+  adultLifeStage = 1, # adult life stage after the first model step (pupae 
+    # to adults)
+  timeLayEggs = 10, # adults longevity fixed to 10 days
+  numInd = 10, # 10 individuals for the simulation
+  stocha = 0.05 # a bit of intra-population variability
+)
+```
+
+```{r, "r006", fig.width=7, fig.height=4}
+sim02 <- forecastX[[1]]
+hist(
+  -999, # empty histogram
+  xlim = c(0, max(sim02)), ylim = c(0, nrow(sim02)), 
+  xlab = "Time", ylab = "Number of individuals", axes = FALSE, main = ""
+)
+axis(1)
+axis(2, las = 1)
+cycleLabels <- rep(c("adults", "larvae", "pupae"), 10)
+trash <- lapply(1:ncol(sim02), function(i){
+  hist(sim02[,i], add = TRUE)
+  text(
+    x = mean(sim02[,i]), 
+    y = max(table(sim02[,i])), 
+    labels = colnames(sim02)[i],
+    pos = 2
+  )
+  text(
+    x = mean(sim02[,i]), 
+    y = max(table(sim02[,i]))+1, 
+    labels = cycleLabels[i],
+    pos = 2
+  )
+  
+})
+```
+
 
 ### 2.3. Model results and comparison
 
@@ -135,7 +236,7 @@ This work is part of the ACOMPLI project. The ACOMPLI project is part of the Str
 
 
 
-
+<!-- # library("devtools") -->
 <!-- # devtools::document() -->
 <!-- # devtools::check() -->
 <!-- # devtools::check_win_devel() -->
