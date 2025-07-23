@@ -220,17 +220,32 @@ trash <- lapply(1:ncol(sim02), function(i){
 })
 ```
 
+### 2.3. Simulation results and comparison
 
-### 2.3. Model results and comparison
+```{r, "r007", fig.width=7, fig.height=4}
+# results of simulations using model 1
+apply(sim01, MARGIN = 2, FUN = summary)
 
+# results of simulations using model 2
+apply(sim02, MARGIN = 2, FUN = summary)
+```
 
-
-
-
+A more detailed comparison would not be meaningful here because the time 
+series is theoretical and the choice of models used is arbitrary. 
+Nevertheless, these simulations highlight notable differences in phenology 
+for *H. armigera*. A comparison could be made based on meteorological data 
+from sites where insect trapping is carried out, in order to compare simulated 
+data with observed data and choose the most appropriate model from among the 
+many possible combinations.
 
 ## Legal information
 
-This work is part of the ACOMPLI project. The ACOMPLI project is part of the Strategic Action Plan for the anticipation of the potential European withdrawal of active substances and the development of alternative crop protection techniques (PARSADA). It is financed by ecological planning funds. The French Ministry of Agriculture cannot be held responsible for the content of this package.
+This work is part of the ACOMPLI project. The ACOMPLI project is part of the 
+Strategic Action Plan for the anticipation of the potential European 
+withdrawal of active substances and the development of alternative crop 
+protection techniques (PARSADA). It is financed by ecological planning funds. 
+The French Ministry of Agriculture cannot be held responsible for the content 
+of this package.
 
 
 
@@ -241,9 +256,3 @@ This work is part of the ACOMPLI project. The ACOMPLI project is part of the Str
 <!-- # devtools::check() -->
 <!-- # devtools::check_win_devel() -->
 <!-- # devtools::build() -->
-
-### TO DO
-#### <input type="checkbox" checked> P1</input> add new models adjusted for H. armigera from the literature // OK
-#### <input type="checkbox" checked> P2</input> modify devRateIBMparam to choose when to insert the timeLayEggs value // OK
-#### <input type="checkbox" checked> P3</input> modify devRateIBMparam to use different models for each life stage // OK with backward compatibility
-#### <input type="checkbox" unchecked> P4</input> add a vignette to explain the different H. armigera models ans how to use them
