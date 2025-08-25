@@ -532,3 +532,93 @@ ha_qureshi1999_ls	<- function(plotfig = TRUE){
     model = list(egg = dr_egg, larva = dr_larva, pupa = dr_pupa)
   ))
 }
+
+#' Ahmad linear thermal performance curve for the development of
+#'   Helicoverpa armigera
+#'
+#' @description Linear development performance curve from four
+#'   experimental temperatures (14, 16, 18, 20, 22, 25, 27, 30, 32, 35 and 36
+#'   degrees Celsius).
+#' @seealso Ahmad S. (2024) Temperature dependent survivorship and development
+#'   of Helicoverpa armigera (Hubner) (Lepidoptera-Noctuidae) on chickpea.
+#'   Preprint. https://doi.org/10.21203/rs.3.rs-4845823/v1
+#' @details This work is part of the ACOMPLI project. The ACOMPLI project
+#'   is part of the Strategic Action Plan for the anticipation of the potential
+#'   European withdrawal of active substances and the development of
+#'   alternative crop protection techniques (PARSADA). It is financed by
+#'   ecological planning funds. The French Ministry of Agriculture cannot be
+#'   held responsible for the content of this package.
+#' @param plotfig A Boolean used to return the experimental points and the
+#'   equation fitted in the article.
+#' @return A list with the equation used, and a list of model parameters for
+#'   the different life stages considered in the article.
+#' @examples
+#'   mymodel <- ha_ahmad2024_ls(plotfig = FALSE)
+#' @export
+ha_ahmad2024_ls	<- function(plotfig = TRUE){
+  if(plotfig){
+    temp <- c(0, 40)
+    dev_egg <- -0.1041 + 0.0135*temp
+    dev_l1 <- -0.1033 + 0.0208*temp
+    dev_l2 <- -0.3041 + 0.0289*temp
+    dev_l3 <- -0.0798 + 0.0171*temp
+    dev_l4 <- -0.0654 + 0.0147*temp
+    dev_l5 <- -0.1492 + 0.026*temp
+    dev_l6 <- -0.0713 + 0.017*temp
+    dev_prepup <- -0.2086 + 0.0248*temp
+    dev_pup <- -0.0547 + 0.0062*temp
+    graphics::plot(
+      x = temp, y = dev_egg, type = "n", pch = 19,
+      main = "DOI: 10.21203/rs.3.rs-4845823/v1 ; Ahmad 2024",
+      xlab = "Temperature (Celsius)",
+      ylab = "Development rate (day^-1)", ylim = c(0, 0.8),
+      xlim = c(0, 40)
+    )
+    graphics::points(x = temp, y = dev_egg, type = "l", lty = 1)
+    graphics::points(x = temp, y = dev_l1, type = "l", lty = 2)
+    graphics::points(x = temp, y = dev_l2, type = "l", lty = 3)
+    graphics::points(x = temp, y = dev_l3, type = "l", lty = 4)
+    graphics::points(x = temp, y = dev_l4, type = "l", lty = 5)
+    graphics::points(x = temp, y = dev_l5, type = "l", lty = 6)
+    graphics::points(x = temp, y = dev_l6, type = "l", lty = 7)
+    graphics::points(x = temp, y = dev_prepup, type = "l", lty = 8)
+    graphics::points(x = temp, y = dev_pup, type = "l", lty = 9)
+    graphics::legend(
+      "topleft", lty = 1:9, legend = c("egg", paste0("l", 1:6), "prepupa", "pupa"),
+      bty = "n"
+    )
+  }
+  dr_egg <- list(aa = -0.1041, bb = 0.0135)
+  dr_l1 <- list(aa = -0.1033, bb = 0.0208)
+  dr_l2 <- list(aa = -0.3041, bb = 0.0289)
+  dr_l3 <- list(aa = -0.0798, bb = 0.0171)
+  dr_l4 <- list(aa = -0.0654, bb = 0.0147)
+  dr_l5 <- list(aa = -0.1492, bb = 0.026)
+  dr_l6 <- list(aa = -0.0713, bb = 0.017)
+  dr_prepup <- list(aa = -0.2086, bb = 0.0248)
+  dr_pup <- list(aa = -0.0547, bb = 0.0062)
+  return(list(
+    equation = list(
+      egg = "campbell_74",
+      l1 = "campbell_74",
+      l2 = "campbell_74",
+      l3 = "campbell_74",
+      l4 = "campbell_74",
+      l5 = "campbell_74",
+      l6 = "campbell_74",
+      prepupa = "campbell_74",
+      pupa = "campbell_74"
+    ),
+    model = list(
+      egg = dr_egg,
+      l1 = dr_l1,
+      l2 = dr_l2,
+      l3 = dr_l3,
+      l4 = dr_l4,
+      l5 = dr_l5,
+      l6 = dr_l6,
+      prepupa = dr_prepup,
+      pupa = dr_pup
+    )
+  ))
+}

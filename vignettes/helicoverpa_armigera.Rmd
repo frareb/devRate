@@ -40,6 +40,7 @@ __Table 1.__ Models for *Helicoverpa armigera*
 | Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_ls      |
 | Noor-ul-Ane et al., 2018               |10.1017/S0007485317000724         |ha_noorulane2018_nls     |
 | Qureshi et al., 1999                   |10.1303/aez.34.327                |ha_qureshi1999_ls        |
+| Ahmad 2024                             |10.21203/rs.3.rs-4845823/v1       |ha_ahmad2024_ls          |
 
 Each model is implemented in this package as a function that returns a list 
 object. Each list is composed of two elements: the first contains the 
@@ -62,6 +63,7 @@ __Table 2.__ Model specifications for *Helicoverpa armigera*
 | ha_noorulane2018_ls |Campbell   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | eggs, larvae, pupae (3)|
 | ha_noorulane2018_nls|Briere-2   |10, 15, 17.5, 20, 25, 27.5, 30, 35, 37.5, 40 (10)            | overall (1)            |
 | ha_qureshi1999_ls   |Campbell   |15, 20, 25, 30 (4)                                           | eggs, larvae, pupae (3)|
+| ha_ahmad2024_ls     |Campbell   |14, 16, 18, 20, 22, 25, 27, 30, 32, 35, 36 (11)              | eggs, l1:6, prepupae, pupae (9)|
 
 ## 2. Simulating phenology
 
