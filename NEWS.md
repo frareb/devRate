@@ -1,3 +1,6 @@
+## devRate 0.2.6
+* fix error "need finite 'xlim' values" in helicoverpa_armigera.Rmd
+
 ## devRate 0.2.5
 * new functions for Helicoverpa armigera phenology modelling
 * fix devRateIBMparam function for negative values when stocha parameter is too high

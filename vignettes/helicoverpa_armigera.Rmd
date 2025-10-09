@@ -15,6 +15,7 @@ in the literature.
 
 ```{r, "r001"}
 require("devRate")
+set.seed(1234)
 ```
 
 ## 1. Models published in the literature
