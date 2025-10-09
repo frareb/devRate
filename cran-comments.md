@@ -3,7 +3,7 @@
 
 ## Test environments
 * Linux Ubuntu 25.04, x86_64-pc-linux-gnu, R 4.4.3 (2025-02-28)
-* win-builder (R Under development ).
+* win-builder (R Under development 2025-10-08 r88906 ucrt).
 
 ## R CMD check results
 There were no NOTE, ERROR, or WARNING. 
